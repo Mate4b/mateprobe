@@ -1,0 +1,22 @@
+{
+  "document": {
+    "surfaces": [{
+      "id": "outcome",
+      "text": "Firmás el acuerdo y organizás una reunión con las personas de tu nuevo equipo.",
+      "state_ref": "accept",
+      "claims": [{"key": "offer.status", "value": "accepted"}]
+    }]
+  },
+  "context": {
+    "states": {
+      "current": {"offer.status": "pending"},
+      "accept": {"offer.status": "accepted"},
+      "reject": {"offer.status": "rejected"}
+    }
+  },
+  "contracts": [
+    {"type": "RequiredFact", "rule_id": "pending-offer", "key": "offer.status", "expected": "pending"},
+    {"type": "DeclaredClaimsConsistent", "rule_id": "branch-facts", "surface_ids": ["outcome"]},
+    {"type": "MinimumTokens", "rule_id": "lexical-floor", "surface_ids": ["outcome"], "minimum": 8, "minimum_unique": 5}
+  ]
+}

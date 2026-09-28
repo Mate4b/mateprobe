@@ -1,0 +1,124 @@
+{
+  "dataset": "synthetic-feasibility-v1",
+  "seed": 1729,
+  "scenario_groups": 48,
+  "cases": 720,
+  "corpus_digest": "be233d8434d49e7b07f5291ddaec4072289b0f9bb0d2d335237b844bac1813ea",
+  "contract_digest": "67763f2079c3927568c8ca2a0a60b8eb8459d359319c43be9ed469264dcaadfe",
+  "targeted_audit": {
+    "total": 720,
+    "eligible": 720,
+    "counts": {
+      "detected": 384,
+      "survived": 96,
+      "preserved": 192,
+      "regressed": 48
+    },
+    "valid_faults": 480,
+    "detected_faults": 384,
+    "detection_score": 0.8,
+    "valid_controls": 240,
+    "preserved_controls": 192,
+    "preservation_rate": 0.8,
+    "families": {
+      "token_spam": {
+        "detected": 48
+      },
+      "padding_restatement": {
+        "detected": 48
+      },
+      "zero_domain_delta": {
+        "detected": 48
+      },
+      "cross_branch_claim": {
+        "detected": 48
+      },
+      "unicode_formula": {
+        "detected": 48
+      },
+      "closed_premise": {
+        "detected": 48
+      },
+      "repeated_scene": {
+        "detected": 48
+      },
+      "required_fact": {
+        "detected": 48
+      },
+      "challenge_semantic_restatement": {
+        "survived": 48
+      },
+      "challenge_undeclared_contradiction": {
+        "survived": 48
+      },
+      "whitespace": {
+        "preserved": 48
+      },
+      "unicode_nfd": {
+        "preserved": 48
+      },
+      "case_change": {
+        "preserved": 48
+      },
+      "valid_expansion": {
+        "preserved": 48
+      },
+      "challenge_negated_formula": {
+        "regressed": 48
+      }
+    }
+  },
+  "binary_comparisons": {
+    "contracts_strict": {
+      "tp": 384,
+      "fn": 96,
+      "fp": 48,
+      "tn": 192,
+      "errors": 0,
+      "baseline_rejections": 0,
+      "precision": 0.8888888888888888,
+      "recall": 0.8,
+      "valid_variant_acceptance": 0.8
+    },
+    "excerpt_baseline": {
+      "tp": 96,
+      "fn": 384,
+      "fp": 48,
+      "tn": 192,
+      "errors": 0,
+      "baseline_rejections": 0,
+      "precision": 0.6666666666666666,
+      "recall": 0.2,
+      "valid_variant_acceptance": 0.8
+    },
+    "always_accept": {
+      "tp": 0,
+      "fn": 480,
+      "fp": 0,
+      "tn": 240,
+      "errors": 0,
+      "baseline_rejections": 0,
+      "precision": null,
+      "recall": 0.0,
+      "valid_variant_acceptance": 1.0
+    },
+    "always_reject": {
+      "tp": 480,
+      "fn": 0,
+      "fp": 240,
+      "tn": 0,
+      "errors": 0,
+      "baseline_rejections": 720,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "valid_variant_acceptance": 0.0
+    }
+  },
+  "limitations": [
+    "Synthetic authored cases; no natural model outputs or independent raters",
+    "Domain templates are lexical variations, not domain generalization evidence",
+    "No train/test tuning study and no LLM-as-judge baseline",
+    "Pairs share scenarios; rows are not independent observations",
+    "Challenge labels extend beyond some rule guarantees"
+  ]
+}

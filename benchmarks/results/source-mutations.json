@@ -1,0 +1,103 @@
+{
+  "scope": "Eight hand-selected source mutants; not an exhaustive mutation score",
+  "baseline": "passed",
+  "source_hashes": {
+    "__init__.py": "b965a77f88668a4765e21a145454731135fa013ba9d021e9547f8e064f652694",
+    "adapters.py": "b7cca7183682665b6ac1d13d35950ae5b92bf9cf08151c3ec4bfe5dfb1508954",
+    "cli.py": "114307cd65bb2012d92095f20eb86cddc797c08d62f8ef2e98003179ebdbcf59",
+    "engine.py": "a68a94efce931d785c9e0099e592eca24290e9d185e4623d77d99bc1579b80c0",
+    "model.py": "8e69daa9e94a5df7002433f9c63a454d8d8f760a221cf6b06e9e4de62b6c20c1",
+    "mutations.py": "3d7b03385d8eb758ddae7fb8a56f9d8ead2a39f092d66e74b3dc3333ca929224",
+    "rules.py": "f85a67073663dae87e6cfe25b64cecf0f4f3bb50ae6c85df636c447be150e0ca",
+    "serialization.py": "adb446fb7c5246a2366e4e5ef64367672dc54806353f6f2634d9db126089cf96",
+    "text.py": "da610a6ac8556a216a5fabe2074a64ffcb58b3303c86427f652e442764b20d00"
+  },
+  "mutants": [
+    {
+      "id": "coerce_fact_types",
+      "file": "model.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_contracts.py::test_fact_comparison_is_type_sensitive[True-1]",
+        "tests/test_contracts.py::test_fact_comparison_is_type_sensitive[1-1.0]"
+      ]
+    },
+    {
+      "id": "ignore_branch_scope",
+      "file": "rules.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_benchmark.py::test_benchmark_is_reproducible_and_keeps_hard_failures_visible",
+        "tests/test_contracts.py::test_claims_are_scoped_to_their_branch",
+        "tests/test_io_and_plugin.py::test_lifecard_adapter_preserves_branch_identity"
+      ]
+    },
+    {
+      "id": "invert_state_change",
+      "file": "rules.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_benchmark.py::test_benchmark_is_reproducible_and_keeps_hard_failures_visible",
+        "tests/test_contracts.py::test_bookkeeping_and_noop_do_not_count_as_domain_change[after0]",
+        "tests/test_contracts.py::test_bookkeeping_and_noop_do_not_count_as_domain_change[after1]",
+        "tests/test_contracts.py::test_state_change_accepts_real_difference"
+      ]
+    },
+    {
+      "id": "remove_diversity_floor",
+      "file": "rules.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_contracts.py::test_lexical_floor_rejects_simple_padding[palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra palabra ]"
+      ]
+    },
+    {
+      "id": "restore_length_escape",
+      "file": "rules.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[89]",
+        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[90]",
+        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[150]",
+        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[1000]"
+      ]
+    },
+    {
+      "id": "remove_unicode_case_normalization",
+      "file": "text.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_contracts.py::test_history_detects_normalized_repeat"
+      ]
+    },
+    {
+      "id": "ignore_detection_scope",
+      "file": "mutations.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_mutations.py::test_wrong_attribution_does_not_count_as_detection"
+      ]
+    },
+    {
+      "id": "swallow_rule_error",
+      "file": "engine.py",
+      "outcome": "killed",
+      "returncode": 1,
+      "failing_tests": [
+        "tests/test_contracts.py::test_missing_surface_is_error_and_always_blocks",
+        "tests/test_contracts.py::test_rule_errors_and_misattribution_cannot_pass",
+        "tests/test_contracts.py::test_invalid_result_status_cannot_be_accepted"
+      ]
+    }
+  ],
+  "valid": 8,
+  "killed": 8,
+  "score": 1.0
+}

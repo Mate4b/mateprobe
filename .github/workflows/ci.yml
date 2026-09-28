@@ -1,0 +1,23 @@
+name: test-and-build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - run: python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+      - run: pytest
+      - run: ruff check . && ruff format --check . && mypy
+      - run: python benchmarks/run.py --variants 1 --output /tmp/narrative-benchmark
+      - run: python -m build && python -m build packages/pytest-narrative-contracts
+      - name: Source mutation regression checks
+        if: matrix.python == '3.12'
+        run: python benchmarks/mutate_guards.py --output /tmp/source-mutations.json

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest-narrative-contracts"
+version = "0.1.0a1"
+description = "Pytest fixtures and reports for narrative-contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["narrative-contracts==0.1.0a1", "pytest>=8,<10"]
+classifiers = ["Development Status :: 3 - Alpha", "Framework :: Pytest", "Programming Language :: Python :: 3"]
+
+[project.entry-points.pytest11]
+narrative_contracts = "pytest_narrative_contracts.plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pytest_narrative_contracts"]
