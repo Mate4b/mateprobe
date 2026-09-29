@@ -23,6 +23,7 @@ validation:
 nav:
   - Start:
       - Overview: index.md
+      - MateProbe and package names: docs/project-name.md
       - Test AI output validators: docs/testing-ai-output-validators.md
       - Try a validator audit: docs/launch.md
       - First audit recipe: docs/first-audit.md
@@ -37,6 +38,7 @@ nav:
       - Contract semantics: docs/contracts.md
       - Architecture: docs/architecture.md
   - Evidence:
+      - Validator comparison study: docs/validator-study.md
       - Discovery and a3 integration: docs/agent-readiness.md
       - Agent integration trial: docs/agent-adoption.md
       - Real-output mutations: docs/real-output-mutations.md

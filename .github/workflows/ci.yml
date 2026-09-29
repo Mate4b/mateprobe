@@ -32,6 +32,8 @@ jobs:
           cmp benchmarks/real-mutation-results/evaluation/summary.json /tmp/real-mutations/summary.json
           python scripts/compare_replay.py benchmarks/real-mutation-results/evaluation/cases.json /tmp/real-mutations/cases.json --old-version 0.1.0a2 --new-version 0.1.0a4 --report-path result.report
           python examples/five_minute_demo.py
+      - name: Replay immutable validator studies with MateProbe
+        run: python benchmarks/study_replay.py --output /tmp/mateprobe-study-replay
       - name: Audit existing validators offline
         run: python examples/audit_existing_validator.py --output /tmp/validator-audit
       - run: python -m build && python -m build packages/pytest-mateprobe

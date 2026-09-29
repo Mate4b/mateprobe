@@ -1,0 +1,191 @@
+{
+  "authored_inputs": {
+    "jsonschema-bool-ref-cache": [
+      {
+        "id": "boolean-ref-control",
+        "invalid": false,
+        "schema": {
+          "$defs": {
+            "ok": true
+          },
+          "$ref": "#/$defs/ok"
+        },
+        "value": {}
+      },
+      {
+        "id": "boolean-ref-fault",
+        "invalid": true,
+        "schema": {
+          "$defs": {
+            "no": false
+          },
+          "$ref": "#/$defs/no"
+        },
+        "value": {}
+      }
+    ],
+    "jsonschema-enum-bool-int": [
+      {
+        "id": "enum-bool-control",
+        "invalid": false,
+        "schema": {
+          "enum": [
+            false
+          ]
+        },
+        "value": false
+      },
+      {
+        "id": "enum-int-variant",
+        "invalid": true,
+        "schema": {
+          "enum": [
+            false
+          ]
+        },
+        "value": 0
+      }
+    ],
+    "marshmallow-file-url": [
+      {
+        "id": "file-url-control",
+        "invalid": false,
+        "value": "file:///tmp/a"
+      },
+      {
+        "id": "file-url-variant",
+        "invalid": true,
+        "value": "FILE:///tmp/a"
+      }
+    ],
+    "marshmallow-idn-email": [
+      {
+        "id": "idn-email-control",
+        "invalid": false,
+        "value": "user@example.com"
+      },
+      {
+        "id": "idn-email-variant",
+        "invalid": true,
+        "value": "user@b\u00fccher.de"
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "after": "3.0.2",
+      "before": "3.0.1",
+      "behavior": "JSON Schema enum/const distinguish 0 from false",
+      "decision": "include",
+      "id": "jsonschema-enum-bool-int",
+      "package": "jsonschema",
+      "reason": "Release notes explicitly call this a bug fix and identify before/after releases.",
+      "source": "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+      "source_id": "issue #575"
+    },
+    {
+      "after": "4.17.3",
+      "before": "4.17.2",
+      "behavior": "Validator instantiation accepts cached boolean schemas",
+      "decision": "include",
+      "id": "jsonschema-bool-ref-cache",
+      "package": "jsonschema",
+      "reason": "Release notes explicitly call this a bug fix with a fixed release.",
+      "source": "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+      "source_id": "issue #1018"
+    },
+    {
+      "after": "4.2.1",
+      "before": "4.2.0",
+      "behavior": "URL validator handles uppercase FILE scheme",
+      "decision": "include",
+      "id": "marshmallow-file-url",
+      "package": "marshmallow",
+      "reason": "Release notes identify a validation fix and adjacent releases.",
+      "source": "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+      "source_id": "issue #2891"
+    },
+    {
+      "after": "4.2.4",
+      "before": "4.2.3",
+      "behavior": "Email validator accepts valid internationalized domain names",
+      "decision": "include",
+      "id": "marshmallow-idn-email",
+      "package": "marshmallow",
+      "reason": "Release notes identify a validator behavior fix and adjacent releases.",
+      "source": "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+      "source_id": "issues #2821/#2936"
+    },
+    {
+      "after": "4.6.0",
+      "before": "4.5.1",
+      "behavior": "format checker is not enabled by default",
+      "decision": "exclude",
+      "id": "jsonschema-format-default",
+      "package": "jsonschema",
+      "reason": "Documented configuration/default behavior; not a library bug under the frozen rule.",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/945",
+      "source_id": "issue #945"
+    },
+    {
+      "after": "3.0.1",
+      "before": "3.0.0",
+      "behavior": "email format checker is incomplete",
+      "decision": "exclude",
+      "id": "jsonschema-email-completeness",
+      "package": "jsonschema",
+      "reason": "Issue describes an intentionally limited optional format implementation, not a fixed acceptance contract.",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/403",
+      "source_id": "issue #403"
+    },
+    {
+      "after": "2.3.0",
+      "before": "2.2.1",
+      "behavior": "built-in generic forward references",
+      "decision": "exclude",
+      "id": "pydantic-forward-ref-generics",
+      "package": "pydantic",
+      "reason": "Issue was marked unconfirmed and the behavior is typing resolution rather than a validator acceptance fix.",
+      "source": "https://github.com/pydantic/pydantic/issues/6130",
+      "source_id": "issue #6130"
+    },
+    {
+      "after": "2.7.0",
+      "before": "2.6.2",
+      "behavior": "IPv4Address default JSON schema warning",
+      "decision": "exclude",
+      "id": "pydantic-ipv4-default",
+      "package": "pydantic",
+      "reason": "Serialization/schema warning, with no documented before/after validation fix.",
+      "source": "https://github.com/pydantic/pydantic/issues/8942",
+      "source_id": "issue #8942"
+    },
+    {
+      "after": "3.13.0",
+      "before": "3.12.0",
+      "behavior": "default/missing parameter transition",
+      "decision": "exclude",
+      "id": "marshmallow-required-default",
+      "package": "marshmallow",
+      "reason": "Intentional API/deprecation transition and configuration semantics, not a validator defect.",
+      "source": "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+      "source_id": "issue #1742"
+    },
+    {
+      "after": "2.12.0",
+      "before": "2.11.0",
+      "behavior": "serialize_as_any IPv4 serialization",
+      "decision": "exclude",
+      "id": "pydantic-serialize-any-regression",
+      "package": "pydantic",
+      "reason": "Serialization regression; not a validation acceptance contract and no fixed after release in the primary record.",
+      "source": "https://github.com/pydantic/pydantic/issues/12348",
+      "source_id": "issue #12348"
+    }
+  ],
+  "protocol_sha256": "de180ac023177e9a72e38fa17f5e5cd036844533d1eacdc9f2d4bedc7a7ab1d0",
+  "source_hashes": {
+    "benchmarks/historical_validator_study.py": "69037aec28acf14af2c28c2ec8a35e1daf21a901369f7893e4ef7421860a075d",
+    "paper/historical-validator-protocol.md": "de180ac023177e9a72e38fa17f5e5cd036844533d1eacdc9f2d4bedc7a7ab1d0"
+  }
+}

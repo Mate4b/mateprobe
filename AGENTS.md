@@ -21,6 +21,14 @@ and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
 
+## Project identity
+
+The current project is **MateProbe by Mate4B** (`mateprobe`, `pytest-mateprobe`, a4).
+Frozen a3 study drivers, protocols, captures and hashes retain their original names
+and source bytes. Use `benchmarks/study_replay.py` to replay those studies against
+MateProbe; direct historical commands require an isolated a3 environment.
+See docs/project-name.md and docs/validator-study.md.
+
 ## Version boundary
 
 The current release is `0.1.0a4`, including independent audits and state bindings.

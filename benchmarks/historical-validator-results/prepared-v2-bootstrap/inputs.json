@@ -1,0 +1,292 @@
+{
+  "authored_inputs": {
+    "jsonschema-bool-ref-cache": [
+      {
+        "baseline": {
+          "kind": "refs",
+          "schema": {
+            "$ref": "urn:study:ok"
+          },
+          "store": {
+            "urn:study:ok": {
+              "type": "object"
+            }
+          },
+          "value": {}
+        },
+        "expected": [],
+        "id": "cached-boolean-valid",
+        "relation": "preserve",
+        "variant": {
+          "kind": "refs",
+          "schema": {
+            "$ref": "urn:study:ok"
+          },
+          "store": {
+            "urn:study:any": true,
+            "urn:study:ok": {
+              "type": "object"
+            }
+          },
+          "value": {}
+        }
+      },
+      {
+        "baseline": {
+          "kind": "refs",
+          "schema": {
+            "$ref": "urn:study:ok"
+          },
+          "store": {
+            "urn:study:ok": {
+              "type": "object"
+            }
+          },
+          "value": {}
+        },
+        "expected": [],
+        "id": "cached-object-control",
+        "relation": "preserve",
+        "variant": {
+          "kind": "refs",
+          "schema": {
+            "$ref": "urn:study:ok"
+          },
+          "store": {
+            "urn:study:ok": {
+              "type": "object"
+            },
+            "urn:study:other": {
+              "type": "array"
+            }
+          },
+          "value": {}
+        }
+      }
+    ],
+    "jsonschema-enum-bool-int": [
+      {
+        "baseline": {
+          "kind": "enum",
+          "schema": {
+            "enum": [
+              false
+            ]
+          },
+          "value": false
+        },
+        "expected": [
+          "enum@$"
+        ],
+        "id": "enum-int-fault",
+        "relation": "violation",
+        "variant": {
+          "kind": "enum",
+          "schema": {
+            "enum": [
+              false
+            ]
+          },
+          "value": 0
+        }
+      },
+      {
+        "baseline": {
+          "kind": "enum",
+          "schema": {
+            "enum": [
+              false
+            ]
+          },
+          "value": false
+        },
+        "expected": [],
+        "id": "enum-valid-control",
+        "relation": "preserve",
+        "variant": {
+          "kind": "enum",
+          "schema": {
+            "enum": [
+              false,
+              true
+            ]
+          },
+          "value": false
+        }
+      }
+    ],
+    "marshmallow-file-url": [
+      {
+        "baseline": {
+          "kind": "file",
+          "value": "file:///tmp/a"
+        },
+        "expected": [],
+        "id": "uppercase-scheme-valid",
+        "relation": "preserve",
+        "variant": {
+          "kind": "file",
+          "value": "FILE:///tmp/a"
+        }
+      },
+      {
+        "baseline": {
+          "kind": "file",
+          "value": "file:///tmp/a"
+        },
+        "expected": [],
+        "id": "lowercase-control",
+        "relation": "preserve",
+        "variant": {
+          "kind": "file",
+          "value": "file:///tmp/b"
+        }
+      }
+    ],
+    "marshmallow-idn-email": [
+      {
+        "baseline": {
+          "kind": "email",
+          "value": "user@example.com"
+        },
+        "expected": [],
+        "id": "unicode-tld-valid",
+        "relation": "preserve",
+        "variant": {
+          "kind": "email",
+          "value": "user@пример.рф"
+        }
+      },
+      {
+        "baseline": {
+          "kind": "email",
+          "value": "user@example.com"
+        },
+        "expected": [],
+        "id": "ascii-control",
+        "relation": "preserve",
+        "variant": {
+          "kind": "email",
+          "value": "user2@example.com"
+        }
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "after": "3.0.2",
+      "before": "3.0.1",
+      "behavior": "JSON Schema enum/const distinguish 0 from false",
+      "decision": "include",
+      "id": "jsonschema-enum-bool-int",
+      "package": "jsonschema",
+      "reason": "Release notes explicitly call this a bug fix and identify before/after releases.",
+      "release_source": "https://github.com/python-jsonschema/jsonschema/blob/51cd75e399c760e5aa3adce600dcce1385756ab0/CHANGELOG.rst",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/575",
+      "source_id": "issue #575"
+    },
+    {
+      "after": "4.17.3",
+      "before": "4.17.2",
+      "behavior": "Validator instantiation accepts cached boolean schemas",
+      "decision": "include",
+      "id": "jsonschema-bool-ref-cache",
+      "package": "jsonschema",
+      "reason": "Release notes explicitly call this a bug fix with a fixed release.",
+      "release_source": "https://github.com/python-jsonschema/jsonschema/blob/51cd75e399c760e5aa3adce600dcce1385756ab0/CHANGELOG.rst",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/1018",
+      "source_id": "issue #1018"
+    },
+    {
+      "after": "4.2.1",
+      "before": "4.2.0",
+      "behavior": "URL validator handles uppercase FILE scheme",
+      "decision": "include",
+      "id": "marshmallow-file-url",
+      "package": "marshmallow",
+      "reason": "Release notes identify a validation fix and adjacent releases.",
+      "release_source": "https://github.com/marshmallow-code/marshmallow/blob/7f0792bd7a06f72e393ec866ac1e89e1502ccfe1/CHANGELOG.rst",
+      "source": "https://github.com/marshmallow-code/marshmallow/issues/2891",
+      "source_id": "issue #2891"
+    },
+    {
+      "after": "4.2.4",
+      "before": "4.2.3",
+      "behavior": "Email validator accepts valid internationalized domain names",
+      "decision": "include",
+      "id": "marshmallow-idn-email",
+      "package": "marshmallow",
+      "reason": "Release notes identify a validator behavior fix and adjacent releases.",
+      "release_source": "https://github.com/marshmallow-code/marshmallow/blob/7f0792bd7a06f72e393ec866ac1e89e1502ccfe1/CHANGELOG.rst",
+      "source": "https://github.com/marshmallow-code/marshmallow/issues/2936",
+      "source_id": "issue #2936"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "format checker is not enabled by default",
+      "decision": "exclude",
+      "id": "jsonschema-format-default",
+      "package": "jsonschema",
+      "reason": "Documented configuration/default behavior; not a library bug under the frozen rule.",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/945",
+      "source_id": "issue #945"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "email format checker is incomplete",
+      "decision": "exclude",
+      "id": "jsonschema-email-completeness",
+      "package": "jsonschema",
+      "reason": "Optional format-check completeness dispute; no documented before/after fix established in screening.",
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/403",
+      "source_id": "issue #403"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "built-in generic forward references",
+      "decision": "exclude",
+      "id": "pydantic-forward-ref-generics",
+      "package": "pydantic",
+      "reason": "Model/type resolution rather than value validation; no fixed before/after release established in screening.",
+      "source": "https://github.com/pydantic/pydantic/issues/6130",
+      "source_id": "issue #6130"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "IPv4Address default JSON schema warning",
+      "decision": "exclude",
+      "id": "pydantic-ipv4-default",
+      "package": "pydantic",
+      "reason": "Serialization/schema warning, with no documented before/after validation fix.",
+      "source": "https://github.com/pydantic/pydantic/issues/8942",
+      "source_id": "issue #8942"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "default/missing parameter transition",
+      "decision": "exclude",
+      "id": "marshmallow-required-default",
+      "package": "marshmallow",
+      "reason": "Intentional API/deprecation transition and configuration semantics, not a validator defect.",
+      "source": "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+      "source_id": "issue #1742"
+    },
+    {
+      "after": null,
+      "before": null,
+      "behavior": "ModuleType serialization fails with serialize_as_any",
+      "decision": "exclude",
+      "id": "pydantic-serialize-any-regression",
+      "package": "pydantic",
+      "reason": "Serialization-only report; outside this study. No validation fix release was established.",
+      "source": "https://github.com/pydantic/pydantic/issues/12348",
+      "source_id": "issue #12348"
+    }
+  ],
+  "preflight_revision": 2
+}

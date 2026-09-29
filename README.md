@@ -244,6 +244,15 @@ trusted Python state transitions, checks branch selection and declarations, and 
 valid paraphrases and failures that remain outside the prose guarantee. It is independent of
 LifeCard; this is an executable second integration, not evidence of broad domain generalization.
 
+## Controlled and historical validator evidence
+
+The [a3 validator study](docs/validator-study.md) compares 144 paired cases under eight
+authored profiles. Detailed Python assertions and the audit agree on all 1,152
+classifications; boolean rejection alone loses diagnostic attribution. A separate
+version-pinned study reproduces three public historical fixes across jsonschema and
+Marshmallow, retaining a fourth unsuccessful reproduction and all compatibility
+failures. This is author-run evidence, not external adoption or natural-text accuracy.
+
 ## Reproduce or challenge the results
 
 ```sh

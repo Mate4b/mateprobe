@@ -25,6 +25,8 @@ Supply authoritative state and branch selection from trusted application code. V
 - [Contract semantics](https://mate4b.github.io/mateprobe/docs/contracts.md): typed equality, unknowns, errors, policies, and mutation denominators.
 - [Real-output mutations](https://mate4b.github.io/mateprobe/docs/real-output-mutations.md): 32 captured responses, 384 authored variants, and 64 accepted prose-only challenges; no semantic accuracy claim.
 
+- [Controlled and historical validator studies](https://mate4b.github.io/mateprobe/docs/validator-study.md): 1,152 paired classifications agree with detailed assertions; three historical fixes reproduced across two packages, with failures and selection limits retained. Includes historical a3 and current MateProbe replay instructions.
+
 ## Audit existing validators
 
 You do not need to change your validator to start. These APIs are available in a4.

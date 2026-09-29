@@ -1,0 +1,77 @@
+{
+  "excluded": 6,
+  "fixes_reproduced": 3,
+  "included": 4,
+  "results": [
+    {
+      "after_version": "3.0.2",
+      "before_version": "3.0.1",
+      "fix_reproduced": true,
+      "id": "jsonschema-enum-bool-int",
+      "outcomes": {
+        "3.0.1": {
+          "enum-int-fault": "survived",
+          "enum-valid-control": "preserved"
+        },
+        "3.0.2": {
+          "enum-int-fault": "detected",
+          "enum-valid-control": "preserved"
+        }
+      },
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/575"
+    },
+    {
+      "after_version": "4.17.3",
+      "before_version": "4.17.1",
+      "fix_reproduced": true,
+      "id": "jsonschema-bool-ref-cache",
+      "outcomes": {
+        "4.17.1": {
+          "cached-boolean-valid": "error",
+          "cached-object-control": "preserved"
+        },
+        "4.17.3": {
+          "cached-boolean-valid": "preserved",
+          "cached-object-control": "preserved"
+        }
+      },
+      "source": "https://github.com/python-jsonschema/jsonschema/issues/1018"
+    },
+    {
+      "after_version": "4.2.1",
+      "before_version": "4.2.0",
+      "fix_reproduced": true,
+      "id": "marshmallow-file-url",
+      "outcomes": {
+        "4.2.0": {
+          "lowercase-control": "preserved",
+          "uppercase-scheme-valid": "regressed"
+        },
+        "4.2.1": {
+          "lowercase-control": "preserved",
+          "uppercase-scheme-valid": "preserved"
+        }
+      },
+      "source": "https://github.com/marshmallow-code/marshmallow/issues/2891"
+    },
+    {
+      "after_version": "4.2.4",
+      "before_version": "4.2.3",
+      "fix_reproduced": false,
+      "id": "marshmallow-idn-email",
+      "outcomes": {
+        "4.2.3": {
+          "ascii-control": "preserved",
+          "unicode-tld-valid": "preserved"
+        },
+        "4.2.4": {
+          "ascii-control": "preserved",
+          "unicode-tld-valid": "preserved"
+        }
+      },
+      "source": "https://github.com/marshmallow-code/marshmallow/issues/2936"
+    }
+  ],
+  "schema_version": 1,
+  "screened": 10
+}

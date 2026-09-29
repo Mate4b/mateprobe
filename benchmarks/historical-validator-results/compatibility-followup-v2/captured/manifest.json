@@ -1,0 +1,14 @@
+{
+  "files": {
+    "captured.json": "cff5b666aacfc848c557a36bbe1c28403e05265b0918e1dca808c637f63c8875",
+    "jsonschema-3.0.1.lock.txt": "6c9323fdb37a347ad757ef9a48d859caa2d428e5105ac987977326cd7c260dbd",
+    "jsonschema-3.0.2.lock.txt": "6eba25f854a8c1f6b17936f8d312a0e71e529630f22f7e216c9e71727595b89e",
+    "jsonschema-4.17.1.lock.txt": "cbcdc8d2ed03fbdbf57a9aaa3c6dc09bb67ca99ae89d16901549ce33d737c9c0",
+    "jsonschema-4.17.3.lock.txt": "839c46ca0b682f2f69ae74c921b15761456ea9107d3fb315ca2e0d7941107f8a",
+    "marshmallow-4.2.0.lock.txt": "42d87bc7dbcbece58f644985e692238b2a6273d097e85deffc337316a6aa0ca0",
+    "marshmallow-4.2.1.lock.txt": "58dc973cc15ec968b9e44708e7ea902faaddb5a380096a4f794ae370dc944b02",
+    "marshmallow-4.2.3.lock.txt": "1d7fa2cd4b51cd71b9a58cfd7bfb0a657d9f94dfc44cf957829af622faa14e57",
+    "marshmallow-4.2.4.lock.txt": "201c63e7fd2b26bde60fece7e85d6f35d651e3362edfa787cf6e536cd5fdd14b"
+  },
+  "prepared_manifest_sha256": "59890219a60da350c31377fa16743d8efead43ded32c1a331f72f9a47908d92b"
+}

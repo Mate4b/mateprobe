@@ -1,0 +1,6 @@
+attrs==26.1.0
+jsonschema==3.0.2
+pyrsistent==0.20.0
+setuptools==84.0.0
+six==1.17.0
+setuptools==70.3.0
