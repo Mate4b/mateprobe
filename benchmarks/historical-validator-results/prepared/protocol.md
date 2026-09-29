@@ -69,3 +69,12 @@ artifact hashes from pip's installation report. Re-collection installs those
 recorded dependency versions when supplied via `--lock-from`. Offline replay
 does not reinstall packages and is distinguished from fresh package execution.
 Hashes detect accidental changes; mutable manifests are not tamper-proof evidence.
+
+## Bootstrap-only execution deviation
+
+Two initial collection attempts stopped while creating the first virtual environment,
+before installing a historical package or executing any sample. This macOS Python
+distribution aborts when its executable is copied by EnvBuilder; the collector now
+uses symlinks, matching the working command-line venv behavior. The source/protocol
+were re-frozen before sample execution. The preceding prepared snapshot is retained
+as `prepared-v2-bootstrap/`; case selection, labels and adapter logic are unchanged.

@@ -120,7 +120,7 @@ def collect(work, output, lock_from=None):
             env = work / name
             if env.exists():
                 raise ValueError("Use a fresh environment directory: " + str(env))
-            venv.EnvBuilder(with_pip=True, symlinks=True).create(env)
+            venv.EnvBuilder(with_pip=True).create(env)
             python = str(env / "bin/python")
             pip_report = env / "install.json"
             install_args = [candidate["package"] + "==" + version]
