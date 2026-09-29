@@ -1,4 +1,4 @@
-"""Five-minute, offline walkthrough of the narrative-contracts API.
+"""Five-minute, offline walkthrough of the mateprobe API.
 
 The transition below is ordinary application code. It produces scalar state
 snapshots before a reply is constructed; the contract runner only checks the
@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -23,9 +23,9 @@ from narrative_contracts import (
     Surface,
     evaluate,
 )
-from narrative_contracts.engine import Contract
-from narrative_contracts.model import Scalar
-from narrative_contracts.mutations import (
+from mateprobe.engine import Contract
+from mateprobe.model import Scalar
+from mateprobe.mutations import (
     MutationCase,
     Relation,
     Sample,

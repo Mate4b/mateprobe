@@ -1,6 +1,6 @@
 # Audit provenance and report schema 2
 
-The external-validator audit uses report schema **2** in alpha 0.1.0a3.
+The external-validator audit uses report schema **2** in alpha 0.1.0a4.
 The original state-evaluation and mutation-report formats are unchanged. The
 pytest JSON envelope remains schema 1; each nested report has its own schema.
 
@@ -12,8 +12,9 @@ Every external audit includes:
 - `schema_version`: the report format, independent from the package version.
 - `provenance`: null unless explicitly supplied, or a Git snapshot labelled by source.
 
-Version 0.1.0a3 identifies the new audit APIs and report metadata. Historical
-0.1.0a2 wheels and frozen benchmark artifacts retain their original versions.
+Version 0.1.0a4 identifies the renamed MateProbe distribution. The audit APIs and
+report schema introduced in Narrative Contracts 0.1.0a3 are unchanged. Historical
+a2/a3 wheels and frozen benchmark artifacts retain their original versions.
 A package version alone does not identify a local patch or external validator;
 retain code/configuration and explicit provenance for development comparisons.
 
@@ -41,8 +42,8 @@ Scores, exclusions, challenge scopes, and denominators are unchanged.
 ## Explicitly observe a repository
 
 ```python
-from narrative_contracts.provenance import observe_git
-from narrative_contracts.validator_audit import audit_validator
+from mateprobe.provenance import observe_git
+from mateprobe.validator_audit import audit_validator
 
 git = observe_git("/path/to/validator-repository")
 report = audit_validator(
@@ -69,7 +70,7 @@ reproducibility requires them. External dependencies need their own version reco
 ## Caller-supplied CI metadata
 
 ```python
-from narrative_contracts.provenance import supplied_git_provenance
+from mateprobe.provenance import supplied_git_provenance
 
 git = supplied_git_provenance(commit="0123456789abcdef0123456789abcdef01234567")
 # source="supplied", dirty=None (unknown), no Git command executed.

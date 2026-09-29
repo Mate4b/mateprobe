@@ -14,7 +14,7 @@ from dataclasses import replace
 from pathlib import Path
 from time import perf_counter_ns
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -29,8 +29,8 @@ from narrative_contracts import (
     Surface,
     evaluate,
 )
-from narrative_contracts.model import plain
-from narrative_contracts.mutations import (
+from mateprobe.model import plain
+from mateprobe.mutations import (
     MutationCase,
     Relation,
     Sample,

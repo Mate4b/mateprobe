@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest-mateprobe"
+version = "0.1.0a4"
+description = "Pytest fixtures and reports for mateprobe"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["mateprobe==0.1.0a4", "pytest>=8,<10"]
+classifiers = ["Development Status :: 3 - Alpha", "Framework :: Pytest", "Programming Language :: Python :: 3"]
+
+[project.urls]
+Repository = "https://github.com/Mate4b/mateprobe"
+Issues = "https://github.com/Mate4b/mateprobe/issues"
+Documentation = "https://mate4b.github.io/mateprobe/"
+
+[project.entry-points.pytest11]
+mateprobe = "pytest_mateprobe.plugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pytest_mateprobe"]

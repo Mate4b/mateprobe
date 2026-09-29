@@ -1,5 +1,9 @@
 # Alpha a2 verification record
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 Verified locally on 2026-09-29 with CPython 3.12.13 on macOS arm64.
 The development tool versions are recorded in `requirements-dev.lock`.
 

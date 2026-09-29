@@ -184,4 +184,4 @@ class Report:
                 for c in self.checks
                 if self.policy.blocks(c)
             ]
-            raise AssertionError("Narrative contract failure:\n" + "\n".join(messages))
+            raise AssertionError("MateProbe contract failure:\n" + "\n".join(messages))

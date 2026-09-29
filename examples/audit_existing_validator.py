@@ -13,9 +13,9 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.provenance import observe_git
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
+from mateprobe.mutations import Relation, Validity
+from mateprobe.provenance import observe_git
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict, audit_validator
 
 Sample = dict[str, Any]
 

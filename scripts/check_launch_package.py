@@ -1,4 +1,4 @@
-"""Check the one-file launch recipe using installed a3 packages, outside the checkout."""
+"""Check the one-file launch recipe using installed a4 packages, outside the checkout."""
 
 from __future__ import annotations
 
@@ -38,17 +38,17 @@ def main() -> None:
             "installation",
             [
                 "-c",
-                "import json, importlib.metadata as m, narrative_contracts as n; "
+                "import json, importlib.metadata as m, mateprobe as n; "
                 "print(json.dumps({'path': n.__file__, 'runtime': n.__version__, 'versions': "
-                "{p: m.version(p) for p in ['narrative-contracts', 'pytest-narrative-contracts']}}))",
+                "{p: m.version(p) for p in ['mateprobe', 'pytest-mateprobe']}}))",
             ],
         )
     )
     package_path = Path(installation["path"]).resolve()
     if package_path.is_relative_to(ROOT) or "site-packages" not in package_path.parts:
         raise RuntimeError("Use installed distributions, not an editable checkout")
-    assert installation["runtime"] == "0.1.0a3"
-    assert set(installation["versions"].values()) == {"0.1.0a3"}
+    assert installation["runtime"] == "0.1.0a4"
+    assert set(installation["versions"].values()) == {"0.1.0a4"}
     script = output / "first_audit.py"
     shutil.copyfile(ROOT / "examples/first_audit.py", script)
     run("demo", [str(script), "--output", str(output / "reports")])
@@ -78,7 +78,7 @@ def main() -> None:
                 "-c",
                 os.devnull,
                 str(path),
-                f"--narrative-report={report_path}",
+                f"--mateprobe-report={report_path}",
             ],
             expected=exit_code,
         )
@@ -121,7 +121,7 @@ def main() -> None:
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(
-        "Launch recipe passed from installed a3; removing the fix and reject-all fail with reports."
+        "Launch recipe passed from installed a4; removing the fix and reject-all fail with reports."
     )
 
 

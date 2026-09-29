@@ -1,5 +1,9 @@
 # Discovery and integration observations
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 We ran two separate tasks with fresh-context `gpt-5.6-luna` agents: finding a tool
 from a testing problem without a supplied package name, and integrating published
 `0.1.0a3` from its public documentation. The criteria were recorded beforehand.

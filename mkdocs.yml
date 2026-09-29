@@ -1,7 +1,7 @@
-site_name: Narrative Contracts
-site_url: https://mate4b.github.io/narrative-contracts/
+site_name: MateProbe by Mate4B
+site_url: https://mate4b.github.io/mateprobe/
 site_description: Test Python validators with invalid AI output samples and valid controls. Find missed faults and wrong-reason rejections with pytest audit reports.
-repo_url: https://github.com/Mate4b/narrative-contracts
+repo_url: https://github.com/Mate4b/mateprobe
 edit_uri: ''
 docs_dir: .docs-src
 site_dir: site
@@ -29,7 +29,8 @@ nav:
       - Integration feedback: docs/integration-feedback.md
       - Quickstart: docs/quickstart.md
       - Agent integration: docs/agent-guide.md
-      - Published API: docs/api-a3.md
+      - Migration to MateProbe: docs/migration-mateprobe.md
+      - Published API: docs/api-a4.md
       - Pydantic recipe: docs/pydantic.md
   - Guarantees:
       - Choosing an evaluator: docs/choosing-an-evaluator.md
@@ -43,7 +44,7 @@ nav:
       - Expanded mutations: docs/mutation-campaign.md
       - Technical report: paper/draft.md
   - Validator audits:
-      - Alpha a3 scope: docs/development-scope.md
+      - Alpha a4 scope: docs/development-scope.md
       - Validator audits: docs/validator-audit.md
       - Adoption levels: docs/adoption-levels.md
       - Policy regression: docs/policy-regression.md

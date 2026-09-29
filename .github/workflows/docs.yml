@@ -14,21 +14,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  published-examples:
+  installed-examples:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install the published alpha, not this checkout
-        run: >-
-          python -m pip install --index-url https://pypi.org/simple
-          narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
-          -r requirements-integrations.txt
+      - name: Build and install MateProbe wheels outside the source tree
+        run: |
+          python -m pip install build
+          python -m build --wheel --outdir /tmp/mateprobe-wheels
+          python -m build --wheel packages/pytest-mateprobe --outdir /tmp/mateprobe-wheels
+          python -m pip install /tmp/mateprobe-wheels/*.whl -r requirements-integrations.txt
       - run: python scripts/check_alpha_install.py --output /tmp/published-docs-evidence
       - run: python scripts/check_launch_package.py --output /tmp/launch-evidence
-      - run: python benchmarks/replay_agent_readiness.py --output /tmp/a3-agent-readiness
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -36,7 +36,22 @@ jobs:
           path: |
             /tmp/published-docs-evidence
             /tmp/launch-evidence
-            /tmp/a3-agent-readiness
+
+  historical-a3-trial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install the historical a3 trial dependencies
+        run: python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+      - run: python benchmarks/replay_agent_readiness.py --output /tmp/a3-agent-readiness
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: historical-a3-agent-readiness
+          path: /tmp/a3-agent-readiness
 
   historical-a2-trial:
     runs-on: ubuntu-latest
@@ -72,7 +87,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [build, published-examples, historical-a2-trial]
+    needs: [build, installed-examples, historical-a2-trial, historical-a3-trial]
     runs-on: ubuntu-latest
     permissions:
       pages: write

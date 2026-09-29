@@ -1,7 +1,7 @@
 import pytest
 
-from narrative_contracts.bindings import check_fields
-from narrative_contracts.model import Status
+from mateprobe.bindings import check_fields
+from mateprobe.model import Status
 
 
 def test_bindings_are_type_sensitive_and_report_mismatch():

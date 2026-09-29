@@ -1,5 +1,9 @@
 # Mutation audit on real model outputs
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 This campaign applies authored mutations to the 32 captured responses from the user's
 installed `gemma4:26b-mlx-hermes` and `qwen3.8:27b` tags. It makes no new model calls.
 These are fictional public scenarios, not production LifeCard sessions. All 32 original

@@ -1,6 +1,12 @@
 # Roadmap and release gates
 
-## Public alpha a3
+## MateProbe alpha a4
+
+The current namespace is `mateprobe`, with optional `pytest-mateprobe` integration.
+Version `0.1.0a4` renames the project under Mate4B while preserving MIT licensing,
+rule behavior and historical research artifacts. See the [migration guide](migration-mateprobe.md).
+
+## Historical public alpha a3
 
 - [x] Audit existing validators through plain samples and normalized verdicts.
 - [x] Independent evidence flags, actionable reports and optional Git provenance.
@@ -25,7 +31,7 @@ adoption and corpus relevance remain open questions, not claims established by C
   The release provenance records the verified commit and CI run.
 
 The release verification records identify the exact published state.
-Both a2 and a3 are available on PyPI; a3 is the current documented install target.
+Both a2 and a3 remain available on PyPI under their original Narrative Contracts names.
 
 ## Additional published evidence
 

@@ -1,4 +1,4 @@
-"""Exercise a3 APIs and pytest using installed distributions, never editable source."""
+"""Exercise a4 APIs and pytest using installed distributions, never editable source."""
 
 from __future__ import annotations
 
@@ -19,13 +19,13 @@ def main() -> None:
     args = parser.parse_args()
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
-    verify(output, "0.1.0a3")
+    verify(output, "0.1.0a4")
     text = (ROOT / "docs/policy-regression.md").read_text()
     blocks = re.findall(r"^```python\n(.*?)^```", text, re.MULTILINE | re.DOTALL)
     test = output / "test_policy_regression.py"
     test.write_text("\n\n".join(blocks))
     commands = [
-        ["-m", "pytest", "-q", "-c", os.devnull, str(test), "--narrative-report=policy-audit.json"],
+        ["-m", "pytest", "-q", "-c", os.devnull, str(test), "--mateprobe-report=policy-audit.json"],
         [str(ROOT / "examples/audit_existing_validator.py"), "--output", str(output / "refund")],
         [str(ROOT / "examples/external_validators.py"), "--output", str(output / "integrations")],
     ]
@@ -37,7 +37,7 @@ def main() -> None:
         if result.returncode:
             raise RuntimeError(result.stdout + result.stderr)
     report = json.loads((output / "policy-audit.json").read_text())["reports"][0]
-    assert report["library_version"] == "0.1.0a3"
+    assert report["library_version"] == "0.1.0a4"
     assert report["summary"]["counts"] == {"detected": 2, "preserved": 1}
     flags = report["summary"]["obligations"][0]
     assert flags["has_fault_tests"] and flags["has_controls"]
@@ -46,7 +46,7 @@ def main() -> None:
         json.dumps(
             {
                 "status": "passed",
-                "library_version": "0.1.0a3",
+                "library_version": "0.1.0a4",
                 "policy_regression": report["summary"],
                 "checks": [
                     "installed paths and versions",
@@ -63,7 +63,7 @@ def main() -> None:
         )
         + "\n"
     )
-    print("a3 installed-package regression, plugin, refund and third-party examples passed.")
+    print("a4 installed-package regression, plugin, refund and third-party examples passed.")
 
 
 if __name__ == "__main__":

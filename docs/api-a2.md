@@ -1,5 +1,9 @@
 # Published API: 0.1.0a2
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 This reference covers the installed PyPI alpha, not every symbol on `main`.
 Use Python 3.11+ and pin `narrative-contracts==0.1.0a2`. See the
 [complete runnable example](agent-guide.md#a-complete-pytest-example).

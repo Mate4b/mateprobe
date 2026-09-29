@@ -1,6 +1,6 @@
-# Integrate Narrative Contracts in an agent project
+# Integrate MateProbe by Mate4B in an agent project
 
-This guide targets **published alpha 0.1.0a3**, Python 3.11+. Use it when an
+This guide targets **alpha 0.1.0a4**, Python 3.11+. Use it when an
 application has authoritative state and needs to test explicit declarations in
 generated outputs against that state. The check itself makes no model or network calls.
 
@@ -9,17 +9,17 @@ and the [one-file audit](first-audit.md). `audit_validator` accepts a sample-onl
 adapter and caller-authored baseline/variant pairs; you do not need to migrate to
 the `Document`/`Claim` representation used in the state-check example below.
 
-## Install the published API
+## Install the alpha API
 
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
 ```
 
-The second package supplies pytest and the automatically discovered `narrative`
+The second package supplies pytest and the automatically discovered `mateprobe`
 fixture. Do not also load it with `-p`. Pin the alpha versions rather than assuming
-an unqualified pip install selects a prerelease. See [API reference](api-a3.md).
+an unqualified pip install selects a prerelease. See [API reference](api-a4.md).
 
 ## Choose the source of authority
 
@@ -43,7 +43,7 @@ prose-only failure that remains outside the guarantee.
 ```python
 import pytest
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -53,7 +53,7 @@ from narrative_contracts import (
 )
 
 
-def test_reply_contract(narrative):
+def test_reply_contract(mateprobe):
     # This snapshot is provided by the application, independently of the output.
     context = Context({"current": {"ticket.status": "resolved"}})
     rules = (DeclaredClaimsConsistent("ticket-claims", ("reply",)),)
@@ -70,7 +70,7 @@ def test_reply_contract(narrative):
             )
         )
 
-    accepted = narrative.check(reply("resolved", "Your ticket is resolved."), context, rules)
+    accepted = mateprobe.check(reply("resolved", "Your ticket is resolved."), context, rules)
     assert accepted.accepted and accepted.complete
 
     wrong = reply("open", "Your ticket remains open.")
@@ -84,10 +84,10 @@ def test_reply_contract(narrative):
     )
     # The fixture records the report and raises on rejection.
     with pytest.raises(AssertionError):
-        narrative.check(wrong, context, rules)
+        mateprobe.check(wrong, context, rules)
 
     # Correct declaration, contradictory prose: deliberately still accepted.
-    prose_gap = narrative.check(
+    prose_gap = mateprobe.check(
         reply("resolved", "Your ticket remains open."),
         context,
         rules,
@@ -96,7 +96,7 @@ def test_reply_contract(narrative):
 ```
 
 ```sh
-python -m pytest -q test_reply.py --narrative-report=contract-results.json
+python -m pytest -q test_reply.py --mateprobe-report=contract-results.json
 ```
 
 Expected: one passing test with three recorded evaluations. The prose challenge
@@ -130,8 +130,8 @@ and preservation separately, with exclusions and missed faults visible.
 ## API version
 
 `check_fields`, `CompareFields`, `AllowedTransition`, and the independent
-validator-audit API are included in **0.1.0a3**. Older a2 wheels do not provide them.
-See [the a3 API index](api-a3.md) and [adoption levels](adoption-levels.md). Pin the
+validator-audit API are included in **0.1.0a4**. Older a2 wheels do not provide them.
+See [the current a4 API index](api-a4.md) and [adoption levels](adoption-levels.md). Pin the
 package version rather than silently switching a consumer to `main`.
 
 For free-form factual correctness or writing quality, this library alone is

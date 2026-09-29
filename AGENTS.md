@@ -1,4 +1,4 @@
-# Working on Narrative Contracts
+# Working on MateProbe by Mate4B
 
 ## Install and verify
 
@@ -7,7 +7,7 @@ Use Python 3.11+. From the repository root:
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+python -m pip install -e '.[dev]' -e ./packages/pytest-mateprobe
 pytest
 ruff check .
 ruff format --check .
@@ -16,18 +16,20 @@ mypy
 
 For documentation builds, install `requirements-docs.txt` and run
 `python scripts/build_docs.py`. For published-package examples, use a **separate**
-environment with `narrative-contracts==0.1.0a3`, `pytest-narrative-contracts==0.1.0a3`,
+environment with `mateprobe==0.1.0a4`, `pytest-mateprobe==0.1.0a4`,
 and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
 
 ## Version boundary
 
-The current release is `0.1.0a3`, including independent audits and state bindings.
+The current release is `0.1.0a4`, including independent audits and state bindings.
 Verify built distributions in an isolated environment with
 `python scripts/check_alpha_install.py --output /tmp/alpha-check` (install the
 optional integration requirements first). Keep frozen a2 research artifacts and
-the agent-adoption replay pinned to a2; do not rewrite historical evidence.
+the agent-adoption replay pinned to a2 and agent-readiness replay pinned to a3;
+do not rewrite historical evidence. Use `benchmarks/replay_renamed_mutations.py`
+for the frozen real-output mutation replay against MateProbe.
 Keep the agent guide, `llms.txt`, and API reference consistent with installable artifacts.
 
 ## Public repository boundary

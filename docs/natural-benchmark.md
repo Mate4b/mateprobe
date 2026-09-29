@@ -1,5 +1,9 @@
 # Real-model pilot and deterministic replay
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 This pilot uses actual locally generated outputs from Qwen3 and Gemma3 on fictional,
 authored scenarios. It is distinct from synthetic mutations and from production traffic.
 The frozen design is in [release-protocol.md](../paper/release-protocol.md).

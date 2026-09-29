@@ -1,8 +1,8 @@
-# Narrative Contracts
+# MateProbe by Mate4B
 
 **Test whether your Python validator catches invalid AI outputs and preserves valid ones.**
 
-Narrative Contracts audits your existing validator with paired input variants:
+MateProbe audits your existing validator with paired input variants:
 known faults and valid controls. It reports missed faults, rejections for the wrong
 reason, incomplete evidence, and execution errors. You supply the cases and policy;
 the audit runs without an LLM judge.
@@ -11,21 +11,23 @@ Here, mutations are changes to the **samples passed to the validator**. The audi
 does not rewrite its Python source. See [how to test AI output validators](docs/testing-ai-output-validators.md)
 for the workflow and how it fits with ordinary pytest and source mutation testing.
 
-Alpha `0.1.0a3`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
+Alpha `0.1.0a4`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
-[Documentation](https://mate4b.github.io/narrative-contracts/) ·
-[Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a3.md) ·
+[Documentation](https://mate4b.github.io/mateprobe/) ·
+[Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a4.md) ·
 [Pydantic recipe](docs/pydantic.md) · [Documentation index for agents](llms.txt)
 
 [Try the one-file audit](docs/first-audit.md): a refund claim without a matching receipt,
 a retained prose survivor, and a pytest regression.
 
+Previously **Narrative Contracts**. Existing users: see the [migration guide](docs/migration-mateprobe.md).
+
 ## Audit an existing validator
 
 You do not need to change your validator to start. Wrap its existing result and
-supply the failures and valid variations you care about. The APIs below are available in **0.1.0a3**; older `0.1.0a2` wheels do not include them.
+supply the failures and valid variations you care about. The APIs below are available in **0.1.0a4**; older `0.1.0a2` wheels do not include them.
 
 Pytest can express every individual assertion. This library supplies paired
 baseline/variant execution, targeted finding attribution, valid controls, honest
@@ -92,37 +94,35 @@ An LLM judge may evaluate open-ended properties outside these predicates. The tw
 can coexist; this library does not claim to replace every judge or guardrail system.
 See [choosing an evaluation method](docs/choosing-an-evaluator.md).
 
-## Install from PyPI
+## Install the current alpha
 
-Both alpha packages are published and verified:
-[narrative-contracts](https://pypi.org/project/narrative-contracts/0.1.0a3/) and
-[pytest-narrative-contracts](https://pypi.org/project/pytest-narrative-contracts/0.1.0a3/).
+Install the pinned alpha from PyPI with:
 
 ```sh
-python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
 ```
 
-Install only `narrative-contracts==0.1.0a3` if you do not need the pytest integration.
+Install only `mateprobe==0.1.0a4` if you do not need the pytest integration.
 
 ## Install from this checkout
 
 ```sh
-git clone https://github.com/Mate4b/narrative-contracts.git
-cd narrative-contracts
+git clone https://github.com/Mate4b/mateprobe.git
+cd mateprobe
 python -m venv .venv
 . .venv/bin/activate
-pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+pip install -e '.[dev]' -e ./packages/pytest-mateprobe
 pytest
 ```
 
-Both packages use the MIT license. Installable wheels and sdists are published in
-[GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases); PyPI is not required.
+Both packages use the MIT license. Versioned wheels and sdists are distributed through
+[GitHub Releases](https://github.com/Mate4b/mateprobe/releases).
 To install the pinned alpha without a checkout:
 
 ```sh
 python -m pip install \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a3/narrative_contracts-0.1.0a3-py3-none-any.whl \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a3/pytest_narrative_contracts-0.1.0a3-py3-none-any.whl
+  https://github.com/Mate4b/mateprobe/releases/download/v0.1.0a4/mateprobe-0.1.0a4-py3-none-any.whl \
+  https://github.com/Mate4b/mateprobe/releases/download/v0.1.0a4/pytest_mateprobe-0.1.0a4-py3-none-any.whl
 ```
 
 The core wheel can also be installed alone. Installation downloads packages; evaluation itself
@@ -134,7 +134,7 @@ a preserved valid variation, and a prose contradiction that passes.
 ## State-conditioned checks
 
 ```python
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -179,15 +179,15 @@ A claim under `reject` cannot use facts from `accept`. Missing snapshots or fact
 Install the second package for automatic `pytest11` discovery:
 
 ```python
-def test_outcome(narrative):
-    narrative.check(document, context, contracts)
+def test_outcome(mateprobe):
+    mateprobe.check(document, context, contracts)
 ```
 
 ```sh
-pytest --narrative-report=contract-results.json
+pytest --mateprobe-report=contract-results.json
 ```
 
-`narrative.audit(cases, contracts, detection=0.9, preservation=0.95)` checks a mutation campaign. Both denominators must exist; an empty suite cannot claim perfect performance. See [mutation examples](examples/mutation_audit.py). Distributed pytest report merging is not yet supported; use a serial run with `--narrative-report`.
+`mateprobe.audit(cases, contracts, detection=0.9, preservation=0.95)` checks a mutation campaign. Both denominators must exist; an empty suite cannot claim perfect performance. See [mutation examples](examples/mutation_audit.py). Distributed pytest report merging is not yet supported; use a serial run with `--mateprobe-report`.
 
 ## What is included
 
@@ -226,14 +226,14 @@ acceptance must not be called semantic accuracy.
 ## JSON and CLI
 
 ```sh
-narrative-contracts examples/valid.json --output report.json
+mateprobe examples/valid.json --output report.json
 ```
 
 Exit status: `0` accepted, `1` rejected, `2` invalid input/configuration/I/O. Configuration accepts only built-in contract types and known fields. It never evaluates Python expressions. Library extensions use the `Contract` protocol, not untrusted imports from JSON.
 
 ## LifeCard integration
 
-`narrative_contracts.adapters.lifecard_document` maps a card to stable surface paths and an individual state reference for every outcome. Supply post-state snapshots calculated by the trusted engine, not by the generating LLM. The adapter does not modify LifeCard or execute effects. See [example](examples/lifecard_adapter.py) and [migration guide](docs/lifecard.md).
+`mateprobe.adapters.lifecard_document` maps a card to stable surface paths and an individual state reference for every outcome. Supply post-state snapshots calculated by the trusted engine, not by the generating LLM. The adapter does not modify LifeCard or execute effects. See [example](examples/lifecard_adapter.py) and [migration guide](docs/lifecard.md).
 
 ## Independent support workflow
 
@@ -250,7 +250,7 @@ python benchmarks/natural.py replay --input benchmarks/natural-results --output 
 ```
 
 Replay requires no model, network or API key. Output directories must be new. Submit
-[counterexamples](https://github.com/Mate4b/narrative-contracts/issues/new/choose) with a minimal
+[counterexamples](https://github.com/Mate4b/mateprobe/issues/new/choose) with a minimal
 bundle and evidence; see [contribution guidance](CONTRIBUTING.md). Publication does not imply
 that independent reviewers have validated the method.
 
@@ -262,7 +262,7 @@ ruff check .
 ruff format --check .
 mypy
 python -m build --no-isolation
-python -m build --no-isolation packages/pytest-narrative-contracts
+python -m build --no-isolation packages/pytest-mateprobe
 python benchmarks/run.py
 ```
 

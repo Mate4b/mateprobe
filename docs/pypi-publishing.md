@@ -1,13 +1,21 @@
-# Published packages and verification
+# Packages and verification
 
-## Current release: 0.1.0a3
+## MateProbe 0.1.0a4
+
+The project is now **MateProbe by Mate4B**. The renamed distributions are
+`mateprobe` and `pytest-mateprobe`, version `0.1.0a4`. See the
+[migration guide](migration-mateprobe.md) and [current API](api-a4.md).
+The historical verification records below apply to their original distributions.
+
+
+## Historical release: Narrative Contracts 0.1.0a3
 
 ```sh
 python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
 ```
 
 Python 3.11+ is required; the pytest plugin is optional. The independent validator
-audit and state-field bindings are available in a3. See [the API index](api-a3.md)
+audit and state-field bindings are available in a3. See [the historical API index](api-a3.md)
 and [first audit recipe](first-audit.md).
 
 [PyPI core](https://pypi.org/project/narrative-contracts/0.1.0a3/) ·

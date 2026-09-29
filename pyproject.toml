@@ -3,29 +3,29 @@ requires = ["hatchling>=1.27,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "narrative-contracts"
-version = "0.1.0a3"
-description = "Deterministic contracts and mutation audits for state-conditioned language generation"
+name = "mateprobe"
+version = "0.1.0a4"
+description = "Mutation testing for your validators, by Mate4B"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
-authors = [{name = "Narrative Contracts contributors"}]
+authors = [{name = "Mate4B and MateProbe contributors"}]
 classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3", "Topic :: Software Development :: Testing"]
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/Mate4b/narrative-contracts"
-Issues = "https://github.com/Mate4b/narrative-contracts/issues"
-Documentation = "https://mate4b.github.io/narrative-contracts/"
+Repository = "https://github.com/Mate4b/mateprobe"
+Issues = "https://github.com/Mate4b/mateprobe/issues"
+Documentation = "https://mate4b.github.io/mateprobe/"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "build>=1.2,<2"]
 
 [project.scripts]
-narrative-contracts = "narrative_contracts.cli:main"
+mateprobe = "mateprobe.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/narrative_contracts"]
+packages = ["src/mateprobe"]
 
 [tool.hatch.build.targets.sdist]
 exclude = [
@@ -47,4 +47,4 @@ select = ["E4", "E7", "E9", "F", "I"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
-files = ["src", "packages/pytest-narrative-contracts/src"]
+files = ["src", "packages/pytest-mateprobe/src"]

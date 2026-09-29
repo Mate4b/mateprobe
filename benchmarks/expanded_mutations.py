@@ -15,7 +15,7 @@ from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -29,8 +29,8 @@ from narrative_contracts import (
     StateChanged,
     Surface,
 )
-from narrative_contracts.model import plain
-from narrative_contracts.mutations import (
+from mateprobe.model import plain
+from mateprobe.mutations import (
     CampaignReport,
     MutationCase,
     Relation,

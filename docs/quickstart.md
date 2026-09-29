@@ -1,25 +1,25 @@
 # Five-minute quickstart
 
-This walkthrough is fully offline. It uses the deterministic `0.1.0a3` API and
+This walkthrough is fully offline. It uses the deterministic `0.1.0a4` API and
 does not call a model, a service, or a network endpoint while evaluating a
 document. The runnable version is [`examples/five_minute_demo.py`](../examples/five_minute_demo.py).
 
-## Install from PyPI
+## Install the alpha
 
-A fresh Python 3.11+ environment can install both published alpha packages:
+After publication, a fresh Python 3.11+ environment can install both alpha packages:
 
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
 ```
 
-The pytest plugin is optional. It adds the `narrative` pytest fixture and the
-`--narrative-report` option; the core package has no pytest dependency. When
+The pytest plugin is optional. It adds the `mateprobe` pytest fixture and the
+`--mateprobe-report` option; the core package has no pytest dependency. When
 working from this checkout, the equivalent editable install is:
 
 ```sh
-python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+python -m pip install -e '.[dev]' -e ./packages/pytest-mateprobe
 ```
 
 ## Run the offline tour
@@ -33,7 +33,7 @@ If you have the repository checkout, run from its root:
 Without a checkout, download the pinned example, then run it with your activated environment:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Mate4b/narrative-contracts/fe771c43e8c56a7aee71509dbea316af650b01b2/examples/five_minute_demo.py -o five_minute_demo.py
+curl -fsSL https://raw.githubusercontent.com/Mate4b/mateprobe/fe771c43e8c56a7aee71509dbea316af650b01b2/examples/five_minute_demo.py -o five_minute_demo.py
 python five_minute_demo.py
 ```
 
@@ -77,10 +77,10 @@ pytest plugin. A minimal test can reuse the same objects from an application
 module:
 
 ```python
-from narrative_contracts import Claim, Context, DeclaredClaimsConsistent, Document, Surface
+from mateprobe import Claim, Context, DeclaredClaimsConsistent, Document, Surface
 
 
-def test_reply_contract(narrative):
+def test_reply_contract(mateprobe):
     document = Document(
         (
             Surface(
@@ -93,7 +93,7 @@ def test_reply_contract(narrative):
     )
     context = Context({"current": {"request.status": "ready"}})
     contracts = (DeclaredClaimsConsistent("reply-claims", ("reply",)),)
-    report = narrative.check(document, context, contracts)
+    report = mateprobe.check(document, context, contracts)
     assert report.accepted and report.complete
 ```
 
@@ -101,7 +101,7 @@ Run it serially and optionally write the structured reports:
 
 ```sh
 .venv/bin/pytest \
-  --narrative-report=contract-results.json
+  --mateprobe-report=contract-results.json
 ```
 
 The plugin records checks and mutation audits in JSON. It does not add prose
