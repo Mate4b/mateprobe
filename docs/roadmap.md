@@ -23,7 +23,8 @@ PyPI distribution is optional follow-up, not a prerequisite to install the publi
 - [x] Harden residency handling, replay identity/configuration checks and missing-attempt accounting.
 - [x] Add a five-minute offline demo and update the technical report with follow-up evidence.
 - [x] Prepare PyPI Trusted Publishing of the original verified a2 artifacts.
-- [ ] Owner configures both PyPI pending publishers; publish and verify clean installation.
+- [x] Publish the core to PyPI and verify original hashes, clean installation, demo and CLI.
+- [ ] Resolve the plugin pending publisher, publish it and verify pytest discovery from PyPI.
 - [x] Prepare a public announcement and counterexample request.
 - [ ] Publish the announcement on the maintainer's chosen channel.
 

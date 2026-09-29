@@ -23,8 +23,8 @@ Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia
   separados, sin atribuirles detección ni mezclarlos con los mutation scores acotados.
 - Descarga de modelos verificada entre lotes, replay endurecido y ausencias explícitas.
 - Demo offline de cinco minutos y reporte técnico ampliado. Semántica del núcleo sin cambios.
-- Workflow de PyPI listo para publicar los bytes originales de a2; faltan los dos
-  pending publishers en la cuenta del propietario. Anuncio preparado, todavía no enviado.
+- Núcleo a2 publicado en PyPI: wheel/sdist verificados e instalación limpia correcta.
+  El plugin sigue pendiente de la configuración de su publisher. Anuncio preparado, todavía no enviado.
 
 ## Límites de la evidencia
 
