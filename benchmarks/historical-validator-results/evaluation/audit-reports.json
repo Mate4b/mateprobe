@@ -1,0 +1,644 @@
+{
+  "jsonschema-bool-ref-cache/4.17.3": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "23d1edd41d6aeba96e7014ab4f960b6025b66424e01c5f6445f9e687d47c0c0b",
+        "expected": [],
+        "id": "cached-boolean-valid",
+        "obligation": "jsonschema-bool-ref-cache",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/1018",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "637d75abb2919f760e0cca7887cfffe980cd2fabdb0ea3cbce6fdddcda31f01c"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "23d1edd41d6aeba96e7014ab4f960b6025b66424e01c5f6445f9e687d47c0c0b",
+        "expected": [],
+        "id": "cached-object-control",
+        "obligation": "jsonschema-bool-ref-cache",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/1018",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "a1f217c76d39d422f165a35ee37ddd15f340ccbf3babf622ac450c8cf9909bdb"
+      }
+    ],
+    "corpus_digest": "51a25513137f3ebef8a66e4f4f413dee971902077d4e04ed8d8d25e126bace62",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "Validator instantiation accepts cached boolean schemas",
+        "id": "jsonschema-bool-ref-cache",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "preserved": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 2,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "controls_only_no_faults",
+          "case_ids": [
+            "cached-boolean-valid",
+            "cached-object-control"
+          ],
+          "counts": {
+            "preserved": 2
+          },
+          "description": "Validator instantiation accepts cached boolean schemas",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "jsonschema-bool-ref-cache",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 2
+    },
+    "validator_id": "jsonschema/4.17.3"
+  },
+  "jsonschema-enum-bool-int/3.0.1": {
+    "cases": [
+      {
+        "baseline": null,
+        "baseline_digest": "7a3567c53252eb64648dedc0bd2efa892f4d90c8d43ca7a3e4c95ec095426acd",
+        "expected": [
+          "enum@$"
+        ],
+        "id": "enum-int-fault",
+        "obligation": "jsonschema-enum-bool-int",
+        "outcome": "baseline_failed",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/575",
+        "reason": "baseline_error: RuntimeError: ModuleNotFoundError: No module named 'pkg_resources'",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": null,
+        "variant_digest": "85caeae8034324bdbc9eb23223c792bcf7a1f2730f4837aec95750e807539ffe"
+      },
+      {
+        "baseline": null,
+        "baseline_digest": "7a3567c53252eb64648dedc0bd2efa892f4d90c8d43ca7a3e4c95ec095426acd",
+        "expected": [],
+        "id": "enum-valid-control",
+        "obligation": "jsonschema-enum-bool-int",
+        "outcome": "baseline_failed",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/575",
+        "reason": "baseline_error: RuntimeError: ModuleNotFoundError: No module named 'pkg_resources'",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": null,
+        "variant_digest": "2446758f1b7798b41baa464d7c0d72d91815b392d2f797b7afd30ab1f5fba147"
+      }
+    ],
+    "corpus_digest": "d918c96e79ae9e403b38755f3e55e55787ed7bec5e66923471224eb534a8b12b",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "JSON Schema enum/const distinguish 0 from false",
+        "id": "jsonschema-enum-bool-int",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "baseline_failed": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 0,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "incomplete_evidence",
+          "case_ids": [
+            "enum-int-fault",
+            "enum-valid-control"
+          ],
+          "counts": {
+            "baseline_failed": 2
+          },
+          "description": "JSON Schema enum/const distinguish 0 from false",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": true,
+          "has_known_gaps": false,
+          "id": "jsonschema-enum-bool-int",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": null,
+      "preserved_controls": 0,
+      "total": 2
+    },
+    "validator_id": "jsonschema/3.0.1"
+  },
+  "jsonschema-enum-bool-int/3.0.2": {
+    "cases": [
+      {
+        "baseline": null,
+        "baseline_digest": "7a3567c53252eb64648dedc0bd2efa892f4d90c8d43ca7a3e4c95ec095426acd",
+        "expected": [
+          "enum@$"
+        ],
+        "id": "enum-int-fault",
+        "obligation": "jsonschema-enum-bool-int",
+        "outcome": "baseline_failed",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/575",
+        "reason": "baseline_error: RuntimeError: ModuleNotFoundError: No module named 'pkg_resources'",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": null,
+        "variant_digest": "85caeae8034324bdbc9eb23223c792bcf7a1f2730f4837aec95750e807539ffe"
+      },
+      {
+        "baseline": null,
+        "baseline_digest": "7a3567c53252eb64648dedc0bd2efa892f4d90c8d43ca7a3e4c95ec095426acd",
+        "expected": [],
+        "id": "enum-valid-control",
+        "obligation": "jsonschema-enum-bool-int",
+        "outcome": "baseline_failed",
+        "provenance": "Authored minimal reproduction of https://github.com/python-jsonschema/jsonschema/issues/575",
+        "reason": "baseline_error: RuntimeError: ModuleNotFoundError: No module named 'pkg_resources'",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": null,
+        "variant_digest": "2446758f1b7798b41baa464d7c0d72d91815b392d2f797b7afd30ab1f5fba147"
+      }
+    ],
+    "corpus_digest": "d918c96e79ae9e403b38755f3e55e55787ed7bec5e66923471224eb534a8b12b",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "JSON Schema enum/const distinguish 0 from false",
+        "id": "jsonschema-enum-bool-int",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "baseline_failed": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 0,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "incomplete_evidence",
+          "case_ids": [
+            "enum-int-fault",
+            "enum-valid-control"
+          ],
+          "counts": {
+            "baseline_failed": 2
+          },
+          "description": "JSON Schema enum/const distinguish 0 from false",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": true,
+          "has_known_gaps": false,
+          "id": "jsonschema-enum-bool-int",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": null,
+      "preserved_controls": 0,
+      "total": 2
+    },
+    "validator_id": "jsonschema/3.0.2"
+  },
+  "marshmallow-file-url/4.2.0": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "8e0181a9a7ffb31fcbba12bac11a8e779ffb29d858ae6f80e2497df03de25d6a",
+        "expected": [],
+        "id": "uppercase-scheme-valid",
+        "obligation": "marshmallow-file-url",
+        "outcome": "regressed",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2891",
+        "reason": "valid_control_rejected",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [
+            "['Not a valid URL.']"
+          ],
+          "violations": [
+            "field@$"
+          ]
+        },
+        "variant_digest": "1c11eec5aa6a9d3631ee25994ad82fe370e5ebf0d0f1896c35db84ec1cbaeb31"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "8e0181a9a7ffb31fcbba12bac11a8e779ffb29d858ae6f80e2497df03de25d6a",
+        "expected": [],
+        "id": "lowercase-control",
+        "obligation": "marshmallow-file-url",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2891",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "fc2859890cc70e6029c2a2e07130c519ee56b0b8305960a2a6319888e012b5b3"
+      }
+    ],
+    "corpus_digest": "8372dc7ce05eca31612829b3af45404209289e23a319853266a2fd943026b844",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "URL validator handles uppercase FILE scheme",
+        "id": "marshmallow-file-url",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "preserved": 1,
+        "regressed": 1
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 2,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "known_gaps",
+          "case_ids": [
+            "uppercase-scheme-valid",
+            "lowercase-control"
+          ],
+          "counts": {
+            "preserved": 1,
+            "regressed": 1
+          },
+          "description": "URL validator handles uppercase FILE scheme",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": true,
+          "id": "marshmallow-file-url",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 0.5,
+      "preserved_controls": 1,
+      "total": 2
+    },
+    "validator_id": "marshmallow/4.2.0"
+  },
+  "marshmallow-file-url/4.2.1": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "8e0181a9a7ffb31fcbba12bac11a8e779ffb29d858ae6f80e2497df03de25d6a",
+        "expected": [],
+        "id": "uppercase-scheme-valid",
+        "obligation": "marshmallow-file-url",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2891",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "1c11eec5aa6a9d3631ee25994ad82fe370e5ebf0d0f1896c35db84ec1cbaeb31"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "8e0181a9a7ffb31fcbba12bac11a8e779ffb29d858ae6f80e2497df03de25d6a",
+        "expected": [],
+        "id": "lowercase-control",
+        "obligation": "marshmallow-file-url",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2891",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "fc2859890cc70e6029c2a2e07130c519ee56b0b8305960a2a6319888e012b5b3"
+      }
+    ],
+    "corpus_digest": "8372dc7ce05eca31612829b3af45404209289e23a319853266a2fd943026b844",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "URL validator handles uppercase FILE scheme",
+        "id": "marshmallow-file-url",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "preserved": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 2,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "controls_only_no_faults",
+          "case_ids": [
+            "uppercase-scheme-valid",
+            "lowercase-control"
+          ],
+          "counts": {
+            "preserved": 2
+          },
+          "description": "URL validator handles uppercase FILE scheme",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "marshmallow-file-url",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 2
+    },
+    "validator_id": "marshmallow/4.2.1"
+  },
+  "marshmallow-idn-email/4.2.3": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "e102831f1946c821ebba3d7d3e4eb088d810b857cf1169c07f5e9d16d06733e0",
+        "expected": [],
+        "id": "unicode-tld-valid",
+        "obligation": "marshmallow-idn-email",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2936",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "2d95c74f71d180a0d5ac62a81fafb19471a9d04abede546ea08e380c5789dc24"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "e102831f1946c821ebba3d7d3e4eb088d810b857cf1169c07f5e9d16d06733e0",
+        "expected": [],
+        "id": "ascii-control",
+        "obligation": "marshmallow-idn-email",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2936",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "01fd15a9b9c17e7048fc00711f58e979c1a0007be6d1e330f5f117bf706b3525"
+      }
+    ],
+    "corpus_digest": "be1c84141ec7eb9991b7399fdf0a9c0c209bfb654d2a24024f0a0cb14c258f33",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "Email validator accepts valid internationalized domain names",
+        "id": "marshmallow-idn-email",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "preserved": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 2,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "controls_only_no_faults",
+          "case_ids": [
+            "unicode-tld-valid",
+            "ascii-control"
+          ],
+          "counts": {
+            "preserved": 2
+          },
+          "description": "Email validator accepts valid internationalized domain names",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "marshmallow-idn-email",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 2
+    },
+    "validator_id": "marshmallow/4.2.3"
+  },
+  "marshmallow-idn-email/4.2.4": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "e102831f1946c821ebba3d7d3e4eb088d810b857cf1169c07f5e9d16d06733e0",
+        "expected": [],
+        "id": "unicode-tld-valid",
+        "obligation": "marshmallow-idn-email",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2936",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "2d95c74f71d180a0d5ac62a81fafb19471a9d04abede546ea08e380c5789dc24"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "e102831f1946c821ebba3d7d3e4eb088d810b857cf1169c07f5e9d16d06733e0",
+        "expected": [],
+        "id": "ascii-control",
+        "obligation": "marshmallow-idn-email",
+        "outcome": "preserved",
+        "provenance": "Authored minimal reproduction of https://github.com/marshmallow-code/marshmallow/issues/2936",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "01fd15a9b9c17e7048fc00711f58e979c1a0007be6d1e330f5f117bf706b3525"
+      }
+    ],
+    "corpus_digest": "be1c84141ec7eb9991b7399fdf0a9c0c209bfb654d2a24024f0a0cb14c258f33",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "Email validator accepts valid internationalized domain names",
+        "id": "marshmallow-idn-email",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "preserved": 2
+      },
+      "detected_faults": 0,
+      "detection_score": null,
+      "eligible_controls": 2,
+      "eligible_faults": 0,
+      "obligations": [
+        {
+          "assessment": "controls_only_no_faults",
+          "case_ids": [
+            "unicode-tld-valid",
+            "ascii-control"
+          ],
+          "counts": {
+            "preserved": 2
+          },
+          "description": "Email validator accepts valid internationalized domain names",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "marshmallow-idn-email",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 2
+    },
+    "validator_id": "marshmallow/4.2.4"
+  }
+}

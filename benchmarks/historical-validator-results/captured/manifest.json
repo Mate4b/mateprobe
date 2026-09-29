@@ -1,0 +1,13 @@
+{
+  "files": {
+    "captured.json": "d2459059f2a64c2f7a2ce508d3a9de3ca0be70f0c15d94c48bc35d7e4a7482a8",
+    "jsonschema-3.0.1.lock.txt": "c8f12a893bfcd6b9a55dbef0d18fcbb5cc3071f0d9d70e3d84c0f062c1142523",
+    "jsonschema-3.0.2.lock.txt": "d1d2d4e7390399505321ce57ddf20c3e67a83e84dedaf7189f51d1819000da3d",
+    "jsonschema-4.17.3.lock.txt": "839c46ca0b682f2f69ae74c921b15761456ea9107d3fb315ca2e0d7941107f8a",
+    "marshmallow-4.2.0.lock.txt": "42d87bc7dbcbece58f644985e692238b2a6273d097e85deffc337316a6aa0ca0",
+    "marshmallow-4.2.1.lock.txt": "58dc973cc15ec968b9e44708e7ea902faaddb5a380096a4f794ae370dc944b02",
+    "marshmallow-4.2.3.lock.txt": "1d7fa2cd4b51cd71b9a58cfd7bfb0a657d9f94dfc44cf957829af622faa14e57",
+    "marshmallow-4.2.4.lock.txt": "201c63e7fd2b26bde60fece7e85d6f35d651e3362edfa787cf6e536cd5fdd14b"
+  },
+  "prepared_manifest_sha256": "3f8b51289a0caed4c608f9a26ddf7b9575ff9bb577cf570b34489375a7353543"
+}
