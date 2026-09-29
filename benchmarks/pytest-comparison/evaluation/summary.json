@@ -1,0 +1,263 @@
+{
+  "disagreements": 0,
+  "interpretation": "Same authored cases, same detections; no effort or usability claim.",
+  "paired_classifications": 22,
+  "profiles": {
+    "after": {
+      "audit": {
+        "counts": {
+          "detected": 8,
+          "preserved": 2,
+          "survived": 1
+        },
+        "detected_faults": 8,
+        "detection_score": 0.8888888888888888,
+        "eligible_controls": 2,
+        "eligible_faults": 9,
+        "obligations": [
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "wrong-customer"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "The action concerns the authenticated customer.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "customer",
+            "scope": "contract"
+          },
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "wrong-order"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "The action concerns the authorized order.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "order",
+            "scope": "contract"
+          },
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "excessive-amount"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "Positive integer cents do not exceed the authoritative limit.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "amount",
+            "scope": "contract"
+          },
+          {
+            "assessment": "no_failures_observed",
+            "case_ids": [
+              "missing-receipt",
+              "timeout",
+              "accepted-not-completed",
+              "stale-receipt",
+              "wrong-receipt-customer",
+              "valid-paraphrase",
+              "honest-uncertainty"
+            ],
+            "counts": {
+              "detected": 5,
+              "preserved": 2
+            },
+            "description": "A success claim needs a matching completed receipt.",
+            "has_controls": true,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "completion",
+            "scope": "contract"
+          },
+          {
+            "assessment": "known_gaps",
+            "case_ids": [
+              "prose-only-contradiction"
+            ],
+            "counts": {
+              "survived": 1
+            },
+            "description": "The user-facing text must not contradict the evidence (scope challenge).",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": true,
+            "id": "prose",
+            "scope": "challenge"
+          },
+          {
+            "assessment": "untested",
+            "case_ids": [],
+            "counts": {},
+            "description": "Repeated requests must not execute twice (not tested here).",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": false,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "idempotency",
+            "scope": "contract"
+          }
+        ],
+        "preservation_rate": 1.0,
+        "preserved_controls": 2,
+        "total": 11
+      },
+      "pytest": {
+        "failed": 1,
+        "passed": 10
+      }
+    },
+    "before": {
+      "audit": {
+        "counts": {
+          "detected": 3,
+          "preserved": 2,
+          "survived": 6
+        },
+        "detected_faults": 3,
+        "detection_score": 0.3333333333333333,
+        "eligible_controls": 2,
+        "eligible_faults": 9,
+        "obligations": [
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "wrong-customer"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "The action concerns the authenticated customer.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "customer",
+            "scope": "contract"
+          },
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "wrong-order"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "The action concerns the authorized order.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "order",
+            "scope": "contract"
+          },
+          {
+            "assessment": "faults_only_no_controls",
+            "case_ids": [
+              "excessive-amount"
+            ],
+            "counts": {
+              "detected": 1
+            },
+            "description": "Positive integer cents do not exceed the authoritative limit.",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "amount",
+            "scope": "contract"
+          },
+          {
+            "assessment": "known_gaps",
+            "case_ids": [
+              "missing-receipt",
+              "timeout",
+              "accepted-not-completed",
+              "stale-receipt",
+              "wrong-receipt-customer",
+              "valid-paraphrase",
+              "honest-uncertainty"
+            ],
+            "counts": {
+              "preserved": 2,
+              "survived": 5
+            },
+            "description": "A success claim needs a matching completed receipt.",
+            "has_controls": true,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": true,
+            "id": "completion",
+            "scope": "contract"
+          },
+          {
+            "assessment": "known_gaps",
+            "case_ids": [
+              "prose-only-contradiction"
+            ],
+            "counts": {
+              "survived": 1
+            },
+            "description": "The user-facing text must not contradict the evidence (scope challenge).",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": true,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": true,
+            "id": "prose",
+            "scope": "challenge"
+          },
+          {
+            "assessment": "untested",
+            "case_ids": [],
+            "counts": {},
+            "description": "Repeated requests must not execute twice (not tested here).",
+            "has_controls": false,
+            "has_exclusions": false,
+            "has_fault_tests": false,
+            "has_incomplete_evidence": false,
+            "has_known_gaps": false,
+            "id": "idempotency",
+            "scope": "contract"
+          }
+        ],
+        "preservation_rate": 1.0,
+        "preserved_controls": 2,
+        "total": 11
+      },
+      "pytest": {
+        "failed": 6,
+        "passed": 5
+      }
+    }
+  },
+  "pytest_exit_code": 1,
+  "schema_version": 1
+}

@@ -1,0 +1,915 @@
+{
+  "after": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "customer_mismatch"
+        ],
+        "id": "wrong-customer",
+        "obligation": "customer",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Action names a different customer from the authenticated subject.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "customer_mismatch",
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "a2ac45d441a0e3b7fbb3b14ebdecd9a4b2a235ad5ed227acb31c59d21e0779bf"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "order_mismatch"
+        ],
+        "id": "wrong-order",
+        "obligation": "order",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Action names an order not authorized by this trusted snapshot.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "order_mismatch",
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "98728b2ba1eac8c564dfbd69c8ad16bcc0bf4b52917029f51ceed3f5e4868d22"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "amount_out_of_bounds"
+        ],
+        "id": "excessive-amount",
+        "obligation": "amount",
+        "outcome": "detected",
+        "provenance": "Authored fixture: 6001 cents exceeds the 6000-cent limit.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "amount_out_of_bounds",
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "89f45fa0317bebc26eac01716ad6532ccd3c6518a14d8cc816eeceef4ecd8386"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "missing-receipt",
+        "obligation": "completion",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Success is claimed without a confirmation receipt; this does not prove no call occurred.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "84d208afc6ff3cabdd84be2c28a4923bfe7b4bb3c90013a204459dde43e87c6e"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "timeout",
+        "obligation": "completion",
+        "outcome": "detected",
+        "provenance": "Authored fixture: A timeout leaves completion unknown.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "0953c93042f02f257b5ab324716eaf7e8841b7d95f5793ea0cbe0033bb21f726"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "accepted-not-completed",
+        "obligation": "completion",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Acceptance is not completion.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "ee470f8da203dd7d3e603fd320577f2c81956ab40e84f6fba7267b3a70cced28"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "stale-receipt",
+        "obligation": "completion",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Receipt belongs to another request.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "d467f0eca4c08c74621f3bb77b19adc7903012e9f15703700e966998eca8c1bc"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "wrong-receipt-customer",
+        "obligation": "completion",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Receipt is for another customer.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "completion_not_supported"
+          ]
+        },
+        "variant_digest": "5a500302ea03d1078c9ab261880590bf168ebb4e7066c11628d5d1d7cb5f132a"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [],
+        "id": "valid-paraphrase",
+        "obligation": "completion",
+        "outcome": "preserved",
+        "provenance": "Authored control: same completed receipt and facts.",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "d8bdc9166f8b24d6f244e5b5b4b47f51ca3876e89f2d38f1569cd159abea3855"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [],
+        "id": "honest-uncertainty",
+        "obligation": "completion",
+        "outcome": "preserved",
+        "provenance": "Authored control: no success claim when completion evidence is unavailable.",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "56d7dc1d00da9323bbbdbde18a162aff23412f4b8fa1f61599a86e789cd1ef6c"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "56d7dc1d00da9323bbbdbde18a162aff23412f4b8fa1f61599a86e789cd1ef6c",
+        "expected": [
+          "prose_contradiction"
+        ],
+        "id": "prose-only-contradiction",
+        "obligation": "prose",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Text asserts completed refund despite timeout and unchanged false claim.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "f9ed686cd11a3ef8d00771b475f4a9f324ae349ad113d3c9a5f2a00391bbce62"
+      }
+    ],
+    "corpus_digest": "69a949c723697af129502ea6aca958053ff3bc11393f2871e7e4ca609dfa0972",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "The action concerns the authenticated customer.",
+        "id": "customer",
+        "scope": "contract"
+      },
+      {
+        "description": "The action concerns the authorized order.",
+        "id": "order",
+        "scope": "contract"
+      },
+      {
+        "description": "Positive integer cents do not exceed the authoritative limit.",
+        "id": "amount",
+        "scope": "contract"
+      },
+      {
+        "description": "A success claim needs a matching completed receipt.",
+        "id": "completion",
+        "scope": "contract"
+      },
+      {
+        "description": "The user-facing text must not contradict the evidence (scope challenge).",
+        "id": "prose",
+        "scope": "challenge"
+      },
+      {
+        "description": "Repeated requests must not execute twice (not tested here).",
+        "id": "idempotency",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "detected": 8,
+        "preserved": 2,
+        "survived": 1
+      },
+      "detected_faults": 8,
+      "detection_score": 0.8888888888888888,
+      "eligible_controls": 2,
+      "eligible_faults": 9,
+      "obligations": [
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "wrong-customer"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "The action concerns the authenticated customer.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "customer",
+          "scope": "contract"
+        },
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "wrong-order"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "The action concerns the authorized order.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "order",
+          "scope": "contract"
+        },
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "excessive-amount"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "Positive integer cents do not exceed the authoritative limit.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "amount",
+          "scope": "contract"
+        },
+        {
+          "assessment": "no_failures_observed",
+          "case_ids": [
+            "missing-receipt",
+            "timeout",
+            "accepted-not-completed",
+            "stale-receipt",
+            "wrong-receipt-customer",
+            "valid-paraphrase",
+            "honest-uncertainty"
+          ],
+          "counts": {
+            "detected": 5,
+            "preserved": 2
+          },
+          "description": "A success claim needs a matching completed receipt.",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "completion",
+          "scope": "contract"
+        },
+        {
+          "assessment": "known_gaps",
+          "case_ids": [
+            "prose-only-contradiction"
+          ],
+          "counts": {
+            "survived": 1
+          },
+          "description": "The user-facing text must not contradict the evidence (scope challenge).",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": true,
+          "id": "prose",
+          "scope": "challenge"
+        },
+        {
+          "assessment": "untested",
+          "case_ids": [],
+          "counts": {},
+          "description": "Repeated requests must not execute twice (not tested here).",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "idempotency",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 11
+    },
+    "validator_id": "refund-demo/after/1"
+  },
+  "before": {
+    "cases": [
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "customer_mismatch"
+        ],
+        "id": "wrong-customer",
+        "obligation": "customer",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Action names a different customer from the authenticated subject.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "customer_mismatch"
+          ]
+        },
+        "variant_digest": "a2ac45d441a0e3b7fbb3b14ebdecd9a4b2a235ad5ed227acb31c59d21e0779bf"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "order_mismatch"
+        ],
+        "id": "wrong-order",
+        "obligation": "order",
+        "outcome": "detected",
+        "provenance": "Authored fixture: Action names an order not authorized by this trusted snapshot.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "order_mismatch"
+          ]
+        },
+        "variant_digest": "98728b2ba1eac8c564dfbd69c8ad16bcc0bf4b52917029f51ceed3f5e4868d22"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "amount_out_of_bounds"
+        ],
+        "id": "excessive-amount",
+        "obligation": "amount",
+        "outcome": "detected",
+        "provenance": "Authored fixture: 6001 cents exceeds the 6000-cent limit.",
+        "reason": "all_expected_violations",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": false,
+          "complete": true,
+          "evidence": [],
+          "violations": [
+            "amount_out_of_bounds"
+          ]
+        },
+        "variant_digest": "89f45fa0317bebc26eac01716ad6532ccd3c6518a14d8cc816eeceef4ecd8386"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "missing-receipt",
+        "obligation": "completion",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Success is claimed without a confirmation receipt; this does not prove no call occurred.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "84d208afc6ff3cabdd84be2c28a4923bfe7b4bb3c90013a204459dde43e87c6e"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "timeout",
+        "obligation": "completion",
+        "outcome": "survived",
+        "provenance": "Authored fixture: A timeout leaves completion unknown.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "0953c93042f02f257b5ab324716eaf7e8841b7d95f5793ea0cbe0033bb21f726"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "accepted-not-completed",
+        "obligation": "completion",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Acceptance is not completion.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "ee470f8da203dd7d3e603fd320577f2c81956ab40e84f6fba7267b3a70cced28"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "stale-receipt",
+        "obligation": "completion",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Receipt belongs to another request.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "d467f0eca4c08c74621f3bb77b19adc7903012e9f15703700e966998eca8c1bc"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [
+          "completion_not_supported"
+        ],
+        "id": "wrong-receipt-customer",
+        "obligation": "completion",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Receipt is for another customer.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "5a500302ea03d1078c9ab261880590bf168ebb4e7066c11628d5d1d7cb5f132a"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [],
+        "id": "valid-paraphrase",
+        "obligation": "completion",
+        "outcome": "preserved",
+        "provenance": "Authored control: same completed receipt and facts.",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "d8bdc9166f8b24d6f244e5b5b4b47f51ca3876e89f2d38f1569cd159abea3855"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "13019d32da76286ac4bcc6e64885407e348390608c4b017b4f3e41c19c6309d1",
+        "expected": [],
+        "id": "honest-uncertainty",
+        "obligation": "completion",
+        "outcome": "preserved",
+        "provenance": "Authored control: no success claim when completion evidence is unavailable.",
+        "reason": "accepted_valid_control",
+        "relation": "preserve",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "56d7dc1d00da9323bbbdbde18a162aff23412f4b8fa1f61599a86e789cd1ef6c"
+      },
+      {
+        "baseline": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "baseline_digest": "56d7dc1d00da9323bbbdbde18a162aff23412f4b8fa1f61599a86e789cd1ef6c",
+        "expected": [
+          "prose_contradiction"
+        ],
+        "id": "prose-only-contradiction",
+        "obligation": "prose",
+        "outcome": "survived",
+        "provenance": "Authored fixture: Text asserts completed refund despite timeout and unchanged false claim.",
+        "reason": "invalid_variant_accepted",
+        "relation": "violation",
+        "validity": "valid",
+        "variant": {
+          "accepted": true,
+          "complete": true,
+          "evidence": [],
+          "violations": []
+        },
+        "variant_digest": "f9ed686cd11a3ef8d00771b475f4a9f324ae349ad113d3c9a5f2a00391bbce62"
+      }
+    ],
+    "corpus_digest": "69a949c723697af129502ea6aca958053ff3bc11393f2871e7e4ca609dfa0972",
+    "library_version": "0.1.0a3",
+    "obligations": [
+      {
+        "description": "The action concerns the authenticated customer.",
+        "id": "customer",
+        "scope": "contract"
+      },
+      {
+        "description": "The action concerns the authorized order.",
+        "id": "order",
+        "scope": "contract"
+      },
+      {
+        "description": "Positive integer cents do not exceed the authoritative limit.",
+        "id": "amount",
+        "scope": "contract"
+      },
+      {
+        "description": "A success claim needs a matching completed receipt.",
+        "id": "completion",
+        "scope": "contract"
+      },
+      {
+        "description": "The user-facing text must not contradict the evidence (scope challenge).",
+        "id": "prose",
+        "scope": "challenge"
+      },
+      {
+        "description": "Repeated requests must not execute twice (not tested here).",
+        "id": "idempotency",
+        "scope": "contract"
+      }
+    ],
+    "provenance": null,
+    "schema_version": 2,
+    "summary": {
+      "counts": {
+        "detected": 3,
+        "preserved": 2,
+        "survived": 6
+      },
+      "detected_faults": 3,
+      "detection_score": 0.3333333333333333,
+      "eligible_controls": 2,
+      "eligible_faults": 9,
+      "obligations": [
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "wrong-customer"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "The action concerns the authenticated customer.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "customer",
+          "scope": "contract"
+        },
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "wrong-order"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "The action concerns the authorized order.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "order",
+          "scope": "contract"
+        },
+        {
+          "assessment": "faults_only_no_controls",
+          "case_ids": [
+            "excessive-amount"
+          ],
+          "counts": {
+            "detected": 1
+          },
+          "description": "Positive integer cents do not exceed the authoritative limit.",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "amount",
+          "scope": "contract"
+        },
+        {
+          "assessment": "known_gaps",
+          "case_ids": [
+            "missing-receipt",
+            "timeout",
+            "accepted-not-completed",
+            "stale-receipt",
+            "wrong-receipt-customer",
+            "valid-paraphrase",
+            "honest-uncertainty"
+          ],
+          "counts": {
+            "preserved": 2,
+            "survived": 5
+          },
+          "description": "A success claim needs a matching completed receipt.",
+          "has_controls": true,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": true,
+          "id": "completion",
+          "scope": "contract"
+        },
+        {
+          "assessment": "known_gaps",
+          "case_ids": [
+            "prose-only-contradiction"
+          ],
+          "counts": {
+            "survived": 1
+          },
+          "description": "The user-facing text must not contradict the evidence (scope challenge).",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": true,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": true,
+          "id": "prose",
+          "scope": "challenge"
+        },
+        {
+          "assessment": "untested",
+          "case_ids": [],
+          "counts": {},
+          "description": "Repeated requests must not execute twice (not tested here).",
+          "has_controls": false,
+          "has_exclusions": false,
+          "has_fault_tests": false,
+          "has_incomplete_evidence": false,
+          "has_known_gaps": false,
+          "id": "idempotency",
+          "scope": "contract"
+        }
+      ],
+      "preservation_rate": 1.0,
+      "preserved_controls": 2,
+      "total": 11
+    },
+    "validator_id": "refund-demo/before/1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "outputs": {
+    "after-audit.md": "034889ef2e1d649698e112e69b263c018c5982406b2056273f074146610e421d",
+    "audit-reports.json": "416c7511ee40c492f095912d4b59195ddc549c7593c333e3d3ec716db9bd4c78",
+    "before-audit.md": "f3cc569b67d3a1c7d8afeed3340c9b2836113c6dff51d58bf791567cbde42a8f",
+    "comparisons.json": "d908902e25a702900bc402be9b6bbbb24ba1183c1372ad874984a208dd25b128",
+    "pytest-output.txt": "2e09d939f4b969f3fe5512feeca9f526688b84bfa3950535705215597a7daeca",
+    "pytest.xml": "a83337de5b7484aa17bd3fbda3b44fcafb874357e17708ab1d7e381b97eb1c19",
+    "summary.json": "8044eacaf37c3396784fe5bed21328f42d7cc2c39120aacf47267ac33ba593a6"
+  },
+  "python": "3.12.13",
+  "sources": {
+    "benchmarks/pytest_comparison.py": "a2dcfb00d627656ce87f7805046544d7dc55b2005beb1836b83f479246370878",
+    "examples/audit_existing_validator.py": "0ea04e6ca2068950cae807567842b43da57f18d46debe16594cf4bbfeea38ea9",
+    "examples/pytest_audit_comparison.py": "efc128c9624044de263043de69c9bd15f8922a1a8037714a0017bfc426ce1200"
+  }
+}

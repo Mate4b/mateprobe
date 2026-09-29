@@ -1,0 +1,11 @@
+{
+  "git_revision": "02a8e5535e43315a82483ff1d714cc44a031abb5",
+  "packages": {
+    "attrs": "26.1.0",
+    "jsonschema": "4.17.3",
+    "narrative-contracts": "0.1.0a3",
+    "pyrsistent": "0.20.0"
+  },
+  "platform": "macOS-15.3.1-arm64-arm-64bit",
+  "python": "3.12.13"
+}

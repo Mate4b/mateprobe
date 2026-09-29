@@ -1,0 +1,3438 @@
+{
+  "cases": [
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/1",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "ed09560bea8f276f273fdd57e69cfe2afeae238e3eb575c3dc1db7c6964c552e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "minProperties/0/2",
+      "obligation": "minProperties",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "4c3cfeb577a72a6408822363059ede0ae519648a411317bffc7e2996cd99bb13"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/3",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "1118fd9e352d0b393748a83a6c97d30b44af9a3f98663413b8e6b6134fc59add"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/4",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "a8366ae69c2f26bf729371c76e5a80ffbea63f4a056ce20d7b8a9c8968617e2d"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/5",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "eea778d837d5406d409a2dedcf46830edc227d013ab949e3d45ea1dadb19c88f"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/6",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "d99bd0ac03be4a772839aea663e45de98db27f5436d1003ed850d0666dd443cf"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3d256ed75d74685f05350c5a90545993c74ee981aa8bfcd1465a1bc964e1cc12",
+      "expected": [],
+      "id": "minProperties/0/7",
+      "obligation": "minProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 7.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "76bd76be48329340d6c67b2c1da765e1717c01f4b4b3cf2c85a19b292f0bf40e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "d992c4298b0211f37b41891b27f29e384c83c0b96109882606d011b4124639fd",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "minProperties/1/1",
+      "obligation": "minProperties",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 1 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "6e178e581aa5f23fffbac3d5af6252ed6cc2a7151a340f7ba1d99d6ba68760d6"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "20ae7458f9e6fc510a150600cd0bd83d7e3707e90427d86ca54a80b146056efb",
+      "expected": [],
+      "id": "maxProperties/0/1",
+      "obligation": "maxProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "1a25e6037ca82b0b9365d438341ba0a3ebc6ce208cc3aae6e8eb3b9489efa702"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "20ae7458f9e6fc510a150600cd0bd83d7e3707e90427d86ca54a80b146056efb",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "maxProperties/0/2",
+      "obligation": "maxProperties",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "d54056b023a6333d2c6d114f00cb0796801ac01726b31f0878a8435ac0a5e5a8"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "20ae7458f9e6fc510a150600cd0bd83d7e3707e90427d86ca54a80b146056efb",
+      "expected": [],
+      "id": "maxProperties/0/3",
+      "obligation": "maxProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "2abca3a09bd8b362d130a2ed8e5017c985beee5299d23b48d523c4b0c99b65fc"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "20ae7458f9e6fc510a150600cd0bd83d7e3707e90427d86ca54a80b146056efb",
+      "expected": [],
+      "id": "maxProperties/0/4",
+      "obligation": "maxProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "5d8704e68ecc22d7234c7ecbea4c6a674913876231a0a32c321aed939c092ba3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "20ae7458f9e6fc510a150600cd0bd83d7e3707e90427d86ca54a80b146056efb",
+      "expected": [],
+      "id": "maxProperties/0/5",
+      "obligation": "maxProperties",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "615f92f8e7e3d47a78c97f767f7952abb8a6cd64739ec993e181f020fb4b13c6"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "9075cc0de8c18dff62188570f1a19704cac490b7eb77031d1981cd3c702ba8f4",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "maxProperties/1/1",
+      "obligation": "maxProperties",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 1 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "f47ff13b46485e81ef7afdf0128301658bd9135edb6d58b261982afe2bc937e5"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "19404c54948bb1059b47f7b489409e02374f49804211b7b3dd755a28505f14ba",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "maxProperties/2/1",
+      "obligation": "maxProperties",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 2 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "829cd69133485da0ae40ad3eaff8a05951b3efb90c55ea32fb99c26b1ff9f1c4"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/1",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "7ce68598c268542bb2e0f75cbbde62f9c27b91a58720de15dec75cf4d17d12e3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/2",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "7fa1424a656dfac1dce1bc6903d70637909473c152722868d3bfabdc460a045f"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/3",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "8a80c6b0b5f1a6a6364f0efdbb648fbad674470e9389fe7e3a4759c61e6b41ee"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/4",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b05d3df2d9933cb8dd67595f2c2ab94284d5d34f477b3ac53ae1ab56a310341e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/5",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "260445cf6fcdf1b2e0d32e5ae8a3f18b607752e1cc23cb971d82ec1ca84619aa"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/6",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "00e6c26a348625d97dcf7d8282f6cb6525d0f4f63c37dbdbdc475a38da8c15ba"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/7",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 7.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "a532dff792ee485620412d209c4154278529f5290c15bbc706bde0753dc21989"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/8",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 8.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "e6eac77d2dfcd2330e965fa23a31afc1175df07330828e6f5ae69be49668e44e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/9",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 9.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "e00dd533cfb940c7bda87edff7ec95b3d0791d3d42469ee696f8f7e42cc55618"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/10",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 10.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "b608c7fd31848d19af54859874608e533acef52df8a58063effd030e70329cf3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/11",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 11.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "439173b8401772bd69df2b2f522faf86f92cf713c786082d77d1b00ac2344e0c"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/12",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 12.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "c1cd52619755cf7c6d9324b62bd7f48ddc4bd3c59bf771ea4f3e6b95c44525d3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/13",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 13.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "2aec6ddbacc528676c7208060b6fe5b951d7e91cc111a6f0b5aa49ec6eae2e24"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/14",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 14.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "739086c13a1ca95469d8c49fc5fd543a4c92ba3d18a38d138816c91e8294c5cf"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/15",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 15.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "079999bb7663acfe350de87b8042d1794bced44a14c7d233f7941ab60b176851"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/16",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 16.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "260445cf6fcdf1b2e0d32e5ae8a3f18b607752e1cc23cb971d82ec1ca84619aa"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/17",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 17.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b05d3df2d9933cb8dd67595f2c2ab94284d5d34f477b3ac53ae1ab56a310341e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/18",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 18.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "fb44ffa46bac275163ba1d397b87e0fd30da184fd46a0e63531856db4ad8edad"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/19",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 19.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "ca4c2490d81158ff8f8c7bb65388a47a96b2a6ed74ede4e769ff84cf4fc4a78a"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/20",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 20.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "0ddb8667c454181b9eda35f7a42438443f170befa367f77ee30d75d3bec72ca9"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/21",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 21.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "c2f2c2043f80a5450dbf31f7c1ad2ddff33318b919bd1f7147faa3aa69714f59"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/22",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 22.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "53783d33d9098173cbb4641ec2d826f8f7f49ad82fdb3dea505b6fc608bb1eee"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/23",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 23.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "128a4161e66eab4f72351f819ab81f541bc725fe54dab906f599de7d17531c7f"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/24",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 24.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "00a7ce4bcce8bd3ede7f9de495b78a4121227948a29b6c3cfa7c2371571804dc"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/0/25",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 25.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "06c4e9f20de3467a59de2f2031ca46924c6560a440e1ae4a71344e2b0f074178"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/26",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 26.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "5a64bb1fe16cc334085e28992a38c6cc63ad06c10695e638c5ad6a9b0cc53ce3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "ad03a6db83093333ba24e4bce12faa962833ac1c7f5961233307b9c2a7ab5c7a",
+      "expected": [],
+      "id": "uniqueItems/0/27",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 27.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "998201147ae0541e5f51a83bdcede6a0e23de5ec4f3b012c7106e12f63dd5aed"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [],
+      "id": "uniqueItems/1/1",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "226583d96288585d95dd5c9ce5e86629509c23002fa9f1974eb2a8a7896a5df7"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/1/2",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "856d9cbcc0cfd8a02656c6f53eddba89dc301f37fbe147ac8db7c80c5a310495"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/1/3",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "f8876ab2da821389d9e303e961fb580f093fc26344a0b4770ec6fcf74b5d1244"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [],
+      "id": "uniqueItems/1/4",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "0364e33d3d0dff86ae372db4298575b9fdd054a692f0eb06840f585dbd2c2a9d"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [],
+      "id": "uniqueItems/1/5",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "545f169201ae35cfd784e6163fb9cd30c712bc2e7bc511c0b6f07d6fc4ba5ffa"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/1/6",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 6.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "92a06726b86cae823b03937ee2b619c6d55d00ba245be79835c22d2e56c62fdf"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "0f0ad43506ef9df2a8dd32ec300dfe33f48c2d886c724e462da8480d8c2452d6",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/1/7",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 7.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "47e24dc7e8959dac7b8bda4f67001d1eb2f8f57aa878c4d066ced2840ecda33d"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bff163fa898a3c5ab250541dcbdf8b0e8cf8022c5f03514664125d673dcc0d1",
+      "expected": [],
+      "id": "uniqueItems/2/1",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "6f8c2d4e44036822b50247416235cb689c999c78b260b47cf29617d8bf02a0b2"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bff163fa898a3c5ab250541dcbdf8b0e8cf8022c5f03514664125d673dcc0d1",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/2/2",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "1482154eee01f4addba1fd25fa475af7337e41a683ca6e560ddf7d01648e78c9"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bff163fa898a3c5ab250541dcbdf8b0e8cf8022c5f03514664125d673dcc0d1",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/2/3",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "c22f477538b960dc32efe63e02b518317c9be0cec373da4f6f1b87eec118d3a2"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bff163fa898a3c5ab250541dcbdf8b0e8cf8022c5f03514664125d673dcc0d1",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/2/4",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 4.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "f8794b18bb6fbdec0e328b8925b331af46bf5d58c353d602044513014ab3e4c0"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/1",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "7f429c14f602525afc10dfce432bd44b1e6610fae6eae7a068df027850cfca6d"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/2",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "5b1a8066895b91dc3bcdc57168fc39c9e033840851a828f02e49e0db539754e3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/3",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "ec46ccdbc3c2de4b3ead4919501dcb2dbff45d4180235c4ee43ff595de299169"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/4",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "1a50d1bb10f37b7e13fdf77390822c934bf89dac9fbd3072d31c5f7c5dd8cf40"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/5",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "fe3ce13c0b534580211e8bb32de06f3cf09f9de23d02fdd999d0e24c973b498a"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/6",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "3a1927ed344786f6b0bf198c1efffa67c77a5e25e991ab75d448a3f9065d146b"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/7",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 7.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "7ef6cc27a88b4d3c1fb76d49232ba48ba0b07eddb186858a2f03b89a6551a533"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/8",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 8.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "e5f91bd8002d3bee3225967c515dbabe08e903cfaffbfc48c5c6860bad0d6afa"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/9",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 9.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "12c456e1d939d8b7cb2a21dc4274b9ac579fe0258918d7ca30415761d9a2056e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/10",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 10.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "7cef28d27882a834e8245b09255ea4d05e44983a1a6a5a82a4bec39d3e68cd44"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/11",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 11.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "1a50d1bb10f37b7e13fdf77390822c934bf89dac9fbd3072d31c5f7c5dd8cf40"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/12",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 12.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "ec46ccdbc3c2de4b3ead4919501dcb2dbff45d4180235c4ee43ff595de299169"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/13",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 13.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "7485d15fc05098b1e89434fafa347242d0641fb11637b0364ca26cf2cce3337e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "f13a3eb95593f73030f72a5ea6e2c30d2dea8c33393bfb3a85e98e190de5e759",
+      "expected": [],
+      "id": "uniqueItems/3/14",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 14.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "2e10de00879fbd4fd5b8b71e72b11b61deb80a62558e70b3e97a63969d336b95"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/1",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "28a9a6d359a9df8cff4360a4f9fb1f3f8b9cc4ae0aeadcf8fcd13900fc065fd6"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/2",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "dc9c24b0e727440411512da00e05f63f865ab951521d4c0b13966dda9af4572e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/3",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "9e94c2067dfb559566eec33cc4d370a975e6467e8ed2f070280b017cbf9c6185"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/4",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "651a250c84f686be0b896165f909aa56abbc7d443e6a27ae16fa76ccc4a39969"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/5",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "21076bf996de05944f6804223c2701529a6797c43d76acd819dfafc2af10d284"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/6",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b2c8b0cbe6e39a7cb9d05db413b70f468c594d21bc4d01b5c80a7c5779910f96"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "b01b07e4bca55f579fdc5315db61a776f5d0dd843aceaf0745552c8af61dc31d",
+      "expected": [],
+      "id": "uniqueItems/4/7",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 7.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "9cd52dad881739824f2d679e3e998e88c85e3c1d8ec70c994d26548c768ab0ec"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3e1a8c667f861d600d375898787687a467cd6b1defa73d56e843fa230bf7a3ec",
+      "expected": [],
+      "id": "uniqueItems/5/1",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "6bb96abb34659514c8eb1483314f8714107a6ed710764145bcedbdcede014442"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3e1a8c667f861d600d375898787687a467cd6b1defa73d56e843fa230bf7a3ec",
+      "expected": [],
+      "id": "uniqueItems/5/2",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "9d1544bacece632cb19e2bf09a8c1a369205e304f8e2487ebaa483c1e76e4c2c"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3e1a8c667f861d600d375898787687a467cd6b1defa73d56e843fa230bf7a3ec",
+      "expected": [],
+      "id": "uniqueItems/5/3",
+      "obligation": "uniqueItems",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "7814612923521ea7d7f3418b4d6a496d53f5015d969ab0abb73bd7b43054ce0c"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "3e1a8c667f861d600d375898787687a467cd6b1defa73d56e843fa230bf7a3ec",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "uniqueItems/5/4",
+      "obligation": "uniqueItems",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 4.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "b51b39771f503d3410409ff1fa54318e2b4cd8c62b557b3b19b08fa5114a7bf7"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "14159183e4aace821bf5b9ecc97fdee2231af2e8371cb1a7205eb7fe2b6b962a",
+      "expected": [],
+      "id": "contains/0/1",
+      "obligation": "contains",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b5b8819df77ede0db0e8e6ac088edfbacfee67527f66c1f170abf7fca4e48a14"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "14159183e4aace821bf5b9ecc97fdee2231af2e8371cb1a7205eb7fe2b6b962a",
+      "expected": [],
+      "id": "contains/0/2",
+      "obligation": "contains",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "89ea7e761430d91f1bf4451304fee6c028d6655e05fdad9682c34a88fe082a8f"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "14159183e4aace821bf5b9ecc97fdee2231af2e8371cb1a7205eb7fe2b6b962a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/0/3",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "384aa340060881bfd7054ecb5fded8823ca7a4957672be9e849e9720f0f84fd1"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "14159183e4aace821bf5b9ecc97fdee2231af2e8371cb1a7205eb7fe2b6b962a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/0/4",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 4.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "f16f4cf73e8d227dccba5c26a4396131c3203730ee89afb3fcafc4eb4cb7e85c"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "14159183e4aace821bf5b9ecc97fdee2231af2e8371cb1a7205eb7fe2b6b962a",
+      "expected": [],
+      "id": "contains/0/5",
+      "obligation": "contains",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "f5f9fbb6971c0abbeb36bfdfe112a8aaf35528420466239a8d20292a7b4e7026"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "de775408b1ee83f05abf25ffbb2f560f55c33236ea7c95466294ce627d67e2f1",
+      "expected": [],
+      "id": "contains/1/1",
+      "obligation": "contains",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 1 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "f890a54b30746cc5d70752f24a629d81692e1f1f332e8e642fa428ce370fde4b"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "de775408b1ee83f05abf25ffbb2f560f55c33236ea7c95466294ce627d67e2f1",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/1/2",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 1 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "29f0e9358293c45a337c7446c38a140ff22d388938dd454875fccbe10562c473"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "7f48fdc80f04441c38ef04ccdae29cd65ea77f8c75047bf5ed143ed41b1574d4",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/2/1",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 2 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "3cc6723fe78902c73c1fc7ee32f7be80e763852de4c2c897c3dea81d188f3cff"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "d3e795ab062c4a70df61926049da0cc745c5138764d4a178daa9064ae5d537dc",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/3/0",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 3 test 0.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "cdb4abce1eb99eb2aebbea115a480531e025e308edc78d0f1b959781f0611f94"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "d3e795ab062c4a70df61926049da0cc745c5138764d4a178daa9064ae5d537dc",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/3/1",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 3 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "c335642fa7c25a532f683bed72e69c0b6fa90dc56a8e3ba5b4465409d5de0193"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "e54aca84d3f39b7c1f088ec2a04d8fa8edc8b6f72450869cb48e5d84f8399bbc",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/4/0",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 0.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "071b7b83c511b1ea453908637d687e206b41c6700065e6254fa5901dc5f65f74"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "e54aca84d3f39b7c1f088ec2a04d8fa8edc8b6f72450869cb48e5d84f8399bbc",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/4/1",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "6c730c9b5968ac99553d51db46dae536512691723022783f5713ffbac3565da4"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "e54aca84d3f39b7c1f088ec2a04d8fa8edc8b6f72450869cb48e5d84f8399bbc",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/4/3",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "c2c0bb8d261e3d6674d6b21c95e7e39310038fe28baebe38ce1c514e711364f1"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "31e0bc6e929c830aa9271b72e76b50cb3e28c8d25701a41648583c31bd048a70",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "contains/5/1",
+      "obligation": "contains",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 5 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "e255f9e72fd888fd3c86413417e4191ab3dd0b660409714160cf5d66abc0a4d8"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [],
+      "id": "dependentRequired/0/1",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "5d9339552ea596da46db3fd1034ae0f6440db51677355d442d405d4cacef6429"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [],
+      "id": "dependentRequired/0/2",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "905447fe71e1159f41bfa5011912402b66abeaaae3854976b44c87a0c76b1f7d"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/0/3",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "71203bec4e2b0bd02a28be2db6656611a23e021499b57c267f3207a5476004f0"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [],
+      "id": "dependentRequired/0/4",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "892fe6199dbeb2b77cef43a746031b43a399e949cb1704b80da17b8181e7907b"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [],
+      "id": "dependentRequired/0/5",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "254e476c2b7c294a716b4d6fe63c1633f6f7b99009643e23234afc284dd95e0a"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1605ed613d2ea63780625ab4ebb6e31248fadc4d6bd7ec82142e26f224225389",
+      "expected": [],
+      "id": "dependentRequired/0/6",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "4f7b21ec91efbcce1242673b71019c5e1beb5a64e5f93e1c8dc33dd991bcffda"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1181758494e521b45050aa9a18a26e6b1a5c4f556e1a85d28acdedd21f3f860e",
+      "expected": [],
+      "id": "dependentRequired/1/1",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 1 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "99b36a7125d78668c939c71808622c1f9e512d640febdeda580c67191cf00b62"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "1181758494e521b45050aa9a18a26e6b1a5c4f556e1a85d28acdedd21f3f860e",
+      "expected": [],
+      "id": "dependentRequired/1/2",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 1 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "84766ee8d9a2e1a8dc34cd27d0c01b6ace34d518f28ff28e003df48650efe9b2"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c0641eb29f71afcca8fa9f567834e3c8a610e18c5fae0d2b9866b36626edbfe0",
+      "expected": [],
+      "id": "dependentRequired/2/1",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b0626efa2755012d847d03cc5ae2fd9983faed2f66e8f0602cff92ebb45c9f46"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c0641eb29f71afcca8fa9f567834e3c8a610e18c5fae0d2b9866b36626edbfe0",
+      "expected": [],
+      "id": "dependentRequired/2/2",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "82047da004e544373bb97b476c34fa667e64670a68ad096c24a20a09d58901e0"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c0641eb29f71afcca8fa9f567834e3c8a610e18c5fae0d2b9866b36626edbfe0",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/2/3",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "e94d4daedb59f59be6c64bd6c49e6984dfe2811551159984c5b9788a738a0321"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c0641eb29f71afcca8fa9f567834e3c8a610e18c5fae0d2b9866b36626edbfe0",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/2/4",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 4.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "cd9bf4b2cd52427c7bbb18e447f0a99ba7ceb1cde03ee5b92e8fb80c1de61e99"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c0641eb29f71afcca8fa9f567834e3c8a610e18c5fae0d2b9866b36626edbfe0",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/2/5",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 5.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "5c3e6e7f61746b9011c473008daef339dad07551a6aa47e0e127708eac9ba364"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "10f3fe7449900efd16b85e6fea2cf2f6a4d69c3066054c052595bed57b0f51f4",
+      "expected": [],
+      "id": "dependentRequired/3/1",
+      "obligation": "dependentRequired",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "55b2880de235e61efdf60a3ef2967618bf639548592b113d03812f01a43466a3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "10f3fe7449900efd16b85e6fea2cf2f6a4d69c3066054c052595bed57b0f51f4",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/3/2",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "957d0a541516b6554d0b46cc3b9e61047e43d613bfa53385e76f54c612fb77a3"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "10f3fe7449900efd16b85e6fea2cf2f6a4d69c3066054c052595bed57b0f51f4",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "dependentRequired/3/3",
+      "obligation": "dependentRequired",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 3.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "9c4c6439b988243a96b33459b07e2eb203a4756aa0d8db4d137c5b67daf51f00"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "propertyNames/0/1",
+      "obligation": "propertyNames",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "d8a9fb4f3dd1d11bc22532f1af63510870751e7c65ff802d26cc150917f2058c"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/2",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "fcff660b1cf4deec81ecbddceef95b4c0feeb0ec722ddbfb58d35c49c85fdf32"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/3",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "13ecda60b7f11647948af3b9f0498bd81be702d7a41232e063b4189c9177cc2f"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/4",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 4.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "eab9352c0297ac66a7e244f6f2eba774e267da7d6ccc79a3dcac4d531df20bb4"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/5",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 5.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "b2b225b0b6d244874e53da53f258072cc5496259a36b73535d9036f3459fb226"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/6",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 6.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "abd3a91df66274f7fd7ac9ad647033d39ec4f03c272f50fc885fad7fab1c1d10"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "097d0183801a1360863899be9f7b73c5786a6c54c30effb9f0d5282c98c93b3a",
+      "expected": [],
+      "id": "propertyNames/0/7",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 7.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "f6499a8ceb38984e001c3166adae1863d596944321a0ed8da18d37375fb6636e"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bfc337b005a9e8ed3e376abc676fd578a96dbec5f3b25b23461bfcf900b2fb0",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "propertyNames/1/1",
+      "obligation": "propertyNames",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 1 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "39ddd7a6728896c95cf9cf8c71606dc1128d5834a769df316233c711927c8719"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "2bfc337b005a9e8ed3e376abc676fd578a96dbec5f3b25b23461bfcf900b2fb0",
+      "expected": [],
+      "id": "propertyNames/1/2",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 1 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "aad26d57e6511c621c8260b5ebd0d07e281c79e43773f2893e6d1e938dc0e65a"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "59c3179be596304ecf17bf0aae43b932f3d76ab1741407886be3c71d4a09e8d8",
+      "expected": [],
+      "id": "propertyNames/2/1",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 2 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "9f0ec1041e2c03bcf3f99cacdeadfb19431e73e4ffa43f446bc4251eea542ad6"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "c1eef32dffcd0da05c9762fcef28942f2fa8a36f8219bc66e06f9ff198409301",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "propertyNames/3/0",
+      "obligation": "propertyNames",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 3 test 0.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "b3559c7be46bd17088fdc470c7be8ca26f440e501606e6f1831dacf743860fcb"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "e7cf056bb8715d170d2585d69bd773139328ba6e9096cf60cf661147753721e2",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "propertyNames/4/1",
+      "obligation": "propertyNames",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 4 test 1.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "2ba0c5bed3f24ad94a71b3125912d1e456c5a3e4904a740449079c768227ab54"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "e7cf056bb8715d170d2585d69bd773139328ba6e9096cf60cf661147753721e2",
+      "expected": [],
+      "id": "propertyNames/4/2",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 4 test 2.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "c934e13e83a705cd3781cb423d52c49e55125161a2647d2dec381db3925126ea"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "95064c4a1b76e88909bb0127ce58be4d9ab34f64748276c8af4384228c5fdfb2",
+      "expected": [],
+      "id": "propertyNames/5/1",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 1.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "4cc16c372eb3dceb89a06c484fbac1daa33e0374e6ebdce2b0dfeb261ef94b8b"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "95064c4a1b76e88909bb0127ce58be4d9ab34f64748276c8af4384228c5fdfb2",
+      "expected": [
+        "schema.invalid"
+      ],
+      "id": "propertyNames/5/2",
+      "obligation": "propertyNames",
+      "outcome": "detected",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 2.",
+      "reason": "all_expected_violations",
+      "relation": "violation",
+      "validity": "valid",
+      "variant": {
+        "accepted": false,
+        "complete": true,
+        "evidence": [],
+        "violations": [
+          "schema.invalid"
+        ]
+      },
+      "variant_digest": "a7f66357950d348c7e0cad4a97504d858922be499d95d94e4cfa1a2dce4e9245"
+    },
+    {
+      "baseline": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "baseline_digest": "95064c4a1b76e88909bb0127ce58be4d9ab34f64748276c8af4384228c5fdfb2",
+      "expected": [],
+      "id": "propertyNames/5/3",
+      "obligation": "propertyNames",
+      "outcome": "preserved",
+      "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 3.",
+      "reason": "accepted_valid_control",
+      "relation": "preserve",
+      "validity": "valid",
+      "variant": {
+        "accepted": true,
+        "complete": true,
+        "evidence": [],
+        "violations": []
+      },
+      "variant_digest": "8c36538c783a5202826b6081b2700c9a8fc44aaadef72b0f34a587bdd07f82dc"
+    }
+  ],
+  "corpus_digest": "f88699e7b434d8395b38bb7892d277f6f0e43778f019cef0051d9fe2d167b1ae",
+  "library_version": "0.1.0a3",
+  "obligations": [
+    {
+      "description": "Upstream minProperties conformance.",
+      "id": "minProperties",
+      "scope": "contract"
+    },
+    {
+      "description": "Upstream maxProperties conformance.",
+      "id": "maxProperties",
+      "scope": "contract"
+    },
+    {
+      "description": "Upstream uniqueItems conformance.",
+      "id": "uniqueItems",
+      "scope": "contract"
+    },
+    {
+      "description": "Upstream contains conformance.",
+      "id": "contains",
+      "scope": "contract"
+    },
+    {
+      "description": "Upstream dependentRequired conformance.",
+      "id": "dependentRequired",
+      "scope": "contract"
+    },
+    {
+      "description": "Upstream propertyNames conformance.",
+      "id": "propertyNames",
+      "scope": "contract"
+    }
+  ],
+  "provenance": null,
+  "schema_version": 2,
+  "summary": {
+    "counts": {
+      "detected": 45,
+      "preserved": 79
+    },
+    "detected_faults": 45,
+    "detection_score": 1.0,
+    "eligible_controls": 79,
+    "eligible_faults": 45,
+    "obligations": [
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "minProperties/0/1",
+          "minProperties/0/2",
+          "minProperties/0/3",
+          "minProperties/0/4",
+          "minProperties/0/5",
+          "minProperties/0/6",
+          "minProperties/0/7",
+          "minProperties/1/1"
+        ],
+        "counts": {
+          "detected": 2,
+          "preserved": 6
+        },
+        "description": "Upstream minProperties conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "minProperties",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "maxProperties/0/1",
+          "maxProperties/0/2",
+          "maxProperties/0/3",
+          "maxProperties/0/4",
+          "maxProperties/0/5",
+          "maxProperties/1/1",
+          "maxProperties/2/1"
+        ],
+        "counts": {
+          "detected": 3,
+          "preserved": 4
+        },
+        "description": "Upstream maxProperties conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "maxProperties",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "uniqueItems/0/1",
+          "uniqueItems/0/2",
+          "uniqueItems/0/3",
+          "uniqueItems/0/4",
+          "uniqueItems/0/5",
+          "uniqueItems/0/6",
+          "uniqueItems/0/7",
+          "uniqueItems/0/8",
+          "uniqueItems/0/9",
+          "uniqueItems/0/10",
+          "uniqueItems/0/11",
+          "uniqueItems/0/12",
+          "uniqueItems/0/13",
+          "uniqueItems/0/14",
+          "uniqueItems/0/15",
+          "uniqueItems/0/16",
+          "uniqueItems/0/17",
+          "uniqueItems/0/18",
+          "uniqueItems/0/19",
+          "uniqueItems/0/20",
+          "uniqueItems/0/21",
+          "uniqueItems/0/22",
+          "uniqueItems/0/23",
+          "uniqueItems/0/24",
+          "uniqueItems/0/25",
+          "uniqueItems/0/26",
+          "uniqueItems/0/27",
+          "uniqueItems/1/1",
+          "uniqueItems/1/2",
+          "uniqueItems/1/3",
+          "uniqueItems/1/4",
+          "uniqueItems/1/5",
+          "uniqueItems/1/6",
+          "uniqueItems/1/7",
+          "uniqueItems/2/1",
+          "uniqueItems/2/2",
+          "uniqueItems/2/3",
+          "uniqueItems/2/4",
+          "uniqueItems/3/1",
+          "uniqueItems/3/2",
+          "uniqueItems/3/3",
+          "uniqueItems/3/4",
+          "uniqueItems/3/5",
+          "uniqueItems/3/6",
+          "uniqueItems/3/7",
+          "uniqueItems/3/8",
+          "uniqueItems/3/9",
+          "uniqueItems/3/10",
+          "uniqueItems/3/11",
+          "uniqueItems/3/12",
+          "uniqueItems/3/13",
+          "uniqueItems/3/14",
+          "uniqueItems/4/1",
+          "uniqueItems/4/2",
+          "uniqueItems/4/3",
+          "uniqueItems/4/4",
+          "uniqueItems/4/5",
+          "uniqueItems/4/6",
+          "uniqueItems/4/7",
+          "uniqueItems/5/1",
+          "uniqueItems/5/2",
+          "uniqueItems/5/3",
+          "uniqueItems/5/4"
+        ],
+        "counts": {
+          "detected": 19,
+          "preserved": 44
+        },
+        "description": "Upstream uniqueItems conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "uniqueItems",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "contains/0/1",
+          "contains/0/2",
+          "contains/0/3",
+          "contains/0/4",
+          "contains/0/5",
+          "contains/1/1",
+          "contains/1/2",
+          "contains/2/1",
+          "contains/3/0",
+          "contains/3/1",
+          "contains/4/0",
+          "contains/4/1",
+          "contains/4/3",
+          "contains/5/1"
+        ],
+        "counts": {
+          "detected": 10,
+          "preserved": 4
+        },
+        "description": "Upstream contains conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "contains",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "dependentRequired/0/1",
+          "dependentRequired/0/2",
+          "dependentRequired/0/3",
+          "dependentRequired/0/4",
+          "dependentRequired/0/5",
+          "dependentRequired/0/6",
+          "dependentRequired/1/1",
+          "dependentRequired/1/2",
+          "dependentRequired/2/1",
+          "dependentRequired/2/2",
+          "dependentRequired/2/3",
+          "dependentRequired/2/4",
+          "dependentRequired/2/5",
+          "dependentRequired/3/1",
+          "dependentRequired/3/2",
+          "dependentRequired/3/3"
+        ],
+        "counts": {
+          "detected": 6,
+          "preserved": 10
+        },
+        "description": "Upstream dependentRequired conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "dependentRequired",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "propertyNames/0/1",
+          "propertyNames/0/2",
+          "propertyNames/0/3",
+          "propertyNames/0/4",
+          "propertyNames/0/5",
+          "propertyNames/0/6",
+          "propertyNames/0/7",
+          "propertyNames/1/1",
+          "propertyNames/1/2",
+          "propertyNames/2/1",
+          "propertyNames/3/0",
+          "propertyNames/4/1",
+          "propertyNames/4/2",
+          "propertyNames/5/1",
+          "propertyNames/5/2",
+          "propertyNames/5/3"
+        ],
+        "counts": {
+          "detected": 5,
+          "preserved": 11
+        },
+        "description": "Upstream propertyNames conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "propertyNames",
+        "scope": "contract"
+      }
+    ],
+    "preservation_rate": 1.0,
+    "preserved_controls": 79,
+    "total": 124
+  },
+  "validator_id": "jsonschema/4.17.3/Draft202012Validator/coarse-invalid"
+}

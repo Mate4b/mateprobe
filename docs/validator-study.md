@@ -117,3 +117,10 @@ It does not establish a new mutation algorithm, natural-output accuracy, adoptio
 or reduced engineering effort. The main demonstrated benefit is a reusable protocol
 and report for paired evidence; careful handwritten tests can express the same checks.
 The original a2 synthetic/model evidence remains separate and unchanged.
+
+## Companion evidence
+
+See the [ordinary-pytest comparison](pytest-comparison.md), the
+[external conformance extension](external-conformance.md), and
+[table and claim regeneration](paper-evidence.md). These extensions preserve the
+original frozen studies and report separate datasets.

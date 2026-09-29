@@ -1,0 +1,236 @@
+[
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "customer_mismatch"
+    ],
+    "id": "wrong-customer",
+    "profile": "before",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "order_mismatch"
+    ],
+    "id": "wrong-order",
+    "profile": "before",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "amount_out_of_bounds"
+    ],
+    "id": "excessive-amount",
+    "profile": "before",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "missing-receipt",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "timeout",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "accepted-not-completed",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "stale-receipt",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "wrong-receipt-customer",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "preserved",
+    "expected_ids": [],
+    "id": "valid-paraphrase",
+    "profile": "before",
+    "pytest": "passed",
+    "relation": "preserve"
+  },
+  {
+    "agree": true,
+    "audit": "preserved",
+    "expected_ids": [],
+    "id": "honest-uncertainty",
+    "profile": "before",
+    "pytest": "passed",
+    "relation": "preserve"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "prose_contradiction"
+    ],
+    "id": "prose-only-contradiction",
+    "profile": "before",
+    "pytest": "failed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "customer_mismatch"
+    ],
+    "id": "wrong-customer",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "order_mismatch"
+    ],
+    "id": "wrong-order",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "amount_out_of_bounds"
+    ],
+    "id": "excessive-amount",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "missing-receipt",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "timeout",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "accepted-not-completed",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "stale-receipt",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "detected",
+    "expected_ids": [
+      "completion_not_supported"
+    ],
+    "id": "wrong-receipt-customer",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "violation"
+  },
+  {
+    "agree": true,
+    "audit": "preserved",
+    "expected_ids": [],
+    "id": "valid-paraphrase",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "preserve"
+  },
+  {
+    "agree": true,
+    "audit": "preserved",
+    "expected_ids": [],
+    "id": "honest-uncertainty",
+    "profile": "after",
+    "pytest": "passed",
+    "relation": "preserve"
+  },
+  {
+    "agree": true,
+    "audit": "survived",
+    "expected_ids": [
+      "prose_contradiction"
+    ],
+    "id": "prose-only-contradiction",
+    "profile": "after",
+    "pytest": "failed",
+    "relation": "violation"
+  }
+]

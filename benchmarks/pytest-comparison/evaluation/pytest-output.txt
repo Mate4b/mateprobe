@@ -1,0 +1,53 @@
+...FFFFF..F..........F                                                   [100%]
+=================================== FAILURES ===================================
+_______________ test_paired_obligation[before::missing-receipt] ________________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+___________________ test_paired_obligation[before::timeout] ____________________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+____________ test_paired_obligation[before::accepted-not-completed] ____________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+________________ test_paired_obligation[before::stale-receipt] _________________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+____________ test_paired_obligation[before::wrong-receipt-customer] ____________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+___________ test_paired_obligation[before::prose-only-contradiction] ___________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+___________ test_paired_obligation[after::prose-only-contradiction] ____________
+examples/pytest_audit_comparison.py:37: in test_paired_obligation
+    assert not changed.accepted, "fault survived"
+E   AssertionError: fault survived
+E   assert not True
+E    +  where True = Verdict(accepted=True, violations=(), complete=True, evidence=()).accepted
+=========================== short test summary info ============================
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::missing-receipt]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::timeout]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::accepted-not-completed]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::stale-receipt]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::wrong-receipt-customer]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[before::prose-only-contradiction]
+FAILED examples/pytest_audit_comparison.py::test_paired_obligation[after::prose-only-contradiction]
+7 failed, 15 passed in 0.07s

@@ -1,0 +1,2529 @@
+{
+  "contains/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "contains/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "contains/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[2, 3, 4] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "contains/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "contains/1/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[1, 2, 3, 4] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/2/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/3/0": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "['foo'] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/3/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/4/0": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[2, 4, 8] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/4/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "3 is not a multiple of 2",
+          "path": [
+            0
+          ],
+          "schema_path": [
+            "items",
+            "multipleOf"
+          ],
+          "validator": "multipleOf"
+        },
+        {
+          "message": "9 is not a multiple of 2",
+          "path": [
+            2
+          ],
+          "schema_path": [
+            "items",
+            "multipleOf"
+          ],
+          "validator": "multipleOf"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/4/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "1 is not a multiple of 2",
+          "path": [
+            0
+          ],
+          "schema_path": [
+            "items",
+            "multipleOf"
+          ],
+          "validator": "multipleOf"
+        },
+        {
+          "message": "5 is not a multiple of 2",
+          "path": [
+            1
+          ],
+          "schema_path": [
+            "items",
+            "multipleOf"
+          ],
+          "validator": "multipleOf"
+        },
+        {
+          "message": "[1, 5] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "contains/5/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[] does not contain items matching the given schema",
+          "path": [],
+          "schema_path": [
+            "contains"
+          ],
+          "validator": "contains"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foo' is a dependency of 'bar'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/0/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/1/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/2/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/2/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/2/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'bar' is a dependency of 'quux'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/2/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foo' is a dependency of 'quux'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/2/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foo' is a dependency of 'quux'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        },
+        {
+          "message": "'bar' is a dependency of 'quux'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/3/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "dependentRequired/3/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foo\\rbar' is a dependency of 'foo\\nbar'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "dependentRequired/3/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "\"foo'bar\" is a dependency of 'foo\"bar'",
+          "path": [],
+          "schema_path": [
+            "dependentRequired"
+          ],
+          "validator": "dependentRequired"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "maxProperties/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "maxProperties/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "{'foo': 1, 'bar': 2, 'baz': 3} has too many properties",
+          "path": [],
+          "schema_path": [
+            "maxProperties"
+          ],
+          "validator": "maxProperties"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "maxProperties/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "maxProperties/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "maxProperties/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "maxProperties/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "{'foo': 1, 'bar': 2, 'baz': 3} has too many properties",
+          "path": [],
+          "schema_path": [
+            "maxProperties"
+          ],
+          "validator": "maxProperties"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "maxProperties/2/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "{'foo': 1} has too many properties",
+          "path": [],
+          "schema_path": [
+            "maxProperties"
+          ],
+          "validator": "maxProperties"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "minProperties/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "{} does not have enough properties",
+          "path": [],
+          "schema_path": [
+            "minProperties"
+          ],
+          "validator": "minProperties"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "minProperties/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/0/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/0/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "minProperties/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "{} does not have enough properties",
+          "path": [],
+          "schema_path": [
+            "minProperties"
+          ],
+          "validator": "minProperties"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foobar' is too long",
+          "path": [],
+          "schema_path": [
+            "propertyNames",
+            "maxLength"
+          ],
+          "validator": "maxLength"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/0/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/0/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'aaA' does not match '^a+$'",
+          "path": [],
+          "schema_path": [
+            "propertyNames",
+            "pattern"
+          ],
+          "validator": "pattern"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/1/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/2/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/3/0": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "False schema does not allow 'foo'",
+          "path": [],
+          "schema_path": [
+            "propertyNames"
+          ],
+          "validator": null
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/4/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'foo' was expected",
+          "path": [],
+          "schema_path": [
+            "propertyNames",
+            "const"
+          ],
+          "validator": "const"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/4/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/5/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "propertyNames/5/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "'baz' is not one of ['foo', 'bar']",
+          "path": [],
+          "schema_path": [
+            "propertyNames",
+            "enum"
+          ],
+          "validator": "enum"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "propertyNames/5/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[1, 1] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/10": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[{'foo': 'bar', 'bar': 'foo'}, {'bar': 'foo', 'foo': 'bar'}] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/11": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/12": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[{'foo': {'bar': {'baz': True}}}, {'foo': {'bar': {'baz': True}}}] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/13": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/14": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[['foo'], ['foo']] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/15": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[['foo'], ['bar'], ['foo']] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/16": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/17": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/18": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/19": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[1, 2, 1] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/20": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/21": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/22": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/23": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[{}, [1], True, None, {}, 1] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/24": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/25": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[{'a': 1, 'b': 2}, {'b': 2, 'a': 1}] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/26": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/27": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[1.0, 1.0, 1] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "['foo', 'bar', 'foo'] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/0/8": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/0/9": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[{'foo': 'bar'}, {'foo': 'bar'}] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/1/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/1/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[False, False] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/1/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[True, True] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/1/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/1/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/1/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[False, True, 'foo', 'foo'] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/1/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[True, False, 'foo', 'foo'] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/2/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/2/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[False, False] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/2/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "[True, True] has non-unique elements",
+          "path": [],
+          "schema_path": [
+            "uniqueItems"
+          ],
+          "validator": "uniqueItems"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/2/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "Expected at most 2 items, but found 3",
+          "path": [],
+          "schema_path": [
+            "items"
+          ],
+          "validator": "items"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  },
+  "uniqueItems/3/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/10": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/11": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/12": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/13": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/14": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/8": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/3/9": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/5": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/6": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/4/7": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/5/1": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/5/2": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/5/3": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    }
+  },
+  "uniqueItems/5/4": {
+    "baseline": {
+      "accepted": true,
+      "complete": true,
+      "error": null,
+      "package_errors": [],
+      "violations": []
+    },
+    "variant": {
+      "accepted": false,
+      "complete": true,
+      "error": null,
+      "package_errors": [
+        {
+          "message": "Expected at most 2 items, but found 3",
+          "path": [],
+          "schema_path": [
+            "items"
+          ],
+          "validator": "items"
+        }
+      ],
+      "violations": [
+        "schema.invalid"
+      ]
+    }
+  }
+}

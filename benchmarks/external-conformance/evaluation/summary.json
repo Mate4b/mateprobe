@@ -1,0 +1,298 @@
+{
+  "audit": {
+    "counts": {
+      "detected": 45,
+      "preserved": 79
+    },
+    "detected_faults": 45,
+    "detection_score": 1.0,
+    "eligible_controls": 79,
+    "eligible_faults": 45,
+    "obligations": [
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "minProperties/0/1",
+          "minProperties/0/2",
+          "minProperties/0/3",
+          "minProperties/0/4",
+          "minProperties/0/5",
+          "minProperties/0/6",
+          "minProperties/0/7",
+          "minProperties/1/1"
+        ],
+        "counts": {
+          "detected": 2,
+          "preserved": 6
+        },
+        "description": "Upstream minProperties conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "minProperties",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "maxProperties/0/1",
+          "maxProperties/0/2",
+          "maxProperties/0/3",
+          "maxProperties/0/4",
+          "maxProperties/0/5",
+          "maxProperties/1/1",
+          "maxProperties/2/1"
+        ],
+        "counts": {
+          "detected": 3,
+          "preserved": 4
+        },
+        "description": "Upstream maxProperties conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "maxProperties",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "uniqueItems/0/1",
+          "uniqueItems/0/2",
+          "uniqueItems/0/3",
+          "uniqueItems/0/4",
+          "uniqueItems/0/5",
+          "uniqueItems/0/6",
+          "uniqueItems/0/7",
+          "uniqueItems/0/8",
+          "uniqueItems/0/9",
+          "uniqueItems/0/10",
+          "uniqueItems/0/11",
+          "uniqueItems/0/12",
+          "uniqueItems/0/13",
+          "uniqueItems/0/14",
+          "uniqueItems/0/15",
+          "uniqueItems/0/16",
+          "uniqueItems/0/17",
+          "uniqueItems/0/18",
+          "uniqueItems/0/19",
+          "uniqueItems/0/20",
+          "uniqueItems/0/21",
+          "uniqueItems/0/22",
+          "uniqueItems/0/23",
+          "uniqueItems/0/24",
+          "uniqueItems/0/25",
+          "uniqueItems/0/26",
+          "uniqueItems/0/27",
+          "uniqueItems/1/1",
+          "uniqueItems/1/2",
+          "uniqueItems/1/3",
+          "uniqueItems/1/4",
+          "uniqueItems/1/5",
+          "uniqueItems/1/6",
+          "uniqueItems/1/7",
+          "uniqueItems/2/1",
+          "uniqueItems/2/2",
+          "uniqueItems/2/3",
+          "uniqueItems/2/4",
+          "uniqueItems/3/1",
+          "uniqueItems/3/2",
+          "uniqueItems/3/3",
+          "uniqueItems/3/4",
+          "uniqueItems/3/5",
+          "uniqueItems/3/6",
+          "uniqueItems/3/7",
+          "uniqueItems/3/8",
+          "uniqueItems/3/9",
+          "uniqueItems/3/10",
+          "uniqueItems/3/11",
+          "uniqueItems/3/12",
+          "uniqueItems/3/13",
+          "uniqueItems/3/14",
+          "uniqueItems/4/1",
+          "uniqueItems/4/2",
+          "uniqueItems/4/3",
+          "uniqueItems/4/4",
+          "uniqueItems/4/5",
+          "uniqueItems/4/6",
+          "uniqueItems/4/7",
+          "uniqueItems/5/1",
+          "uniqueItems/5/2",
+          "uniqueItems/5/3",
+          "uniqueItems/5/4"
+        ],
+        "counts": {
+          "detected": 19,
+          "preserved": 44
+        },
+        "description": "Upstream uniqueItems conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "uniqueItems",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "contains/0/1",
+          "contains/0/2",
+          "contains/0/3",
+          "contains/0/4",
+          "contains/0/5",
+          "contains/1/1",
+          "contains/1/2",
+          "contains/2/1",
+          "contains/3/0",
+          "contains/3/1",
+          "contains/4/0",
+          "contains/4/1",
+          "contains/4/3",
+          "contains/5/1"
+        ],
+        "counts": {
+          "detected": 10,
+          "preserved": 4
+        },
+        "description": "Upstream contains conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "contains",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "dependentRequired/0/1",
+          "dependentRequired/0/2",
+          "dependentRequired/0/3",
+          "dependentRequired/0/4",
+          "dependentRequired/0/5",
+          "dependentRequired/0/6",
+          "dependentRequired/1/1",
+          "dependentRequired/1/2",
+          "dependentRequired/2/1",
+          "dependentRequired/2/2",
+          "dependentRequired/2/3",
+          "dependentRequired/2/4",
+          "dependentRequired/2/5",
+          "dependentRequired/3/1",
+          "dependentRequired/3/2",
+          "dependentRequired/3/3"
+        ],
+        "counts": {
+          "detected": 6,
+          "preserved": 10
+        },
+        "description": "Upstream dependentRequired conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "dependentRequired",
+        "scope": "contract"
+      },
+      {
+        "assessment": "no_failures_observed",
+        "case_ids": [
+          "propertyNames/0/1",
+          "propertyNames/0/2",
+          "propertyNames/0/3",
+          "propertyNames/0/4",
+          "propertyNames/0/5",
+          "propertyNames/0/6",
+          "propertyNames/0/7",
+          "propertyNames/1/1",
+          "propertyNames/1/2",
+          "propertyNames/2/1",
+          "propertyNames/3/0",
+          "propertyNames/4/1",
+          "propertyNames/4/2",
+          "propertyNames/5/1",
+          "propertyNames/5/2",
+          "propertyNames/5/3"
+        ],
+        "counts": {
+          "detected": 5,
+          "preserved": 11
+        },
+        "description": "Upstream propertyNames conformance.",
+        "has_controls": true,
+        "has_exclusions": false,
+        "has_fault_tests": true,
+        "has_incomplete_evidence": false,
+        "has_known_gaps": false,
+        "id": "propertyNames",
+        "scope": "contract"
+      }
+    ],
+    "preservation_rate": 1.0,
+    "preserved_controls": 79,
+    "total": 124
+  },
+  "by_family": {
+    "contains": {
+      "counts": {
+        "detected": 10,
+        "preserved": 4
+      },
+      "pairs": 14
+    },
+    "dependentRequired": {
+      "counts": {
+        "detected": 6,
+        "preserved": 10
+      },
+      "pairs": 16
+    },
+    "maxProperties": {
+      "counts": {
+        "detected": 3,
+        "preserved": 4
+      },
+      "pairs": 7
+    },
+    "minProperties": {
+      "counts": {
+        "detected": 2,
+        "preserved": 6
+      },
+      "pairs": 8
+    },
+    "propertyNames": {
+      "counts": {
+        "detected": 5,
+        "preserved": 11
+      },
+      "pairs": 16
+    },
+    "uniqueItems": {
+      "counts": {
+        "detected": 19,
+        "preserved": 44
+      },
+      "pairs": 63
+    }
+  },
+  "disagreements": 0,
+  "ledger_status": {
+    "baseline": 28,
+    "paired": 124
+  },
+  "paired_groups": 27,
+  "pairs": 124,
+  "schema_version": 1,
+  "source_groups": 28,
+  "source_tests": 152,
+  "upstream_revision": "5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8"
+}
