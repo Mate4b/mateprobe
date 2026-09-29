@@ -5,7 +5,12 @@
 The project is now **MateProbe by Mate4B**. The renamed distributions are
 `mateprobe` and `pytest-mateprobe`, version `0.1.0a4`. See the
 [migration guide](migration-mateprobe.md) and [current API](api-a4.md).
-The historical verification records below apply to their original distributions.
+The [GitHub alpha release](https://github.com/Mate4b/mateprobe/releases/tag/v0.1.0a4)
+contains wheels and source distributions built from commit
+`e842d66faa5d2dd6d8cc9a7dd8abd7e31bc49078`. The [artifact manifest](../scripts/release-a4.json)
+pins their SHA-256 hashes. Publication under the new PyPI names is pending;
+use the release wheels in the meantime. The historical verification records below
+apply to their original distributions.
 
 
 ## Historical release: Narrative Contracts 0.1.0a3
