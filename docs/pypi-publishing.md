@@ -8,9 +8,23 @@ The project is now **MateProbe by Mate4B**. The renamed distributions are
 The [GitHub alpha release](https://github.com/Mate4b/mateprobe/releases/tag/v0.1.0a4)
 contains wheels and source distributions built from commit
 `e842d66faa5d2dd6d8cc9a7dd8abd7e31bc49078`. The [artifact manifest](../scripts/release-a4.json)
-pins their SHA-256 hashes. Publication under the new PyPI names is pending;
-use the release wheels in the meantime. The historical verification records below
-apply to their original distributions.
+pins their SHA-256 hashes. Both packages are published on PyPI:
+[mateprobe](https://pypi.org/project/mateprobe/0.1.0a4/) and
+[pytest-mateprobe](https://pypi.org/project/pytest-mateprobe/0.1.0a4/).
+
+```sh
+python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
+```
+
+All four downloaded PyPI wheel/sdist hashes match the GitHub release. A clean
+Python 3.12 environment installed both packages from PyPI and passed the consumer
+docs, CLI, pytest, policy-regression, integration and launch checks. Removing the
+demo fix and rejecting every input both fail while retaining their JSON reports.
+See [machine-readable verification](pypi-a4-verification.json),
+[core publication](https://github.com/Mate4b/mateprobe/actions/runs/36640476132) and
+[plugin publication](https://github.com/Mate4b/mateprobe/actions/runs/36640621431).
+
+The historical verification records below apply to their original distributions.
 
 
 ## Historical release: Narrative Contracts 0.1.0a3

@@ -1,7 +1,7 @@
 # Audit your existing validator
 
 Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
-After publication, install the core and optional pytest plugin from PyPI; see the
+Install the core and optional pytest plugin from PyPI; see the
 [migration guide](migration-mateprobe.md). An editable checkout is only needed for development.
 
 Use `audit_validator` when you already have a validator and want to test its

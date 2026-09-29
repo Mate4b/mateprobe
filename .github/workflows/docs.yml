@@ -14,19 +14,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  installed-examples:
+  published-examples:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Build and install MateProbe wheels outside the source tree
-        run: |
-          python -m pip install build
-          python -m build --wheel --outdir /tmp/mateprobe-wheels
-          python -m build --wheel packages/pytest-mateprobe --outdir /tmp/mateprobe-wheels
-          python -m pip install /tmp/mateprobe-wheels/*.whl -r requirements-integrations.txt
+      - name: Install the published MateProbe alpha from PyPI
+        run: >-
+          python -m pip install --index-url https://pypi.org/simple
+          mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
+          -r requirements-integrations.txt
       - run: python scripts/check_alpha_install.py --output /tmp/published-docs-evidence
       - run: python scripts/check_launch_package.py --output /tmp/launch-evidence
       - uses: actions/upload-artifact@v4
@@ -87,7 +86,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [build, installed-examples, historical-a2-trial, historical-a3-trial]
+    needs: [build, published-examples, historical-a2-trial, historical-a3-trial]
     runs-on: ubuntu-latest
     permissions:
       pages: write

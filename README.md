@@ -96,7 +96,9 @@ See [choosing an evaluation method](docs/choosing-an-evaluator.md).
 
 ## Install the current alpha
 
-Install the pinned alpha from PyPI with:
+Both [mateprobe](https://pypi.org/project/mateprobe/0.1.0a4/) and
+[pytest-mateprobe](https://pypi.org/project/pytest-mateprobe/0.1.0a4/) are published
+and verified. Install the pinned alpha with:
 
 ```sh
 python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
