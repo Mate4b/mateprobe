@@ -7,6 +7,14 @@ on:
         type: boolean
         default: false
         required: true
+      package:
+        description: 'Package selection for publishing or recovery'
+        type: choice
+        default: both
+        options:
+          - both
+          - core
+          - plugin
 permissions:
   contents: read
 concurrency:
@@ -43,6 +51,11 @@ jobs:
     needs: verify
     if: inputs.publish
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        prefix: ${{ fromJSON(inputs.package == 'core' && '["narrative_contracts"]' || inputs.package == 'plugin' && '["pytest_narrative_contracts"]' || '["narrative_contracts","pytest_narrative_contracts"]') }}
     environment:
       name: pypi
       url: https://pypi.org/project/narrative-contracts/
@@ -53,7 +66,14 @@ jobs:
         with:
           name: verified-pypi-distributions
           path: dist/
+      - name: Select only this package's verified files
+        env:
+          PACKAGE_PREFIX: ${{ matrix.prefix }}
+        run: |
+          mkdir upload
+          mv "dist/${PACKAGE_PREFIX}"-* upload/
       - name: Publish with PyPI Trusted Publishing
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
+          packages-dir: upload/
           skip-existing: true
