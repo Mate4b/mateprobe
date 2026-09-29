@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0a3",
+  "tag": "v0.1.0a3",
+  "source_commit": "980c78f25771cfd408f7b2e2eece548396d063e6",
+  "sha256": {
+    "narrative_contracts-0.1.0a3-py3-none-any.whl": "ba5b4b309bff27f343760c9cef4633ce3176db39bea842c44b5bb6d44ac169db",
+    "narrative_contracts-0.1.0a3.tar.gz": "f91021b23e4c3769194ecb6960bdeab79c892bd4aa4809a4514dc300db04612c",
+    "pytest_narrative_contracts-0.1.0a3-py3-none-any.whl": "707ca8acb3d4a9ee0b1d2237ae48181582cb072832b7ee2e7162840494d558c3",
+    "pytest_narrative_contracts-0.1.0a3.tar.gz": "ab2206e49d051a6205b30f3fedeaf58dcd9f6d880f156b3be454149f552e9e51"
+  }
+}
