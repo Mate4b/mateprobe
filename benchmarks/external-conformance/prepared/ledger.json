@@ -1,0 +1,1522 @@
+[
+  {
+    "baseline_index": 0,
+    "description": "longer is valid",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "exact length is valid",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "too short is invalid",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores null",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores booleans",
+    "domain": "minProperties",
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/7",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "longer is valid",
+    "domain": "minProperties",
+    "group": "minProperties/1",
+    "group_description": "minProperties validation with a decimal",
+    "id": "minProperties/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "too short is invalid",
+    "domain": "minProperties",
+    "group": "minProperties/1",
+    "group_description": "minProperties validation with a decimal",
+    "id": "minProperties/1/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "shorter is valid",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "exact length is valid",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "too long is invalid",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "maxProperties",
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "shorter is valid",
+    "domain": "maxProperties",
+    "group": "maxProperties/1",
+    "group_description": "maxProperties validation with a decimal",
+    "id": "maxProperties/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "too long is invalid",
+    "domain": "maxProperties",
+    "group": "maxProperties/1",
+    "group_description": "maxProperties validation with a decimal",
+    "id": "maxProperties/1/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "no properties is valid",
+    "domain": "maxProperties",
+    "group": "maxProperties/2",
+    "group_description": "maxProperties = 0 means the object is empty",
+    "id": "maxProperties/2/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "one property is invalid",
+    "domain": "maxProperties",
+    "group": "maxProperties/2",
+    "group_description": "maxProperties = 0 means the object is empty",
+    "id": "maxProperties/2/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of integers is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of integers is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of more than two integers is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "numbers are unique if mathematically unequal",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "false is not equal to zero",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "true is not equal to one",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of strings is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of strings is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/7",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/8",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of objects is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/9",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "property order of array of objects is ignored",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/10",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/11",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of nested objects is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/12",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/13",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of arrays is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/14",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of more than two arrays is invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/15",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "1 and true are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/16",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "0 and false are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/17",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[1] and [true] are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/18",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[0] and [false] are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/19",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "nested [1] and [true] are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/20",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "nested [0] and [false] are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/21",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/22",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique heterogeneous types are invalid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/23",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "different objects are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/24",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "objects are non-unique despite key order",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/25",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "{\"a\": false} and {\"a\": 0} are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/26",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "{\"a\": true} and {\"a\": 1} are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/27",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, false] from items array is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, true] from items array is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array extended from [false, true] is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/6",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array extended from [true, false] is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/7",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, false] from items array is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, true] from items array is not valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "extra items are invalid even if unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/4",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of integers is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of integers is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "numbers are unique if mathematically unequal",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "false is not equal to zero",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "true is not equal to one",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/7",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/8",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/9",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/10",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "1 and true are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/11",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "0 and false are unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/12",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/13",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/14",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/7",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[false, false] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "[true, true] from items array is valid",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "extra items are invalid even if unique",
+    "domain": "uniqueItems",
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/4",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "array with item matching schema (5) is valid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array with item matching schema (6) is valid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array with two items matching schema (5, 6) is valid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array without items matching schema is invalid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/4",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "not array is valid",
+    "domain": "contains",
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array with item 5 is valid",
+    "domain": "contains",
+    "group": "contains/1",
+    "group_description": "contains keyword with const keyword",
+    "id": "contains/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array with two items 5 is valid",
+    "domain": "contains",
+    "group": "contains/1",
+    "group_description": "contains keyword with const keyword",
+    "id": "contains/1/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "array without item 5 is invalid",
+    "domain": "contains",
+    "group": "contains/1",
+    "group_description": "contains keyword with const keyword",
+    "id": "contains/1/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "any non-empty array is valid",
+    "domain": "contains",
+    "group": "contains/2",
+    "group_description": "contains keyword with boolean schema true",
+    "id": "contains/2/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "group": "contains/2",
+    "group_description": "contains keyword with boolean schema true",
+    "id": "contains/2/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 2,
+    "description": "any non-empty array is invalid",
+    "domain": "contains",
+    "group": "contains/3",
+    "group_description": "contains keyword with boolean schema false",
+    "id": "contains/3/0",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 2,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "group": "contains/3",
+    "group_description": "contains keyword with boolean schema false",
+    "id": "contains/3/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 2,
+    "description": "non-arrays are valid",
+    "domain": "contains",
+    "group": "contains/3",
+    "group_description": "contains keyword with boolean schema false",
+    "id": "contains/3/2",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 2,
+    "description": "matches items, does not match contains",
+    "domain": "contains",
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/0",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 2,
+    "description": "does not match items, matches contains",
+    "domain": "contains",
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 2,
+    "description": "matches both items and contains",
+    "domain": "contains",
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/2",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 2,
+    "description": "matches neither items nor contains",
+    "domain": "contains",
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "any non-empty array is valid",
+    "domain": "contains",
+    "group": "contains/5",
+    "group_description": "contains with false if subschema",
+    "id": "contains/5/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "group": "contains/5",
+    "group_description": "contains with false if subschema",
+    "id": "contains/5/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "allows null items",
+    "domain": "contains",
+    "group": "contains/6",
+    "group_description": "contains with null instance elements",
+    "id": "contains/6/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "neither",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "nondependant",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "with dependency",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "missing dependency",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty object",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/1",
+    "group_description": "empty dependents",
+    "id": "dependentRequired/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with one property",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/1",
+    "group_description": "empty dependents",
+    "id": "dependentRequired/1/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-object is valid",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/1",
+    "group_description": "empty dependents",
+    "id": "dependentRequired/1/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "neither",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "nondependants",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "with dependencies",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "missing dependency",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "missing other dependency",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/4",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "missing both dependencies",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/5",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "CRLF",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "quoted quotes",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "CRLF missing dependent",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "quoted quotes missing dependent",
+    "domain": "dependentRequired",
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/3",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "all property names valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "some property names invalid",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "object without properties is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/3",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/4",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/5",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores null",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/6",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "ignores booleans",
+    "domain": "propertyNames",
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/7",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "matching property names valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/1",
+    "group_description": "propertyNames validation with pattern",
+    "id": "propertyNames/1/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "non-matching property name is invalid",
+    "domain": "propertyNames",
+    "group": "propertyNames/1",
+    "group_description": "propertyNames validation with pattern",
+    "id": "propertyNames/1/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "object without properties is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/1",
+    "group_description": "propertyNames validation with pattern",
+    "id": "propertyNames/1/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with any properties is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/2",
+    "group_description": "propertyNames with boolean schema true",
+    "id": "propertyNames/2/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/2",
+    "group_description": "propertyNames with boolean schema true",
+    "id": "propertyNames/2/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 1,
+    "description": "object with any properties is invalid",
+    "domain": "propertyNames",
+    "group": "propertyNames/3",
+    "group_description": "propertyNames with boolean schema false",
+    "id": "propertyNames/3/0",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 1,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/3",
+    "group_description": "propertyNames with boolean schema false",
+    "id": "propertyNames/3/1",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with property foo is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/4",
+    "group_description": "propertyNames with const",
+    "id": "propertyNames/4/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with any other property is invalid",
+    "domain": "propertyNames",
+    "group": "propertyNames/4",
+    "group_description": "propertyNames with const",
+    "id": "propertyNames/4/1",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/4",
+    "group_description": "propertyNames with const",
+    "id": "propertyNames/4/2",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with property foo is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/0",
+    "status": "baseline",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with property foo and bar is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/1",
+    "status": "paired",
+    "valid": true
+  },
+  {
+    "baseline_index": 0,
+    "description": "object with any other property is invalid",
+    "domain": "propertyNames",
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/2",
+    "status": "paired",
+    "valid": false
+  },
+  {
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/3",
+    "status": "paired",
+    "valid": true
+  }
+]

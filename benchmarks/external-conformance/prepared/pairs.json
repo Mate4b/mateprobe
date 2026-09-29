@@ -1,0 +1,4770 @@
+[
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "exact length is valid",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "too short is invalid",
+    "domain": "minProperties",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": "",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": 12,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores null",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": null,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores booleans",
+    "domain": "minProperties",
+    "expected": [],
+    "group": "minProperties/0",
+    "group_description": "minProperties validation",
+    "id": "minProperties/0/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 0 test 7.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": true,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1.0
+      }
+    },
+    "baseline_index": 0,
+    "description": "too short is invalid",
+    "domain": "minProperties",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "minProperties/1",
+    "group_description": "minProperties validation with a decimal",
+    "id": "minProperties/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/minProperties.json group 1 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "minProperties": 1.0
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    },
+    "baseline_index": 0,
+    "description": "exact length is valid",
+    "domain": "maxProperties",
+    "expected": [],
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    },
+    "baseline_index": 0,
+    "description": "too long is invalid",
+    "domain": "maxProperties",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "baz": 3,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "maxProperties",
+    "expected": [],
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        2,
+        3
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "maxProperties",
+    "expected": [],
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": "foobar",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "maxProperties",
+    "expected": [],
+    "group": "maxProperties/0",
+    "group_description": "maxProperties validation",
+    "id": "maxProperties/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": 12,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2.0
+      }
+    },
+    "baseline_index": 0,
+    "description": "too long is invalid",
+    "domain": "maxProperties",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "maxProperties/1",
+    "group_description": "maxProperties validation with a decimal",
+    "id": "maxProperties/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 1 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "baz": 3,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 2.0
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 0
+      }
+    },
+    "baseline_index": 0,
+    "description": "one property is invalid",
+    "domain": "maxProperties",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "maxProperties/2",
+    "group_description": "maxProperties = 0 means the object is empty",
+    "id": "maxProperties/2/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/maxProperties.json group 2 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "maxProperties": 0
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of integers is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        1,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of more than two integers is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        1,
+        2,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "numbers are unique if mathematically unequal",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        1.0,
+        1.0,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "false is not equal to zero",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        0,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "true is not equal to one",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of strings is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        "foo",
+        "bar",
+        "baz"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of strings is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 7.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        "foo",
+        "bar",
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/8",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 8.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": "bar"
+        },
+        {
+          "foo": "baz"
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of objects is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/9",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 9.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        {
+          "foo": "bar"
+        },
+        {
+          "foo": "bar"
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "property order of array of objects is ignored",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/10",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 10.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        {
+          "bar": "foo",
+          "foo": "bar"
+        },
+        {
+          "bar": "foo",
+          "foo": "bar"
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/11",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 11.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        },
+        {
+          "foo": {
+            "bar": {
+              "baz": false
+            }
+          }
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of nested objects is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/12",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 12.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        },
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/13",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 13.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          "foo"
+        ],
+        [
+          "bar"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of arrays is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/14",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 14.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        [
+          "foo"
+        ],
+        [
+          "foo"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of more than two arrays is invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/15",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 15.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        [
+          "foo"
+        ],
+        [
+          "bar"
+        ],
+        [
+          "foo"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "1 and true are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/16",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 16.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "0 and false are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/17",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 17.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        0,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[1] and [true] are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/18",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 18.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          1
+        ],
+        [
+          true
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[0] and [false] are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/19",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 19.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          0
+        ],
+        [
+          false
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "nested [1] and [true] are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/20",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 20.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          [
+            1
+          ],
+          "foo"
+        ],
+        [
+          [
+            true
+          ],
+          "foo"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "nested [0] and [false] are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/21",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 21.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          [
+            0
+          ],
+          "foo"
+        ],
+        [
+          [
+            false
+          ],
+          "foo"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/22",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 22.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {},
+        [
+          1
+        ],
+        true,
+        null,
+        1,
+        "{}"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique heterogeneous types are invalid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/23",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 23.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        {},
+        [
+          1
+        ],
+        true,
+        null,
+        {},
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "different objects are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/24",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 24.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "a": 1,
+          "b": 2
+        },
+        {
+          "a": 2,
+          "b": 1
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "objects are non-unique despite key order",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/25",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 25.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        {
+          "a": 1,
+          "b": 2
+        },
+        {
+          "a": 1,
+          "b": 2
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "{\"a\": false} and {\"a\": 0} are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/26",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 26.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "a": false
+        },
+        {
+          "a": 0
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "{\"a\": true} and {\"a\": 1} are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/0",
+    "group_description": "uniqueItems validation",
+    "id": "uniqueItems/0/27",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 0 test 27.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "a": true
+        },
+        {
+          "a": 1
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[false, false] from items array is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        false,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, true] from items array is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        true,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        false,
+        true,
+        "foo",
+        "bar"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false,
+        "foo",
+        "bar"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array extended from [false, true] is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 6.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        false,
+        true,
+        "foo",
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array extended from [true, false] is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/1",
+    "group_description": "uniqueItems with an array of items",
+    "id": "uniqueItems/1/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 1 test 7.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        true,
+        false,
+        "foo",
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[false, false] from items array is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        false,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, true] from items array is not valid",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        true,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "extra items are invalid even if unique",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/2",
+    "group_description": "uniqueItems with an array of items and additionalItems=false",
+    "id": "uniqueItems/2/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 2 test 4.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        false,
+        true,
+        null
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of integers is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "numbers are unique if mathematically unequal",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1.0,
+        1.0,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "false is not equal to zero",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        0,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "true is not equal to one",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": "bar"
+        },
+        {
+          "foo": "baz"
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": "bar"
+        },
+        {
+          "foo": "bar"
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 7.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        },
+        {
+          "foo": {
+            "bar": {
+              "baz": false
+            }
+          }
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of nested objects is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/8",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 8.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        },
+        {
+          "foo": {
+            "bar": {
+              "baz": true
+            }
+          }
+        }
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/9",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 9.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          "foo"
+        ],
+        [
+          "bar"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array of arrays is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/10",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 10.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        [
+          "foo"
+        ],
+        [
+          "foo"
+        ]
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "1 and true are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/11",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 11.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "0 and false are unique",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/12",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 12.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        0,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/13",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 13.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {},
+        [
+          1
+        ],
+        true,
+        null,
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        1,
+        2
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique heterogeneous types are valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/3",
+    "group_description": "uniqueItems=false validation",
+    "id": "uniqueItems/3/14",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 3 test 14.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        {},
+        [
+          1
+        ],
+        true,
+        null,
+        {},
+        1
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[false, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        false,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, true] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        false,
+        true,
+        "foo",
+        "bar"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false,
+        "foo",
+        "bar"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array extended from [false, true] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        false,
+        true,
+        "foo",
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-unique array extended from [true, false] is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/4",
+    "group_description": "uniqueItems=false with an array of items",
+    "id": "uniqueItems/4/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 4 test 7.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false,
+        "foo",
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[false, false] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        false,
+        false
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "[true, true] from items array is valid",
+    "domain": "uniqueItems",
+    "expected": [],
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        true,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        false,
+        true
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    },
+    "baseline_index": 0,
+    "description": "extra items are invalid even if unique",
+    "domain": "uniqueItems",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "uniqueItems/5",
+    "group_description": "uniqueItems=false with an array of items and additionalItems=false",
+    "id": "uniqueItems/5/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/uniqueItems.json group 5 test 4.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        false,
+        true,
+        null
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "items": false,
+        "prefixItems": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "boolean"
+          }
+        ],
+        "uniqueItems": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "array with item matching schema (6) is valid",
+    "domain": "contains",
+    "expected": [],
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        3,
+        4,
+        6
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "array with two items matching schema (5, 6) is valid",
+    "domain": "contains",
+    "expected": [],
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "array without items matching schema is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        2,
+        3,
+        4
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 4.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "not array is valid",
+    "domain": "contains",
+    "expected": [],
+    "group": "contains/0",
+    "group_description": "contains keyword validation",
+    "id": "contains/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "minimum": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "const": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "array with two items 5 is valid",
+    "domain": "contains",
+    "expected": [],
+    "group": "contains/1",
+    "group_description": "contains keyword with const keyword",
+    "id": "contains/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 1 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        3,
+        4,
+        5,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "const": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        3,
+        4,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "const": 5
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "array without item 5 is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/1",
+    "group_description": "contains keyword with const keyword",
+    "id": "contains/1/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 1 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "const": 5
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/2",
+    "group_description": "contains keyword with boolean schema true",
+    "id": "contains/2/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 2 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": "contains does not apply to strings",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": false
+      }
+    },
+    "baseline_index": 2,
+    "description": "any non-empty array is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/3",
+    "group_description": "contains keyword with boolean schema false",
+    "id": "contains/3/0",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 3 test 0.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": "contains does not apply to strings",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": false
+      }
+    },
+    "baseline_index": 2,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/3",
+    "group_description": "contains keyword with boolean schema false",
+    "id": "contains/3/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 3 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        6,
+        12
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    },
+    "baseline_index": 2,
+    "description": "matches items, does not match contains",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/0",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 0.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        2,
+        4,
+        8
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        6,
+        12
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    },
+    "baseline_index": 2,
+    "description": "does not match items, matches contains",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        3,
+        6,
+        9
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        6,
+        12
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    },
+    "baseline_index": 2,
+    "description": "matches neither items nor contains",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/4",
+    "group_description": "items + contains",
+    "id": "contains/4/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 4 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [
+        1,
+        5
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "multipleOf": 3
+        },
+        "items": {
+          "multipleOf": 2
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": [
+        "foo"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "else": true,
+          "if": false
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty array is invalid",
+    "domain": "contains",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "contains/5",
+    "group_description": "contains with false if subschema",
+    "id": "contains/5/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/contains.json group 5 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": [],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "contains": {
+          "else": true,
+          "if": false
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "nondependant",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "with dependency",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "missing dependency",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "bar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        "bar"
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": "foobar",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/0",
+    "group_description": "single dependency",
+    "id": "dependentRequired/0/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 0 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": 12,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": [
+            "foo"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": []
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object with one property",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/1",
+    "group_description": "empty dependents",
+    "id": "dependentRequired/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 1 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": []
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": []
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-object is valid",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/1",
+    "group_description": "empty dependents",
+    "id": "dependentRequired/1/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 1 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": 1,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "bar": []
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "nondependants",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "with dependencies",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 2,
+        "foo": 1,
+        "quux": 3
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "missing dependency",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo": 1,
+        "quux": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "missing other dependency",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 4.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "bar": 1,
+        "quux": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "missing both dependencies",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/2",
+    "group_description": "multiple dependents required",
+    "id": "dependentRequired/2/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 2 test 5.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "quux": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "quux": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo\nbar": 1,
+        "foo\rbar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "quoted quotes",
+    "domain": "dependentRequired",
+    "expected": [],
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "foo\"bar": 2,
+        "foo'bar": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo\nbar": 1,
+        "foo\rbar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "CRLF missing dependent",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo": 2,
+        "foo\nbar": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo\nbar": 1,
+        "foo\rbar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "quoted quotes missing dependent",
+    "domain": "dependentRequired",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "dependentRequired/3",
+    "group_description": "dependencies with escaped characters",
+    "id": "dependentRequired/3/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/dependentRequired.json group 3 test 3.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo\"bar": 2
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "dependentRequired": {
+          "foo\nbar": [
+            "foo\rbar"
+          ],
+          "foo\"bar": [
+            "foo'bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "some property names invalid",
+    "domain": "propertyNames",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo": {},
+        "foobar": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object without properties is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores arrays",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores strings",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/4",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 4.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": "foobar",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores other non-objects",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/5",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 5.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": 12,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores null",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/6",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 6.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": null,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "f": {},
+        "foo": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "ignores booleans",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/0",
+    "group_description": "propertyNames validation",
+    "id": "propertyNames/0/7",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 0 test 7.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": true,
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "maxLength": 3
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "a": {},
+        "aa": {},
+        "aaa": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "pattern": "^a+$"
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "non-matching property name is invalid",
+    "domain": "propertyNames",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "propertyNames/1",
+    "group_description": "propertyNames validation with pattern",
+    "id": "propertyNames/1/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 1 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "aaA": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "pattern": "^a+$"
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "a": {},
+        "aa": {},
+        "aaa": {}
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "pattern": "^a+$"
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object without properties is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/1",
+    "group_description": "propertyNames validation with pattern",
+    "id": "propertyNames/1/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 1 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "pattern": "^a+$"
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": true
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/2",
+    "group_description": "propertyNames with boolean schema true",
+    "id": "propertyNames/2/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 2 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": true
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": false
+      }
+    },
+    "baseline_index": 1,
+    "description": "object with any properties is invalid",
+    "domain": "propertyNames",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "propertyNames/3",
+    "group_description": "propertyNames with boolean schema false",
+    "id": "propertyNames/3/0",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 3 test 0.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": false
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "const": "foo"
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object with any other property is invalid",
+    "domain": "propertyNames",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "propertyNames/4",
+    "group_description": "propertyNames with const",
+    "id": "propertyNames/4/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 4 test 1.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "bar": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "const": "foo"
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "const": "foo"
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/4",
+    "group_description": "propertyNames with const",
+    "id": "propertyNames/4/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 4 test 2.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "const": "foo"
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object with property foo and bar is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/1",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 1.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {
+        "bar": 1,
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "object with any other property is invalid",
+    "domain": "propertyNames",
+    "expected": [
+      "schema.invalid"
+    ],
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/2",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 2.",
+    "relation": "violation",
+    "valid": false,
+    "variant": {
+      "data": {
+        "baz": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "baseline": {
+      "data": {
+        "foo": 1
+      },
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    },
+    "baseline_index": 0,
+    "description": "empty object is valid",
+    "domain": "propertyNames",
+    "expected": [],
+    "group": "propertyNames/5",
+    "group_description": "propertyNames with enum",
+    "id": "propertyNames/5/3",
+    "provenance": "Upstream valid label at 5b0ee1613e45fcc2bddac00e07c19cd49b00d8a8: tests/draft2020-12/propertyNames.json group 5 test 3.",
+    "relation": "preserve",
+    "valid": true,
+    "variant": {
+      "data": {},
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "propertyNames": {
+          "enum": [
+            "foo",
+            "bar"
+          ]
+        }
+      }
+    }
+  }
+]
