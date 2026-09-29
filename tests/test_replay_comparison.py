@@ -4,7 +4,9 @@ from runpy import run_path
 
 import pytest
 
-compare = run_path(str(Path(__file__).resolve().parents[1] / "scripts/compare_replay.py"))["compare"]
+compare = run_path(str(Path(__file__).resolve().parents[1] / "scripts/compare_replay.py"))[
+    "compare"
+]
 
 
 def test_replay_comparison_only_allows_explicit_version_change():
