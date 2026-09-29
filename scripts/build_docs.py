@@ -20,6 +20,8 @@ SITE_URL = "https://mate4b.github.io/narrative-contracts/"
 REPO_URL = "https://github.com/Mate4b/narrative-contracts/blob/main/"
 LINK = re.compile(r"(!?\[[^\]\n]*\]\()([^\s)]+)(\))")
 EXAMPLES = (
+    "examples/audit_existing_validator.py",
+    "examples/external_validators.py",
     "examples/five_minute_demo.py",
     "examples/mutation_audit.py",
     "examples/pydantic_reply.py",

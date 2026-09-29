@@ -100,3 +100,32 @@ operation failed, but it cannot support an affirmative completion claim.
 "No failures observed" only refers to these cases. A declared `scope="challenge"`
 labels a deliberate broader-policy challenge; it does not exclude it from scores.
 In the refund demo the prose contradiction is still one of the nine faults.
+
+## A nested model does not require a new path language
+
+If your already schema-validated output is nested, make its projection explicit:
+
+```python
+from narrative_contracts import check_fields
+
+
+def refund_projection(data):
+    # The input schema already requires refund to be an object when present.
+    refund = data.get("refund", {})
+    return {"completed": refund["completed"]} if "completed" in refund else {}
+
+
+report = check_fields(
+    refund_projection({"refund": {"completed": True}}),
+    refund_projection({"refund": {"completed": False}}),  # Trusted backend result.
+    {"completed": "completed"},
+)
+assert not report.accepted
+```
+
+With a validated Pydantic object, pass `output_model.model_dump(mode="json")`
+through that projection. Missing fields remain absent and therefore undetermined;
+do not manufacture `False` or `None` for an unknown backend outcome. An explicit
+JSON null is still a value, not an automatic unknown marker. This recipe does not
+interpret prose or replace schema validation. Projection code remains integration
+work; dotted-path resolution is deliberately not introduced in this increment.

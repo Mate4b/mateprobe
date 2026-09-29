@@ -40,6 +40,10 @@ nav:
   - Development:
       - Unreleased scope: docs/development-scope.md
       - Validator audits: docs/validator-audit.md
+      - Adoption levels: docs/adoption-levels.md
+      - Audit provenance: docs/audit-provenance.md
+      - External validator trials: docs/external-validator-integrations.md
+      - Audit adoption plan: docs/audit-adoption-plan.md
       - State field bindings: docs/state-bindings.md
       - Contributing: CONTRIBUTING.md
       - Agent contributor instructions: AGENTS.md
