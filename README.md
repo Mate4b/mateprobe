@@ -1,8 +1,11 @@
-# Narrative Contracts
+# MateProbe
+
+Formerly **Narrative Contracts**. The published a3 packages and Python imports
+still use `narrative-contracts` / `narrative_contracts`; see [names and compatibility](docs/project-name.md).
 
 **Test whether your Python validator catches invalid AI outputs and preserves valid ones.**
 
-Narrative Contracts audits your existing validator with paired input variants:
+MateProbe audits your existing validator with paired input variants:
 known faults and valid controls. It reports missed faults, rejections for the wrong
 reason, incomplete evidence, and execution errors. You supply the cases and policy;
 the audit runs without an LLM judge.

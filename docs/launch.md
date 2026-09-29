@@ -2,7 +2,7 @@
 
 An assertion like `assert not validate(sample)` can pass for the wrong reason:
 you expected `customer_mismatch`, but the validator rejected `malformed_input`.
-Narrative Contracts audits paired cases and reports that as an **unattributed
+MateProbe audits paired cases and reports that as an **unattributed
 rejection**, rather than a successful targeted detection.
 
 Bring your existing Python validator. Define the failures you care about and

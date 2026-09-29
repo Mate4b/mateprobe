@@ -1,4 +1,8 @@
-# Narrative Contracts
+# MateProbe
+
+Formerly Narrative Contracts. For published alpha a3, install `narrative-contracts`
+and import `narrative_contracts`. MateProbe is the project name; `mateprobe` is not
+an import provided by these published wheels.
 
 > Test existing Python validators with known-invalid AI output samples and valid controls. Paired input audits report missed faults, targeted detections, unrelated rejections, unknowns and errors. Built-in contracts also check explicit declarations against application state; arbitrary prose truthfulness is outside the guarantee.
 

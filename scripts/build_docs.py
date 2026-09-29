@@ -55,6 +55,7 @@ PUBLIC_MARKDOWN = (
     "docs/mutation-campaign.md",
     "docs/natural-benchmark.md",
     "docs/policy-regression.md",
+    "docs/project-name.md",
     "docs/pydantic.md",
     "docs/pypi-publishing.md",
     "docs/quickstart.md",

@@ -1,4 +1,4 @@
-# Integrate Narrative Contracts in an agent project
+# Integrate MateProbe in an agent project
 
 This guide targets **published alpha 0.1.0a3**, Python 3.11+. Use it when an
 application has authoritative state and needs to test explicit declarations in
@@ -8,6 +8,9 @@ Already have a validator? Start with [testing AI output validators](testing-ai-o
 and the [one-file audit](first-audit.md). `audit_validator` accepts a sample-only
 adapter and caller-authored baseline/variant pairs; you do not need to migrate to
 the `Document`/`Claim` representation used in the state-check example below.
+
+MateProbe is the current project name; the a3 distribution and imports retain
+the original identifiers. See [names and compatibility](project-name.md).
 
 ## Install the published API
 

@@ -1,4 +1,4 @@
-# Working on Narrative Contracts
+# Working on MateProbe
 
 ## Install and verify
 
@@ -20,6 +20,15 @@ environment with `narrative-contracts==0.1.0a3`, `pytest-narrative-contracts==0.
 and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
+
+## Project identity
+
+The public project and paper name is **MateProbe**, formerly Narrative Contracts.
+Published a2/a3 distribution names, Python imports, CLI/pytest entry points and
+repository URLs remain the existing identifiers until a separately verified
+technical migration. Do not invent `import mateprobe` for those wheels or rewrite
+frozen protocols, captured sources, historical results or release hashes for branding.
+See docs/project-name.md.
 
 ## Version boundary
 

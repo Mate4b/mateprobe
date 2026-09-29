@@ -7,7 +7,7 @@ description: Audit an existing Python validator with invalid output samples and 
 
 You already validate structured responses from an LLM or agent. How do you know
 the validator catches the policy violations you care about, while accepting valid
-changes? **Narrative Contracts runs your validator against paired samples and
+changes? **MateProbe runs your validator against paired samples and
 reports what it detects, misses, or rejects for an unrelated reason.**
 
 The independent `audit_validator` API is available in published `0.1.0a3` for
@@ -54,7 +54,7 @@ value must stay accepted. Rejecting every input cannot establish useful coverage
 | Source mutation testing | Program source, with tests run against altered implementations | Do the tests detect these changes to the implementation? |
 | Ordinary pytest assertions | Whatever fixtures and assertions you write | Does the code satisfy these explicit test expectations? |
 
-These approaches can be used together. Narrative Contracts adds paired execution,
+These approaches can be used together. MateProbe adds paired execution,
 finding attribution, obligation inventories, and JSON/Markdown reports to a supplied
 corpus. It does not edit validator source or automatically invent and label mutations.
 Every individual expectation can also be expressed directly in pytest.

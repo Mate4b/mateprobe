@@ -1,4 +1,4 @@
-site_name: Narrative Contracts
+site_name: MateProbe
 site_url: https://mate4b.github.io/narrative-contracts/
 site_description: Test Python validators with invalid AI output samples and valid controls. Find missed faults and wrong-reason rejections with pytest audit reports.
 repo_url: https://github.com/Mate4b/narrative-contracts
@@ -23,6 +23,7 @@ validation:
 nav:
   - Start:
       - Overview: index.md
+      - MateProbe and package names: docs/project-name.md
       - Test AI output validators: docs/testing-ai-output-validators.md
       - Try a validator audit: docs/launch.md
       - First audit recipe: docs/first-audit.md

@@ -1,4 +1,4 @@
-# Narrative Contracts: Attributable Mutation Audits for State-Aware Validators
+# MateProbe: Attributable Mutation Audits for State-Aware Validators
 
 **Technical report, a3 validator study with preserved a2 evidence — 29 September 2026.**
 
@@ -6,7 +6,8 @@ Status: public engineering report, not submitted or peer reviewed. The artifact 
 
 ## Abstract
 
-Narrative Contracts is a dependency-free Python library and pytest plugin for
+MateProbe (formerly Narrative Contracts; distributed in alpha a3 as
+`narrative-contracts`) is a dependency-free Python library and pytest plugin for
 attributable mutation audits of existing validators and bounded state-conditioned
 checks. An audit pairs accepted baselines with authored faults and valid variations,
 requires the intended diagnostic findings, and preserves crashes, incomplete evidence,
