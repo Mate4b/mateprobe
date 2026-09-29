@@ -9,7 +9,7 @@ The library checks structured state invariants and explicitly labelled lexical h
 ## Install from this checkout
 
 ```sh
-git clone https://github.com/pablomate4b/narrative-contracts.git
+git clone https://github.com/Mate4b/narrative-contracts.git
 cd narrative-contracts
 python -m venv .venv
 . .venv/bin/activate
@@ -18,13 +18,13 @@ pytest
 ```
 
 Both packages use the MIT license. Installable wheels and sdists are published in
-[GitHub Releases](https://github.com/pablomate4b/narrative-contracts/releases); PyPI is not required.
+[GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases); PyPI is not required.
 To install the pinned alpha without a checkout:
 
 ```sh
 python -m pip install \
-  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
-  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
 ```
 
 The core wheel can also be installed alone. Installation downloads packages; evaluation itself
@@ -152,7 +152,7 @@ python benchmarks/natural.py replay --input benchmarks/natural-results --output 
 ```
 
 Replay requires no model, network or API key. Output directories must be new. Submit
-[counterexamples](https://github.com/pablomate4b/narrative-contracts/issues/new/choose) with a minimal
+[counterexamples](https://github.com/Mate4b/narrative-contracts/issues/new/choose) with a minimal
 bundle and evidence; see [contribution guidance](CONTRIBUTING.md). Publication does not imply
 that independent reviewers have validated the method.
 

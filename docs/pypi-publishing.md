@@ -1,6 +1,6 @@
 # First PyPI publication
 
-The alpha remains installable from [GitHub Releases](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a2).
+The alpha remains installable from [GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2).
 The new workflow publishes exactly the four original a2 wheel/sdist files, verified against
 pinned SHA-256 hashes, rather than rebuilding different bytes under the same version.
 Current benchmark and documentation additions live in the repository; the original a2
@@ -17,7 +17,7 @@ Configure two **pending GitHub publishers**, one per package:
 | Field | First publisher | Second publisher |
 | --- | --- | --- |
 | PyPI project name | `narrative-contracts` | `pytest-narrative-contracts` |
-| Owner | `pablomate4b` | `pablomate4b` |
+| Owner | `Mate4b` | `Mate4b` |
 | Repository | `narrative-contracts` | `narrative-contracts` |
 | Workflow filename | `publish-pypi.yml` | `publish-pypi.yml` |
 | Environment name | `pypi` | `pypi` |

@@ -39,9 +39,9 @@ pero no demuestra que ya exista.
 
 ## Publicación y verificación
 
-- [Repositorio público](https://github.com/pablomate4b/narrative-contracts).
-- [Alpha a2 y artefactos instalables](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a2).
-- [CI: test-and-build, Python 3.11–3.14](https://github.com/pablomate4b/narrative-contracts/actions/workflows/ci.yml). La procedencia adjunta a la release identifica el commit y run verificados.
+- [Repositorio público](https://github.com/Mate4b/narrative-contracts).
+- [Alpha a2 y artefactos instalables](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2).
+- [CI: test-and-build, Python 3.11–3.14](https://github.com/Mate4b/narrative-contracts/actions/workflows/ci.yml). La procedencia adjunta a la release identifica el commit y run verificados.
 - Wheels/sdists se distribuyen por GitHub Releases; PyPI no es necesario para instalarlos.
 - Verificación local de este avance: 108 tests, Ruff, mypy, ocho mutantes de código y replay reproducible.
 - Instalación de wheels y descubrimiento del plugin verificados en un entorno aislado.

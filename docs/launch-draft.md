@@ -18,10 +18,10 @@ Try the five-minute offline demo, then send a minimal counterexample: authoritat
 text, contract configuration, observed report and the behavior you expected. We welcome
 missed violations, false rejections and contracts for other applications.
 
-Code: https://github.com/pablomate4b/narrative-contracts
-Demo: https://github.com/pablomate4b/narrative-contracts/blob/main/docs/quickstart.md
-Evidence: https://github.com/pablomate4b/narrative-contracts/blob/main/docs/real-output-mutations.md
-Issues: https://github.com/pablomate4b/narrative-contracts/issues/new/choose
+Code: https://github.com/Mate4b/narrative-contracts
+Demo: https://github.com/Mate4b/narrative-contracts/blob/main/docs/quickstart.md
+Evidence: https://github.com/Mate4b/narrative-contracts/blob/main/docs/real-output-mutations.md
+Issues: https://github.com/Mate4b/narrative-contracts/issues/new/choose
 
 ## Publication status
 

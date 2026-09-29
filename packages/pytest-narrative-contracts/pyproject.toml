@@ -13,9 +13,9 @@ dependencies = ["narrative-contracts==0.1.0a2", "pytest>=8,<10"]
 classifiers = ["Development Status :: 3 - Alpha", "Framework :: Pytest", "Programming Language :: Python :: 3"]
 
 [project.urls]
-Repository = "https://github.com/pablomate4b/narrative-contracts"
-Issues = "https://github.com/pablomate4b/narrative-contracts/issues"
-Documentation = "https://github.com/pablomate4b/narrative-contracts#readme"
+Repository = "https://github.com/Mate4b/narrative-contracts"
+Issues = "https://github.com/Mate4b/narrative-contracts/issues"
+Documentation = "https://github.com/Mate4b/narrative-contracts#readme"
 
 [project.entry-points.pytest11]
 narrative_contracts = "pytest_narrative_contracts.plugin"

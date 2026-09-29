@@ -13,8 +13,8 @@ environment can install both packages without cloning the repository:
 python -m venv .venv
 . .venv/bin/activate
 python -m pip install \
-  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
-  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
 ```
 
 The second wheel is optional. It adds the `narrative` pytest fixture and the

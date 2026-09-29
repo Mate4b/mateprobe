@@ -14,9 +14,9 @@ classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Pytho
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/pablomate4b/narrative-contracts"
-Issues = "https://github.com/pablomate4b/narrative-contracts/issues"
-Documentation = "https://github.com/pablomate4b/narrative-contracts#readme"
+Repository = "https://github.com/Mate4b/narrative-contracts"
+Issues = "https://github.com/Mate4b/narrative-contracts/issues"
+Documentation = "https://github.com/Mate4b/narrative-contracts#readme"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "build>=1.2,<2"]

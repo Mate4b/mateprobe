@@ -40,4 +40,4 @@ cmp evaluation/summary.json /tmp/narrative-remote-replay-new/summary.json
 
 El directorio de salida debe ser nuevo. El replay no necesita Ollama. Se verificó igualdad byte por byte de ambos informes con el código archivado; `latency.json` varía con cada ejecución. Volver a generar textos puede dar otros resultados según hardware y runtime.
 
-Los paquetes instalables de la alpha están en [GitHub Releases](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a2).
+Los paquetes instalables de la alpha están en [GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2).
