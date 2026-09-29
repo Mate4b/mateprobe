@@ -31,7 +31,12 @@ This preserves configuration digests and frozen replay comparisons. Custom rules
 continue to use their own fully qualified class names.
 
 To replay the original real-output mutation experiment against the renamed library,
-run `python benchmarks/replay_renamed_mutations.py --output /tmp/mateprobe-replay`.
+use an environment with MateProbe installed, then run
+`python benchmarks/replay_renamed_mutations.py --output /tmp/mateprobe-replay`.
 It verifies and executes the frozen generator and adapter bytes in a subprocess,
 with historical import names bound to MateProbe only in that process. The original
 source and corpus integrity checks remain active.
+
+The replay command produces results; CI separately checks the summary byte for byte
+and compares case reports with `scripts/compare_replay.py`, allowing only the
+declared `library_version` transition from `0.1.0a2` to `0.1.0a4`.

@@ -6,7 +6,7 @@ document. The runnable version is [`examples/five_minute_demo.py`](../examples/f
 
 ## Install the alpha
 
-After publication, a fresh Python 3.11+ environment can install both alpha packages:
+A fresh Python 3.11+ environment can install both alpha packages:
 
 ```sh
 python -m venv .venv
@@ -33,7 +33,7 @@ If you have the repository checkout, run from its root:
 Without a checkout, download the pinned example, then run it with your activated environment:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Mate4b/mateprobe/fe771c43e8c56a7aee71509dbea316af650b01b2/examples/five_minute_demo.py -o five_minute_demo.py
+curl -fsSL https://raw.githubusercontent.com/Mate4b/mateprobe/v0.1.0a4/examples/five_minute_demo.py -o five_minute_demo.py
 python five_minute_demo.py
 ```
 
