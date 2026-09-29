@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0a2",
+  "date": "2026-09-29",
+  "files": {
+    "narrative-contracts": [
+      {
+        "filename": "narrative_contracts-0.1.0a2-py3-none-any.whl",
+        "sha256": "2f12ba226df94d99eaffb6f07f5cf5f278e951ec7f045b45caddcb6aefa3c9c3"
+      },
+      {
+        "filename": "narrative_contracts-0.1.0a2.tar.gz",
+        "sha256": "002377243a85bfd3ca1039c0e731a7427f9a82fbdeb6ce9c38dacea6a91e7a9c"
+      }
+    ],
+    "pytest-narrative-contracts": [
+      {
+        "filename": "pytest_narrative_contracts-0.1.0a2-py3-none-any.whl",
+        "sha256": "424a08ac11e828036b45697c435b954845508056a298c54c92f6f33542be91cf"
+      },
+      {
+        "filename": "pytest_narrative_contracts-0.1.0a2.tar.gz",
+        "sha256": "8f0a380f77c5c2bb0df4b56cd599f3701ee70a1234b5601b97081939ec6a540c"
+      }
+    ]
+  },
+  "core_workflow": "https://github.com/Mate4b/narrative-contracts/actions/runs/36615827807",
+  "plugin_workflow": "https://github.com/Mate4b/narrative-contracts/actions/runs/36616326251",
+  "original_failed_workflow": "https://github.com/Mate4b/narrative-contracts/actions/runs/36615296267",
+  "clean_pypi_install": "passed",
+  "pytest_auto_discovery_and_fixture": "passed",
+  "offline_demo": "passed",
+  "cli": "passed",
+  "python": "3.12.13",
+  "source_of_packages": "https://pypi.org/simple",
+  "publication_source_commit": "fe771c43e8c56a7aee71509dbea316af650b01b2",
+  "notes": [
+    "Original v0.1.0a2 release bytes reused unchanged",
+    "Repository ownership moved to Mate4b; the original distribution metadata retains pre-transfer URLs which redirect",
+    "Core publication recovered independently while the missing plugin pending publisher was configured"
+  ]
+}

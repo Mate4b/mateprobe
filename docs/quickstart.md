@@ -4,20 +4,17 @@ This walkthrough is fully offline. It uses the deterministic `0.1.0a2` API and
 does not call a model, a service, or a network endpoint while evaluating a
 document. The runnable version is [`examples/five_minute_demo.py`](../examples/five_minute_demo.py).
 
-## Install the released wheels
+## Install from PyPI
 
-The alpha wheels are published as GitHub release assets. A fresh Python 3.11+
-environment can install both packages without cloning the repository:
+A fresh Python 3.11+ environment can install both published alpha packages:
 
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
+python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
 ```
 
-The second wheel is optional. It adds the `narrative` pytest fixture and the
+The pytest plugin is optional. It adds the `narrative` pytest fixture and the
 `--narrative-report` option; the core package has no pytest dependency. When
 working from this checkout, the equivalent editable install is:
 
@@ -27,11 +24,20 @@ python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
 
 ## Run the offline tour
 
-From the repository root, run:
+If you have the repository checkout, run from its root:
 
 ```sh
 .venv/bin/python examples/five_minute_demo.py
 ```
+
+Without a checkout, download the pinned example, then run it with your activated environment:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/Mate4b/narrative-contracts/fe771c43e8c56a7aee71509dbea316af650b01b2/examples/five_minute_demo.py -o five_minute_demo.py
+python five_minute_demo.py
+```
+
+Installing packages and downloading the example require network access. The demo itself is offline.
 
 The flow is deliberately visible in the output:
 
@@ -67,7 +73,7 @@ example, not an independent semantic adjudicator.
 ## Add the pytest fixture
 
 The plugin is discovered through its `pytest11` entry point after installing the
-second wheel. A minimal test can reuse the same objects from an application
+pytest plugin. A minimal test can reuse the same objects from an application
 module:
 
 ```python

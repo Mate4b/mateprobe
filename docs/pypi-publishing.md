@@ -1,59 +1,65 @@
-# First PyPI publication
+# PyPI publication and recovery
 
-The alpha remains installable from [GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2).
-The new workflow publishes exactly the four original a2 wheel/sdist files, verified against
-pinned SHA-256 hashes, rather than rebuilding different bytes under the same version.
-Current benchmark and documentation additions live in the repository; the original a2
-source archive retains the original release snapshot. Core/plugin code is unchanged.
+Both packages are published on PyPI at **0.1.0a2**:
 
-## Current publication status
+- [narrative-contracts](https://pypi.org/project/narrative-contracts/0.1.0a2/)
+- [pytest-narrative-contracts](https://pypi.org/project/pytest-narrative-contracts/0.1.0a2/)
 
-`narrative-contracts==0.1.0a2` is published on PyPI with both original wheel and sdist.
-Their SHA-256 hashes match the pinned release; installation in a clean environment, the
-offline demo and CLI validation passed. [Successful core upload](https://github.com/Mate4b/narrative-contracts/actions/runs/36615827807).
+```sh
+python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
+```
 
-The first combined upload and its retry failed when creating `pytest-narrative-contracts`
-with PyPI's `Non-user identities cannot create new projects` response. The plugin remains
-unpublished on PyPI; check that its pending publisher has the exact identity below. The
-workflow now isolates each package so a plugin failure cannot prevent core completion.
+Downloaded wheel and sdist bytes match all four original GitHub release SHA-256 hashes.
+A fresh Python 3.12 environment installed both packages solely from PyPI, auto-discovered
+the pytest plugin, passed its fixture/report smoke test, and ran the offline demo and CLI.
+See [machine-readable verification](pypi-verification.json).
 
-## One-time owner setup
+## Publication evidence
 
-Sign in to the intended owner account on [PyPI publishing settings](https://pypi.org/manage/account/publishing/).
-Configure two **pending GitHub publishers**, one per package:
+- [Successful core publication](https://github.com/Mate4b/narrative-contracts/actions/runs/36615827807).
+- [Successful plugin publication](https://github.com/Mate4b/narrative-contracts/actions/runs/36616326251).
+- [Original partial attempt and retry](https://github.com/Mate4b/narrative-contracts/actions/runs/36615296267):
+  the core wheel uploaded, then PyPI rejected creation of the plugin because its pending
+  publisher had not been configured. The owner supplied the account page confirming that
+  absence. Core completion was isolated, the plugin publisher was added, and its upload succeeded.
 
-| Field | First publisher | Second publisher |
+The workflow publishes exactly the four original a2 files from
+[GitHub Releases](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2), verified
+against pinned hashes, rather than rebuilding different bytes under the same version.
+Their original metadata retains pre-transfer repository URLs, which redirect to `Mate4b`.
+Current benchmark/documentation additions live in the repository; the original source
+archive retains the original release snapshot. Future metadata changes require a new release.
+
+## Active publisher bindings
+
+These are existing project publishers now, not pending publishers. Manage them in each
+project's PyPI publishing settings if the repository or workflow identity changes:
+
+| Field | Core | Plugin |
 | --- | --- | --- |
-| PyPI project name | `narrative-contracts` | `pytest-narrative-contracts` |
-| Owner | `Mate4b` | `Mate4b` |
+| PyPI project | `narrative-contracts` | `pytest-narrative-contracts` |
+| GitHub owner | `Mate4b` | `Mate4b` |
 | Repository | `narrative-contracts` | `narrative-contracts` |
 | Workflow filename | `publish-pypi.yml` | `publish-pypi.yml` |
 | Environment name | `pypi` | `pypi` |
 
-For the already-created core project, manage its existing publisher in project settings;
-do not create another pending publisher for that name.
+GitHub organization ownership and PyPI project ownership are separate. The binding authorizes
+this workflow to upload; it does not itself establish a PyPI organization account. No API
+token is stored in GitHub. See [PyPI Trusted Publishing documentation](https://docs.pypi.org/trusted-publishers/).
 
-The account must meet PyPI's current verification/authentication requirements. No API token
-needs to be shared or stored in GitHub. A pending publisher does not reserve the name and
-only creates the project when publishing succeeds. See [PyPI's official setup guide](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/).
+## Re-running the existing a2 publication
 
-## Execution
-
-From `main`, first run the **publish-existing-alpha-to-pypi** workflow with `publish=false`.
-It downloads the existing release, checks pinned hashes and package metadata, installs the
-wheels and runs the offline demonstration. It does not request PyPI publishing credentials.
-
-Once the plugin pending publisher and the core project publisher are configured, run it with `publish=true`. The publishing job uses the
-`pypi` GitHub environment and short-lived OIDC credentials. `skip-existing` permits recovery
-if one package uploads and the other fails; never change the pinned a2 bytes.
+From `main`, run **publish-existing-alpha-to-pypi** with `publish=false` for a dry run.
+It checks original hashes and metadata, installs wheels and runs the demo. Uploads use the
+`pypi` environment and short-lived OIDC credentials. Each package is handled separately;
+`skip-existing` supports recovery without replacing existing files. The package selector
+accepts `both`, `core`, or `plugin`.
 
 ```sh
-gh workflow run publish-pypi.yml --ref main -f publish=false
-# Recover just the pending plugin upload after its owner setup:
-gh workflow run publish-pypi.yml --ref main -f publish=true -f package=plugin
+gh workflow run publish-pypi.yml --repo Mate4b/narrative-contracts --ref main -f publish=false
+# Only if recovering a missing plugin upload:
+gh workflow run publish-pypi.yml --repo Mate4b/narrative-contracts --ref main -f publish=true -f package=plugin
 ```
 
-After success, verify both PyPI project versions and file hashes, then install
-`narrative-contracts==0.1.0a2` and `pytest-narrative-contracts==0.1.0a2` in a clean environment.
-Only then change the README to advertise installation from PyPI. Packaging guidance:
-[PyPA workflow guide](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/).
+All a2 files are already published. This workflow is intentionally pinned to a2; a future
+release needs new versioned artifacts and hashes. Do not overwrite or rebuild a2 in place.

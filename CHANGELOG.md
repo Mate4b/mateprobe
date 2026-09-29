@@ -7,7 +7,7 @@
 - Keep v1 in Git history; v2 strengthens request integrity and missing-attempt accounting without changing labels or results.
 - Serialize collection with explicit unloading and validate replay identity/configuration.
 - Add a five-minute offline demo and expand the technical report.
-- Prepare Trusted Publishing of original a2 artifacts to PyPI and a public announcement draft.
+- Publish both original a2 packages to PyPI through Trusted Publishing; verify hashes, clean installation and pytest discovery. Public announcement remains a draft.
 
 ## 0.1.0a2 — 2026-09-29
 

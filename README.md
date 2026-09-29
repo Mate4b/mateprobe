@@ -6,16 +6,17 @@ Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies an
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
-## Install the core from PyPI
+## Install from PyPI
 
-The core alpha is published and verified on [PyPI](https://pypi.org/project/narrative-contracts/0.1.0a2/):
+Both alpha packages are published and verified:
+[narrative-contracts](https://pypi.org/project/narrative-contracts/0.1.0a2/) and
+[pytest-narrative-contracts](https://pypi.org/project/pytest-narrative-contracts/0.1.0a2/).
 
 ```sh
-python -m pip install narrative-contracts==0.1.0a2
+python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
 ```
 
-The pytest plugin's first PyPI publication is still pending its publisher configuration.
-Both packages remain available through the GitHub wheel links below.
+Install only `narrative-contracts==0.1.0a2` if you do not need the pytest integration.
 
 ## Install from this checkout
 

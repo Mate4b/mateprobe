@@ -27,4 +27,5 @@ Issues: https://github.com/Mate4b/narrative-contracts/issues/new/choose
 
 This is copy prepared for the maintainer, not a post that has been sent. No claim of human
 validation, production adoption, peer review, or superiority to LLM-as-judge is made.
-Use GitHub wheel installation until both PyPI projects are verified as published.
+Both alpha packages are published on PyPI and verified with a clean installation.
+Install with `python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2`.

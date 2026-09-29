@@ -23,8 +23,9 @@ Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia
   separados, sin atribuirles detección ni mezclarlos con los mutation scores acotados.
 - Descarga de modelos verificada entre lotes, replay endurecido y ausencias explícitas.
 - Demo offline de cinco minutos y reporte técnico ampliado. Semántica del núcleo sin cambios.
-- Núcleo a2 publicado en PyPI: wheel/sdist verificados e instalación limpia correcta.
-  El plugin sigue pendiente de la configuración de su publisher. Anuncio preparado, todavía no enviado.
+- Núcleo y plugin a2 publicados en PyPI: los cuatro archivos coinciden con la release,
+  instalación limpia, descubrimiento automático de pytest, demo y CLI verificados.
+  Anuncio preparado, todavía no enviado.
 
 ## Límites de la evidencia
 
@@ -42,7 +43,7 @@ pero no demuestra que ya exista.
 - [Repositorio público](https://github.com/Mate4b/narrative-contracts).
 - [Alpha a2 y artefactos instalables](https://github.com/Mate4b/narrative-contracts/releases/tag/v0.1.0a2).
 - [CI: test-and-build, Python 3.11–3.14](https://github.com/Mate4b/narrative-contracts/actions/workflows/ci.yml). La procedencia adjunta a la release identifica el commit y run verificados.
-- Wheels/sdists se distribuyen por GitHub Releases; PyPI no es necesario para instalarlos.
+- Wheels/sdists disponibles en PyPI y GitHub Releases. Ver [publicación verificada](docs/pypi-publishing.md).
 - Verificación local de este avance: 108 tests, Ruff, mypy, ocho mutantes de código y replay reproducible.
 - Instalación de wheels y descubrimiento del plugin verificados en un entorno aislado.
 
