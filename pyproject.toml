@@ -16,7 +16,7 @@ dependencies = []
 [project.urls]
 Repository = "https://github.com/Mate4b/narrative-contracts"
 Issues = "https://github.com/Mate4b/narrative-contracts/issues"
-Documentation = "https://github.com/Mate4b/narrative-contracts#readme"
+Documentation = "https://mate4b.github.io/narrative-contracts/"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.11,<1", "mypy>=1.15,<2", "build>=1.2,<2"]

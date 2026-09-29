@@ -19,7 +19,9 @@ text, contract configuration, observed report and the behavior you expected. We 
 missed violations, false rejections and contracts for other applications.
 
 Code: https://github.com/Mate4b/narrative-contracts
-Demo: https://github.com/Mate4b/narrative-contracts/blob/main/docs/quickstart.md
+Documentation: https://mate4b.github.io/narrative-contracts/
+Demo: https://mate4b.github.io/narrative-contracts/docs/quickstart/
+Agent guide: https://mate4b.github.io/narrative-contracts/docs/agent-guide/
 Evidence: https://github.com/Mate4b/narrative-contracts/blob/main/docs/real-output-mutations.md
 Issues: https://github.com/Mate4b/narrative-contracts/issues/new/choose
 

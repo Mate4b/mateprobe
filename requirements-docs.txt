@@ -1,0 +1,2 @@
+# Documentation tooling only; core runtime remains dependency-free.
+mkdocs==1.6.1

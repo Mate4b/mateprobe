@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <link rel="describedby" type="text/plain" href="{{ config.site_url }}llms.txt">
+  {% if page %}
+  <link rel="alternate" type="text/markdown" href="{{ config.site_url }}{{ page.file.src_uri }}">
+  {% endif %}
+{% endblock %}
+{% block content %}
+  <p class="small text-muted">Published alpha: <strong>0.1.0a2</strong> · Development APIs are marked unreleased.
+    {% if page %}<a href="{{ config.site_url }}{{ page.file.src_uri }}">Read Markdown</a> · {% endif %}
+    <a href="{{ config.site_url }}llms.txt">Agent documentation index</a>
+  </p>
+  {{ super() }}
+{% endblock %}

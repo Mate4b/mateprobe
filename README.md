@@ -6,6 +6,33 @@ Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies an
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
+[Documentation](https://mate4b.github.io/narrative-contracts/) ·
+[Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a2.md) ·
+[Pydantic recipe](docs/pydantic.md) · [Documentation index for agents](llms.txt)
+
+## When to use this
+
+- Your application owns authoritative state and needs to check explicit output declarations
+  against it: refund status, account balances, workflow outcomes, or narrative branches.
+- You need repeatable pytest failures and reports for specified constraints, without an
+  inference call during evaluation.
+- You want to audit a validator using faulty variants **and** valid controls, retaining
+  missed faults and false rejections as evidence.
+
+Start with the [published alpha quickstart](docs/quickstart.md). Schema validation and
+state checks solve different problems; the [Pydantic recipe](docs/pydantic.md) shows both.
+
+## When this is insufficient
+
+- Checking whether unrestricted prose is truthful or entails the supplied declarations.
+- Discovering authoritative facts, executing state transitions, or enforcing runtime permissions.
+- Measuring writing quality, broad semantic equivalence, or production accuracy from a
+  mutation score alone.
+
+An LLM judge may evaluate open-ended properties outside these predicates. The two approaches
+can coexist; this library does not claim to replace every judge or guardrail system.
+See [choosing an evaluation method](docs/choosing-an-evaluator.md).
+
 ## In this development checkout
 
 The following additions are **unreleased** and are not in the published `0.1.0a2`

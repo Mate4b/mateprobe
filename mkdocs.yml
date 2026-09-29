@@ -1,0 +1,45 @@
+site_name: Narrative Contracts
+site_url: https://mate4b.github.io/narrative-contracts/
+site_description: Deterministic state and claim contracts, pytest integration, and mutation audits for LLM applications.
+repo_url: https://github.com/Mate4b/narrative-contracts
+edit_uri: ''
+docs_dir: .docs-src
+site_dir: site
+strict: true
+theme:
+  name: mkdocs
+  custom_dir: docs_theme
+  color_mode: auto
+  nav_style: light
+markdown_extensions:
+  - fenced_code
+  - tables
+  - toc:
+      permalink: true
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+nav:
+  - Start:
+      - Overview: index.md
+      - Quickstart: docs/quickstart.md
+      - Agent integration: docs/agent-guide.md
+      - Published API: docs/api-a2.md
+      - Pydantic recipe: docs/pydantic.md
+  - Guarantees:
+      - Choosing an evaluator: docs/choosing-an-evaluator.md
+      - Contract semantics: docs/contracts.md
+      - Architecture: docs/architecture.md
+  - Evidence:
+      - Real-output mutations: docs/real-output-mutations.md
+      - Model pilot: docs/natural-benchmark.md
+      - Expanded mutations: docs/mutation-campaign.md
+      - Technical report: paper/draft.md
+  - Development:
+      - Unreleased scope: docs/development-scope.md
+      - Validator audits: docs/validator-audit.md
+      - State field bindings: docs/state-bindings.md
+      - Contributing: CONTRIBUTING.md
+      - Agent contributor instructions: AGENTS.md
+      - Roadmap: docs/roadmap.md
