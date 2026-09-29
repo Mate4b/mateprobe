@@ -23,6 +23,9 @@ validation:
 nav:
   - Start:
       - Overview: index.md
+      - Try a validator audit: docs/launch.md
+      - First audit recipe: docs/first-audit.md
+      - Integration feedback: docs/integration-feedback.md
       - Quickstart: docs/quickstart.md
       - Agent integration: docs/agent-guide.md
       - Published API: docs/api-a3.md

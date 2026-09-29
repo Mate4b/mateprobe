@@ -8,6 +8,9 @@ Supply authoritative state and branch selection from trusted application code. V
 
 ## Start here
 
+- [First validator audit](https://mate4b.github.io/narrative-contracts/docs/first-audit.md): one downloadable file, published a3, two completion faults, one valid control and one retained prose challenge.
+- [Integration feedback](https://mate4b.github.io/narrative-contracts/docs/integration-feedback.md): report relevant survivors, regressions, blockers, or no useful finding.
+
 - [Agent integration guide](https://mate4b.github.io/narrative-contracts/docs/agent-guide.md): install, authority boundary, complete pytest example, and version selection.
 - [Five-minute quickstart](https://mate4b.github.io/narrative-contracts/docs/quickstart.md): accepted output, detected fault, and a prose-only contradiction that passes.
 - [Published 0.1.0a3 API](https://mate4b.github.io/narrative-contracts/docs/api-a3.md): imports, constructors, result states, pytest, and mutation entry points.

@@ -27,12 +27,14 @@ jobs:
           narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
           -r requirements-integrations.txt
       - run: python scripts/check_alpha_install.py --output /tmp/published-docs-evidence
+      - run: python scripts/check_launch_package.py --output /tmp/launch-evidence
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: published-docs-evidence
           path: |
             /tmp/published-docs-evidence
+            /tmp/launch-evidence
 
   historical-a2-trial:
     runs-on: ubuntu-latest

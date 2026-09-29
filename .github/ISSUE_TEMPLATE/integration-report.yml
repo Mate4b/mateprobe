@@ -1,0 +1,58 @@
+name: Existing validator integration
+description: Tell us what worked, failed, or was unclear with your own validator
+title: "[Integration] "
+labels: ["evaluation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Getting stuck or finding no useful survivor is useful feedback too.
+        Share only synthetic or sanitized content. Review evidence and exception text before posting.
+  - type: input
+    id: environment
+    attributes:
+      label: Package/Python versions and validator framework
+    validations:
+      required: true
+  - type: dropdown
+    id: origin
+    attributes:
+      label: Trial origin
+      options:
+        - My own system or policy
+        - Reproduction of a maintainer-authored demo
+        - Maintainer-run integration
+        - Another context (describe below)
+    validations:
+      required: true
+  - type: textarea
+    id: policy
+    attributes:
+      label: Policy and assistance received
+      description: Name one obligation, why the cases are valid/invalid, and whether an agent or maintainer helped. Do not include private application data.
+    validations:
+      required: true
+  - type: textarea
+    id: integration
+    attributes:
+      label: Adapter and corpus
+      description: Boolean or finding IDs? How many fault cases and valid controls? Include a minimal sanitized reproduction if available.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Result or blocker
+      description: Relevant survivor, false rejection, error, wrong-reason rejection, no useful finding, or integration blocked. Include expected and observed findings if available.
+    validations:
+      required: true
+  - type: textarea
+    id: followthrough
+    attributes:
+      label: Did this lead to a change and a permanent regression test?
+      description: Unfixed or not applicable is fine. Link public evidence if available; note whether the audit was run again.
+  - type: textarea
+    id: friction
+    attributes:
+      label: Friction and optional measurements
+      description: What was unclear? If you measured time, separate setup, adapter, corpus and execution; note estimates, interruptions and assistance. Unknown is fine.

@@ -10,6 +10,9 @@ The library checks structured state invariants and explicitly labelled lexical h
 [Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a3.md) ·
 [Pydantic recipe](docs/pydantic.md) · [Documentation index for agents](llms.txt)
 
+[Try the one-file audit](docs/first-audit.md): a refund claim without a matching receipt,
+a retained prose survivor, and a pytest regression.
+
 ## Audit an existing validator
 
 You do not need to change your validator to start. Wrap its existing result and
