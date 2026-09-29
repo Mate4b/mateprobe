@@ -1,0 +1,32 @@
+name: Violation not detected
+description: Show a specific missed obligation and its scope
+labels: ["evaluation"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Package version and Python version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction with states and configured contracts
+      description: Use fictional or publishable content; preserve the failing branch and required declarations.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Which obligation is violated, and what evidence establishes that?
+      description: Identify the exact surface/state reference. Indicate whether this is within the documented guarantee or a requested extension.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual report and expected rule/code/scope
+      render: json
+    validations:
+      required: true

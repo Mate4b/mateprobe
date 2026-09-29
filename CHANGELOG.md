@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0a2 — 2026-09-29
+
+- Add an independent trusted customer-support workflow with branch-selection checks.
+- Add a separate 21-case mutation campaign, retaining survivors, exclusions and valid-control failures.
+- Publish 32 actual local-model responses from two families, frozen collection protocol and offline replay.
+- Add community evaluation issue templates and update the engineering report.
+- Synchronize package/report metadata at a2. Built-in rule semantics and rule versions remain unchanged.
+- Human annotation is optional future validation, not an alpha release gate.
+
 ## 0.1.0a1 — 2026-09-28
 
 Initial alpha: branch-scoped state contracts, explicit unknown/error outcomes, configurable

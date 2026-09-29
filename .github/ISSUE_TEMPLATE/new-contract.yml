@@ -1,0 +1,21 @@
+name: Contract or domain proposal
+description: Propose a scoped contract with positive controls
+body:
+  - type: textarea
+    id: guarantee
+    attributes:
+      label: Property, domain, assumptions and inputs
+      description: Specify exact invariant versus linguistic heuristic. Who supplies authoritative state and annotations?
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: A violation, a valid variation and an ambiguous case
+      description: Include minimal publishable examples and explain their labels independently of the implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits, expected unknowns and proposed integration

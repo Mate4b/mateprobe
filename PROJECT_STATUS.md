@@ -1,42 +1,38 @@
 # Narrative Contracts — estado del proyecto
 
-Primera alpha funcional: **0.1.0a1**. Proyecto independiente de Lifecard, con licencia MIT.
-
-## Estado de publicación
-
-- **Repositorio público**: [pablomate4b/narrative-contracts](https://github.com/pablomate4b/narrative-contracts)
-- **CI / GitHub Actions**: [Workflow test-and-build](https://github.com/pablomate4b/narrative-contracts/actions) en verde en todas las versiones matriciales (Python 3.11, 3.12, 3.13 y 3.14).
-- **GitHub Prerelease**: [v0.1.0a1](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a1) publicada con wheels y sdists adjuntos (`dist/` y `packages/pytest-narrative-contracts/dist/`).
-- **PyPI**: Pendiente para una etapa posterior tras la evaluación independiente con salidas reales.
+Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia MIT.
 
 ## Entregado
 
-- Núcleo Python sin dependencias externas, con ocho tipos de contratos.
-- Plugin `pytest-narrative-contracts`, CLI y reportes reproducibles con evidencia.
-- Validación de hechos, afirmaciones declaradas por rama y cambios efectivos de estado.
-- Heurísticas de texto identificadas como tales, con límites documentados.
-- Runner de mutaciones con atribución por regla/código/ubicación, controles positivos y exclusiones.
-- Adaptador de Lifecard y ejemplo de integración; el motor original sigue intacto.
-- Corpus sintético, baseline simplificado, resultados completos y experimento de mutación de código.
-- Borrador de paper en inglés, bibliografía y protocolo para evaluación independiente.
-- Paquetes wheel/sdist y workflow de CI verificado en verde.
+- Contratos exactos de estado y declaraciones, separados de heurísticas de texto.
+- Núcleo sin dependencias externas, plugin pytest, CLI y reportes con evidencia y versiones.
+- Integración independiente de soporte al cliente con transición y selección de rama confiables.
+- Benchmark sintético original: 720 casos, 384/480 defectos detectados y 192/240 controles preservados.
+- Campaña ampliada: 21 casos; 8/13 fallos detectados, 4/5 controles preservados y 3 exclusiones.
+- Piloto con **32 respuestas reales** de Qwen3 y Gemma3, sobre escenarios públicos ficticios.
+- Protocolo congelado, respuestas crudas, replay offline y reporte técnico actualizado.
+- Plantillas para contraejemplos, fallos no detectados y nuevos contratos.
 
-## Evidencia actual
+## Límites de la evidencia
 
-66 tests pasan; lint, formato y tipado pasan. Las ocho mutaciones de código seleccionadas fueron
-detectadas. Se verificó instalación de wheels en un entorno limpio y reproducción idéntica de
-los resultados deterministas.
+Qwen3 respetó la estructura en 16/16 respuestas y sus declaraciones pasaron los invariantes;
+ninguna respuesta pasó el perfil estricto. Gemma3 no respetó el envelope en los 16 casos.
+Se publican todos los resultados. Son datos del pipeline, no una clasificación de calidad de
+modelos ni accuracy semántica: todavía no hay etiquetas independientes.
 
-En 720 casos sintéticos: 80% de detección de defectos y 80% de preservación de variantes válidas.
-Los supervivientes y falsos positivos quedan publicados dentro del artefacto. Esto demuestra
-comportamiento y límites de la implementación; todavía no mide desempeño sobre salidas reales
-ni superioridad frente a LLM-as-a-judge.
+La revisión humana y las comparaciones con jueces LLM son trabajos futuros opcionales,
+no condiciones para lanzar esta alpha. Abrir el código invita a validación comunitaria,
+pero no demuestra que ya exista.
 
-## Siguiente etapa
+## Publicación y verificación
 
-El siguiente hito científico es congelar un corpus de salidas reales con etiquetas independientes
-según [el protocolo](paper/protocol.md).
-La publicación de paquetes en PyPI sigue pendiente para una etapa posterior. El paper es un borrador de factibilidad, no listo para presentarse como estudio concluido.
+- [Repositorio público](https://github.com/pablomate4b/narrative-contracts).
+- [Alpha a2 y artefactos instalables](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a2).
+- [CI: test-and-build, Python 3.11–3.14](https://github.com/pablomate4b/narrative-contracts/actions/workflows/ci.yml). La procedencia adjunta a la release identifica el commit y run verificados.
+- Wheels/sdists se distribuyen por GitHub Releases; PyPI no es necesario para instalarlos.
+- Verificación local: 91 tests, Ruff, mypy, ocho mutantes de código y replay reproducible.
+- Instalación de wheels y descubrimiento del plugin verificados en un entorno aislado.
 
-[Empezar a usar](README.md) · [Verificación](docs/verification.md) ·
-[Resultados](benchmarks/results/summary.md) · [Paper](paper/draft.md) · [Roadmap](docs/roadmap.md)
+[Uso](README.md) · [Verificación](docs/verification.md) ·
+[Piloto real](docs/natural-benchmark.md) · [Informe técnico](paper/draft.md) ·
+[Contribuir](CONTRIBUTING.md) · [Roadmap](docs/roadmap.md)

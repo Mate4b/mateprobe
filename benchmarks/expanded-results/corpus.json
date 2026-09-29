@@ -1,0 +1,2419 @@
+{
+  "seed": 20260929,
+  "cases": [
+    {
+      "id": "expanded/required_fact_type",
+      "family": "required_fact_type",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": true,
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "required-status",
+          "code": "REQUIRED_FACT",
+          "scope": "state:current:status"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The required status changes from string pending to boolean true; JSON scalar equality is type-sensitive.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/branch_claim_mismatch",
+      "family": "branch_claim_mismatch",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "declined"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The take branch explicitly declares declined while authoritative take facts say accepted.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/branch_claim_cross_scope",
+      "family": "branch_claim_cross_scope",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "leave",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The accepted claim is evaluated against leave facts; branch scope must remain exact.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/state_delta_removed",
+      "family": "state_delta_removed",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 50
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "advance",
+          "code": "NO_DOMAIN_CHANGE",
+          "scope": "transition:current->take"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The projected credits key no longer changes from current to take.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/state_snapshot_missing",
+      "family": "state_snapshot_missing",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted"
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "advance",
+          "code": "STATE_UNAVAILABLE",
+          "scope": "transition:current->take"
+        }
+      ],
+      "validity": "unreviewed",
+      "provenance": "Not applicable to detection scoring: the rule reports an undetermined missing snapshot, not a violated check.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/irrelevant_branch_fact",
+      "family": "irrelevant_branch_fact",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "withdrawn",
+              "credits": 51
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "valid",
+      "provenance": "Changing an unused leave-branch fact must not affect the current/take invariants or take claim.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/undeclared_contradiction",
+      "family": "undeclared_contradiction",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Rechazaste definitivamente la propuesta y no aceptaste ningún acuerdo durante esta conversación con las personas responsables del proyecto.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "Operator intent says the prose contradicts the accepted outcome, but no claim changed; this is an explicit guarantee-boundary challenge.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/unicode_nfd",
+      "family": "unicode_nfd",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.  \n",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "valid",
+      "provenance": "NFD accents, trailing spaces and a newline preserve the authored words.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/accent_case_spacing_punctuation",
+      "family": "accent_case_spacing_punctuation",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "  LA COORDINADORA ESCUCHA AL CLIENTE ANTES DE REVISAR LAS NOTAS Y PRESENTAR LOS PRÓXIMOS PASOS PARA RESOLVER LA SITUACIÓN PENDIENTE CON EL EQUIPO!..  ",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "valid",
+      "provenance": "Case, accent-bearing letters, punctuation and surrounding whitespace are formatting changes.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/long_novel_expansion",
+      "family": "long_novel_expansion",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana. Además, el equipo documenta cada decisión, coordina una revisión semanal y conserva los detalles para la próxima etapa del proyecto.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "valid",
+      "provenance": "A long outcome adds several novel tokens and remains compatible with the accepted claim.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/long_lexical_restatement",
+      "family": "long_lexical_restatement",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal Aceptar la propuesta formal mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "restatement",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "A long target repeats the label vocabulary with one extra token; the lexical rule has no character-length escape.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/literal_formula",
+      "family": "literal_formula",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La reunión salió bien. La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "formula",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The configured forbidden phrase appears literally after Unicode accent folding.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/negated_formula_control",
+      "family": "negated_formula_control",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "Nadie dijo que la reunión salió bien: hubo desacuerdos concretos. La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "valid",
+      "provenance": "Operator intent treats a negated/quoted formula as semantically safe; the phrase-only heuristic is expected to false-positive.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/formula_paraphrase",
+      "family": "formula_paraphrase",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La conversación terminó de manera positiva, aunque esta frase evita la fórmula exacta. La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "formula",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "Operator intent treats a paraphrase of the forbidden formula as a fault; this is a known phrase-recognizer blind spot.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/literal_settled_premise",
+      "family": "literal_settled_premise",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "Te ofrecen otra vez el mismo contrato. La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "premise",
+          "code": "SETTLED_PREMISE_REOFFER",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The closed offer premise is reintroduced with the configured literal phrase.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/premise_paraphrase",
+      "family": "premise_paraphrase",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La misma propuesta contractual vuelve a aparecer después de haber sido cerrada. La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "premise",
+          "code": "SETTLED_PREMISE_REOFFER",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "Operator intent treats a paraphrased re-offer as a fault; the configured premise recognizer is intentionally lexical.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/exact_repeat",
+      "family": "exact_repeat",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "repeat",
+          "code": "REUSED_TEXT",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "The body is exactly the normalized token sequence supplied in history.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/paraphrase_repeat",
+      "family": "paraphrase_repeat",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "Una persona vigila la entrada mientras alguien más examina papeles dejados sobre la mesa durante la noche.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "repeat",
+          "code": "REUSED_TEXT",
+          "scope": "body"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "Operator intent treats a semantic restatement of history as reuse; token-sequence matching is expected to miss it.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/semantic_restatement",
+      "family": "semantic_restatement",
+      "relation": "violation",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Decidiste aceptar la oferta pendiente y confirmaste de forma afirmativa la respuesta para esta conversación.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [
+        {
+          "rule_id": "restatement",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome"
+        }
+      ],
+      "validity": "valid",
+      "provenance": "Operator intent treats this paraphrase of the label/outcome repetition as a restatement; set overlap is expected to miss it.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/equivalent_unicode_normalization",
+      "family": "equivalent_unicode_normalization",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.  ",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "equivalent",
+      "provenance": "Equivalent label: NFD spelling and spacing are outside the token-level semantic distinction used here.",
+      "group": "expanded-alpha"
+    },
+    {
+      "id": "expanded/not_applicable_semantics",
+      "family": "not_applicable_semantics",
+      "relation": "preserve",
+      "baseline": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "La coordinadora escucha al cliente antes de revisar las notas y presentar los próximos pasos para resolver la situación pendiente con el equipo.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "variant": {
+        "document": {
+          "surfaces": [
+            {
+              "id": "body",
+              "text": "El texto comunica una intención distinta y no tiene una etiqueta contractual.",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "label",
+              "text": "Aceptar la propuesta formal",
+              "state_ref": "current",
+              "claims": []
+            },
+            {
+              "id": "outcome",
+              "text": "Firmás el acuerdo y recibís recursos adicionales para contratar dos especialistas que empezarán a trabajar con vos mañana.",
+              "state_ref": "take",
+              "claims": [
+                {
+                  "key": "decision",
+                  "value": "accepted"
+                }
+              ]
+            }
+          ]
+        },
+        "context": {
+          "states": {
+            "current": {
+              "status": "pending",
+              "credits": 50
+            },
+            "take": {
+              "decision": "accepted",
+              "credits": 60
+            },
+            "leave": {
+              "decision": "declined",
+              "credits": 50
+            }
+          },
+          "closed_premises": [
+            "offer"
+          ],
+          "history": [
+            "El guardia abre una puerta lateral mientras otra persona estudia los documentos que quedaron sobre la mesa durante toda la noche."
+          ]
+        }
+      },
+      "expected": [],
+      "validity": "unreviewed",
+      "provenance": "Not applicable: arbitrary prose meaning is outside this synthetic contract corpus.",
+      "group": "expanded-alpha"
+    }
+  ]
+}

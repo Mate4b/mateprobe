@@ -2,7 +2,7 @@
 
 **Executable contracts for state-conditioned language generation, with mutation audits of the validators.**
 
-Alpha `0.1.0a1`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
+Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
@@ -17,7 +17,18 @@ pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
 pytest
 ```
 
-Distribution names are proposed; this project has not been published to PyPI. Both packages use the MIT license.
+Both packages use the MIT license. Installable wheels and sdists are published in
+[GitHub Releases](https://github.com/pablomate4b/narrative-contracts/releases); PyPI is not required.
+To install the pinned alpha without a checkout:
+
+```sh
+python -m pip install \
+  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
+  https://github.com/pablomate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
+```
+
+The core wheel can also be installed alone. Installation downloads packages; evaluation itself
+never calls a model. Model collection is a separate, opt-in benchmark script.
 
 ## State-conditioned checks
 
@@ -101,7 +112,12 @@ python examples/mutation_audit.py
 python benchmarks/run.py
 ```
 
-The included benchmark has author-constructed state/text variations and deliberate scope challenges. It is a feasibility artifact, **not** evidence of accuracy on natural LLM outputs. [Measured results](benchmarks/results/summary.md), [research protocol](paper/protocol.md), [paper draft](paper/draft.md).
+The included benchmark has author-constructed state/text variations and deliberate scope challenges. It is a feasibility artifact, **not** evidence of accuracy on natural LLM outputs. [Original synthetic results](benchmarks/results/summary.md),
+[expanded mutation campaign](docs/mutation-campaign.md), and
+[real-model pilot](docs/natural-benchmark.md) are separate evidence streams.
+Read the [technical report](paper/draft.md) and [frozen release protocol](paper/release-protocol.md).
+No human labels are required to use or reproduce the alpha; without them, natural-output
+acceptance must not be called semantic accuracy.
 
 ## JSON and CLI
 
@@ -114,6 +130,25 @@ Exit status: `0` accepted, `1` rejected, `2` invalid input/configuration/I/O. Co
 ## LifeCard integration
 
 `narrative_contracts.adapters.lifecard_document` maps a card to stable surface paths and an individual state reference for every outcome. Supply post-state snapshots calculated by the trusted engine, not by the generating LLM. The adapter does not modify LifeCard or execute effects. See [example](examples/lifecard_adapter.py) and [migration guide](docs/lifecard.md).
+
+## Independent support workflow
+
+The [customer-support example](docs/support-workflow.md) computes refund eligibility with
+trusted Python state transitions, checks branch selection and declarations, and demonstrates
+valid paraphrases and failures that remain outside the prose guarantee. It is independent of
+LifeCard; this is an executable second integration, not evidence of broad domain generalization.
+
+## Reproduce or challenge the results
+
+```sh
+python benchmarks/expanded_mutations.py --output /tmp/expanded-campaign
+python benchmarks/natural.py replay --input benchmarks/natural-results --output /tmp/natural-replay
+```
+
+Replay requires no model, network or API key. Output directories must be new. Submit
+[counterexamples](https://github.com/pablomate4b/narrative-contracts/issues/new/choose) with a minimal
+bundle and evidence; see [contribution guidance](CONTRIBUTING.md). Publication does not imply
+that independent reviewers have validated the method.
 
 ## Development
 

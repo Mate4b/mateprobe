@@ -1,36 +1,37 @@
 # Roadmap and release gates
 
-## Alpha engineering milestone
+## Public alpha a2
 
-- [x] Dependency-free core with state, branch and lexical contracts.
-- [x] Explicit satisfied / violated / undetermined / error outcomes.
-- [x] Configurable acceptance policy and reproducible reports.
-- [x] Mutation audit with attributable findings, positive controls and visible exclusions.
-- [x] Pytest package, CLI and LifeCard adapter demonstration.
-- [x] Synthetic benchmark with intentionally retained survivors and false positives.
-- [x] Research draft and independent evaluation protocol.
-- [x] Publish the source repository at https://github.com/pablomate4b/narrative-contracts and verify CI in green.
-- [x] Publish GitHub prerelease [v0.1.0a1](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a1) with wheel and sdist distributions.
-- [ ] First PyPI release (package namespace and publishing credentials; scheduled for a later stage after independent real-output evaluation).
+- [x] Dependency-free, deterministic core; explicit exact/heuristic boundaries.
+- [x] Pytest plugin, CLI, versioned reports, LifeCard adapter.
+- [x] Second executable integration: trusted customer-support refund workflow.
+- [x] Original synthetic benchmark plus a separate expanded campaign with valid controls,
+  attributable detections, exclusions, survivors and false positives.
+- [x] Frozen engineering pilot protocol; two real local model families and offline replay.
+- [x] Community issue templates and evidence-based contribution process.
+- [x] Technical report with limitations; independent human labels are not a release gate.
+- [x] Alpha a2 GitHub release with pinned installable wheels/sdists; CI runs on Python 3.11–3.14.
+  The release provenance records the verified commit and CI run.
 
-## Research milestone — not completed by the synthetic benchmark
+The release verification record and PROJECT_STATUS.md identify the exact published state.
+PyPI distribution is optional follow-up, not a prerequisite to install the published wheels.
 
-- [ ] Freeze contract semantics and preregister evaluation questions.
-- [ ] Collect natural outputs and errors from several generator families and applications.
-- [ ] Independently annotate defects and valid variations; adjudicate disagreement.
-- [ ] Hold out scenarios and fault families; separate calibration from final evaluation.
-- [ ] Compare against calibrated LLM judges and existing assertion tools on the same information.
-- [ ] Report cluster-aware uncertainty, error analysis, maintenance effort and authoring cost.
-- [ ] Recruit an external adopter and reproduce outside LifeCard.
-- [ ] Reassess contribution and submit an appropriate paper with the completed evidence.
+## External validation and research — future work
+
+- [ ] Independent review and adoption outside the authoring team.
+- [ ] Natural-output labels, adjudication and cluster-aware error/uncertainty analysis.
+- [ ] Held-out applications and fault families, with calibration separated from evaluation.
+- [ ] Calibrated LLM judges and existing assertion tools compared on the same evidence.
+- [ ] Maintenance/authoring effort, production-scale costs and controlled text grounding.
+- [ ] Research submission with claims proportional to the resulting evidence.
+
+Shipping code invites scrutiny; it does not establish external validation. The labelled study
+protocol remains available in `paper/protocol.md` for contributors who want to pursue it.
 
 ## Architecture follow-ups
 
-- [ ] Profile schema/versioning and documented compatibility policy after adopter feedback.
-- [ ] Controlled-language rendering/anchoring experiment for a stronger text-to-state guarantee.
-- [ ] Applicability masks per contract, richer structured evidence and source-text span mapping.
-- [ ] Distributed pytest report aggregation if users need it.
-- [ ] Temporal obligations over typed event traces; bounded reachability remains an adapter concern.
-
-Shipping the alpha is useful independently of the research milestones. No synthetic score
-should be represented as a claim that arbitrary LLM output is semantically verified.
+- [ ] Stable profile schema/compatibility policy informed by adopter feedback.
+- [ ] Controlled-language rendering for stronger text-to-state guarantees.
+- [ ] Applicability masks and source-text evidence spans.
+- [ ] Distributed pytest report aggregation.
+- [ ] Typed temporal traces and separately scoped bounded reachability adapters.

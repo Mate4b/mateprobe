@@ -54,7 +54,7 @@ MUTANTS = (
 def run_tests(src):
     env = {
         **os.environ,
-        "PYTHONPATH": str(src),
+        "PYTHONPATH": os.pathsep.join((str(src), str(ROOT))),
         "PYTHONDONTWRITEBYTECODE": "1",
         "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
     }

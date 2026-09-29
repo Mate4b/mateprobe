@@ -157,7 +157,7 @@ class Report:
     input_digest: str
     contracts_digest: str
     policy: Policy
-    library_version: str = "0.1.0a1"
+    library_version: str = "0.1.0a2"
     schema_version: int = 1
 
     @property

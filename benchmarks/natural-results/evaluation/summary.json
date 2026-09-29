@@ -1,0 +1,50 @@
+{
+  "profile": "natural-pilot-v1",
+  "corpus_digest": "f9113ee6895bc4c5912113a2a5f926a4710a98b6a41afd3b7c5be0aa17d58905",
+  "scenario_groups": 8,
+  "missing_attempts": [],
+  "models": {
+    "gemma3:1b": {
+      "attempts": 16,
+      "status_counts": {
+        "invalid_structure": 16
+      },
+      "structured_outputs": 0,
+      "strict_accepted": 0,
+      "invariant_accepted": 0,
+      "heuristic_accepted": 0,
+      "length_assertions_accepted": 0,
+      "violation_findings": {},
+      "generation_wall_median_s": 2.8686364165041596,
+      "generation_wall_p95_s": 5.121161333983764,
+      "output_tokens": 2982,
+      "prompt_tokens": 6064
+    },
+    "qwen3:1.7b": {
+      "attempts": 16,
+      "status_counts": {
+        "evaluated": 16
+      },
+      "structured_outputs": 16,
+      "strict_accepted": 0,
+      "invariant_accepted": 16,
+      "heuristic_accepted": 0,
+      "length_assertions_accepted": 0,
+      "violation_findings": {
+        "LEXICAL_RESTATEMENT": 8,
+        "LOW_LEXICAL_CONTENT": 32
+      },
+      "generation_wall_median_s": 3.2280431455001235,
+      "generation_wall_p95_s": 5.325586666003801,
+      "output_tokens": 2839,
+      "prompt_tokens": 6024
+    }
+  },
+  "limitations": [
+    "No independent labels: acceptance is not accuracy or quality",
+    "Small authored pilot; no production traffic or model ranking",
+    "Claims check annotations, not whether prose entails them",
+    "Regeneration is hardware/version dependent; replay of frozen records is deterministic",
+    "No judge baseline; no superiority or semantic FPR/FNR claim"
+  ]
+}

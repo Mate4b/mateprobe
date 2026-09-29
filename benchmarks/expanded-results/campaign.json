@@ -1,0 +1,6058 @@
+{
+  "schema_version": 1,
+  "corpus_digest": "cfad3ba2aca7b31418dfe3d39d785c2ddc22203975a3a29e7a374d0e8264c255",
+  "summary": {
+    "total": 21,
+    "eligible": 18,
+    "counts": {
+      "detected": 8,
+      "excluded": 3,
+      "preserved": 4,
+      "survived": 5,
+      "regressed": 1
+    },
+    "valid_faults": 13,
+    "detected_faults": 8,
+    "detection_score": 0.6153846153846154,
+    "valid_controls": 5,
+    "preserved_controls": 4,
+    "preservation_rate": 0.8,
+    "families": {
+      "required_fact_type": {
+        "detected": 1
+      },
+      "branch_claim_mismatch": {
+        "detected": 1
+      },
+      "branch_claim_cross_scope": {
+        "detected": 1
+      },
+      "state_delta_removed": {
+        "detected": 1
+      },
+      "state_snapshot_missing": {
+        "excluded": 1
+      },
+      "irrelevant_branch_fact": {
+        "preserved": 1
+      },
+      "undeclared_contradiction": {
+        "survived": 1
+      },
+      "unicode_nfd": {
+        "preserved": 1
+      },
+      "accent_case_spacing_punctuation": {
+        "preserved": 1
+      },
+      "long_novel_expansion": {
+        "preserved": 1
+      },
+      "long_lexical_restatement": {
+        "detected": 1
+      },
+      "literal_formula": {
+        "detected": 1
+      },
+      "negated_formula_control": {
+        "regressed": 1
+      },
+      "formula_paraphrase": {
+        "survived": 1
+      },
+      "literal_settled_premise": {
+        "detected": 1
+      },
+      "premise_paraphrase": {
+        "survived": 1
+      },
+      "exact_repeat": {
+        "detected": 1
+      },
+      "paraphrase_repeat": {
+        "survived": 1
+      },
+      "semantic_restatement": {
+        "survived": 1
+      },
+      "equivalent_unicode_normalization": {
+        "excluded": 1
+      },
+      "not_applicable_semantics": {
+        "excluded": 1
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "expanded/required_fact_type",
+      "family": "required_fact_type",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "violated",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed True",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "422ddadbbc4f230cfeb8c5725069f807e5ce1a04f13d54750d5d5431c025d2d9",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "required-status",
+          "code": "REQUIRED_FACT",
+          "scope": "state:current:status"
+        }
+      ]
+    },
+    {
+      "id": "expanded/branch_claim_mismatch",
+      "family": "branch_claim_mismatch",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "violated",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'declined'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "4392d95e179b7fc428f8cbf4f7e1c4687d8c572f5a4720cec69334663422cbf9",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "expanded/branch_claim_cross_scope",
+      "family": "branch_claim_cross_scope",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "violated",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; leave has 'declined'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "9b3f821951588f3849d29fb3ade28ec07bef7ac614a37e66d9d18bde3ab57110",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "expanded/state_delta_removed",
+      "family": "state_delta_removed",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "violated",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: []",
+            "metrics": [
+              [
+                "changed_keys",
+                0
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "0821701cc1545328acb2d39c733930456b5e752fbb24b0272f1ec5c4ac0b91c9",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "advance",
+          "code": "NO_DOMAIN_CHANGE",
+          "scope": "transition:current->take"
+        }
+      ]
+    },
+    {
+      "id": "expanded/state_snapshot_missing",
+      "family": "state_snapshot_missing",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "excluded",
+      "reason": "label_unreviewed",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": null,
+      "expected": [
+        {
+          "rule_id": "advance",
+          "code": "STATE_UNAVAILABLE",
+          "scope": "transition:current->take"
+        }
+      ]
+    },
+    {
+      "id": "expanded/irrelevant_branch_fact",
+      "family": "irrelevant_branch_fact",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "preserved",
+      "reason": "accepted_and_complete",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "a5a8a17e0d94ce4e4c56efc9267a955ab7df83f9804d61c59bf58e9efdfe2497",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": []
+    },
+    {
+      "id": "expanded/undeclared_contradiction",
+      "family": "undeclared_contradiction",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "survived",
+      "reason": "target_not_detected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                16
+              ],
+              [
+                "overlap",
+                0.5
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "fd662041f34d10331cf6b5086294a717654d5a2386232fc32471a5a09d785bb3",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "branch-claims",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "expanded/unicode_nfd",
+      "family": "unicode_nfd",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "preserved",
+      "reason": "accepted_and_complete",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "a764b60d088f2abccd6fd7343dd803e9bf00f2b926d3c7b9cf791fecb33b33c8",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": []
+    },
+    {
+      "id": "expanded/accent_case_spacing_punctuation",
+      "family": "accent_case_spacing_punctuation",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "preserved",
+      "reason": "accepted_and_complete",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "84a7bbea1ffeaf549f6e90e8dec881c6a686ab13ae924196f783413a32d67820",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": []
+    },
+    {
+      "id": "expanded/long_novel_expansion",
+      "family": "long_novel_expansion",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "preserved",
+      "reason": "accepted_and_complete",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                38
+              ],
+              [
+                "unique_tokens",
+                35
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                34
+              ],
+              [
+                "overlap",
+                0.25
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "c5714269f832d629b5f9582e95fcfe3e860e611391e4bcf6da8398531215b948",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": []
+    },
+    {
+      "id": "expanded/long_lexical_restatement",
+      "family": "long_lexical_restatement",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                141
+              ],
+              [
+                "unique_tokens",
+                5
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                1
+              ],
+              [
+                "overlap",
+                1.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "6c0d0583e81b032f0cf0ccbb39e9b7e5817c40ea0470ccffb1257347ebcde016",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "restatement",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "expanded/literal_formula",
+      "family": "literal_formula",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                27
+              ],
+              [
+                "unique_tokens",
+                25
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "Normalized match: 'la reunion salio bien'",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "4f8924c4ceee251cdf57df79aff1a49126920eddce760fdfabdac226c07d4547",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "formula",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/negated_formula_control",
+      "family": "negated_formula_control",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "regressed",
+      "reason": "valid_variant_rejected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                33
+              ],
+              [
+                "unique_tokens",
+                31
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "Normalized match: 'la reunion salio bien'",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "27f93af879381a1d458fd021db5302416a3020506b62ccc1978a46a9622722b6",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": []
+    },
+    {
+      "id": "expanded/formula_paraphrase",
+      "family": "formula_paraphrase",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "survived",
+      "reason": "target_not_detected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                36
+              ],
+              [
+                "unique_tokens",
+                32
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "855abd9b999f2ac4be082ac7b34146c21986be864ce8c179d329fda0ce0dfef0",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "formula",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/literal_settled_premise",
+      "family": "literal_settled_premise",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                30
+              ],
+              [
+                "unique_tokens",
+                28
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=True",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "96cda81f98f486e1912e0dd86ebe843baa0ac8df988c511cdc99e6116894966b",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "premise",
+          "code": "SETTLED_PREMISE_REOFFER",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/premise_paraphrase",
+      "family": "premise_paraphrase",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "survived",
+      "reason": "target_not_detected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                35
+              ],
+              [
+                "unique_tokens",
+                32
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "0c101c3ddc2a3c83d250b35fb9770e3ea110c058367ac14a7d4c3e33f4440413",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "premise",
+          "code": "SETTLED_PREMISE_REOFFER",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/exact_repeat",
+      "family": "exact_repeat",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "detected",
+      "reason": "all_expected_violations",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                21
+              ],
+              [
+                "unique_tokens",
+                20
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "violated",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "98cb7763a15a3355ee4ec69632fdc850626fbcee60faf97636b2bf077c6fee87",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": false,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "repeat",
+          "code": "REUSED_TEXT",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/paraphrase_repeat",
+      "family": "paraphrase_repeat",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "survived",
+      "reason": "target_not_detected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                17
+              ],
+              [
+                "unique_tokens",
+                15
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "d0008f4b8ea15fd56323fcd90acabb13e8f73bf335ebc9057ee01443dc176d54",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "repeat",
+          "code": "REUSED_TEXT",
+          "scope": "body"
+        }
+      ]
+    },
+    {
+      "id": "expanded/semantic_restatement",
+      "family": "semantic_restatement",
+      "group": "expanded-alpha",
+      "relation": "violation",
+      "outcome": "survived",
+      "reason": "target_not_detected",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                15
+              ],
+              [
+                "unique_tokens",
+                14
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                12
+              ],
+              [
+                "overlap",
+                0.5
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "18ab243ea2610b4600f8b56eb5cdbdf0c3777143fc435afa6ea5dbaf395dd029",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "expected": [
+        {
+          "rule_id": "restatement",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome"
+        }
+      ]
+    },
+    {
+      "id": "expanded/equivalent_unicode_normalization",
+      "family": "equivalent_unicode_normalization",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "excluded",
+      "reason": "label_equivalent",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": null,
+      "expected": []
+    },
+    {
+      "id": "expanded/not_applicable_semantics",
+      "family": "not_applicable_semantics",
+      "group": "expanded-alpha",
+      "relation": "preserve",
+      "outcome": "excluded",
+      "reason": "label_unreviewed",
+      "baseline": {
+        "checks": [
+          {
+            "rule_id": "required-status",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "REQUIRED_FACT",
+            "scope": "state:current:status",
+            "evidence": "Expected 'pending'; observed 'pending'",
+            "metrics": []
+          },
+          {
+            "rule_id": "branch-claims",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "CLAIM_STATE_MISMATCH",
+            "scope": "outcome",
+            "evidence": "decision declared 'accepted'; take has 'accepted'",
+            "metrics": []
+          },
+          {
+            "rule_id": "advance",
+            "version": "1",
+            "kind": "invariant",
+            "status": "satisfied",
+            "code": "NO_DOMAIN_CHANGE",
+            "scope": "transition:current->take",
+            "evidence": "Changed domain keys: ['credits']",
+            "metrics": [
+              [
+                "changed_keys",
+                1
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "body",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                23
+              ],
+              [
+                "unique_tokens",
+                22
+              ]
+            ]
+          },
+          {
+            "rule_id": "lexical-floor",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LOW_LEXICAL_CONTENT",
+            "scope": "outcome",
+            "evidence": "Token count and diversity are proxies, not scene quality",
+            "metrics": [
+              [
+                "tokens",
+                18
+              ],
+              [
+                "unique_tokens",
+                18
+              ]
+            ]
+          },
+          {
+            "rule_id": "restatement",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "LEXICAL_RESTATEMENT",
+            "scope": "outcome",
+            "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+            "metrics": [
+              [
+                "novel_tokens",
+                18
+              ],
+              [
+                "overlap",
+                0.0
+              ]
+            ]
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "body",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "formula",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "FORBIDDEN_PATTERN",
+            "scope": "outcome",
+            "evidence": "No configured phrase matched; paraphrases may escape",
+            "metrics": []
+          },
+          {
+            "rule_id": "premise",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "SETTLED_PREMISE_REOFFER",
+            "scope": "body",
+            "evidence": "Closed premise offer; lexical match=False",
+            "metrics": []
+          },
+          {
+            "rule_id": "repeat",
+            "version": "1",
+            "kind": "heuristic",
+            "status": "satisfied",
+            "code": "REUSED_TEXT",
+            "scope": "body",
+            "evidence": "Compared normalized token sequences to supplied history",
+            "metrics": []
+          }
+        ],
+        "input_digest": "58e301479e6dda2f1277d69970725b89bfbd65ff149ed89fbf5bca109d47c53d",
+        "contracts_digest": "e5181fd2990f1d432e8e4927631562aee6d8b86edd3e7eafac4752e6ec943bb8",
+        "policy": {
+          "block_heuristics": true,
+          "block_undetermined": true
+        },
+        "library_version": "0.1.0a2",
+        "schema_version": 1,
+        "accepted": true,
+        "complete": true
+      },
+      "variant": null,
+      "expected": []
+    }
+  ]
+}

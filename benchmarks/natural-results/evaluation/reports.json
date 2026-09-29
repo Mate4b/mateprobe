@@ -1,0 +1,3218 @@
+[
+  {
+    "id": "qwen3:1.7b/support-en-0",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-en-0",
+    "domain": "support",
+    "language": "en",
+    "group": "support-0",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 30; refund has 30",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 20; replace has 20",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              43
+            ],
+            [
+              "unique_tokens",
+              31
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "7e0e49758a1cfd234c6a3a48b55b311b43cb773dcdc0b3ce257ac808762cc5aa",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-en-1",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-en-1",
+    "domain": "support",
+    "language": "en",
+    "group": "support-1",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 45; refund has 45",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 35; replace has 35",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              28
+            ],
+            [
+              "unique_tokens",
+              26
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.5
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "88942660e35e27dd9e708b18f01f2f32d42fa79d1e2c5e7260bcce774014cb14",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-en-2",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-en-2",
+    "domain": "support",
+    "language": "en",
+    "group": "support-2",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 60; refund has 60",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 50; replace has 50",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              31
+            ],
+            [
+              "unique_tokens",
+              28
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.5
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "1289b4e13e2bcd7027a2e096aa3864391feae3e7540dbe3d6b8730a64df0945b",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-en-3",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-en-3",
+    "domain": "support",
+    "language": "en",
+    "group": "support-3",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 75; refund has 75",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 65; replace has 65",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              44
+            ],
+            [
+              "unique_tokens",
+              32
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "6eb38960322155395238a65fc92206dd8a94c2595697547e224b86d80d8db87a",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-es-0",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-es-0",
+    "domain": "support",
+    "language": "es",
+    "group": "support-0",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 30; refund has 30",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 20; replace has 20",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              25
+            ],
+            [
+              "unique_tokens",
+              20
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "e76b23348b36451460904c66486207036ade22344da9af8da97e856289c84061",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-es-1",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-es-1",
+    "domain": "support",
+    "language": "es",
+    "group": "support-1",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 45; refund has 45",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 35; replace has 35",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              25
+            ],
+            [
+              "unique_tokens",
+              20
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "ffbac3ddae4c988bdb7b3f5718455bd668ef57dfc222e9daa78a787313a70293",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-es-2",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-es-2",
+    "domain": "support",
+    "language": "es",
+    "group": "support-2",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 60; refund has 60",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 50; replace has 50",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              25
+            ],
+            [
+              "unique_tokens",
+              20
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "b19e916412d29170bcebf554c081239c97fdf87e2fbec4dfb3d1caa277d0cbfe",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/support-es-3",
+    "model": "qwen3:1.7b",
+    "scenario_id": "support-es-3",
+    "domain": "support",
+    "language": "es",
+    "group": "support-3",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 75; refund has 75",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'refund_pending'; refund has 'refund_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 65; replace has 65",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'replacement_pending'; replace has 'replacement_pending'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              40
+            ],
+            [
+              "unique_tokens",
+              29
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              5
+            ],
+            [
+              "unique_tokens",
+              5
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              4
+            ],
+            [
+              "unique_tokens",
+              4
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              1.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              1.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "d6c6d3130e47b803f18a569c18a97aafdcc2b15d5fb1d16400deb605ab599427",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-en-0",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-en-0",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-0",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 10; ferry has 10",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 20; inn has 20",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              52
+            ],
+            [
+              "unique_tokens",
+              29
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.2
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.16666666666666666
+            ]
+          ]
+        }
+      ],
+      "input_digest": "fa585902e5a2fe9e644542567c80a5c0d800696a2089e5fa9930bccc05674fba",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-en-1",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-en-1",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-1",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 25; ferry has 25",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 35; inn has 35",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              52
+            ],
+            [
+              "unique_tokens",
+              29
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.2
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.16666666666666666
+            ]
+          ]
+        }
+      ],
+      "input_digest": "7bee366167efc6084e56a2e7dc639f8270188e572da1d76b4c5681a680747e16",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-en-2",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-en-2",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-2",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 40; ferry has 40",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 50; inn has 50",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              52
+            ],
+            [
+              "unique_tokens",
+              29
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.2
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.16666666666666666
+            ]
+          ]
+        }
+      ],
+      "input_digest": "df899683b5a930769c1561afe1de48ea89f91755ae228abaf1dbbf2d40f9194a",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-en-3",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-en-3",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-3",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 55; ferry has 55",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 65; inn has 65",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              54
+            ],
+            [
+              "unique_tokens",
+              34
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.2
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.16666666666666666
+            ]
+          ]
+        }
+      ],
+      "input_digest": "ca96adea44929f449973832ab8d7f3a52d17b5bcfcd1e6a9b5c840b7c8b57d90",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-es-0",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-es-0",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-0",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 10; ferry has 10",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 20; inn has 20",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              41
+            ],
+            [
+              "unique_tokens",
+              35
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              6
+            ],
+            [
+              "unique_tokens",
+              6
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              6
+            ],
+            [
+              "unique_tokens",
+              6
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.8333333333333334
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.8333333333333334
+            ]
+          ]
+        }
+      ],
+      "input_digest": "e19d846018e6ac1c52340ba4db823a302fbd4dff6ed79cc9c8da6e531e9408d1",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-es-1",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-es-1",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-1",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 25; ferry has 25",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 35; inn has 35",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              41
+            ],
+            [
+              "unique_tokens",
+              35
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              6
+            ],
+            [
+              "unique_tokens",
+              6
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              6
+            ],
+            [
+              "unique_tokens",
+              6
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.8333333333333334
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              1
+            ],
+            [
+              "overlap",
+              0.8333333333333334
+            ]
+          ]
+        }
+      ],
+      "input_digest": "8c91e634bf7f79475821df6b0991e0a73e3640f3a0594f498e0e4bacff6192b9",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-es-2",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-es-2",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-2",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 40; ferry has 40",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 50; inn has 50",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              38
+            ],
+            [
+              "unique_tokens",
+              32
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              1
+            ],
+            [
+              "unique_tokens",
+              1
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.3333333333333333
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              0.3333333333333333
+            ]
+          ]
+        }
+      ],
+      "input_digest": "3b667d43db6be3db10aa63a70a803338e33296655f8d5b0c35083297d36670ac",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "qwen3:1.7b/fiction-es-3",
+    "model": "qwen3:1.7b",
+    "scenario_id": "fiction-es-3",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-3",
+    "status": "evaluated",
+    "report": {
+      "checks": [
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "credits declared 55; ferry has 55",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.0",
+          "evidence": "status declared 'ferry_booked'; ferry has 'ferry_booked'",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "credits declared 65; inn has 65",
+          "metrics": []
+        },
+        {
+          "rule_id": "claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "outcome.1",
+          "evidence": "status declared 'at_inn'; inn has 'at_inn'",
+          "metrics": []
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "body",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              38
+            ],
+            [
+              "unique_tokens",
+              32
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.0",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              3
+            ],
+            [
+              "unique_tokens",
+              3
+            ]
+          ]
+        },
+        {
+          "rule_id": "content",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LOW_LEXICAL_CONTENT",
+          "scope": "outcome.1",
+          "evidence": "Token count and diversity are proxies, not scene quality",
+          "metrics": [
+            [
+              "tokens",
+              3
+            ],
+            [
+              "unique_tokens",
+              3
+            ]
+          ]
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "body",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.0",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "formula",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "satisfied",
+          "code": "FORBIDDEN_PATTERN",
+          "scope": "outcome.1",
+          "evidence": "No configured phrase matched; paraphrases may escape",
+          "metrics": []
+        },
+        {
+          "rule_id": "restatement.0",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.0",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              1.0
+            ]
+          ]
+        },
+        {
+          "rule_id": "restatement.1",
+          "version": "1",
+          "kind": "heuristic",
+          "status": "violated",
+          "code": "LEXICAL_RESTATEMENT",
+          "scope": "outcome.1",
+          "evidence": "High lexical reuse with little lexical novelty; no character cutoff",
+          "metrics": [
+            [
+              "novel_tokens",
+              0
+            ],
+            [
+              "overlap",
+              1.0
+            ]
+          ]
+        }
+      ],
+      "input_digest": "651baa5667d00a759496cc8505aa555eff9727edfcd2ec89e0b5812009eb93b9",
+      "contracts_digest": "0f88e0e564ab00f0efcddbbde73196ac46ae3ac77e439d72bd7fae067d3921aa",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    },
+    "invariant_accepted": true,
+    "heuristic_accepted": false,
+    "length_assertions_accepted": false
+  },
+  {
+    "id": "gemma3:1b/support-en-0",
+    "model": "gemma3:1b",
+    "scenario_id": "support-en-0",
+    "domain": "support",
+    "language": "en",
+    "group": "support-0",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-en-1",
+    "model": "gemma3:1b",
+    "scenario_id": "support-en-1",
+    "domain": "support",
+    "language": "en",
+    "group": "support-1",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-en-2",
+    "model": "gemma3:1b",
+    "scenario_id": "support-en-2",
+    "domain": "support",
+    "language": "en",
+    "group": "support-2",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-en-3",
+    "model": "gemma3:1b",
+    "scenario_id": "support-en-3",
+    "domain": "support",
+    "language": "en",
+    "group": "support-3",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-es-0",
+    "model": "gemma3:1b",
+    "scenario_id": "support-es-0",
+    "domain": "support",
+    "language": "es",
+    "group": "support-0",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-es-1",
+    "model": "gemma3:1b",
+    "scenario_id": "support-es-1",
+    "domain": "support",
+    "language": "es",
+    "group": "support-1",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-es-2",
+    "model": "gemma3:1b",
+    "scenario_id": "support-es-2",
+    "domain": "support",
+    "language": "es",
+    "group": "support-2",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/support-es-3",
+    "model": "gemma3:1b",
+    "scenario_id": "support-es-3",
+    "domain": "support",
+    "language": "es",
+    "group": "support-3",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-en-0",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-en-0",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-0",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-en-1",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-en-1",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-1",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-en-2",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-en-2",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-2",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-en-3",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-en-3",
+    "domain": "fiction",
+    "language": "en",
+    "group": "fiction-3",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-es-0",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-es-0",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-0",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-es-1",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-es-1",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-1",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-es-2",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-es-2",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-2",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  },
+  {
+    "id": "gemma3:1b/fiction-es-3",
+    "model": "gemma3:1b",
+    "scenario_id": "fiction-es-3",
+    "domain": "fiction",
+    "language": "es",
+    "group": "fiction-3",
+    "status": "invalid_structure",
+    "error_type": "ValueError"
+  }
+]

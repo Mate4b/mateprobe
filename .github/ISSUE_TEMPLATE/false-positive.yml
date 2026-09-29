@@ -1,0 +1,35 @@
+name: Valid text rejected
+description: Submit a minimal, shareable false-positive candidate
+labels: ["evaluation"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private customer data, prompts, credentials, or proprietary game content. A report is evidence to investigate, not automatically a gold label.
+  - type: input
+    id: version
+    attributes:
+      label: Package version and Python version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal JSON bundle or Python reproduction
+      description: Include document, authoritative state, contracts, policy and the command used.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Why should this variant remain valid?
+      description: Explain the intended property, supporting context and any uncertainty. Separate prose meaning from supplied claim annotations.
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Actual finding, rule version and expected behavior
+      render: json
+    validations:
+      required: true

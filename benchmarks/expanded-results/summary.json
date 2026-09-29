@@ -1,0 +1,207 @@
+{
+  "dataset": "expanded-synthetic-mutation-campaign-v1",
+  "seed": 20260929,
+  "cases": 21,
+  "corpus_digest": "cfad3ba2aca7b31418dfe3d39d785c2ddc22203975a3a29e7a374d0e8264c255",
+  "combined": {
+    "total": 21,
+    "eligible": 18,
+    "counts": {
+      "detected": 8,
+      "excluded": 3,
+      "preserved": 4,
+      "survived": 5,
+      "regressed": 1
+    },
+    "valid_faults": 13,
+    "detected_faults": 8,
+    "detection_score": 0.6153846153846154,
+    "valid_controls": 5,
+    "preserved_controls": 4,
+    "preservation_rate": 0.8,
+    "families": {
+      "required_fact_type": {
+        "detected": 1
+      },
+      "branch_claim_mismatch": {
+        "detected": 1
+      },
+      "branch_claim_cross_scope": {
+        "detected": 1
+      },
+      "state_delta_removed": {
+        "detected": 1
+      },
+      "state_snapshot_missing": {
+        "excluded": 1
+      },
+      "irrelevant_branch_fact": {
+        "preserved": 1
+      },
+      "undeclared_contradiction": {
+        "survived": 1
+      },
+      "unicode_nfd": {
+        "preserved": 1
+      },
+      "accent_case_spacing_punctuation": {
+        "preserved": 1
+      },
+      "long_novel_expansion": {
+        "preserved": 1
+      },
+      "long_lexical_restatement": {
+        "detected": 1
+      },
+      "literal_formula": {
+        "detected": 1
+      },
+      "negated_formula_control": {
+        "regressed": 1
+      },
+      "formula_paraphrase": {
+        "survived": 1
+      },
+      "literal_settled_premise": {
+        "detected": 1
+      },
+      "premise_paraphrase": {
+        "survived": 1
+      },
+      "exact_repeat": {
+        "detected": 1
+      },
+      "paraphrase_repeat": {
+        "survived": 1
+      },
+      "semantic_restatement": {
+        "survived": 1
+      },
+      "equivalent_unicode_normalization": {
+        "excluded": 1
+      },
+      "not_applicable_semantics": {
+        "excluded": 1
+      }
+    }
+  },
+  "by_kind": {
+    "invariant": {
+      "total": 7,
+      "eligible": 6,
+      "counts": {
+        "detected": 4,
+        "excluded": 1,
+        "preserved": 1,
+        "survived": 1
+      },
+      "valid_faults": 5,
+      "detected_faults": 4,
+      "detection_score": 0.8,
+      "valid_controls": 1,
+      "preserved_controls": 1,
+      "preservation_rate": 1.0,
+      "families": {
+        "required_fact_type": {
+          "detected": 1
+        },
+        "branch_claim_mismatch": {
+          "detected": 1
+        },
+        "branch_claim_cross_scope": {
+          "detected": 1
+        },
+        "state_delta_removed": {
+          "detected": 1
+        },
+        "state_snapshot_missing": {
+          "excluded": 1
+        },
+        "irrelevant_branch_fact": {
+          "preserved": 1
+        },
+        "undeclared_contradiction": {
+          "survived": 1
+        }
+      },
+      "kind": "invariant",
+      "scope": "invariant rules"
+    },
+    "heuristic": {
+      "total": 14,
+      "eligible": 12,
+      "counts": {
+        "preserved": 3,
+        "detected": 4,
+        "regressed": 1,
+        "survived": 4,
+        "excluded": 2
+      },
+      "valid_faults": 8,
+      "detected_faults": 4,
+      "detection_score": 0.5,
+      "valid_controls": 4,
+      "preserved_controls": 3,
+      "preservation_rate": 0.75,
+      "families": {
+        "unicode_nfd": {
+          "preserved": 1
+        },
+        "accent_case_spacing_punctuation": {
+          "preserved": 1
+        },
+        "long_novel_expansion": {
+          "preserved": 1
+        },
+        "long_lexical_restatement": {
+          "detected": 1
+        },
+        "literal_formula": {
+          "detected": 1
+        },
+        "negated_formula_control": {
+          "regressed": 1
+        },
+        "formula_paraphrase": {
+          "survived": 1
+        },
+        "literal_settled_premise": {
+          "detected": 1
+        },
+        "premise_paraphrase": {
+          "survived": 1
+        },
+        "exact_repeat": {
+          "detected": 1
+        },
+        "paraphrase_repeat": {
+          "survived": 1
+        },
+        "semantic_restatement": {
+          "survived": 1
+        },
+        "equivalent_unicode_normalization": {
+          "excluded": 1
+        },
+        "not_applicable_semantics": {
+          "excluded": 1
+        }
+      },
+      "kind": "heuristic",
+      "scope": "text heuristics"
+    }
+  },
+  "controls": {
+    "valid_controls": 5,
+    "preserved_controls": 4,
+    "preservation_rate": 0.8,
+    "always_reject_valid_variant_acceptance": 0.0,
+    "note": "A reject-all validator cannot pass the nonempty valid-control gate."
+  },
+  "label_policy": {
+    "valid": "Transparent authored operator intent with provenance.",
+    "equivalent": "Explicitly excluded because semantic equivalence is not inferred by audit().",
+    "unreviewed": "Explicitly excluded as not applicable or ambiguous.",
+    "semantic_challenges": "Paraphrase and undeclared-contradiction labels are synthetic scope challenges, not natural semantic accuracy claims."
+  }
+}

@@ -1,6 +1,6 @@
 # Protocol for an independent study
 
-Status: proposed, not preregistered and not executed. Freeze and timestamp this protocol
+Status: optional future independent study, not an alpha release gate. Proposed, not preregistered and not executed. Freeze and timestamp this protocol
 before collecting final test labels. The included synthetic corpus is a development artifact
 and must not become the final held-out test set.
 
@@ -76,5 +76,5 @@ Perform error analysis on survivors and false positives before claiming practica
 Publish raw permitted examples, labels, code, contract versions, prompt configurations, random
 seeds, environment lockfiles and aggregate reports. Remove private application content or use
 reproducible consented replacements. Publish failures and exclusions. Select publication venue
-and contribution claim only after seeing independent evidence. No submission or public release
-has occurred as part of the alpha artifact.
+and contribution claim only after seeing independent evidence. The engineering alpha has been publicly released separately; no research submission or
+independent study completion is claimed. See release-protocol.md for the narrower completed pilot.

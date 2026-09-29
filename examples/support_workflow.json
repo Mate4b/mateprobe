@@ -1,0 +1,47 @@
+{
+  "document": {
+    "surfaces": [
+      {
+        "id": "support.reply",
+        "text": "Your refund request qualifies under the 30-day support window. We will issue the refund to the original payment method.",
+        "state_ref": "refund_eligible",
+        "claims": [
+          {"key": "refund.eligible", "value": true},
+          {"key": "refund.action", "value": "issue"}
+        ]
+      }
+    ]
+  },
+  "context": {
+    "states": {
+      "current": {
+        "request.kind": "refund",
+        "order.status": "delivered",
+        "order.days_since_delivery": 10,
+        "policy.refund_window_days": 30,
+        "payment.captured": true,
+        "order.final_sale": false,
+        "refund.decision": "pending",
+        "refund.eligible": null,
+        "refund.action": "pending"
+      },
+      "refund_eligible": {
+        "request.kind": "refund",
+        "order.status": "delivered",
+        "order.days_since_delivery": 10,
+        "policy.refund_window_days": 30,
+        "payment.captured": true,
+        "order.final_sale": false,
+        "refund.decision": "eligible",
+        "refund.eligible": true,
+        "refund.action": "issue"
+      }
+    }
+  },
+  "contracts": [
+    {"type": "RequiredFact", "rule_id": "support-request", "key": "request.kind", "expected": "refund", "state_ref": "current"},
+    {"type": "DeclaredClaimsConsistent", "rule_id": "branch-claims", "surface_ids": ["support.reply"]},
+    {"type": "StateChanged", "rule_id": "refund-transition", "before": "current", "after": "refund_eligible", "keys": ["refund.decision", "refund.eligible", "refund.action"]},
+    {"type": "MinimumTokens", "rule_id": "reply-length", "surface_ids": ["support.reply"], "minimum": 12, "minimum_unique": 8}
+  ]
+}

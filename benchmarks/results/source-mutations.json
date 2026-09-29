@@ -2,11 +2,11 @@
   "scope": "Eight hand-selected source mutants; not an exhaustive mutation score",
   "baseline": "passed",
   "source_hashes": {
-    "__init__.py": "b965a77f88668a4765e21a145454731135fa013ba9d021e9547f8e064f652694",
+    "__init__.py": "e2ec5e521f0c3a3ad78dead3007509c8add9a7c3465c2de7a6a7a8618c2111e5",
     "adapters.py": "b7cca7183682665b6ac1d13d35950ae5b92bf9cf08151c3ec4bfe5dfb1508954",
     "cli.py": "114307cd65bb2012d92095f20eb86cddc797c08d62f8ef2e98003179ebdbcf59",
     "engine.py": "a68a94efce931d785c9e0099e592eca24290e9d185e4623d77d99bc1579b80c0",
-    "model.py": "8e69daa9e94a5df7002433f9c63a454d8d8f760a221cf6b06e9e4de62b6c20c1",
+    "model.py": "d1048b50db640870cc36dc8f10041cac088e54d542d29f0c4efd4fcaca741d49",
     "mutations.py": "3d7b03385d8eb758ddae7fb8a56f9d8ead2a39f092d66e74b3dc3333ca929224",
     "rules.py": "f85a67073663dae87e6cfe25b64cecf0f4f3bb50ae6c85df636c447be150e0ca",
     "serialization.py": "adb446fb7c5246a2366e4e5ef64367672dc54806353f6f2634d9db126089cf96",
@@ -31,7 +31,15 @@
       "failing_tests": [
         "tests/test_benchmark.py::test_benchmark_is_reproducible_and_keeps_hard_failures_visible",
         "tests/test_contracts.py::test_claims_are_scoped_to_their_branch",
-        "tests/test_io_and_plugin.py::test_lifecard_adapter_preserves_branch_identity"
+        "tests/test_expanded_mutations.py::test_campaign_keeps_invariant_and_heuristic_evidence_separate",
+        "tests/test_expanded_mutations.py::test_expected_survivors_false_positive_and_exclusions_remain_visible",
+        "tests/test_io_and_plugin.py::test_lifecard_adapter_preserves_branch_identity",
+        "tests/test_natural.py::test_prose_contradiction_without_claim_change_remains_a_documented_gap",
+        "tests/test_support_workflow.py::test_ineligible_text_names_the_actual_policy_reason",
+        "tests/test_support_workflow.py::test_valid_and_paraphrase_cases_pass",
+        "tests/test_support_workflow.py::test_cross_branch_state_cannot_mask_trusted_transition",
+        "tests/test_support_workflow.py::test_declared_claims_do_not_verify_arbitrary_prose",
+        "tests/test_support_workflow.py::test_generated_cases_are_small_stable_and_labelled"
       ]
     },
     {
@@ -43,7 +51,13 @@
         "tests/test_benchmark.py::test_benchmark_is_reproducible_and_keeps_hard_failures_visible",
         "tests/test_contracts.py::test_bookkeeping_and_noop_do_not_count_as_domain_change[after0]",
         "tests/test_contracts.py::test_bookkeeping_and_noop_do_not_count_as_domain_change[after1]",
-        "tests/test_contracts.py::test_state_change_accepts_real_difference"
+        "tests/test_contracts.py::test_state_change_accepts_real_difference",
+        "tests/test_expanded_mutations.py::test_campaign_keeps_invariant_and_heuristic_evidence_separate",
+        "tests/test_expanded_mutations.py::test_expected_survivors_false_positive_and_exclusions_remain_visible",
+        "tests/test_support_workflow.py::test_ineligible_text_names_the_actual_policy_reason",
+        "tests/test_support_workflow.py::test_valid_and_paraphrase_cases_pass",
+        "tests/test_support_workflow.py::test_declared_claims_do_not_verify_arbitrary_prose",
+        "tests/test_support_workflow.py::test_generated_cases_are_small_stable_and_labelled"
       ]
     },
     {
@@ -64,7 +78,8 @@
         "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[89]",
         "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[90]",
         "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[150]",
-        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[1000]"
+        "tests/test_contracts.py::test_padding_has_no_character_cutoff_bypass[1000]",
+        "tests/test_expanded_mutations.py::test_campaign_keeps_invariant_and_heuristic_evidence_separate"
       ]
     },
     {

@@ -1,6 +1,6 @@
 # pytest-narrative-contracts
 
-Optional pytest integration for `narrative-contracts`, version `0.1.0a1`.
+Optional pytest integration for `narrative-contracts`, version `0.1.0a2`.
 
 Install both packages from the repository root:
 

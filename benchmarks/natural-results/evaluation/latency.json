@@ -1,0 +1,6 @@
+{
+  "samples": 32,
+  "median_ms": 0.1760835,
+  "p95_ms": 0.609166,
+  "note": "Warm local replay, parsing and three profiles included; timing not deterministic"
+}

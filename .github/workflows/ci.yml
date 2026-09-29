@@ -17,6 +17,12 @@ jobs:
       - run: pytest
       - run: ruff check . && ruff format --check . && mypy
       - run: python benchmarks/run.py --variants 1 --output /tmp/narrative-benchmark
+      - run: python benchmarks/expanded_mutations.py --output /tmp/expanded-mutations
+      - name: Replay captured model outputs offline
+        run: |
+          python benchmarks/natural.py replay --input benchmarks/natural-results --output /tmp/natural-replay
+          cmp benchmarks/natural-results/evaluation/reports.json /tmp/natural-replay/reports.json
+          cmp benchmarks/natural-results/evaluation/summary.json /tmp/natural-replay/summary.json
       - run: python -m build && python -m build packages/pytest-narrative-contracts
       - name: Source mutation regression checks
         if: matrix.python == '3.12'
