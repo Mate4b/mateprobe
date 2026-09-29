@@ -1,7 +1,7 @@
-# Alpha a3 scope: audit existing validators
+# Alpha a4 scope: audit existing validators
 
-Version 0.1.0a3 packages the audit and state-binding APIs developed after a2.
-Install `narrative-contracts==0.1.0a3` for these additions; a2 wheels do not include them. Frozen benchmark artifacts are not rewritten.
+Version 0.1.0a4 packages the audit and state-binding APIs developed after a2.
+Install `mateprobe==0.1.0a4` for these additions; a2 wheels do not include them. Frozen benchmark artifacts are not rewritten.
 
 ## Delivered scope
 

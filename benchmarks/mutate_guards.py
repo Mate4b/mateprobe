@@ -82,7 +82,7 @@ def main():
         with tempfile.TemporaryDirectory(prefix="narrative-mutant-") as directory:
             src = Path(directory) / "src"
             shutil.copytree(ROOT / "src", src, ignore=shutil.ignore_patterns("__pycache__"))
-            path = src / "narrative_contracts" / filename
+            path = src / "mateprobe" / filename
             original = path.read_text()
             if original.count(old) != 1:
                 results.append(
@@ -112,7 +112,7 @@ def main():
     valid = [r for r in results if r["outcome"] in ("killed", "survived")]
     hashes = {
         p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-        for p in sorted((ROOT / "src/narrative_contracts").glob("*.py"))
+        for p in sorted((ROOT / "src/mateprobe").glob("*.py"))
     }
     payload = {
         "scope": "Eight hand-selected source mutants; not an exhaustive mutation score",

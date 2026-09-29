@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block htmltitle %}
   {% if page and page.file.src_uri == 'index.md' %}
-  <title>Narrative Contracts — Test Python validators for AI outputs</title>
+  <title>MateProbe by Mate4B — Test Python validators for AI outputs</title>
   {% elif page and page.meta.title %}
   <title>{{ page.meta.title | e }} — {{ config.site_name | e }}</title>
   {% else %}{{ super() }}{% endif %}
@@ -21,7 +21,7 @@
   {% endif %}
 {% endblock %}
 {% block content %}
-  <p class="small text-muted">Published alpha: <strong>0.1.0a3</strong> · Historical evidence retains its original version.
+  <p class="small text-muted">Published alpha: <strong>0.1.0a4</strong> · Historical evidence retains its original version.
     {% if page %}<a href="{{ config.site_url }}{{ page.file.src_uri }}">Read Markdown</a> · {% endif %}
     <a href="{{ config.site_url }}llms.txt">Agent documentation index</a>
   </p>

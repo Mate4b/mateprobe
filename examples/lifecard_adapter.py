@@ -1,7 +1,7 @@
 """Minimal original fixture demonstrating the LifeCard adapter without importing its engine."""
 
-from narrative_contracts import Claim, Context, DeclaredClaimsConsistent, StateChanged, evaluate
-from narrative_contracts.adapters import lifecard_document
+from mateprobe import Claim, Context, DeclaredClaimsConsistent, StateChanged, evaluate
+from mateprobe.adapters import lifecard_document
 
 card = {
     "title_template": "Una propuesta",

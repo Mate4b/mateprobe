@@ -1,6 +1,6 @@
 # State bindings and relational contracts
 
-Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
+Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
 
 These optional helpers cover small, explicit relationships between structured
 output and state. They do not parse prose, evaluate expressions, or introduce
@@ -16,7 +16,7 @@ relationship: refund eligibility, approval, and completed execution are differen
 facts and must not be equated.
 
 ```python
-from narrative_contracts import check_fields
+from mateprobe import check_fields
 
 report = check_fields(
     output={"reservation_confirmed": True},  # Structured output from the LLM.
@@ -62,9 +62,9 @@ All behavior is version 1 and deterministic. Configure relationships as data
 and use the regular engine, for example:
 
 ```python
-from narrative_contracts.engine import evaluate
-from narrative_contracts.model import Context, Document, Surface
-from narrative_contracts.relations import AllowedTransition, FieldRef
+from mateprobe.engine import evaluate
+from mateprobe.model import Context, Document, Surface
+from mateprobe.relations import AllowedTransition, FieldRef
 
 document = Document((Surface("out", ""),))
 context = Context({"before": {"status": "draft"}, "after": {"status": "ready"}})
@@ -80,7 +80,7 @@ report = evaluate(document, context, (rule,))
 For a proposed amount and a trusted limit:
 
 ```python
-from narrative_contracts import CompareFields
+from mateprobe import CompareFields
 
 context = Context({"action": {"cents": 5000}, "trusted": {"limit_cents": 6000}})
 rule = CompareFields(

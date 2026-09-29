@@ -1,6 +1,6 @@
 # Adopt the audit progressively
 
-Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
+Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
 
 You do not need to change your validator to start: Level 0 can wrap its existing
 boolean result and show raw survivors, regressions, and unattributed rejections.
@@ -26,7 +26,7 @@ the corresponding valid control.
 ## Level 0: an existing boolean function
 
 ```python
-from narrative_contracts.validator_audit import Verdict
+from mateprobe.validator_audit import Verdict
 
 
 def adapt(sample):
@@ -113,7 +113,7 @@ In the refund demo the prose contradiction is still one of the nine faults.
 If your already schema-validated output is nested, make its projection explicit:
 
 ```python
-from narrative_contracts import check_fields
+from mateprobe import check_fields
 
 
 def refund_projection(data):

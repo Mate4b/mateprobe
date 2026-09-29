@@ -1,4 +1,4 @@
-"""Small, offline refund audit for published narrative-contracts 0.1.0a3.
+"""Small, offline refund audit for published mateprobe 0.1.0a4.
 
 Receipts and labels are authored fixtures. No API is called and no refund occurs.
 In an application, trusted receipts must come from backend instrumentation.
@@ -10,8 +10,8 @@ import argparse
 import json
 from pathlib import Path
 
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
+from mateprobe.mutations import Relation, Validity
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict, audit_validator
 
 
 def existing_validator(sample):
@@ -103,10 +103,10 @@ EXPECTED_AFTER = {
 }
 
 
-def test_refund_policy(narrative):
+def test_refund_policy(mateprobe):
     # Keep the prose challenge in the score. Allow exactly this known survivor;
     # exact per-case assertions prevent a different missed fault from replacing it.
-    report = narrative.audit_validator(
+    report = mateprobe.audit_validator(
         after,
         CASES,
         obligations=OBLIGATIONS,

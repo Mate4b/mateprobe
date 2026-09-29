@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0a4 — 2026-09-29
+
+- Renamed the project to **MateProbe by Mate4B**. The MIT license is unchanged.
+- New distributions: `mateprobe` and `pytest-mateprobe`; Python imports are
+  `mateprobe` and `pytest_mateprobe`; CLI is `mateprobe`.
+- The pytest fixture is now `mateprobe`, with `--mateprobe-report` for JSON output.
+- Contract and audit behavior, report schema versions, and frozen research evidence
+  are unchanged. Runtime report metadata identifies version `0.1.0a4`.
+- See [the migration guide](docs/migration-mateprobe.md). Historical releases retain
+  their original names and bytes.
+
 ## 0.1.0a3 — 2026-09-29
 
 - Audit existing validators through paired cases, finding attribution, controls, and explicit obligation inventories.

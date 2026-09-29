@@ -21,7 +21,7 @@ EXAMPLES = (
 )
 
 
-def verify(output: Path, version: str = "0.1.0a3") -> None:
+def verify(output: Path, version: str = "0.1.0a4") -> None:
     def run(label: str, *args: str) -> str:
         result = subprocess.run(
             [sys.executable, "-I", *args], cwd=output, capture_output=True, text=True
@@ -35,16 +35,16 @@ def verify(output: Path, version: str = "0.1.0a3") -> None:
         run(
             "installation",
             "-c",
-            "import json, importlib.metadata as m, narrative_contracts as n; "
+            "import json, importlib.metadata as m, mateprobe as n; "
             "print(json.dumps({'module': n.__file__, 'versions': "
             "{p: m.version(p) for p in "
-            "['narrative-contracts', 'pytest-narrative-contracts', 'pytest', 'pydantic']}}))",
+            "['mateprobe', 'pytest-mateprobe', 'pytest', 'pydantic']}}))",
         )
     )
     module_path = Path(installation["module"]).resolve()
     if module_path.is_relative_to(ROOT) or "site-packages" not in module_path.parts:
         raise RuntimeError(f"Expected an isolated installed package, got {module_path}")
-    for package in ("narrative-contracts", "pytest-narrative-contracts"):
+    for package in ("mateprobe", "pytest-mateprobe"):
         if installation["versions"][package] != version:
             raise RuntimeError(f"Wrong published version of {package}")
 
@@ -64,7 +64,7 @@ def verify(output: Path, version: str = "0.1.0a3") -> None:
         "-q",
         "-c",
         os.devnull,
-        "--narrative-report=contract-results.json",
+        "--mateprobe-report=contract-results.json",
         str(output),
     )
     records = json.loads((output / "contract-results.json").read_text())["reports"]
@@ -78,7 +78,7 @@ def verify(output: Path, version: str = "0.1.0a3") -> None:
     run(
         "cli",
         "-m",
-        "narrative_contracts.cli",
+        "mateprobe.cli",
         str(ROOT / "examples/valid.json"),
         "--output",
         str(output / "cli-report.json"),
@@ -103,13 +103,13 @@ def verify(output: Path, version: str = "0.1.0a3") -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="New directory for retained evidence")
-    parser.add_argument("--version", default="0.1.0a3")
+    parser.add_argument("--version", default="0.1.0a4")
     args = parser.parse_args()
     if args.output:
         args.output.mkdir(parents=True, exist_ok=False)
         verify(args.output.resolve(), args.version)
     else:
-        with tempfile.TemporaryDirectory(prefix="narrative-published-docs-") as directory:
+        with tempfile.TemporaryDirectory(prefix="mateprobe-published-docs-") as directory:
             verify(Path(directory), args.version)
 
 

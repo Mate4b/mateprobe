@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from typing import Any
 
-from narrative_contracts.model import plain
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.provenance import GitProvenance, supplied_git_provenance
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
-from narrative_contracts.version import LIBRARY_VERSION
+from mateprobe.model import plain
+from mateprobe.mutations import Relation, Validity
+from mateprobe.provenance import GitProvenance, supplied_git_provenance
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict, audit_validator
+from mateprobe.version import LIBRARY_VERSION
 
 
 def accepted(value: object) -> Verdict:
@@ -149,7 +149,7 @@ def test_default_audit_does_not_inspect_git(monkeypatch: Any) -> None:
     def fail_if_called(*args: object, **kwargs: object) -> None:
         raise AssertionError("audit unexpectedly inspected Git")
 
-    monkeypatch.setattr("narrative_contracts.provenance.subprocess.run", fail_if_called)
+    monkeypatch.setattr("mateprobe.provenance.subprocess.run", fail_if_called)
     obligation = Obligation("state", "State remains valid")
     report = audit_validator(
         accepted,

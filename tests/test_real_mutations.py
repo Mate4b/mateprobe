@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from narrative_contracts.model import digest
+from mateprobe.model import digest
 
 ROOT = Path(__file__).parents[1]
 SPEC = importlib.util.spec_from_file_location(

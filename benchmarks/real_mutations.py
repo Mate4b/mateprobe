@@ -13,8 +13,8 @@ from collections import Counter
 from dataclasses import asdict
 from pathlib import Path
 
-from narrative_contracts.model import digest
-from narrative_contracts.mutations import MutationCase, Relation, Sample, Target, Validity, audit
+from mateprobe.model import digest
+from mateprobe.mutations import MutationCase, Relation, Sample, Target, Validity, audit
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = importlib.util.spec_from_file_location(

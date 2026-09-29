@@ -20,7 +20,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -31,7 +31,7 @@ from narrative_contracts import (
     Surface,
     evaluate,
 )
-from narrative_contracts.model import digest
+from mateprobe.model import digest
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = "natural-pilot-v1"

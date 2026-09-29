@@ -82,8 +82,8 @@ def _with_variant(
 
 
 def _run(root: Path) -> tuple[Any, dict[str, str], dict[str, Any]]:
-    from narrative_contracts.mutations import Relation, Validity
-    from narrative_contracts.validator_audit import (
+    from mateprobe.mutations import Relation, Validity
+    from mateprobe.validator_audit import (
         AuditCase,
         Obligation,
         Verdict,

@@ -6,6 +6,29 @@ from typing import Any, ClassVar, Protocol
 
 from .model import Check, Context, Document, Kind, Policy, Report, Status, digest, plain
 
+# Stable wire identifiers for rules released before the project rename. These
+# strings are report metadata, not import paths; changing them changes digests.
+_LEGACY_RULE_TYPES = {
+    f"mateprobe.{module}.{name}": f"narrative_contracts.{module}.{name}"
+    for module, names in (
+        (
+            "rules",
+            (
+                "RequiredFact",
+                "DeclaredClaimsConsistent",
+                "StateChanged",
+                "MinimumTokens",
+                "LexicalRestatement",
+                "ForbiddenPattern",
+                "SettledPremise",
+                "NoRepeatedText",
+            ),
+        ),
+        ("relations", ("CompareFields", "AllowedTransition")),
+    )
+    for name in names
+}
+
 
 class Contract(Protocol):
     @property
@@ -25,8 +48,9 @@ class Rule:
     kind: ClassVar[Kind] = Kind.INVARIANT
 
     def configuration(self) -> Mapping[str, Any]:
+        identity = f"{type(self).__module__}.{type(self).__qualname__}"
         return {
-            "type": f"{type(self).__module__}.{type(self).__qualname__}",
+            "type": _LEGACY_RULE_TYPES.get(identity, identity),
             "version": self.version,
             "kind": self.kind.value,
             "parameters": plain(self),

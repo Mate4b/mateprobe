@@ -1,7 +1,7 @@
 # Turn a survivor into a regression check
 
 This guide shows how to preserve a real audit failure while fixing the validator
-that caused it. It uses the `audit_validator` API from `narrative-contracts==0.1.0a3`; it does
+that caused it. It uses the `audit_validator` API from `mateprobe==0.1.0a4`; it does
 not require replacing the validator or adding a new policy language. The example
 is self-contained and uses no private application data.
 
@@ -11,8 +11,8 @@ Suppose refunds are allowed only in USD and only up to the supplied limit. The
 existing validator checks the amount but forgets the currency rule:
 
 ```python
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.validator_audit import (
+from mateprobe.mutations import Relation, Validity
+from mateprobe.validator_audit import (
     AuditCase,
     Obligation,
     Verdict,
@@ -132,8 +132,8 @@ validator instead of copying this illustrative implementation. Keep the cases
 unchanged when revising the validator.
 
 ```python
-def test_refund_policy(narrative):
-    narrative.audit_validator(
+def test_refund_policy(mateprobe):
+    mateprobe.audit_validator(
         validate_refund_after,
         cases,
         obligations=obligations,
@@ -142,7 +142,7 @@ def test_refund_policy(narrative):
 ```
 
 ```sh
-python -m pytest tests/test_refund_policy.py --narrative-report=refund-audit.json
+python -m pytest tests/test_refund_policy.py --mateprobe-report=refund-audit.json
 ```
 
 The default gate requires targeted detection of every eligible fault and preservation

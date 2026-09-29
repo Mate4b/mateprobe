@@ -1,10 +1,10 @@
 # External validator integrations
 
-Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
+Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
 
 These opt-in, offline examples audit authored domain obligations against two existing
 third-party validator configurations. They do not add either library to core
-`narrative-contracts`, and make no claim about production coverage or adoption.
+`mateprobe`, and make no claim about production coverage or adoption.
 
 The jsonschema example authors an IPv4 obligation. JSON Schema's `format` keyword is
 an annotation by default, so `Draft202012Validator(schema)` accepts `999.1.1.1` and

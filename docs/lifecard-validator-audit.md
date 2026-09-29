@@ -1,6 +1,6 @@
 # LifeCard validator audit
 
-Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
+Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
 
 `examples/lifecard_validator_audit.py` is an opt-in, read-only demonstration of
 the validator audit API against a local LifeCard checkout. It imports

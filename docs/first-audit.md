@@ -1,7 +1,7 @@
 # Your first validator audit
 
 **Bring an existing validator. You do not need to adopt Document, Claim, or a new
-policy language.** This small example targets published `0.1.0a3` and runs offline
+policy language.** This small example targets alpha `0.1.0a4` and runs offline
 after installation. The walkthrough is designed for a short demo; five minutes
 is a presentation target, not measured integration time.
 
@@ -16,10 +16,10 @@ Python 3.11+ is required. In a new directory:
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
-curl -fL https://mate4b.github.io/narrative-contracts/examples/first_audit.py -o first_audit.py
+python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4
+curl -fL https://mate4b.github.io/mateprobe/examples/first_audit.py -o first_audit.py
 python first_audit.py --output audit-report
-python -m pytest first_audit.py --narrative-report=pytest-audit.json
+python -m pytest first_audit.py --mateprobe-report=pytest-audit.json
 ```
 
 On Windows, activate with `.venv\Scripts\Activate.ps1` in PowerShell and download
@@ -59,7 +59,7 @@ threshold acknowledges that survivor; it does not move the challenge out of the
 score or allow another missed fault to replace it.
 
 To see a regression fail, temporarily replace `after` with `before` in the
-`narrative.audit_validator(...)` call inside `test_refund_policy`, then rerun pytest.
+`mateprobe.audit_validator(...)` call inside `test_refund_policy`, then rerun pytest.
 The command fails and `pytest-audit.json` retains the findings. Restore `after`.
 A validator that rejects all samples fails baseline validation as well.
 

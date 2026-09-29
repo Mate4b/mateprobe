@@ -2,7 +2,7 @@ import importlib.util
 import json
 from pathlib import Path
 
-from narrative_contracts.validator_audit import audit_validator
+from mateprobe.validator_audit import audit_validator
 
 PATH = Path(__file__).resolve().parents[1] / "examples" / "audit_existing_validator.py"
 spec = importlib.util.spec_from_file_location("external_validator_demo", PATH)
@@ -31,9 +31,9 @@ def test_demo_finds_missing_execution_checks_without_hiding_prose_survivor():
 def test_external_audit_plugin_records_failure_and_success(pytester, monkeypatch):
     monkeypatch.setenv("PYTEST_DISABLE_PLUGIN_AUTOLOAD", "1")
     pytester.makepyfile("""
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.provenance import supplied_git_provenance
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict
+from mateprobe.mutations import Relation, Validity
+from mateprobe.provenance import supplied_git_provenance
 
 metadata = supplied_git_provenance("a" * 40)
 
@@ -45,22 +45,22 @@ cases = (
 )
 obligations = (Obligation("positive", "Input must be positive"),)
 
-def test_correct(narrative):
-    narrative.audit_validator(
+def test_correct(mateprobe):
+    mateprobe.audit_validator(
         lambda n: Verdict(n > 0, () if n > 0 else ("negative",)),
         cases, obligations=obligations, validator_id="correct/1",
         provenance=metadata,
     )
 
-def test_broken(narrative):
-    narrative.audit_validator(
+def test_broken(mateprobe):
+    mateprobe.audit_validator(
         lambda n: Verdict(True), cases, obligations=obligations, validator_id="broken/1",
         provenance=metadata,
     )
 """)
     path = pytester.path / "report.json"
     result = pytester.runpytest_subprocess(
-        "-p", "pytest_narrative_contracts.plugin", "--narrative-report", str(path)
+        "-p", "pytest_mateprobe.plugin", "--mateprobe-report", str(path)
     )
     result.assert_outcomes(passed=1, failed=1)
     result.stdout.fnmatch_lines(["*Validator audit failure:*", "*fault*survived*"])

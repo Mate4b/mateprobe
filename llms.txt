@@ -1,45 +1,45 @@
-# Narrative Contracts
+# MateProbe by Mate4B
 
 > Test existing Python validators with known-invalid AI output samples and valid controls. Paired input audits report missed faults, targeted detections, unrelated rejections, unknowns and errors. Built-in contracts also check explicit declarations against application state; arbitrary prose truthfulness is outside the guarantee.
 
 For questions such as "How do I test whether my validator catches invalid agent outputs?", start with the problem guide below. Audit mutations are caller-supplied input variants, not edits to validator source. The library does not automatically generate or justify the cases. Offline deterministic results require a deterministic wrapped validator; the audit does not make an arbitrary callback deterministic.
 
-Install the published alpha with `python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3` (Python 3.11+). The pytest plugin is optional. Version a3 includes `check_fields`, relational rules, and the independent validator-audit API.
+Install the current alpha with `python -m pip install mateprobe==0.1.0a4 pytest-mateprobe==0.1.0a4` (Python 3.11+). The pytest plugin is optional. Version a4 includes `check_fields`, relational rules, and the independent validator-audit API.
 
 Supply authoritative state and branch selection from trusted application code. Validate required output fields before mapping them to `Claim` objects. A complete, accepted report covers configured predicates on supplied inputs, not every assertion in the prose. Evaluation needs no model calls; installation needs network access. Mutation labels and their provenance come from the caller.
 
 ## Start here
 
-- [How to test AI output validators in Python](https://mate4b.github.io/narrative-contracts/docs/testing-ai-output-validators.md): problem-to-API guide, wrong-reason rejection, valid controls, and the distinction from source mutation testing.
-- [First validator audit](https://mate4b.github.io/narrative-contracts/docs/first-audit.md): one downloadable file, published a3, two completion faults, one valid control and one retained prose challenge.
-- [Integration feedback](https://mate4b.github.io/narrative-contracts/docs/integration-feedback.md): report relevant survivors, regressions, blockers, or no useful finding.
+- [How to test AI output validators in Python](https://mate4b.github.io/mateprobe/docs/testing-ai-output-validators.md): problem-to-API guide, wrong-reason rejection, valid controls, and the distinction from source mutation testing.
+- [First validator audit](https://mate4b.github.io/mateprobe/docs/first-audit.md): one downloadable file, two completion faults, one valid control and one retained prose challenge.
+- [Integration feedback](https://mate4b.github.io/mateprobe/docs/integration-feedback.md): report relevant survivors, regressions, blockers, or no useful finding.
 
-- [Agent integration guide](https://mate4b.github.io/narrative-contracts/docs/agent-guide.md): install, authority boundary, complete pytest example, and version selection.
-- [Five-minute quickstart](https://mate4b.github.io/narrative-contracts/docs/quickstart.md): accepted output, detected fault, and a prose-only contradiction that passes.
-- [Published 0.1.0a3 API](https://mate4b.github.io/narrative-contracts/docs/api-a3.md): imports, constructors, result states, pytest, and mutation entry points.
-- [Pydantic recipe](https://mate4b.github.io/narrative-contracts/docs/pydantic.md): strict schema validation followed by explicit state checks.
+- [Agent integration guide](https://mate4b.github.io/mateprobe/docs/agent-guide.md): install, authority boundary, complete pytest example, and version selection.
+- [Five-minute quickstart](https://mate4b.github.io/mateprobe/docs/quickstart.md): accepted output, detected fault, and a prose-only contradiction that passes.
+- [Current a4 API](https://mate4b.github.io/mateprobe/docs/api-a4.md): imports, result states, pytest, and mutation entry points.
+- [Pydantic recipe](https://mate4b.github.io/mateprobe/docs/pydantic.md): strict schema validation followed by explicit state checks.
 
 ## Scope and evidence
 
-- [Choosing an evaluator](https://mate4b.github.io/narrative-contracts/docs/choosing-an-evaluator.md): deterministic contracts, schemas, lexical heuristics, and model judges.
-- [Contract semantics](https://mate4b.github.io/narrative-contracts/docs/contracts.md): typed equality, unknowns, errors, policies, and mutation denominators.
-- [Real-output mutations](https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md): 32 captured responses, 384 authored variants, and 64 accepted prose-only challenges; no semantic accuracy claim.
+- [Choosing an evaluator](https://mate4b.github.io/mateprobe/docs/choosing-an-evaluator.md): deterministic contracts, schemas, lexical heuristics, and model judges.
+- [Contract semantics](https://mate4b.github.io/mateprobe/docs/contracts.md): typed equality, unknowns, errors, policies, and mutation denominators.
+- [Real-output mutations](https://mate4b.github.io/mateprobe/docs/real-output-mutations.md): 32 captured responses, 384 authored variants, and 64 accepted prose-only challenges; no semantic accuracy claim.
 
 ## Audit existing validators
 
-You do not need to change your validator to start. These APIs are available in a3.
+You do not need to change your validator to start. These APIs are available in a4.
 
-- [Audit an existing validator](https://mate4b.github.io/narrative-contracts/docs/validator-audit.md): paired samples, expected finding IDs, controls and CI reports without adopting Document/Claim.
-- [Adoption levels](https://mate4b.github.io/narrative-contracts/docs/adoption-levels.md): boolean acceptance, findings, scopes and incomplete evidence; boolean rejection alone is not targeted detection.
-- [Audit provenance](https://mate4b.github.io/narrative-contracts/docs/audit-provenance.md): report schema 2, library version, corpus digest and optional supplied/observed Git metadata.
-- [External validator trials](https://mate4b.github.io/narrative-contracts/docs/external-validator-integrations.md): authored configuration tests with real JSON Schema and Pydantic engines; not independent adopter evidence.
+- [Audit an existing validator](https://mate4b.github.io/mateprobe/docs/validator-audit.md): paired samples, expected finding IDs, controls and CI reports without adopting Document/Claim.
+- [Adoption levels](https://mate4b.github.io/mateprobe/docs/adoption-levels.md): boolean acceptance, findings, scopes and incomplete evidence; boolean rejection alone is not targeted detection.
+- [Audit provenance](https://mate4b.github.io/mateprobe/docs/audit-provenance.md): report schema 2, library version, corpus digest and optional supplied/observed Git metadata.
+- [External validator trials](https://mate4b.github.io/mateprobe/docs/external-validator-integrations.md): authored configuration tests with real JSON Schema and Pydantic engines; not independent adopter evidence.
 
-- [Policy regression guide](https://mate4b.github.io/narrative-contracts/docs/policy-regression.md): keep survivors as permanent pytest checks and share sanitized feedback.
+- [Policy regression guide](https://mate4b.github.io/mateprobe/docs/policy-regression.md): keep survivors as permanent pytest checks and share sanitized feedback.
 
 ## Optional
 
-- [Discovery and a3 integration observations](https://mate4b.github.io/narrative-contracts/docs/agent-readiness.md): target not recommended in one bounded search task; new a3 integration with four consumer tests and twenty reviewer checks, with limits retained.
-- [Agent integration trial](https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
-- [Alpha a3 scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): delivered APIs and explicit limits.
-- [Repository](https://github.com/Mate4b/narrative-contracts): source, issues, and releases.
-- [Contributing](https://mate4b.github.io/narrative-contracts/CONTRIBUTING.md): report missed violations and false rejections with minimal evidence.
+- [Discovery and a3 integration observations](https://mate4b.github.io/mateprobe/docs/agent-readiness.md): target not recommended in one bounded search task; new a3 integration with four consumer tests and twenty reviewer checks, with limits retained.
+- [Agent integration trial](https://mate4b.github.io/mateprobe/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
+- [Alpha a4 scope](https://mate4b.github.io/mateprobe/docs/development-scope.md): delivered APIs and explicit limits.
+- [Repository](https://github.com/Mate4b/mateprobe): source, issues, and releases.
+- [Contributing](https://mate4b.github.io/mateprobe/CONTRIBUTING.md): report missed violations and false rejections with minimal evidence.

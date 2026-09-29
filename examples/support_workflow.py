@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Literal
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -28,8 +28,8 @@ from narrative_contracts import (
     Surface,
     evaluate,
 )
-from narrative_contracts.engine import Contract
-from narrative_contracts.model import Check, Scalar
+from mateprobe.engine import Contract
+from mateprobe.model import Check, Scalar
 
 Branch = Literal["refund_eligible", "refund_ineligible"]
 Variant = Literal[

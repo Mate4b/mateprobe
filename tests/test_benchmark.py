@@ -1,8 +1,8 @@
 import importlib.util
 from pathlib import Path
 
-from narrative_contracts.model import digest
-from narrative_contracts.mutations import audit
+from mateprobe.model import digest
+from mateprobe.mutations import audit
 
 spec = importlib.util.spec_from_file_location(
     "benchmark", Path(__file__).parents[1] / "benchmarks/run.py"

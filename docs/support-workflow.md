@@ -49,7 +49,7 @@ load the example-local `BranchSelection` rule; use the Python API for the full
 trusted-branch guarantee:
 
 ```sh
-.venv/bin/narrative-contracts examples/support_workflow.json
+.venv/bin/mateprobe examples/support_workflow.json
 ```
 
 For a small deterministic benchmark corpus, import

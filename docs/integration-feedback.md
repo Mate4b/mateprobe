@@ -4,7 +4,7 @@ The useful question is whether an audit found a policy failure worth fixing and
 keeping as a regression. Getting stuck or finding nothing useful also matters.
 An integration report is voluntary; external evaluation is not a release gate.
 
-[Open an integration report](https://github.com/Mate4b/narrative-contracts/issues/new?template=integration-report.yml).
+[Open an integration report](https://github.com/Mate4b/mateprobe/issues/new?template=integration-report.yml).
 Use synthetic or sanitized examples; never paste credentials, customer records,
 or unreviewed production traces. Evidence and exception messages can contain
 application data even when the report stores input digests instead of raw inputs.

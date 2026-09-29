@@ -8,8 +8,8 @@ from types import SimpleNamespace
 
 import pytest
 
-from narrative_contracts import evaluate
-from narrative_contracts.model import digest
+from mateprobe import evaluate
+from mateprobe.model import digest
 
 SPEC = importlib.util.spec_from_file_location(
     "natural_benchmark", Path(__file__).parents[1] / "benchmarks/natural.py"

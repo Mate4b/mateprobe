@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from narrative_contracts.model import Kind, Status
+from mateprobe.model import Kind, Status
 
 MODULE_PATH = Path(__file__).parents[1] / "examples" / "support_workflow.py"
 SPEC = importlib.util.spec_from_file_location("support_workflow", MODULE_PATH)
