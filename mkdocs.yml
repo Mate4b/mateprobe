@@ -10,7 +10,7 @@ theme:
   name: mkdocs
   custom_dir: docs_theme
   color_mode: auto
-  nav_style: light
+  nav_style: dark
 markdown_extensions:
   - fenced_code
   - tables
@@ -32,6 +32,7 @@ nav:
       - Contract semantics: docs/contracts.md
       - Architecture: docs/architecture.md
   - Evidence:
+      - Agent integration trial: docs/agent-adoption.md
       - Real-output mutations: docs/real-output-mutations.md
       - Model pilot: docs/natural-benchmark.md
       - Expanded mutations: docs/mutation-campaign.md

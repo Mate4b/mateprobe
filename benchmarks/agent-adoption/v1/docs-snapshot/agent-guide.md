@@ -111,10 +111,6 @@ Default policy blocks violations, unknowns and errors. Heuristics can be advisor
 with `Policy(block_heuristics=False)`. `complete` only means no unknown/error result;
 it does not mean every sentence or required business obligation was checked.
 
-If schema validation fails before evaluation, report that stage separately
-(for example, `schema_valid=False`, `evaluation_ran=False`, `accepted=False`).
-Do not set an engine-style `complete=True` when no contract report was produced.
-
 ## Audit the checks
 
 Use [the runnable mutation example](../examples/mutation_audit.py) and

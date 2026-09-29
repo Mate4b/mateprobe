@@ -1,0 +1,107 @@
+"""Shipping reply boundary for narrative-contracts 0.1.0a2.
+
+The branch is selected by trusted application code.  The generated payload can
+provide declarations, but it cannot select a snapshot or add claims outside the
+schema.
+"""
+
+from __future__ import annotations
+
+from collections.abc import Mapping
+from typing import Any
+
+from narrative_contracts import (
+    Claim,
+    Context,
+    DeclaredClaimsConsistent,
+    Document,
+    Surface,
+    evaluate,
+)
+from pydantic import BaseModel, ConfigDict, ValidationError
+
+
+TRUSTED_STATE_REF = "dispatched"
+
+
+class ShippingReply(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    status: str
+    fee: int
+    body: str
+
+
+def _schema_report(error: ValidationError) -> dict[str, Any]:
+    return {
+        "schema_valid": False,
+        "accepted": False,
+        "complete": True,
+        "error": "SCHEMA_VALIDATION_ERROR",
+        "details": error.errors(include_url=False),
+    }
+
+
+def evaluate_reply(
+    payload: Mapping[str, Any], snapshots: Mapping[str, Mapping[str, Any]]
+) -> dict[str, Any]:
+    """Validate a generated reply and return a JSON-compatible report.
+
+    ``TRUSTED_STATE_REF`` is fixed in application code.  ``snapshots`` is
+    supplied independently by the caller and is never populated from payload.
+    """
+
+    try:
+        reply = ShippingReply.model_validate(payload, strict=True)
+    except ValidationError as error:
+        return _schema_report(error)
+
+    document = Document(
+        (
+            Surface(
+                "reply",
+                reply.body,
+                state_ref=TRUSTED_STATE_REF,
+                claims=(
+                    Claim("shipment.status", reply.status),
+                    Claim("shipment.fee", reply.fee),
+                ),
+            ),
+        )
+    )
+    context = Context(snapshots)
+    report = evaluate(
+        document,
+        context,
+        (DeclaredClaimsConsistent("shipment-claims", ("reply",)),),
+    )
+    result = report.to_dict()
+    result["schema_valid"] = True
+    return result
+
+
+def build_document(payload: Mapping[str, Any]) -> Document:
+    """Build the validated document for pytest fixture demonstrations."""
+
+    reply = ShippingReply.model_validate(payload, strict=True)
+    return Document(
+        (
+            Surface(
+                "reply",
+                reply.body,
+                state_ref=TRUSTED_STATE_REF,
+                claims=(
+                    Claim("shipment.status", reply.status),
+                    Claim("shipment.fee", reply.fee),
+                ),
+            ),
+        )
+    )
+
+
+def build_context(snapshots: Mapping[str, Mapping[str, Any]]) -> Context:
+    return Context(snapshots)
+
+
+def contract_rules() -> tuple[DeclaredClaimsConsistent]:
+    return (DeclaredClaimsConsistent("shipment-claims", ("reply",)),)

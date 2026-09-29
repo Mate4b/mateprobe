@@ -1,0 +1,53 @@
+# Agent integration trial
+
+We tested whether an agent could build a small integration using the public
+documentation and published packages, without inheriting the implementation
+conversation. The [task and criteria](agent-adoption-protocol.md) were fixed first.
+
+One `gpt-5.6-luna` agent started at `llms.txt` and implemented a shipping-assistant
+validator using `narrative-contracts==0.1.0a2`, its pytest plugin, and strict
+Pydantic validation. The application selected the trusted branch; generated fields
+could not choose another snapshot. Core library and docs source access were
+prohibited by instruction, not by an OS sandbox.
+
+## Observed results
+
+| Check | Observation |
+|---|---|
+| Installable API | Published core/plugin a2; no unreleased imports |
+| Consumer's tests | 8 passed |
+| Additional maintainer checks | 16 passed against unchanged consumer code |
+| Wrong declaration | Attributable `CLAIM_STATE_MISMATCH` |
+| Missing state | Rejected, incomplete/undetermined report |
+| Invalid types or branch injection | Schema rejection |
+| Correct declarations with contradictory prose | Accepted, with the limitation explained |
+
+The 24 tests exercise related cases in **one prompted task**. They are not 24
+independent integrations or an agent success-rate estimate. The trial does not
+test whether a model recommends the library without being told about it.
+
+## Problems retained
+
+The agent initially invoked pytest before creating its test file; that exit 4
+is retained in the evidence. It also saved only `llms.txt` from the requested
+documentation snapshots, so the maintainer recovered the reported public pages
+and actual site build metadata afterward. We do not count artifact capture as
+fully completed by the agent.
+
+The consumer wrapper labels schema failures `complete=true` although the core
+engine was not evaluated. Rejection remains `accepted=false`, but the field is
+ambiguous. The [integration guide](agent-guide.md#diagnose-a-result) now explains
+how to distinguish schema results from engine completeness. The original consumer
+code remains unchanged in the evidence.
+
+## Reproduce
+
+The [frozen evidence and replay instructions](../benchmarks/agent-adoption/v1/README.md)
+include the source, reports, docs revision, hashes and maintainer checks. CI runs
+the replay against installed PyPI packages. Replaying code tests its behavior;
+it does not rerun the agent or demonstrate general discoverability.
+
+This is maintainer-run usability evidence, separate from the
+[real-output mutation audit](real-output-mutations.md) and from independent human
+evaluation. Search visibility, third-party adoption and unprompted recommendations
+remain unmeasured.

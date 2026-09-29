@@ -21,7 +21,6 @@ Supply authoritative state and branch selection from trusted application code. V
 
 ## Optional
 
-- [Agent integration trial](https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
 - [Unreleased development scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): APIs requiring a source checkout.
 - [Repository](https://github.com/Mate4b/narrative-contracts): source, issues, and releases.
 - [Contributing](https://mate4b.github.io/narrative-contracts/CONTRIBUTING.md): report missed violations and false rejections with minimal evidence.

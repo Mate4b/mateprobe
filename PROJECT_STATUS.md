@@ -27,6 +27,18 @@ Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia
   instalación limpia, descubrimiento automático de pytest, demo y CLI verificados.
   Anuncio preparado, todavía no enviado.
 
+## Documentación y uso por agentes
+
+- [Sitio público](https://mate4b.github.io/narrative-contracts/) con HTML, Markdown,
+  sitemap, `llms.txt`, guía para agentes y API publicada separada del desarrollo.
+- Descripción, topics y enlace del repositorio completos; receta ejecutable con Pydantic.
+- CI verifica los ejemplos contra PyPI a2, sin instalar el checkout como sustituto.
+- Una prueba con Luna produjo una integración con 8 tests pasando; otros 16 checks
+  del mantenedor pasaron sin modificarla. Se conservan los problemas de captura de
+  evidencia y el campo ambiguo de completitud del wrapper. Ver [resultado](docs/agent-adoption.md).
+- Este avance pasó 129 tests locales, Ruff y mypy; CI Python 3.11–3.14 también pasó.
+  La prueba de agentes no demuestra indexación, recomendación espontánea ni adopción externa.
+
 ## Límites de la evidencia
 
 Qwen3 respetó la estructura en 16/16 respuestas y sus declaraciones pasaron los invariantes;

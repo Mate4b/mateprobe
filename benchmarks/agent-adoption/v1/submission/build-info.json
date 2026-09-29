@@ -1,0 +1,32 @@
+{
+  "trial": "agent-adoption-v1",
+  "python_requirement": ">=3.11",
+  "python_runtime": "3.12",
+  "packages": {
+    "narrative-contracts": "0.1.0a2",
+    "pytest-narrative-contracts": "0.1.0a2",
+    "pydantic": "2.13.5",
+    "pytest": "9.1.1"
+  },
+  "trusted_state_ref": "dispatched",
+  "snapshots": {
+    "dispatched": {
+      "shipment.status": "dispatched",
+      "shipment.fee": 5
+    },
+    "cancelled": {
+      "shipment.status": "cancelled",
+      "shipment.fee": 0
+    }
+  },
+  "consulted_urls": [
+    "https://mate4b.github.io/narrative-contracts/llms.txt",
+    "https://mate4b.github.io/narrative-contracts/docs/agent-guide.md",
+    "https://mate4b.github.io/narrative-contracts/docs/quickstart.md",
+    "https://mate4b.github.io/narrative-contracts/docs/api-a2.md",
+    "https://mate4b.github.io/narrative-contracts/docs/pydantic.md",
+    "https://mate4b.github.io/narrative-contracts/docs/contracts.md",
+    "https://mate4b.github.io/narrative-contracts/docs/choosing-an-evaluator.md",
+    "https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md"
+  ]
+}

@@ -16,7 +16,8 @@ mypy
 
 For documentation builds, install `requirements-docs.txt` and run
 `python scripts/build_docs.py`. For published-package examples, use a **separate**
-environment with the PyPI versions and run `python scripts/check_published_docs.py`;
+environment with `narrative-contracts==0.1.0a2`, `pytest-narrative-contracts==0.1.0a2`,
+and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
 

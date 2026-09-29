@@ -1,0 +1,23 @@
+import json
+
+from shipping_contract import evaluate_reply
+
+
+snapshots = {
+    "dispatched": {"shipment.status": "dispatched", "shipment.fee": 5},
+    "cancelled": {"shipment.status": "cancelled", "shipment.fee": 0},
+}
+valid = {"status": "dispatched", "fee": 5, "body": "Your shipment is dispatched."}
+cases = {
+    "valid_output": (valid, snapshots),
+    "schema_valid_wrong_fee": ({**valid, "fee": 0}, snapshots),
+    "missing_state_evidence": (valid, {"dispatched": {"shipment.status": "dispatched"}}),
+    "boolean_fee": ({**valid, "fee": True}, snapshots),
+    "contradictory_prose_with_correct_fields": (
+        {**valid, "body": "Your shipment is cancelled and costs nothing."},
+        snapshots,
+    ),
+    "attempt_to_choose_cancelled_branch": ({**valid, "state_ref": "cancelled"}, snapshots),
+}
+
+print(json.dumps({name: evaluate_reply(payload, state) for name, (payload, state) in cases.items()}, indent=2, sort_keys=True))

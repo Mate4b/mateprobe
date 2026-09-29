@@ -1,0 +1,174 @@
+{
+  "attempt_to_choose_cancelled_branch": {
+    "accepted": false,
+    "complete": true,
+    "details": [
+      {
+        "input": "cancelled",
+        "loc": [
+          "state_ref"
+        ],
+        "msg": "Extra inputs are not permitted",
+        "type": "extra_forbidden"
+      }
+    ],
+    "error": "SCHEMA_VALIDATION_ERROR",
+    "schema_valid": false
+  },
+  "boolean_fee": {
+    "accepted": false,
+    "complete": true,
+    "details": [
+      {
+        "input": true,
+        "loc": [
+          "fee"
+        ],
+        "msg": "Input should be a valid integer",
+        "type": "int_type"
+      }
+    ],
+    "error": "SCHEMA_VALIDATION_ERROR",
+    "schema_valid": false
+  },
+  "contradictory_prose_with_correct_fields": {
+    "accepted": true,
+    "checks": [
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      },
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.fee declared 5; dispatched has 5",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      }
+    ],
+    "complete": true,
+    "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+    "input_digest": "bb365c5989745b1b419d939ac42e0716145166c6f6c8b7549fe92da82d352f3f",
+    "library_version": "0.1.0a2",
+    "policy": {
+      "block_heuristics": true,
+      "block_undetermined": true
+    },
+    "schema_valid": true,
+    "schema_version": 1
+  },
+  "missing_state_evidence": {
+    "accepted": false,
+    "checks": [
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      },
+      {
+        "code": "CLAIM_UNAVAILABLE",
+        "evidence": "shipment.fee absent in dispatched",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "undetermined",
+        "version": "1"
+      }
+    ],
+    "complete": false,
+    "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+    "input_digest": "c9eac42c6cd07354fb149ddbce0ceaf6c717ad0571f25b984d62c465a929e6c1",
+    "library_version": "0.1.0a2",
+    "policy": {
+      "block_heuristics": true,
+      "block_undetermined": true
+    },
+    "schema_valid": true,
+    "schema_version": 1
+  },
+  "schema_valid_wrong_fee": {
+    "accepted": false,
+    "checks": [
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      },
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.fee declared 0; dispatched has 5",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "violated",
+        "version": "1"
+      }
+    ],
+    "complete": true,
+    "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+    "input_digest": "530d684514badac072e46a6c4291359e5ac539a1f16d42792e709f7052c530b2",
+    "library_version": "0.1.0a2",
+    "policy": {
+      "block_heuristics": true,
+      "block_undetermined": true
+    },
+    "schema_valid": true,
+    "schema_version": 1
+  },
+  "valid_output": {
+    "accepted": true,
+    "checks": [
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      },
+      {
+        "code": "CLAIM_STATE_MISMATCH",
+        "evidence": "shipment.fee declared 5; dispatched has 5",
+        "kind": "invariant",
+        "metrics": [],
+        "rule_id": "shipment-claims",
+        "scope": "reply",
+        "status": "satisfied",
+        "version": "1"
+      }
+    ],
+    "complete": true,
+    "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+    "input_digest": "ca9417d08244135f2548a77d3f3e6794b2af3e975d46506778138e87fb2be7e0",
+    "library_version": "0.1.0a2",
+    "policy": {
+      "block_heuristics": true,
+      "block_undetermined": true
+    },
+    "schema_valid": true,
+    "schema_version": 1
+  }
+}

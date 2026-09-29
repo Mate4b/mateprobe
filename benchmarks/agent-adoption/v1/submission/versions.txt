@@ -1,0 +1,9 @@
+Python 3.12.13
+Name: narrative-contracts
+Version: 0.1.0a2
+Name: pytest-narrative-contracts
+Version: 0.1.0a2
+Name: pydantic
+Version: 2.13.5
+Name: pytest
+Version: 9.1.1

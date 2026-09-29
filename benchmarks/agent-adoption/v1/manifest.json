@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "trial": "documentation-agent-smoke-v1",
+  "agent_model": "gpt-5.6-luna",
+  "context": "fresh subagent, no inherited conversation",
+  "docs_revision": "1343c410a90637a984998a13ba9d1d1cf002be72",
+  "agent_authored_tests_passed": 8,
+  "maintainer_checks_passed": 16,
+  "docs_snapshot_capture": "maintainer fetched reported URLs after trial, before docs revision changed",
+  "access_boundary": "agent instructed not to read local repo or installed source; cooperative restriction, not an OS sandbox",
+  "reviewer_interface": "Assertions consume the submitted dictionary report; schema rejection is a returned record rather than an exception. Behavioral criteria were unchanged.",
+  "issues": [
+    "Agent ran pytest before creating the test file; retained initial exit 4.",
+    "Agent saved only llms.txt and its own metadata; maintainer recovered public pages and site build metadata afterward.",
+    "Schema-rejection wrapper reports complete=true even though core evaluation did not run; accepted=false is preserved."
+  ],
+  "scope": "One prompted maintainer-run integration; not independent validation, recommendation/discovery rate, or semantic accuracy.",
+  "docs_sha256": {
+    "https://mate4b.github.io/narrative-contracts/llms.txt": "754bc4a2ec6c6bc824cd7d58ab04d4cae6b582a1f929733b9fdc1f48151bdfb1",
+    "https://mate4b.github.io/narrative-contracts/docs/agent-guide.md": "905d0fe621a9dcf9c27285e4f74cb619df4ee1a3f11e04377c0f6806ed485cdb",
+    "https://mate4b.github.io/narrative-contracts/docs/quickstart.md": "04656d217545078324c0aa7c246401ad667b54f11a1f785ea5f2fe88bf0d016d",
+    "https://mate4b.github.io/narrative-contracts/docs/api-a2.md": "60d24e2f34c7b40515ed15a6aea26da004a14fbdb43f7f5fdea593096352c69d",
+    "https://mate4b.github.io/narrative-contracts/docs/pydantic.md": "1504b5c33160bfd18ab1fed64e49c9a3a1597cef5d73923a03d903c23ef67940",
+    "https://mate4b.github.io/narrative-contracts/docs/contracts.md": "f8aeb0315a49f634894d180620999e8a81fa3f76da7a06b422a72d98b14a3a41",
+    "https://mate4b.github.io/narrative-contracts/docs/choosing-an-evaluator.md": "6f3faf87b6bce1487ef7ab23a4202f089dc5d3d74ce00c8192c6d2d3fb841968",
+    "https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md": "338fc2476274c3bbbfa2e5819af4a3f9d212f88d253528158ded4ec0fcaa4f98",
+    "https://mate4b.github.io/narrative-contracts/build-info.json": "b692250e68636c00ba5057df900df7bbe0419023113c392df353e4c1084254aa"
+  },
+  "artifact_sha256": {
+    "docs-snapshot/agent-guide.md": "905d0fe621a9dcf9c27285e4f74cb619df4ee1a3f11e04377c0f6806ed485cdb",
+    "docs-snapshot/api-a2.md": "60d24e2f34c7b40515ed15a6aea26da004a14fbdb43f7f5fdea593096352c69d",
+    "docs-snapshot/build-info.json": "b692250e68636c00ba5057df900df7bbe0419023113c392df353e4c1084254aa",
+    "docs-snapshot/choosing-an-evaluator.md": "6f3faf87b6bce1487ef7ab23a4202f089dc5d3d74ce00c8192c6d2d3fb841968",
+    "docs-snapshot/contracts.md": "f8aeb0315a49f634894d180620999e8a81fa3f76da7a06b422a72d98b14a3a41",
+    "docs-snapshot/llms.txt": "754bc4a2ec6c6bc824cd7d58ab04d4cae6b582a1f929733b9fdc1f48151bdfb1",
+    "docs-snapshot/pydantic.md": "1504b5c33160bfd18ab1fed64e49c9a3a1597cef5d73923a03d903c23ef67940",
+    "docs-snapshot/quickstart.md": "04656d217545078324c0aa7c246401ad667b54f11a1f785ea5f2fe88bf0d016d",
+    "docs-snapshot/real-output-mutations.md": "338fc2476274c3bbbfa2e5819af4a3f9d212f88d253528158ded4ec0fcaa4f98",
+    "protocol.md": "39c172a39a90a5587547d21a3c36e82b93aaf289a96c55cc77fa7ac022ed0125",
+    "reviewer_checks.py.txt": "cb489e04dc179b8ec5e41f7ee07b3d710254c3a9cfc7d01b4e1c858486f1813b",
+    "submission/build-info.json": "6f4c2014c8788d57983c76a8ae3747cd3658b39151b943bbb79e6b469efd78a2",
+    "submission/contract-results.json": "62bb67fa01b66a197238f24001217249d69150a1880f6023915bc76c1fe91b41",
+    "submission/final-stdout.txt": "e73c870cd88fdba40a5d0f30f34f270f30909cca24fe8b6e89bb9876a641e27e",
+    "submission/generate_report.py.txt": "185125d1338bc7d938249d9cea4dc0205b82e7b6df84c65d4034238d87dca4f5",
+    "submission/initial-failure.txt": "9ccba769e0bcc91590fbc927ccbeeb7954ad9217cd58ec968a994f9a64d1d636",
+    "submission/llms.txt": "754bc4a2ec6c6bc824cd7d58ab04d4cae6b582a1f929733b9fdc1f48151bdfb1",
+    "submission/scenario-report.json": "36a8df3493f58a9bb777b91d6b4bc2a46b2fdf71dda3e9bd5b3a68a8caddac98",
+    "submission/shipping_contract.py.txt": "481ba42d20c0e6941923f1953a3ebc2d7f6e712cd74501319a1e02b701f10ebc",
+    "submission/test_shipping_contract.py.txt": "7cc6d93ae6cf395371878c48bde71c4391ac6b7d885ad4bf2dd855bc627691d9",
+    "submission/trial-log.md": "c5839887ef877dd16cc7d8bc42722067e1e9228e2caa38110ee30d6ecc42e800",
+    "submission/versions.txt": "e8c7fb16b80feeb68d44de931ccc1b4a28fba7ba52190be817f46afa819ac9f9"
+  }
+}

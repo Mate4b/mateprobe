@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "test": "test_shipping_contract.py::test_valid_output_is_accepted_and_recorded",
+      "type": "evaluation",
+      "checks": [
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+          "metrics": []
+        },
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.fee declared 5; dispatched has 5",
+          "metrics": []
+        }
+      ],
+      "input_digest": "ca9417d08244135f2548a77d3f3e6794b2af3e975d46506778138e87fb2be7e0",
+      "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": true,
+      "complete": true
+    },
+    {
+      "test": "test_shipping_contract.py::test_correct_structured_fields_with_contradictory_prose_are_accepted",
+      "type": "evaluation",
+      "checks": [
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+          "metrics": []
+        },
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.fee declared 5; dispatched has 5",
+          "metrics": []
+        }
+      ],
+      "input_digest": "bb365c5989745b1b419d939ac42e0716145166c6f6c8b7549fe92da82d352f3f",
+      "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": true,
+      "complete": true
+    },
+    {
+      "test": "test_shipping_contract.py::test_fixture_rejection_is_recorded",
+      "type": "evaluation",
+      "checks": [
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "satisfied",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.status declared 'dispatched'; dispatched has 'dispatched'",
+          "metrics": []
+        },
+        {
+          "rule_id": "shipment-claims",
+          "version": "1",
+          "kind": "invariant",
+          "status": "violated",
+          "code": "CLAIM_STATE_MISMATCH",
+          "scope": "reply",
+          "evidence": "shipment.fee declared 0; dispatched has 5",
+          "metrics": []
+        }
+      ],
+      "input_digest": "530d684514badac072e46a6c4291359e5ac539a1f16d42792e709f7052c530b2",
+      "contracts_digest": "5f634bef259c1ad4da1d090d5fea7cc7c18211b53ed5fa84baac619bf144fbe1",
+      "policy": {
+        "block_heuristics": true,
+        "block_undetermined": true
+      },
+      "library_version": "0.1.0a2",
+      "schema_version": 1,
+      "accepted": false,
+      "complete": true
+    }
+  ]
+}

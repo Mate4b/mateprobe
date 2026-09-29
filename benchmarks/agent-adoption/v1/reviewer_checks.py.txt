@@ -1,0 +1,76 @@
+"""Maintainer-authored checks of the submitted consumer function, unchanged."""
+
+from copy import deepcopy
+
+import pytest
+
+from shipping_contract import evaluate_reply
+
+STATES = {
+    "dispatched": {"shipment.status": "dispatched", "shipment.fee": 5},
+    "cancelled": {"shipment.status": "cancelled", "shipment.fee": 0},
+}
+VALID = {"status": "dispatched", "fee": 5, "body": "The parcel is on its way."}
+
+
+@pytest.mark.parametrize("body", ["The parcel is on its way.", "Your package has shipped."])
+def test_valid_wording(body):
+    result = evaluate_reply({**VALID, "body": body}, deepcopy(STATES))
+    assert result["accepted"] and result["complete"]
+
+
+def test_fee_violation_is_attributed():
+    result = evaluate_reply({**VALID, "fee": 9}, deepcopy(STATES))
+    assert not result["accepted"] and result["complete"]
+    assert any(
+        c["status"] == "violated" and c["code"] == "CLAIM_STATE_MISMATCH"
+        and c["rule_id"] and c["scope"]
+        for c in result["checks"]
+    )
+
+
+@pytest.mark.parametrize("states", [
+    {"dispatched": {"shipment.status": "dispatched"}},
+    {"cancelled": {"shipment.status": "cancelled", "shipment.fee": 0}},
+])
+def test_missing_state_is_unknown(states):
+    result = evaluate_reply(VALID, states)
+    assert not result["accepted"] and not result["complete"]
+    assert any(c["status"] == "undetermined" for c in result["checks"])
+
+
+@pytest.mark.parametrize("fee", [True, "5", 5.0])
+def test_fee_schema_is_strict(fee):
+    result = evaluate_reply({**VALID, "fee": fee}, deepcopy(STATES))
+    assert not result["schema_valid"] and not result["accepted"]
+
+
+@pytest.mark.parametrize("field", ["state_ref", "branch"])
+def test_output_cannot_select_branch(field):
+    result = evaluate_reply({**VALID, field: "cancelled"}, deepcopy(STATES))
+    assert not result["schema_valid"] and not result["accepted"]
+
+
+def test_cannot_choose_other_existing_snapshot():
+    result = evaluate_reply({**VALID, "status": "cancelled", "fee": 0}, deepcopy(STATES))
+    assert not result["accepted"] and result["complete"]
+
+
+def test_prose_limit_is_retained():
+    result = evaluate_reply({**VALID, "body": "Your shipment was cancelled; the fee is zero."}, deepcopy(STATES))
+    assert result["accepted"] and result["complete"]
+
+
+def test_uses_supplied_state_instead_of_hardcoded_expected_fee():
+    states = deepcopy(STATES)
+    states["dispatched"]["shipment.fee"] = 7
+    result = evaluate_reply({**VALID, "fee": 7}, states)
+    assert result["accepted"] and result["complete"]
+
+
+@pytest.mark.parametrize("field", ["status", "fee", "body"])
+def test_required_output_fields(field):
+    payload = dict(VALID)
+    payload.pop(field)
+    result = evaluate_reply(payload, deepcopy(STATES))
+    assert not result["schema_valid"] and not result["accepted"]

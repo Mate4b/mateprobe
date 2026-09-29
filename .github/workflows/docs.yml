@@ -27,11 +27,14 @@ jobs:
           narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
           'pydantic==2.13.5'
       - run: python scripts/check_published_docs.py --output /tmp/published-docs-evidence
+      - run: python benchmarks/replay_agent_adoption.py --output /tmp/agent-adoption-replay
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: published-docs-evidence
-          path: /tmp/published-docs-evidence
+          path: |
+            /tmp/published-docs-evidence
+            /tmp/agent-adoption-replay
 
   build:
     runs-on: ubuntu-latest

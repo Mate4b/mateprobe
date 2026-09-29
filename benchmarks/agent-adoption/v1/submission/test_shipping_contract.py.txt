@@ -1,0 +1,77 @@
+import json
+from pathlib import Path
+
+import pytest
+
+from narrative_contracts import evaluate
+
+from shipping_contract import (
+    build_context,
+    build_document,
+    contract_rules,
+    evaluate_reply,
+)
+
+
+SNAPSHOTS = {
+    "dispatched": {"shipment.status": "dispatched", "shipment.fee": 5},
+    "cancelled": {"shipment.status": "cancelled", "shipment.fee": 0},
+}
+
+VALID = {"status": "dispatched", "fee": 5, "body": "Your shipment is dispatched."}
+
+
+def report_for(payload, snapshots=SNAPSHOTS):
+    return evaluate_reply(payload, snapshots)
+
+
+def test_valid_output_is_accepted_and_recorded(narrative):
+    report = narrative.check(
+        build_document(VALID), build_context(SNAPSHOTS), contract_rules()
+    )
+    assert report.accepted and report.complete
+
+
+def test_schema_valid_wrong_fee_is_rejected():
+    report = report_for({**VALID, "fee": 0})
+    assert report["schema_valid"]
+    assert not report["accepted"] and report["complete"]
+    assert any(c["status"] == "violated" for c in report["checks"])
+
+
+def test_missing_state_evidence_is_incomplete():
+    report = report_for(VALID, {"dispatched": {"shipment.status": "dispatched"}})
+    assert report["schema_valid"]
+    assert not report["accepted"] and not report["complete"]
+    assert any(c["status"] == "undetermined" for c in report["checks"])
+
+
+def test_boolean_fee_is_schema_rejected():
+    report = report_for({**VALID, "fee": True})
+    assert not report["schema_valid"]
+    assert report["error"] == "SCHEMA_VALIDATION_ERROR"
+
+
+def test_correct_structured_fields_with_contradictory_prose_are_accepted(narrative):
+    payload = {**VALID, "body": "Your shipment is cancelled and costs nothing."}
+    report = narrative.check(
+        build_document(payload), build_context(SNAPSHOTS), contract_rules()
+    )
+    assert report.accepted and report.complete
+
+
+def test_attempt_to_choose_another_branch_through_extra_field_is_rejected():
+    report = report_for({**VALID, "state_ref": "cancelled"})
+    assert not report["schema_valid"]
+    assert report["error"] == "SCHEMA_VALIDATION_ERROR"
+
+
+def test_fixture_rejection_is_recorded(narrative):
+    wrong = build_document({**VALID, "fee": 0})
+    with pytest.raises(AssertionError):
+        narrative.check(wrong, build_context(SNAPSHOTS), contract_rules())
+
+
+def test_report_is_json_serializable():
+    report = report_for(VALID)
+    json.dumps(report)
