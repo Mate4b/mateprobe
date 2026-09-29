@@ -1,0 +1,14 @@
+# Search capture audit
+
+Exact web search call count: **4**.
+
+1. Call 1 used query `Python pytest mutation testing tool inject defects mutmut official documentation Hypothesis property based testing`. Its raw response was displayed by the tool but was not written to a file at that time.
+2. Call 2 used query `Python pytest mutation testing open source package mutmut cosmic-ray pytest-gremlins official`. Its complete raw response is saved as `02-query.json`.
+3. Call 3 used query `site:pypi.org/project pytest-gremlins PyPI install Python 3.11`. Its complete raw response is saved as `03-query.json`.
+4. Call 4 repeated the exact query from call 1 specifically to persist a raw response. Its complete response is saved as `01-query.json`.
+
+The original call-1 response was not saved and was not overwritten by a file; `01-query.json` contains the later call-4 response. The original call-1 response cannot be recovered from the existing scratch files without rerunning the search. No rerun was made for this clarification. `04-official-docs.json` contains the separate official-documentation open call, not a search response.
+
+The final report says “3 searches” to mean **three unique query formulations**. There were four search calls because query 1 was repeated for capture.
+
+Query formulation deliberately named tools already known before browsing: query 1 named `mutmut` and `Hypothesis`; query 2 named `mutmut`, `cosmic-ray`, and `pytest-gremlins`. This was candidate-oriented discovery rather than a supplied preferred product. Query 3 was a package-availability verification query for `pytest-gremlins`.

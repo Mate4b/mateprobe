@@ -1,8 +1,5 @@
 # Agent integration trial
 
-This page preserves the historical a2 trial. See the separate
-[discovery and a3 integration observations](agent-readiness.md) for the newer tasks.
-
 We tested whether an agent could build a small integration using the public
 documentation and published packages, without inheriting the implementation
 conversation. The [task and criteria](agent-adoption-protocol.md) were fixed first.
@@ -45,7 +42,7 @@ code remains unchanged in the evidence.
 
 ## Reproduce
 
-The [frozen evidence and replay instructions](../benchmarks/agent-adoption/v1/README.md)
+The [frozen evidence and replay instructions](https://github.com/Mate4b/narrative-contracts/blob/main/benchmarks/agent-adoption/v1/README.md)
 include the source, reports, docs revision, hashes and maintainer checks. CI runs
 the replay against installed PyPI packages. Replaying code tests its behavior;
 it does not rerun the agent or demonstrate general discoverability.

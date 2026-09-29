@@ -14,16 +14,11 @@ not general factuality or writing-quality evaluation.
 | Does the text contain a configured forbidden phrase? | A lexical rule | It does not interpret quotation, negation or semantic paraphrases |
 | Does unrestricted prose contradict the database? | A separately validated extraction/entailment method, or constrained rendering | Supplied claims alone do not establish what the prose says |
 | Is the response helpful or stylistically appropriate? | A task-specific evaluation protocol, potentially including model or human judgments | The protocol needs its own reliability evidence |
-| Does my Python validator catch invalid AI outputs and preserve valid ones? | A validator audit with paired input samples, fault targets and controls | Results depend on the validity and coverage of the authored cases |
+| Does the validator catch known defects without rejecting valid changes? | A mutation audit with fault targets and controls | Results depend on the validity and coverage of the authored cases |
 
 These mechanisms can coexist. For example, validate the JSON schema, evaluate
 exact state predicates, then route selected prose properties to another evaluator.
 Keep the resulting evidence separate rather than treating every pass as proof of truth.
-
-In this audit, mutations are supplied input variants. Source mutation testing instead
-changes program source to test whether the test suite catches altered behavior.
-See [how to test AI output validators](testing-ai-output-validators.md) for the
-distinction and a workflow for an existing validator.
 
 ## Deterministic contracts and LLM judges
 

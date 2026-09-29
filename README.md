@@ -1,6 +1,15 @@
 # Narrative Contracts
 
-**Mutation-test your existing validators. See which faults they detect, miss, or reject for the wrong reason.**
+**Test whether your Python validator catches invalid AI outputs and preserves valid ones.**
+
+Narrative Contracts audits your existing validator with paired input variants:
+known faults and valid controls. It reports missed faults, rejections for the wrong
+reason, incomplete evidence, and execution errors. You supply the cases and policy;
+the audit runs without an LLM judge.
+
+Here, mutations are changes to the **samples passed to the validator**. The audit
+does not rewrite its Python source. See [how to test AI output validators](docs/testing-ai-output-validators.md)
+for the workflow and how it fits with ordinary pytest and source mutation testing.
 
 Alpha `0.1.0a3`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 

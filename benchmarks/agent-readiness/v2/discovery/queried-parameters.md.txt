@@ -1,0 +1,16 @@
+# Queries and parameters
+
+Searches used (four total; within the six-query limit):
+
+1. `Python pytest mutation testing tool inject defects mutmut official documentation Hypothesis property based testing`
+2. `Python pytest mutation testing open source package mutmut cosmic-ray pytest-gremlins official`
+3. `site:pypi.org/project pytest-gremlins PyPI install Python 3.11`
+4. Repeated query 1 to capture and persist its complete raw response: `Python pytest mutation testing tool inject defects mutmut official documentation Hypothesis property based testing`
+
+Parameters for all searches: `response_length: "long"`; no recency or domain filter unless stated in query 3. Official documentation pages opened (candidate inspection limit: three projects):
+
+- pytest-gremlins: https://pytest-gremlins.readthedocs.io/en/latest/guide/getting-started/
+- Hypothesis: https://hypothesis.readthedocs.io/en/latest/quickstart.html
+- mutmut: https://mutmut.readthedocs.io/en/latest/index.html
+
+Raw search responses are stored in `01-query.json`, `02-query.json`, and `03-query.json`. The fourth search response is stored in `01-query.json` because it was the repeat capture of query 1.

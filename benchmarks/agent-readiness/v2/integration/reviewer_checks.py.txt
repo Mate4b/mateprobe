@@ -1,0 +1,188 @@
+"""Prewritten behavioral checks for the a3 consumer submission."""
+
+from copy import deepcopy
+
+import pytest
+
+from narrative_contracts.mutations import Relation, Validity
+from narrative_contracts.validator_audit import Verdict, audit_validator
+
+from allocation_audit import (
+    adapt_validator,
+    build_cases,
+    build_obligations,
+    validate_after,
+    validate_before,
+)
+
+BASE = {
+    "units": 2,
+    "stock": 5,
+    "requested_zone": "north",
+    "permitted_zone": "north",
+    "reply": "Two units were allocated.",
+}
+
+
+def audit(validator, cases=None):
+    return audit_validator(
+        adapt_validator(validator),
+        build_cases() if cases is None else cases,
+        obligations=build_obligations(),
+        validator_id="maintainer/unchanged-consumer",
+    )
+
+
+def find_case(predicate):
+    found = [c for c in build_cases() if predicate(c)]
+    assert len(found) == 1
+    return found[0]
+
+
+def policy_cases():
+    return tuple(
+        c for c in build_cases()
+        if c.baseline != c.variant
+        and (
+            c.relation == Relation.PRESERVE
+            or (
+                type(c.variant.get("units")) is int
+                and type(c.variant.get("stock")) is int
+            )
+        )
+    )
+
+
+@pytest.mark.parametrize("units,stock", [(2, 5), (5, 5), (7, 9)])
+def test_valid_arithmetic_and_boundary(units, stock):
+    sample = {**BASE, "units": units, "stock": stock}
+    for validator in (validate_before, validate_after):
+        verdict = adapt_validator(validator)(sample)
+        assert verdict.accepted and verdict.complete and not verdict.violations
+
+
+@pytest.mark.parametrize("units,stock", [(6, 5), (10, 9)])
+def test_stock_fault_is_attributed(units, stock):
+    verdict = adapt_validator(validate_after)({**BASE, "units": units, "stock": stock})
+    assert not verdict.accepted and verdict.complete
+    assert "stock_exceeded" in verdict.violations
+
+
+def test_fix_preserves_discovered_region_survivor():
+    sample = {**BASE, "requested_zone": "south"}
+    before = adapt_validator(validate_before)(sample)
+    after = adapt_validator(validate_after)(sample)
+    assert before.accepted and before.complete
+    assert not after.accepted and after.complete
+    assert "zone_not_allowed" in after.violations
+
+
+def test_region_is_compared_against_supplied_authority():
+    sample = {**BASE, "requested_zone": "west", "permitted_zone": "west"}
+    assert adapt_validator(validate_after)(sample).accepted
+    mismatch = {**sample, "requested_zone": "north"}
+    assert not adapt_validator(validate_after)(mismatch).accepted
+
+
+@pytest.mark.parametrize("units", [True, "6", 2.0])
+def test_type_errors_are_not_fabricated_stock_findings(units):
+    verdict = adapt_validator(validate_after)({**BASE, "units": units})
+    assert not verdict.accepted and verdict.complete
+    assert verdict.violations == ("schema.units",)
+
+
+@pytest.mark.parametrize("missing", [False, True])
+def test_missing_evidence_not_success(missing):
+    sample = {**BASE, "stock": None}
+    if missing:
+        sample.pop("stock")
+    verdict = adapt_validator(validate_after)(sample)
+    assert not verdict.accepted and not verdict.complete
+
+
+def test_adapter_does_not_swallow_execution_exception():
+    with pytest.raises(TypeError):
+        adapt_validator(validate_after)({**BASE, "stock": "unavailable"})
+
+
+def test_adapter_preserves_arbitrary_validator_findings():
+    def unrelated(sample):
+        assert sample == BASE
+        return {"accepted": False, "complete": True, "errors": ["another.rule"]}
+
+    assert adapt_validator(unrelated)(deepcopy(BASE)) == Verdict(
+        accepted=False, violations=("another.rule",), complete=True
+    )
+
+
+def test_authored_corpus_keeps_all_requested_cases():
+    cases = build_cases()
+    assert isinstance(cases, tuple) and len(cases) == 8
+    assert all(c.provenance for c in cases if c.validity == Validity.VALID)
+    assert len({c.id for c in cases}) == 8
+    assert len(policy_cases()) == 4
+
+
+def test_full_campaign_reports_before_and_after_without_disappearing_gaps():
+    before, after = audit(validate_before), audit(validate_after)
+    assert before.corpus_digest == after.corpus_digest
+    assert before.summary()["counts"] == {
+        "detected": 1, "survived": 1, "preserved": 2,
+        "unattributed_rejection": 1, "undetermined": 1, "error": 1, "excluded": 1,
+    }
+    assert after.summary()["counts"] == {
+        "detected": 2, "preserved": 2, "unattributed_rejection": 1,
+        "undetermined": 1, "error": 1, "excluded": 1,
+    }
+    for report in (before, after):
+        summary = report.summary()
+        assert summary["eligible_faults"] == 5
+        assert summary["eligible_controls"] == summary["preserved_controls"] == 2
+        with pytest.raises(AssertionError):
+            report.assert_thresholds()
+        assert report.library_version == "0.1.0a3" and report.schema_version == 2
+        untested = [o for o in summary["obligations"] if o["id"] == "idempotency"]
+        assert len(untested) == 1 and untested[0]["assessment"] == "untested"
+
+
+def test_individual_diagnostic_cases_are_attributed_correctly():
+    cases = build_cases()
+    outcome = {r.id: r.outcome for r in audit(validate_after).cases}
+    for case in cases:
+        if case.baseline == case.variant:
+            assert outcome[case.id] == "excluded"
+        elif case.variant.get("stock") is None:
+            assert outcome[case.id] == "undetermined"
+        elif case.variant.get("stock") == "unavailable":
+            assert outcome[case.id] == "error"
+        elif type(case.variant.get("units")) is not int:
+            assert outcome[case.id] == "unattributed_rejection"
+
+
+def test_regression_subset_passes_only_after_fix(narrative):
+    selected = policy_cases()
+    with pytest.raises(AssertionError):
+        narrative.audit_validator(
+            adapt_validator(validate_before), selected,
+            obligations=build_obligations(), validator_id="before-regression",
+        )
+    narrative.audit_validator(
+        adapt_validator(validate_after), selected,
+        obligations=build_obligations(), validator_id="after-regression",
+    )
+
+
+def test_reject_everything_cannot_pass_regression_subset():
+    def reject_all(sample):
+        return {"accepted": False, "complete": True, "errors": ["stock_exceeded", "zone_not_allowed"]}
+
+    report = audit(reject_all, policy_cases())
+    assert all(c.outcome == "baseline_failed" for c in report.cases)
+    with pytest.raises(AssertionError):
+        report.assert_thresholds()
+
+
+def test_prose_is_outside_this_validators_scope():
+    sample = {**BASE, "reply": "No units were allocated; the request was denied."}
+    verdict = adapt_validator(validate_after)(sample)
+    assert verdict.accepted and verdict.complete

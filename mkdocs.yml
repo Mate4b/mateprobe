@@ -1,6 +1,6 @@
 site_name: Narrative Contracts
 site_url: https://mate4b.github.io/narrative-contracts/
-site_description: Deterministic state and claim contracts, pytest integration, and mutation audits for LLM applications.
+site_description: Test Python validators with invalid AI output samples and valid controls. Find missed faults and wrong-reason rejections with pytest audit reports.
 repo_url: https://github.com/Mate4b/narrative-contracts
 edit_uri: ''
 docs_dir: .docs-src
@@ -23,6 +23,7 @@ validation:
 nav:
   - Start:
       - Overview: index.md
+      - Test AI output validators: docs/testing-ai-output-validators.md
       - Try a validator audit: docs/launch.md
       - First audit recipe: docs/first-audit.md
       - Integration feedback: docs/integration-feedback.md
@@ -36,6 +37,7 @@ nav:
       - Architecture: docs/architecture.md
   - Evidence:
       - Validator comparison study: docs/validator-study.md
+      - Discovery and a3 integration: docs/agent-readiness.md
       - Agent integration trial: docs/agent-adoption.md
       - Real-output mutations: docs/real-output-mutations.md
       - Model pilot: docs/natural-benchmark.md

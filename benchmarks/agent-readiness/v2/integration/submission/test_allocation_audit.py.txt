@@ -1,0 +1,50 @@
+import pytest
+
+from allocation_audit import (
+    adapt_validator,
+    build_cases,
+    build_obligations,
+    build_policy_cases,
+    validate_after,
+    validate_before,
+)
+
+
+def test_full_campaign_before_fails_and_retains_survivor(narrative):
+    with pytest.raises(AssertionError):
+        narrative.audit_validator(
+            adapt_validator(validate_before),
+            build_cases(),
+            obligations=build_obligations(),
+            validator_id="inventory-allocation/before",
+        )
+
+
+def test_full_campaign_after_still_fails_diagnostic_gaps(narrative):
+    with pytest.raises(AssertionError):
+        narrative.audit_validator(
+            adapt_validator(validate_after),
+            build_cases(),
+            obligations=build_obligations(),
+            validator_id="inventory-allocation/after",
+        )
+
+
+def test_policy_subset_before_fails(narrative):
+    with pytest.raises(AssertionError):
+        narrative.audit_validator(
+            adapt_validator(validate_before),
+            build_policy_cases(),
+            obligations=build_obligations(),
+            validator_id="inventory-allocation/policy-before",
+        )
+
+
+def test_policy_subset_after_passes(narrative):
+    narrative.audit_validator(
+        adapt_validator(validate_after),
+        build_policy_cases(),
+        obligations=build_obligations(),
+        validator_id="inventory-allocation/policy-after",
+    )
+

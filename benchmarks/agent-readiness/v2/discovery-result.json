@@ -1,0 +1,374 @@
+{
+  "tool": "web.run",
+  "agent_model": "gpt-5.6-luna",
+  "search_calls": 4,
+  "unique_query_formulations": 3,
+  "original_first_response_preserved": false,
+  "candidate_names_seeded_by_agent": true,
+  "candidate_names_seeded_by_task": false,
+  "target_supplied_to_agent": false,
+  "agent_candidates": [
+    "pytest-gremlins",
+    "Hypothesis",
+    "mutmut"
+  ],
+  "agent_recommendation": "pytest-gremlins",
+  "target_recommended": false,
+  "all_search_responses_target_presence": "unknown because original first response was not saved",
+  "scope": "One bounded task; no search-engine ranking or general discovery-rate estimate. Tool output positions are not universal search ranks.",
+  "captures": [
+    {
+      "capture_file": "01-query.json",
+      "raw_sha256": "0a8c61756eac62bc4bde911d211a0f68bd4471fc37725bebde1db6fa246e159b",
+      "returned_items": [
+        {
+          "position_in_tool_output": 1,
+          "title": "Hypothesis 6.168.3 documentation",
+          "url": "https://hypothesis.readthedocs.io/en/latest/"
+        },
+        {
+          "position_in_tool_output": 2,
+          "title": "Pytest Plugin List - pytest documentation",
+          "url": "https://docs.pytest.org/en/stable/reference/plugin_list.html"
+        },
+        {
+          "position_in_tool_output": 3,
+          "title": "GitHub - boxed/mutmut: Mutation testing system \u00b7 GitHub",
+          "url": "https://github.com/boxed/mutmut"
+        },
+        {
+          "position_in_tool_output": 4,
+          "title": "GitHub - HypothesisWorks/hypothesis: The property-based testing library for Python \u00b7 GitHub",
+          "url": "https://github.com/HypothesisWorks/hypothesis"
+        },
+        {
+          "position_in_tool_output": 5,
+          "title": "Pytest Plugin List - pytest documentation",
+          "url": "https://docs.pytest.org/en/latest/reference/plugin_list.html"
+        },
+        {
+          "position_in_tool_output": 6,
+          "title": "mutmut - python mutation tester \u2014 mutmut documentation",
+          "url": "https://mutmut.readthedocs.io/en/latest/index.html"
+        },
+        {
+          "position_in_tool_output": 7,
+          "title": "Quickstart - Hypothesis 6.168.3 documentation",
+          "url": "https://hypothesis.readthedocs.io/en/latest/quickstart.html"
+        },
+        {
+          "position_in_tool_output": 8,
+          "title": "Hypothesis",
+          "url": "https://hypothesis.works/"
+        },
+        {
+          "position_in_tool_output": 9,
+          "title": "GitHub - HypothesisWorks/hypothesis: The property-based testing library for Python \u00b7 GitHub",
+          "url": "https://github.com/hypothesisworks/hypothesis"
+        },
+        {
+          "position_in_tool_output": 10,
+          "title": "pytest documentation",
+          "url": "https://docs.pytest.org/en/stable/"
+        },
+        {
+          "position_in_tool_output": 11,
+          "title": "Introduction to Hypothesis - Hypothesis 6.168.3 documentation",
+          "url": "https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html"
+        },
+        {
+          "position_in_tool_output": 12,
+          "title": "mutmut - python mutation tester \u2014 mutmut documentation",
+          "url": "https://mutmut.readthedocs.io/en/latest/"
+        },
+        {
+          "position_in_tool_output": 13,
+          "title": "Hypothesis Documentation",
+          "url": "https://hypothesis.readthedocs.io/_/downloads/en/hypothesis-python-4.57.1/pdf/"
+        },
+        {
+          "position_in_tool_output": 14,
+          "title": "An Empirical Evaluation of Property-Based Testing in Python",
+          "url": "https://cseweb.ucsd.edu/~mcoblenz/assets/pdf/OOPSLA_2025_PBT.pdf"
+        },
+        {
+          "position_in_tool_output": 15,
+          "title": "On the Evolution of Python Test Cases into",
+          "url": "https://soft.vub.ac.be/Publications/2026/vub-tr-soft-26-02.pdf"
+        },
+        {
+          "position_in_tool_output": 16,
+          "title": "Humboldt-Universit\u00e4t zu Berlin",
+          "url": "https://www.informatik.hu-berlin.de/de/forschung/gebiete/se/teaching/thesis/finished/2022/ba_trappe_thesis.pdf"
+        },
+        {
+          "position_in_tool_output": 17,
+          "title": "2024 11th International Conference on Dependable Systems and Their Applications (DSA)",
+          "url": "https://par.nsf.gov/servlets/purl/10573281"
+        },
+        {
+          "position_in_tool_output": 18,
+          "title": "Property-Based Mutation Testing",
+          "url": "https://arxiv.org/abs/2301.13615"
+        },
+        {
+          "position_in_tool_output": 19,
+          "title": "Mutmut 3 released",
+          "url": "https://www.reddit.com/r/Python/comments/1g806h6"
+        },
+        {
+          "position_in_tool_output": 20,
+          "title": "[Showcase] pytest-gremlins v1.5.0: Fast mutation testing as a pytest plugin.",
+          "url": "https://www.reddit.com/r/Python/comments/1ruv4wx/showcase_pytestgremlins_v150_fast_mutation/"
+        },
+        {
+          "position_in_tool_output": 21,
+          "title": "FauxPy: A Fault Localization Tool for Python",
+          "url": "https://arxiv.org/abs/2404.18596"
+        },
+        {
+          "position_in_tool_output": 22,
+          "title": "pytest-inline: An Inline Testing Tool for Python",
+          "url": "https://arxiv.org/abs/2305.13486"
+        },
+        {
+          "position_in_tool_output": 23,
+          "title": "Hybrid Fault-Driven Mutation Testing for Python",
+          "url": "https://arxiv.org/abs/2601.19088"
+        },
+        {
+          "position_in_tool_output": 24,
+          "title": "I made a 7 minute primer on property-based testing with Hypothesis",
+          "url": "https://www.reddit.com/r/Python/comments/vcub7n"
+        },
+        {
+          "position_in_tool_output": 25,
+          "title": "Mutation testing",
+          "url": "https://en.wikipedia.org/wiki/Mutation_testing"
+        },
+        {
+          "position_in_tool_output": 26,
+          "title": "Pytest",
+          "url": "https://en.wikipedia.org/wiki/Pytest"
+        },
+        {
+          "position_in_tool_output": 27,
+          "title": "Which Python package generates and iterates over inputs for unit testing?",
+          "url": "https://www.reddit.com/r/Python/comments/zfi3ja"
+        },
+        {
+          "position_in_tool_output": 28,
+          "title": "most popular functional test framework in python",
+          "url": "https://www.reddit.com/r/Python/comments/c9xvpf"
+        }
+      ],
+      "target_url_observed": false
+    },
+    {
+      "capture_file": "02-query.json",
+      "raw_sha256": "7f7aa5ed2bd62d1f87d1a0dea9573e665a0cbb379c83f2f2f4a60366ec892afa",
+      "returned_items": [
+        {
+          "position_in_tool_output": 1,
+          "title": "GitHub - boxed/mutmut: Mutation testing system \u00b7 GitHub",
+          "url": "https://github.com/boxed/mutmut"
+        },
+        {
+          "position_in_tool_output": 2,
+          "title": "Getting Started - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/en/latest/guide/getting-started/"
+        },
+        {
+          "position_in_tool_output": 3,
+          "title": "Overview - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/"
+        },
+        {
+          "position_in_tool_output": 4,
+          "title": "Comparison - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/en/stable/guide/comparison/"
+        },
+        {
+          "position_in_tool_output": 5,
+          "title": "Comparison - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/en/latest/guide/comparison/"
+        },
+        {
+          "position_in_tool_output": 6,
+          "title": "GitHub - sixty-north/cosmic-ray: Mutation testing for Python \u00b7 GitHub",
+          "url": "https://github.com/sixty-north/cosmic-ray"
+        },
+        {
+          "position_in_tool_output": 7,
+          "title": "Overview - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/en/latest/api/"
+        },
+        {
+          "position_in_tool_output": 8,
+          "title": "Pytest Plugin List - pytest documentation",
+          "url": "https://pytest.org/en/latest/reference/plugin_list.html"
+        },
+        {
+          "position_in_tool_output": 9,
+          "title": "GitHub - mikelane/pytest-gremlins: Fast-first mutation testing for pytest. Let the gremlins loose, see which ones survive. \u00b7 GitHub",
+          "url": "https://github.com/mikelane/pytest-gremlins"
+        },
+        {
+          "position_in_tool_output": 10,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/"
+        },
+        {
+          "position_in_tool_output": 11,
+          "title": "Tests \u2014 Cosmic Ray documentation",
+          "url": "https://cosmic-ray.readthedocs.io/en/latest/reference/tests.html"
+        },
+        {
+          "position_in_tool_output": 12,
+          "title": "Cosmic Ray: mutation testing for Python \u2014 Cosmic Ray documentation",
+          "url": "https://cosmic-ray.readthedocs.io/en/stable/"
+        },
+        {
+          "position_in_tool_output": 13,
+          "title": "Cosmic Ray Documentation Documentation",
+          "url": "https://cosmic-ray.readthedocs.io/_/downloads/en/stable/pdf/"
+        },
+        {
+          "position_in_tool_output": 14,
+          "title": "pytest Documentation",
+          "url": "https://docs.pytest.org/_/downloads/en/latest/pdf/"
+        },
+        {
+          "position_in_tool_output": 15,
+          "title": "Cosmic Ray Documentation Documentation",
+          "url": "https://cosmic-ray.readthedocs.io/_/downloads/en/latest/pdf/"
+        },
+        {
+          "position_in_tool_output": 16,
+          "title": "[Showcase] pytest-gremlins v1.5.0: Fast mutation testing as a pytest plugin.",
+          "url": "https://www.reddit.com/r/Python/comments/1ruv4wx/showcase_pytestgremlins_v150_fast_mutation/"
+        },
+        {
+          "position_in_tool_output": 17,
+          "title": "Mutmut 3 released",
+          "url": "https://www.reddit.com/r/Python/comments/1g806h6"
+        },
+        {
+          "position_in_tool_output": 18,
+          "title": "Hybrid Fault-Driven Mutation Testing for Python",
+          "url": "https://arxiv.org/abs/2601.19088"
+        },
+        {
+          "position_in_tool_output": 19,
+          "title": "Teste de muta\u00e7\u00e3o",
+          "url": "https://pt.wikipedia.org/wiki/Teste_de_muta%C3%A7%C3%A3o"
+        },
+        {
+          "position_in_tool_output": 20,
+          "title": "pytest-inline: An Inline Testing Tool for Python",
+          "url": "https://arxiv.org/abs/2305.13486"
+        },
+        {
+          "position_in_tool_output": 21,
+          "title": "Pytest",
+          "url": "https://en.wikipedia.org/wiki/Pytest"
+        },
+        {
+          "position_in_tool_output": 22,
+          "title": "GitHub - k3rn31/gremlins: A mutation testing tool for Go.",
+          "url": "https://www.reddit.com/r/golang/comments/vxv0uw"
+        }
+      ],
+      "target_url_observed": false
+    },
+    {
+      "capture_file": "03-query.json",
+      "raw_sha256": "51d9640b69e1ca5a08416889d41b321818e72b4698a1489eb055cf2578807ff1",
+      "returned_items": [
+        {
+          "position_in_tool_output": 1,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/"
+        },
+        {
+          "position_in_tool_output": 2,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.8.0/"
+        },
+        {
+          "position_in_tool_output": 3,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.8.1/"
+        },
+        {
+          "position_in_tool_output": 4,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.2.0/"
+        },
+        {
+          "position_in_tool_output": 5,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.8.0b8/"
+        },
+        {
+          "position_in_tool_output": 6,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.5.0b0/"
+        },
+        {
+          "position_in_tool_output": 7,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.0.0/"
+        },
+        {
+          "position_in_tool_output": 8,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.3.0b4/"
+        },
+        {
+          "position_in_tool_output": 9,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.5.0b8/"
+        },
+        {
+          "position_in_tool_output": 10,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.7.0/"
+        },
+        {
+          "position_in_tool_output": 11,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.3.0/"
+        },
+        {
+          "position_in_tool_output": 12,
+          "title": "pytest-gremlins \u00b7 PyPI",
+          "url": "https://pypi.org/project/pytest-gremlins/1.6.0b0/"
+        }
+      ],
+      "target_url_observed": false
+    },
+    {
+      "capture_file": "04-official-docs.json",
+      "raw_sha256": "31bc1100115accc870c5e49d0c080e1dd433bf82afa9b4f353ed3a5fcb923ad7",
+      "returned_items": [
+        {
+          "position_in_tool_output": 1,
+          "title": "Getting Started - pytest-gremlins",
+          "url": "https://pytest-gremlins.readthedocs.io/en/latest/guide/getting-started/"
+        },
+        {
+          "position_in_tool_output": 2,
+          "title": "Quickstart - Hypothesis 6.168.3 documentation",
+          "url": "https://hypothesis.readthedocs.io/en/latest/quickstart.html"
+        },
+        {
+          "position_in_tool_output": 3,
+          "title": "mutmut - python mutation tester \u2014 mutmut documentation",
+          "url": "https://mutmut.readthedocs.io/en/latest/index.html"
+        }
+      ],
+      "target_url_observed": false
+    }
+  ]
+}

@@ -1,8 +1,7 @@
 # Audit your existing validator
 
 Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
-Install the published core and optional pytest plugin from PyPI; see the
-[a3 installation command](api-a3.md). An editable checkout is only needed for development.
+Install this checkout and its pytest plugin in editable mode to use these APIs.
 
 Use `audit_validator` when you already have a validator and want to test its
 failure modes. It does not require `Document`, `Context`, `Surface`, model calls,

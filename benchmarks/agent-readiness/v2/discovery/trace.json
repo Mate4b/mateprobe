@@ -1,0 +1,41 @@
+{
+  "queries": [
+    {
+      "number": 1,
+      "query": "Python pytest mutation testing tool inject defects mutmut official documentation Hypothesis property based testing",
+      "response_file": "01-query.json"
+    },
+    {
+      "number": 2,
+      "query": "Python pytest mutation testing open source package mutmut cosmic-ray pytest-gremlins official",
+      "response_file": "02-query.json"
+    },
+    {
+      "number": 3,
+      "query": "site:pypi.org/project pytest-gremlins PyPI install Python 3.11",
+      "response_file": "03-query.json"
+    },
+    {
+      "number": 4,
+      "query": "Python pytest mutation testing tool inject defects mutmut official documentation Hypothesis property based testing",
+      "response_file": "01-query.json",
+      "note": "repeat capture to persist the complete raw response"
+    }
+  ],
+  "returned_titles_urls": [
+    {"title": "Hypothesis 6.168.3 documentation", "url": "https://hypothesis.readthedocs.io/en/latest/"},
+    {"title": "GitHub - boxed/mutmut: Mutation testing system", "url": "https://github.com/boxed/mutmut"},
+    {"title": "Getting Started - pytest-gremlins", "url": "https://pytest-gremlins.readthedocs.io/en/latest/guide/getting-started/"},
+    {"title": "pytest-gremlins · PyPI", "url": "https://pypi.org/project/pytest-gremlins/"},
+    {"title": "Quickstart - Hypothesis 6.168.3 documentation", "url": "https://hypothesis.readthedocs.io/en/latest/quickstart.html"},
+    {"title": "mutmut - python mutation tester", "url": "https://mutmut.readthedocs.io/en/latest/index.html"}
+  ],
+  "candidates": ["pytest-gremlins", "Hypothesis", "mutmut"],
+  "recommendation": {
+    "name": "pytest-gremlins",
+    "reason": "Closest direct fit for defect injection and pytest-native surviving/crash reporting; retain explicit pytest oracles and optionally pair with Hypothesis for valid variations.",
+    "availability_verified": true,
+    "package_url": "https://pypi.org/project/pytest-gremlins/",
+    "caveat": "PyPI classifies current release as Alpha and requires Python >=3.11."
+  }
+}

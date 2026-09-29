@@ -1,13 +1,27 @@
 {% extends "base.html" %}
+{% block htmltitle %}
+  {% if page and page.file.src_uri == 'index.md' %}
+  <title>Narrative Contracts — Test Python validators for AI outputs</title>
+  {% elif page and page.meta.title %}
+  <title>{{ page.meta.title | e }} — {{ config.site_name | e }}</title>
+  {% else %}{{ super() }}{% endif %}
+{% endblock %}
 {% block extrahead %}
   {{ super() }}
+  {% if page and not page.is_homepage %}
+  {% if page.file.src_uri == 'index.md' %}
+  <meta name="description" content="{{ config.site_description | e }}">
+  {% elif page.meta.description %}
+  <meta name="description" content="{{ page.meta.description | e }}">
+  {% endif %}
+  {% endif %}
   <link rel="describedby" type="text/plain" href="{{ config.site_url }}llms.txt">
   {% if page %}
   <link rel="alternate" type="text/markdown" href="{{ config.site_url }}{{ page.file.src_uri }}">
   {% endif %}
 {% endblock %}
 {% block content %}
-  <p class="small text-muted">Published alpha: <strong>0.1.0a2</strong> · Development APIs are marked unreleased.
+  <p class="small text-muted">Published alpha: <strong>0.1.0a3</strong> · Historical evidence retains its original version.
     {% if page %}<a href="{{ config.site_url }}{{ page.file.src_uri }}">Read Markdown</a> · {% endif %}
     <a href="{{ config.site_url }}llms.txt">Agent documentation index</a>
   </p>

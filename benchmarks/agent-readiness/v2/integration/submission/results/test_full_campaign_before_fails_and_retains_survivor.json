@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "test": "tests/test_allocation_audit.py::test_full_campaign_before_fails_and_retains_survivor",
+      "type": "validator_audit",
+      "validator_id": "inventory-allocation/before",
+      "obligations": [
+        {
+          "id": "allocation-policy",
+          "description": "Allocation units must not exceed trusted stock and requested_zone must equal permitted_zone.",
+          "scope": "contract"
+        },
+        {
+          "id": "idempotency",
+          "description": "Repeated validation of the same allocation should be stable.",
+          "scope": "contract"
+        }
+      ],
+      "cases": [
+        {
+          "id": "above-stock",
+          "obligation": "allocation-policy",
+          "relation": "violation",
+          "validity": "valid",
+          "provenance": "Authored violation: requested units 6 exceed trusted stock 5.",
+          "expected": [
+            "stock_exceeded"
+          ],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "fbe0d6257c8273cc7cd0299c0937f4887630935e3f53b64a4d0c97146b64266a",
+          "outcome": "detected",
+          "reason": "all_expected_violations",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": false,
+            "violations": [
+              "stock_exceeded"
+            ],
+            "complete": true,
+            "evidence": []
+          }
+        },
+        {
+          "id": "wrong-zone",
+          "obligation": "allocation-policy",
+          "relation": "violation",
+          "validity": "valid",
+          "provenance": "Authored violation: requested zone south differs from trusted permitted zone north.",
+          "expected": [
+            "zone_not_allowed"
+          ],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "42c25d121c795a1bf875c399d667c0b72f37e90cd6342fedc491ae0baa1b86a6",
+          "outcome": "survived",
+          "reason": "invalid_variant_accepted",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          }
+        },
+        {
+          "id": "exact-stock",
+          "obligation": "allocation-policy",
+          "relation": "preserve",
+          "validity": "valid",
+          "provenance": "Authored control: allocation exactly at trusted stock 5 is permitted.",
+          "expected": [],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "1dd2422879485210ab2c8425688157b966cba924a4358aeaed24f5dc8af4238f",
+          "outcome": "preserved",
+          "reason": "accepted_valid_control",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          }
+        },
+        {
+          "id": "changed-wording",
+          "obligation": "allocation-policy",
+          "relation": "preserve",
+          "validity": "valid",
+          "provenance": "Authored control: wording may change while trusted state is unchanged.",
+          "expected": [],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "d71f5886a32a234504146a6d0b9a069dd753d08b09862126cbf0d8cb500237cc",
+          "outcome": "preserved",
+          "reason": "accepted_valid_control",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          }
+        },
+        {
+          "id": "schema-units-string",
+          "obligation": "allocation-policy",
+          "relation": "violation",
+          "validity": "valid",
+          "provenance": "Authored diagnostic violation: string units is rejected by schema, not by stock policy.",
+          "expected": [
+            "stock_exceeded"
+          ],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "0df1bc62d059dae9a62184f09d605ca80eacc58cd84007507c724ffd4689b051",
+          "outcome": "unattributed_rejection",
+          "reason": "expected_violations_missing",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": false,
+            "violations": [
+              "schema.units"
+            ],
+            "complete": true,
+            "evidence": []
+          }
+        },
+        {
+          "id": "stock-unknown",
+          "obligation": "allocation-policy",
+          "relation": "violation",
+          "validity": "valid",
+          "provenance": "Authored diagnostic violation: missing trusted stock remains unknown and is retained in the denominator.",
+          "expected": [
+            "stock_exceeded"
+          ],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "0b2e62eae9f40207b1756cf2881f9eb181f8e2b2274195930434a137bfee4603",
+          "outcome": "undetermined",
+          "reason": "variant_evidence_incomplete",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": {
+            "accepted": false,
+            "violations": [],
+            "complete": false,
+            "evidence": []
+          }
+        },
+        {
+          "id": "stock-error",
+          "obligation": "allocation-policy",
+          "relation": "violation",
+          "validity": "valid",
+          "provenance": "Authored diagnostic violation: invalid string stock intentionally exercises comparison error accounting.",
+          "expected": [
+            "stock_exceeded"
+          ],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "200f1eb46e6e748ec58e4cd467bb8bae312ec78384bb9deb2a11556bab895fdd",
+          "outcome": "error",
+          "reason": "variant_error: TypeError: '>' not supported between instances of 'int' and 'str'",
+          "baseline": {
+            "accepted": true,
+            "violations": [],
+            "complete": true,
+            "evidence": []
+          },
+          "variant": null
+        },
+        {
+          "id": "identical-baseline-variant",
+          "obligation": "allocation-policy",
+          "relation": "preserve",
+          "validity": "valid",
+          "provenance": "Authored equivalent pair: baseline and variant are identical and excluded.",
+          "expected": [],
+          "baseline_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "variant_digest": "f4e5e88426f402220a712fefd2030af852a9b1894fc2403ba5daa28b6a65b49d",
+          "outcome": "excluded",
+          "reason": "identical_variant",
+          "baseline": null,
+          "variant": null
+        }
+      ],
+      "corpus_digest": "d65096f58448100a72ec0ed264ba2eeb3c8727b3fbab969ffad978b03a6bc654",
+      "schema_version": 2,
+      "library_version": "0.1.0a3",
+      "provenance": null,
+      "summary": {
+        "total": 8,
+        "counts": {
+          "detected": 1,
+          "error": 1,
+          "excluded": 1,
+          "preserved": 2,
+          "survived": 1,
+          "unattributed_rejection": 1,
+          "undetermined": 1
+        },
+        "eligible_faults": 5,
+        "detected_faults": 1,
+        "detection_score": 0.2,
+        "eligible_controls": 2,
+        "preserved_controls": 2,
+        "preservation_rate": 1.0,
+        "obligations": [
+          {
+            "id": "allocation-policy",
+            "description": "Allocation units must not exceed trusted stock and requested_zone must equal permitted_zone.",
+            "scope": "contract",
+            "assessment": "known_gaps",
+            "has_known_gaps": true,
+            "has_incomplete_evidence": true,
+            "has_fault_tests": true,
+            "has_controls": true,
+            "has_exclusions": true,
+            "counts": {
+              "detected": 1,
+              "error": 1,
+              "excluded": 1,
+              "preserved": 2,
+              "survived": 1,
+              "unattributed_rejection": 1,
+              "undetermined": 1
+            },
+            "case_ids": [
+              "above-stock",
+              "wrong-zone",
+              "exact-stock",
+              "changed-wording",
+              "schema-units-string",
+              "stock-unknown",
+              "stock-error",
+              "identical-baseline-variant"
+            ]
+          },
+          {
+            "id": "idempotency",
+            "description": "Repeated validation of the same allocation should be stable.",
+            "scope": "contract",
+            "assessment": "untested",
+            "has_known_gaps": false,
+            "has_incomplete_evidence": false,
+            "has_fault_tests": false,
+            "has_controls": false,
+            "has_exclusions": false,
+            "counts": {},
+            "case_ids": []
+          }
+        ]
+      }
+    }
+  ]
+}

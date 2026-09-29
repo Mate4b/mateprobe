@@ -1,8 +1,6 @@
 # Narrative Contracts
 
-> Test existing Python validators with known-invalid AI output samples and valid controls. Paired input audits report missed faults, targeted detections, unrelated rejections, unknowns and errors. Built-in contracts also check explicit declarations against application state; arbitrary prose truthfulness is outside the guarantee.
-
-For questions such as "How do I test whether my validator catches invalid agent outputs?", start with the problem guide below. Audit mutations are caller-supplied input variants, not edits to validator source. The library does not automatically generate or justify the cases. Offline deterministic results require a deterministic wrapped validator; the audit does not make an arbitrary callback deterministic.
+> Python contracts that check explicit declarations against application state, plus mutation audits of validators. Evaluation is offline and deterministic; arbitrary prose truthfulness is outside the guarantee.
 
 Install the published alpha with `python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3` (Python 3.11+). The pytest plugin is optional. Version a3 includes `check_fields`, relational rules, and the independent validator-audit API.
 
@@ -10,7 +8,6 @@ Supply authoritative state and branch selection from trusted application code. V
 
 ## Start here
 
-- [How to test AI output validators in Python](https://mate4b.github.io/narrative-contracts/docs/testing-ai-output-validators.md): problem-to-API guide, wrong-reason rejection, valid controls, and the distinction from source mutation testing.
 - [First validator audit](https://mate4b.github.io/narrative-contracts/docs/first-audit.md): one downloadable file, published a3, two completion faults, one valid control and one retained prose challenge.
 - [Integration feedback](https://mate4b.github.io/narrative-contracts/docs/integration-feedback.md): report relevant survivors, regressions, blockers, or no useful finding.
 
@@ -38,7 +35,6 @@ You do not need to change your validator to start. These APIs are available in a
 
 ## Optional
 
-- [Discovery and a3 integration observations](https://mate4b.github.io/narrative-contracts/docs/agent-readiness.md): target not recommended in one bounded search task; new a3 integration with four consumer tests and twenty reviewer checks, with limits retained.
 - [Agent integration trial](https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
 - [Alpha a3 scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): delivered APIs and explicit limits.
 - [Repository](https://github.com/Mate4b/narrative-contracts): source, issues, and releases.
