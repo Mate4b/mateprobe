@@ -18,13 +18,12 @@ no pytest dependency. Serial JSON reports only; distributed report merging is no
 
 Alpha software; MIT license. General free-text truthfulness is outside its guarantees.
 
-## Unreleased development addition
+## Audit existing validators (a3)
 
-This checkout also provides `narrative.audit_validator(validator, cases,
+Version 0.1.0a3 provides `narrative.audit_validator(validator, cases,
 obligations=..., validator_id=..., detection=1.0, preservation=1.0)` for existing
 validators. It records JSON results before asserting thresholds, including
-failures. Install both packages from this checkout; this API is not in the
-published `0.1.0a2` wheels. See [the audit guide](../../docs/validator-audit.md).
+failures. Install both packages at `0.1.0a3`; this API is not in older a2 wheels. See [the audit guide](../../docs/validator-audit.md).
 
 `audit_validator` also accepts optional `provenance=...` from the explicit
 Git helpers. Its nested report uses schema 2; the aggregate pytest envelope remains

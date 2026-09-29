@@ -16,18 +16,19 @@ mypy
 
 For documentation builds, install `requirements-docs.txt` and run
 `python scripts/build_docs.py`. For published-package examples, use a **separate**
-environment with `narrative-contracts==0.1.0a2`, `pytest-narrative-contracts==0.1.0a2`,
+environment with `narrative-contracts==0.1.0a3`, `pytest-narrative-contracts==0.1.0a3`,
 and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
 
 ## Version boundary
 
-The checkout targets `0.1.0a3`; PyPI a2 does not contain its audit and state-binding
-APIs. Before publication, verify both built distributions in an isolated environment
-with `python scripts/check_alpha_install.py --output /tmp/alpha-check`. Do not
-present candidate APIs as available from the old a2 wheels. Keep the agent guide,
-`llms.txt`, and published API reference consistent with actual installable artifacts.
+The current release is `0.1.0a3`, including independent audits and state bindings.
+Verify built distributions in an isolated environment with
+`python scripts/check_alpha_install.py --output /tmp/alpha-check` (install the
+optional integration requirements first). Keep frozen a2 research artifacts and
+the agent-adoption replay pinned to a2; do not rewrite historical evidence.
+Keep the agent guide, `llms.txt`, and API reference consistent with installable artifacts.
 
 ## Engineering boundaries
 

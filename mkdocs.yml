@@ -25,7 +25,7 @@ nav:
       - Overview: index.md
       - Quickstart: docs/quickstart.md
       - Agent integration: docs/agent-guide.md
-      - Published API: docs/api-a2.md
+      - Published API: docs/api-a3.md
       - Pydantic recipe: docs/pydantic.md
   - Guarantees:
       - Choosing an evaluator: docs/choosing-an-evaluator.md
@@ -37,8 +37,8 @@ nav:
       - Model pilot: docs/natural-benchmark.md
       - Expanded mutations: docs/mutation-campaign.md
       - Technical report: paper/draft.md
-  - Development:
-      - Unreleased scope: docs/development-scope.md
+  - Validator audits:
+      - Alpha a3 scope: docs/development-scope.md
       - Validator audits: docs/validator-audit.md
       - Adoption levels: docs/adoption-levels.md
       - Policy regression: docs/policy-regression.md

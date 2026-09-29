@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0a3 — release candidate
+## 0.1.0a3 — 2026-09-29
 
 - Audit existing validators through paired cases, finding attribution, controls, and explicit obligation inventories.
 - Add independent evidence flags, prioritized reports, and optional Git provenance.

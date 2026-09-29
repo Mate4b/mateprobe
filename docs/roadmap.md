@@ -1,5 +1,16 @@
 # Roadmap and release gates
 
+## Public alpha a3
+
+- [x] Audit existing validators through plain samples and normalized verdicts.
+- [x] Independent evidence flags, actionable reports and optional Git provenance.
+- [x] Progressive adoption and a permanent-regression pytest recipe.
+- [x] Authored JSON Schema/Pydantic configuration trials with explicit limits.
+- [x] Publish synchronized core/plugin a3 packages; verify artifact hashes and clean PyPI installation.
+
+Feature expansion is paused while collecting useful integration cases. Independent
+adoption and corpus relevance remain open questions, not claims established by CI.
+
 ## Public alpha a2
 
 - [x] Dependency-free, deterministic core; explicit exact/heuristic boundaries.
@@ -14,7 +25,7 @@
   The release provenance records the verified commit and CI run.
 
 The release verification record and PROJECT_STATUS.md identify the exact published state.
-PyPI distribution is optional follow-up, not a prerequisite to install the published wheels.
+Both a2 and a3 are available on PyPI; a3 is the current documented install target.
 
 ## Follow-up launch milestones
 

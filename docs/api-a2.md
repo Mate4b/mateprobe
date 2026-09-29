@@ -96,8 +96,8 @@ The CLI accepts the documented JSON bundle, not plain prose. Exit codes are
 0 accepted, 1 rejected, 2 invalid input/configuration/I/O. The
 [JSON example](../examples/valid.json) provides the complete format.
 
-## Not in the published alpha
+## Not in a2
 
 `check_fields`, `FieldRef`, `CompareFields`, `AllowedTransition`, and
-`narrative_contracts.validator_audit` require a development checkout. They are
-not made available by the alpha's version string. See [development scope](development-scope.md).
+`narrative_contracts.validator_audit` are absent from a2. They are available in
+[published alpha a3](api-a3.md); upgrade explicitly to use them.

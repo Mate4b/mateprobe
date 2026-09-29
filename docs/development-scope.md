@@ -1,8 +1,7 @@
-# Development scope: audit existing validators
+# Alpha a3 scope: audit existing validators
 
 Version 0.1.0a3 packages the audit and state-binding APIs developed after a2.
-The a3 release candidate is available from this checkout; published a2 wheels
-do not include these additions. Frozen benchmark artifacts are not rewritten.
+Install `narrative-contracts==0.1.0a3` for these additions; a2 wheels do not include them. Frozen benchmark artifacts are not rewritten.
 
 ## Delivered scope
 

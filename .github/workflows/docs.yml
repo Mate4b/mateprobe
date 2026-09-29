@@ -24,17 +24,34 @@ jobs:
       - name: Install the published alpha, not this checkout
         run: >-
           python -m pip install --index-url https://pypi.org/simple
-          narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
-          'pydantic==2.13.5'
-      - run: python scripts/check_published_docs.py --output /tmp/published-docs-evidence
-      - run: python benchmarks/replay_agent_adoption.py --output /tmp/agent-adoption-replay
+          narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+          -r requirements-integrations.txt
+      - run: python scripts/check_alpha_install.py --output /tmp/published-docs-evidence
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: published-docs-evidence
           path: |
             /tmp/published-docs-evidence
-            /tmp/agent-adoption-replay
+
+  historical-a2-trial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install the historical trial dependencies
+        run: >-
+          python -m pip install --index-url https://pypi.org/simple
+          narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
+          'pydantic==2.13.5'
+      - run: python benchmarks/replay_agent_adoption.py --output /tmp/agent-adoption-replay
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: historical-agent-adoption-replay
+          path: /tmp/agent-adoption-replay
 
   build:
     runs-on: ubuntu-latest
@@ -51,7 +68,7 @@ jobs:
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [build, published-examples]
+    needs: [build, published-examples, historical-a2-trial]
     runs-on: ubuntu-latest
     permissions:
       pages: write

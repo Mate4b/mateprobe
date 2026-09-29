@@ -1,6 +1,6 @@
 # Audit your existing validator
 
-**Development checkout feature; not included in the published `0.1.0a2` wheels.**
+Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
 Install this checkout and its pytest plugin in editable mode to use these APIs.
 
 Use `audit_validator` when you already have a validator and want to test its

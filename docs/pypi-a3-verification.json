@@ -1,0 +1,107 @@
+{
+  "version": "0.1.0a3",
+  "source_commit": "980c78f25771cfd408f7b2e2eece548396d063e6",
+  "status": "passed",
+  "files": [
+    {
+      "project": "narrative-contracts",
+      "filename": "narrative_contracts-0.1.0a3-py3-none-any.whl",
+      "sha256": "ba5b4b309bff27f343760c9cef4633ce3176db39bea842c44b5bb6d44ac169db",
+      "matches_release": true
+    },
+    {
+      "project": "narrative-contracts",
+      "filename": "narrative_contracts-0.1.0a3.tar.gz",
+      "sha256": "f91021b23e4c3769194ecb6960bdeab79c892bd4aa4809a4514dc300db04612c",
+      "matches_release": true
+    },
+    {
+      "project": "pytest-narrative-contracts",
+      "filename": "pytest_narrative_contracts-0.1.0a3-py3-none-any.whl",
+      "sha256": "707ca8acb3d4a9ee0b1d2237ae48181582cb072832b7ee2e7162840494d558c3",
+      "matches_release": true
+    },
+    {
+      "project": "pytest-narrative-contracts",
+      "filename": "pytest_narrative_contracts-0.1.0a3.tar.gz",
+      "sha256": "ab2206e49d051a6205b30f3fedeaf58dcd9f6d880f156b3be454149f552e9e51",
+      "matches_release": true
+    }
+  ],
+  "installed_checks": {
+    "status": "passed",
+    "library_version": "0.1.0a3",
+    "policy_regression": {
+      "total": 3,
+      "counts": {
+        "detected": 2,
+        "preserved": 1
+      },
+      "eligible_faults": 2,
+      "detected_faults": 2,
+      "detection_score": 1.0,
+      "eligible_controls": 1,
+      "preserved_controls": 1,
+      "preservation_rate": 1.0,
+      "obligations": [
+        {
+          "id": "refund-policy",
+          "description": "Refunds must be USD and no greater than the limit.",
+          "scope": "contract",
+          "assessment": "no_failures_observed",
+          "has_known_gaps": false,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": true,
+          "has_exclusions": false,
+          "counts": {
+            "detected": 2,
+            "preserved": 1
+          },
+          "case_ids": [
+            "over-limit",
+            "unsupported-currency",
+            "at-limit-usd"
+          ]
+        }
+      ]
+    },
+    "checks": [
+      "installed paths and versions",
+      "consumer docs",
+      "CLI",
+      "pytest plugin",
+      "policy regression",
+      "refund demo",
+      "JSON Schema and Pydantic trials"
+    ],
+    "scope": "Installed artifact checks; not independent adoption or semantic accuracy."
+  },
+  "consumer_checks": {
+    "status": "passed",
+    "versions": {
+      "narrative-contracts": "0.1.0a3",
+      "pytest-narrative-contracts": "0.1.0a3",
+      "pytest": "9.1.1",
+      "pydantic": "2.13.5"
+    },
+    "python": "3.12.13",
+    "markdown_tests": 2,
+    "recorded_evaluations": 4,
+    "examples": [
+      "examples/five_minute_demo.py",
+      "examples/mutation_audit.py",
+      "examples/pydantic_reply.py"
+    ],
+    "cli": "passed",
+    "source_sha256": {
+      "docs/quickstart.md": "f1da33192faea3c0465c286333975ec6da4ac12c46513797302128d647ca95de",
+      "docs/agent-guide.md": "4e9c461c3d7b464f00092667107ad0aef65fb0980848e4ca79bdf1b8c613523b",
+      "examples/five_minute_demo.py": "293e5da9332ac29d1edd590598d30b75905503d44807cab015baa2893401309c",
+      "examples/mutation_audit.py": "53e6b3539e2827e06419925654b6f073776f3d03e17be9dc3a7ca19efb3868e2",
+      "examples/pydantic_reply.py": "d32153ac007363c6f6c13be2a6ff505b1ab792beea655c66d976a69c978335db"
+    },
+    "scope": "Consumer example compatibility; not agent discovery or semantic accuracy."
+  },
+  "publication_run": "https://github.com/Mate4b/narrative-contracts/actions/runs/36627528644"
+}

@@ -1,7 +1,7 @@
 # Turn a survivor into a regression check
 
 This guide shows how to preserve a real audit failure while fixing the validator
-that caused it. It uses the development-checkout `audit_validator` API; it does
+that caused it. It uses the `audit_validator` API from `narrative-contracts==0.1.0a3`; it does
 not require replacing the validator or adding a new policy language. The example
 is self-contained and uses no private application data.
 

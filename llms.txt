@@ -2,7 +2,7 @@
 
 > Python contracts that check explicit declarations against application state, plus mutation audits of validators. Evaluation is offline and deterministic; arbitrary prose truthfulness is outside the guarantee.
 
-Install the published alpha with `python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2` (Python 3.11+). The pytest plugin is optional. These versions do not contain the checkout's unreleased `check_fields`, relational rules, or independent validator-audit API.
+Install the published alpha with `python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3` (Python 3.11+). The pytest plugin is optional. Version a3 includes `check_fields`, relational rules, and the independent validator-audit API.
 
 Supply authoritative state and branch selection from trusted application code. Validate required output fields before mapping them to `Claim` objects. A complete, accepted report covers configured predicates on supplied inputs, not every assertion in the prose. Evaluation needs no model calls; installation needs network access. Mutation labels and their provenance come from the caller.
 
@@ -10,7 +10,7 @@ Supply authoritative state and branch selection from trusted application code. V
 
 - [Agent integration guide](https://mate4b.github.io/narrative-contracts/docs/agent-guide.md): install, authority boundary, complete pytest example, and version selection.
 - [Five-minute quickstart](https://mate4b.github.io/narrative-contracts/docs/quickstart.md): accepted output, detected fault, and a prose-only contradiction that passes.
-- [Published 0.1.0a2 API](https://mate4b.github.io/narrative-contracts/docs/api-a2.md): imports, constructors, result states, pytest, and mutation entry points.
+- [Published 0.1.0a3 API](https://mate4b.github.io/narrative-contracts/docs/api-a3.md): imports, constructors, result states, pytest, and mutation entry points.
 - [Pydantic recipe](https://mate4b.github.io/narrative-contracts/docs/pydantic.md): strict schema validation followed by explicit state checks.
 
 ## Scope and evidence
@@ -19,9 +19,9 @@ Supply authoritative state and branch selection from trusted application code. V
 - [Contract semantics](https://mate4b.github.io/narrative-contracts/docs/contracts.md): typed equality, unknowns, errors, policies, and mutation denominators.
 - [Real-output mutations](https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md): 32 captured responses, 384 authored variants, and 64 accepted prose-only challenges; no semantic accuracy claim.
 
-## Alpha 0.1.0a3 release candidate
+## Audit existing validators
 
-These APIs require the a3 candidate checkout, not the published `0.1.0a2` wheels.
+You do not need to change your validator to start. These APIs are available in a3.
 
 - [Audit an existing validator](https://mate4b.github.io/narrative-contracts/docs/validator-audit.md): paired samples, expected finding IDs, controls and CI reports without adopting Document/Claim.
 - [Adoption levels](https://mate4b.github.io/narrative-contracts/docs/adoption-levels.md): boolean acceptance, findings, scopes and incomplete evidence; boolean rejection alone is not targeted detection.
@@ -33,6 +33,6 @@ These APIs require the a3 candidate checkout, not the published `0.1.0a2` wheels
 ## Optional
 
 - [Agent integration trial](https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
-- [Unreleased development scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): APIs requiring a source checkout.
+- [Alpha a3 scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): delivered APIs and explicit limits.
 - [Repository](https://github.com/Mate4b/narrative-contracts): source, issues, and releases.
 - [Contributing](https://mate4b.github.io/narrative-contracts/CONTRIBUTING.md): report missed violations and false rejections with minimal evidence.

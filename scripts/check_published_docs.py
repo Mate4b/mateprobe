@@ -21,7 +21,7 @@ EXAMPLES = (
 )
 
 
-def verify(output: Path, version: str = "0.1.0a2") -> None:
+def verify(output: Path, version: str = "0.1.0a3") -> None:
     def run(label: str, *args: str) -> str:
         result = subprocess.run(
             [sys.executable, "-I", *args], cwd=output, capture_output=True, text=True
@@ -103,7 +103,7 @@ def verify(output: Path, version: str = "0.1.0a2") -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="New directory for retained evidence")
-    parser.add_argument("--version", default="0.1.0a2")
+    parser.add_argument("--version", default="0.1.0a3")
     args = parser.parse_args()
     if args.output:
         args.output.mkdir(parents=True, exist_ok=False)

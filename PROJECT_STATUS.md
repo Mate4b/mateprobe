@@ -1,6 +1,10 @@
 # Narrative Contracts — estado del proyecto
 
-Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia MIT.
+Alpha a3 incluye auditoría de validadores existentes, flags de evidencia independientes,
+trazabilidad opcional y guía de regresión. La evidencia histórica de abajo conserva
+sus versiones y resultados originales.
+
+Alpha **0.1.0a3**, independiente de Lifecard, con núcleo y plugin bajo licencia MIT.
 
 ## Entregado
 

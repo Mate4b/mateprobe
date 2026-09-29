@@ -1,6 +1,6 @@
 # Audit provenance and report schema 2
 
-The external-validator audit uses report schema **2** in this development checkout.
+The external-validator audit uses report schema **2** in alpha 0.1.0a3.
 The original state-evaluation and mutation-report formats are unchanged. The
 pytest JSON envelope remains schema 1; each nested report has its own schema.
 

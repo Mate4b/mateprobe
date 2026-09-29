@@ -1,6 +1,6 @@
 # State bindings and relational contracts
 
-**Unreleased checkout APIs; not present in the published `0.1.0a2` packages.**
+Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
 
 These optional helpers cover small, explicit relationships between structured
 output and state. They do not parse prose, evaluate expressions, or introduce

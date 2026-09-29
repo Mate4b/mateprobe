@@ -1,6 +1,6 @@
 # Five-minute quickstart
 
-This walkthrough is fully offline. It uses the deterministic `0.1.0a2` API and
+This walkthrough is fully offline. It uses the deterministic `0.1.0a3` API and
 does not call a model, a service, or a network endpoint while evaluating a
 document. The runnable version is [`examples/five_minute_demo.py`](../examples/five_minute_demo.py).
 
@@ -11,7 +11,7 @@ A fresh Python 3.11+ environment can install both published alpha packages:
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
+python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
 ```
 
 The pytest plugin is optional. It adds the `narrative` pytest fixture and the

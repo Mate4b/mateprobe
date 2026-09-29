@@ -1,7 +1,8 @@
 # Audit adoption increment
 
 This increment follows review of the independent-validator audit. It is source
-development after published alpha `0.1.0a2`, not a new PyPI release.
+development after published alpha `0.1.0a2`. That increment did not publish a new
+package; its APIs are now included in [alpha a3](api-a3.md).
 
 | Work | Why | Acceptance evidence |
 |---|---|---|

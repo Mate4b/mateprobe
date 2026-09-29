@@ -7,7 +7,7 @@ fresh Python 3.11+ environment:
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a2 'pydantic>=2,<3'
+python -m pip install narrative-contracts==0.1.0a3 'pydantic>=2,<3'
 ```
 
 Run it from the repository root:
@@ -35,8 +35,8 @@ The example demonstrates three boundaries:
   match state. The released package checks declarations against state; it does
   not infer truth from free prose.
 
-The recipe targets the published `narrative-contracts==0.1.0a2` API and does not
-use unreleased field-checking, relation, or audit APIs. Pydantic is an example
+The recipe targets the published `narrative-contracts==0.1.0a3` API and does not
+use the additional field-checking, relation, or audit APIs. Pydantic is an example
 dependency only; it is not added to the package runtime dependencies.
 
 See Pydantic's [strict mode documentation](https://docs.pydantic.dev/latest/concepts/strict_mode/)

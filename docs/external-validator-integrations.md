@@ -1,6 +1,6 @@
 # External validator integrations
 
-**Development checkout only; these APIs are not in published `0.1.0a2`.**
+Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
 
 These opt-in, offline examples audit authored domain obligations against two existing
 third-party validator configurations. They do not add either library to core

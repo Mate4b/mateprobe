@@ -1,6 +1,6 @@
 # Integrate Narrative Contracts in an agent project
 
-This guide targets **published alpha 0.1.0a2**, Python 3.11+. Use it when an
+This guide targets **published alpha 0.1.0a3**, Python 3.11+. Use it when an
 application has authoritative state and needs to test explicit declarations in
 generated outputs against that state. The check itself makes no model or network calls.
 
@@ -9,7 +9,7 @@ generated outputs against that state. The check itself makes no model or network
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
+python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
 ```
 
 The second package supplies pytest and the automatically discovered `narrative`
@@ -122,12 +122,12 @@ Use [the runnable mutation example](../examples/mutation_audit.py) and
 attributable faulty variants, valid controls, and label provenance. Report detection
 and preservation separately, with exclusions and missed faults visible.
 
-## Published versus development API
+## API version
 
 `check_fields`, `CompareFields`, `AllowedTransition`, and the independent
-validator-audit API are **unreleased checkout features**. Installing `0.1.0a2`
-does not provide them. See [development scope](development-scope.md) for source
-installation; do not silently switch a consumer to `main` to make an import work.
+validator-audit API are included in **0.1.0a3**. Older a2 wheels do not provide them.
+See [the a3 API index](api-a3.md) and [adoption levels](adoption-levels.md). Pin the
+package version rather than silently switching a consumer to `main`.
 
 For free-form factual correctness or writing quality, this library alone is
 insufficient. See [choosing an evaluator](choosing-an-evaluator.md).

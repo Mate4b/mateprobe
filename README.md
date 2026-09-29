@@ -2,19 +2,18 @@
 
 **Mutation-test your existing validators. See which faults they detect, miss, or reject for the wrong reason.**
 
-Alpha `0.1.0a3` release candidate. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
+Alpha `0.1.0a3`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
 [Documentation](https://mate4b.github.io/narrative-contracts/) ·
-[Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a2.md) ·
+[Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a3.md) ·
 [Pydantic recipe](docs/pydantic.md) · [Documentation index for agents](llms.txt)
 
 ## Audit an existing validator
 
 You do not need to change your validator to start. Wrap its existing result and
-supply the failures and valid variations you care about. The APIs below belong to
-the **0.1.0a3 release candidate**; published `0.1.0a2` does not include them.
+supply the failures and valid variations you care about. The APIs below are available in **0.1.0a3**; older `0.1.0a2` wheels do not include them.
 
 Pytest can express every individual assertion. This library supplies paired
 baseline/variant execution, targeted finding attribution, valid controls, honest
@@ -84,14 +83,14 @@ See [choosing an evaluation method](docs/choosing-an-evaluator.md).
 ## Install from PyPI
 
 Both alpha packages are published and verified:
-[narrative-contracts](https://pypi.org/project/narrative-contracts/0.1.0a2/) and
-[pytest-narrative-contracts](https://pypi.org/project/pytest-narrative-contracts/0.1.0a2/).
+[narrative-contracts](https://pypi.org/project/narrative-contracts/0.1.0a3/) and
+[pytest-narrative-contracts](https://pypi.org/project/pytest-narrative-contracts/0.1.0a3/).
 
 ```sh
-python -m pip install narrative-contracts==0.1.0a2 pytest-narrative-contracts==0.1.0a2
+python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
 ```
 
-Install only `narrative-contracts==0.1.0a2` if you do not need the pytest integration.
+Install only `narrative-contracts==0.1.0a3` if you do not need the pytest integration.
 
 ## Install from this checkout
 
@@ -110,8 +109,8 @@ To install the pinned alpha without a checkout:
 
 ```sh
 python -m pip install \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/narrative_contracts-0.1.0a2-py3-none-any.whl \
-  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a2/pytest_narrative_contracts-0.1.0a2-py3-none-any.whl
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a3/narrative_contracts-0.1.0a3-py3-none-any.whl \
+  https://github.com/Mate4b/narrative-contracts/releases/download/v0.1.0a3/pytest_narrative_contracts-0.1.0a3-py3-none-any.whl
 ```
 
 The core wheel can also be installed alone. Installation downloads packages; evaluation itself
