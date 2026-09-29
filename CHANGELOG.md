@@ -1,5 +1,14 @@
 # Changelog
 
+## Repository follow-up — 2026-09-29 (package version unchanged)
+
+- Preserve a second 32-response collection from larger user-installed Gemma/Qwen tags.
+- Add a frozen 384-case real-output mutation audit with separate schema and prose-challenge accounting.
+- Keep v1 in Git history; v2 strengthens request integrity and missing-attempt accounting without changing labels or results.
+- Serialize collection with explicit unloading and validate replay identity/configuration.
+- Add a five-minute offline demo and expand the technical report.
+- Prepare Trusted Publishing of original a2 artifacts to PyPI and a public announcement draft.
+
 ## 0.1.0a2 — 2026-09-29
 
 - Add an independent trusted customer-support workflow with branch-selection checks.

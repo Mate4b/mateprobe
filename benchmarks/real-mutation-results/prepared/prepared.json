@@ -1,5 +1,5 @@
 {
-  "profile": "real-output-mutations-v1",
+  "profile": "real-output-mutations-v2",
   "source_corpus_digest": "26cff8e49df2b869af8454fe15c59a64b6012e4556ddb14a32ec345e7baddac6",
   "source_manifest": {
     "schema_version": 1,
@@ -814,6 +814,7 @@
       "electricity_and_hardware_cost": null
     }
   },
+  "expected_baseline_records": 32,
   "source_records": [
     {
       "id": "gemma4:26b-mlx-hermes/support-en-0",
@@ -21936,9 +21937,9 @@
       }
     }
   ],
-  "protocol_sha256": "baeecd2824efef6dd0ede38fdf347a48bd0665ec801aa8865ff6eb69aeadfff0",
-  "generator_sha256": "8c86c878c7ff6967d16a05bc0ce82c090f04c5c0860f8c9f3e77d4ccb9ce5f9a",
-  "adapter_sha256": "d2ba52d265d5eb8e657dc81db933b074aab7ca1b42fb60d7e9b9faebaf98bb23",
+  "protocol_sha256": "6321df919e04a48d2203bcd54d0a9699ab85bf67816e30da2b7b7a1806cab94f",
+  "generator_sha256": "a87dccfa51de6d6abe6b5c31001a512c16af8fcc1e71176c96607638d638dd72",
+  "adapter_sha256": "c4e816c3d16a3739687d0041d70cdb1dbd8153f46b40d1e0a59aff7409cc4780",
   "operators": [
     [
       "claim_credits",

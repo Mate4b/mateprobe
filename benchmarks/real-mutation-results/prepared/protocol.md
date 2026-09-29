@@ -1,4 +1,4 @@
-# Mutations of captured model outputs — protocol v1
+# Mutations of captured model outputs — protocol v2
 
 Written before this campaign is evaluated. This is an authored engineering audit, not
 an independent human study, preregistration service record, or natural-output accuracy study.
@@ -63,3 +63,12 @@ they do not certify it as good writing. Label replay dependencies/version explic
 
 The prepared corpus is immutable after evaluation. Future fixes use a new profile and
 report both old and new outcomes; do not relabel cases or delete survivors to improve scores.
+
+## Integrity-only revision
+
+Version 1 is preserved at Git commit `c7f11cf`. Version 2 keeps exactly the same
+operators, reference data, labels and rule thresholds. It additionally verifies all
+request fields (`stream`, `keep_alive`, `think` included), lists missing model/scenario
+attempts against the manifest, and excludes truncated generations at preparation.
+The original captured collection has none of these anomalies. Version 2 is prepared
+and hashed before its evaluation; this is not a new independent experiment.

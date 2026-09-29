@@ -1,0 +1,59 @@
+name: publish-existing-alpha-to-pypi
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Upload the verified v0.1.0a2 artifacts to PyPI (false = dry run)'
+        type: boolean
+        default: false
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: pypi-publish-a2
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'pablomate4b/narrative-contracts' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download already released artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download v0.1.0a2 --repo pablomate4b/narrative-contracts \
+            --pattern '*.whl' --pattern '*.tar.gz' --dir downloaded
+          python scripts/stage_pypi_a2.py --source downloaded --output pypi-dist
+      - name: Check metadata and wheel imports
+        run: |
+          python -m pip install twine pytest pypi-dist/*.whl
+          python -m twine check --strict pypi-dist/*
+          python -I -c 'from importlib.metadata import version; import narrative_contracts; assert version("narrative-contracts") == version("pytest-narrative-contracts") == narrative_contracts.__version__ == "0.1.0a2"'
+          python examples/five_minute_demo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-pypi-distributions
+          path: pypi-dist/
+          if-no-files-found: error
+  publish:
+    needs: verify
+    if: inputs.publish
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/narrative-contracts/
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-pypi-distributions
+          path: dist/
+      - name: Publish with PyPI Trusted Publishing
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          skip-existing: true

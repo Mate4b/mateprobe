@@ -1,12 +1,12 @@
 # State-Conditioned Narrative Contracts: Deterministic Validation with Mutation and Invariance Audits
 
-**Technical report, alpha artifact v0.1.0a2 — 29 September 2026.**
+**Technical report, alpha artifact v0.1.0a2 with follow-up evidence — 29 September 2026.**
 
 Status: public engineering report, not submitted or peer reviewed. The artifact includes synthetic author-constructed cases, a second independent software integration, and a small frozen corpus of actual model generations. There are no independent human labels or LLM-judge labels. Natural-output acceptance is not semantic accuracy.
 
 ## Abstract
 
-Language-generation systems that maintain authoritative structured state can evaluate a useful subset of output obligations without another language model. We present Narrative Contracts, a dependency-free Python library that separates exact predicates over structured state and declared claims from lexical heuristics over prose. Contracts produce four-valued outcomes with branch-local scope, versioned configuration and diagnostic evidence. An accompanying mutation audit requires attributable detections and valid-variation controls, and exposes equivalent, unreviewed and baseline-invalid cases rather than counting them as successful tests. A synthetic feasibility corpus contains 720 paired cases in 48 shared scenario groups. The strict profile detects 384 of 480 authored faults and accepts 192 of 240 valid variations. Retained failures expose three boundaries: semantic restatement without lexical overlap, contradictions outside supplied claim annotations and negated phrases rejected by regex. An additional 21-case mutation campaign retains five survivors and one valid-control regression. A frozen 32-request pilot with two local model families records structural failures and contract findings without assigning semantic-accuracy labels. A separate customer-support workflow demonstrates trusted branch selection outside LifeCard. These artifacts illustrate behavior and limitations; they do not establish natural-output accuracy, superiority to LLM judges or broad cross-domain generalization. Independent evaluation is future work, not a prerequisite for releasing the engineering artifact.
+Language-generation systems that maintain authoritative structured state can evaluate a useful subset of output obligations without another language model. We present Narrative Contracts, a dependency-free Python library that separates exact predicates over structured state and declared claims from lexical heuristics over prose. Contracts produce four-valued outcomes with branch-local scope, versioned configuration and diagnostic evidence. An accompanying mutation audit requires attributable detections and valid-variation controls, and exposes equivalent, unreviewed and baseline-invalid cases rather than counting them as successful tests. A synthetic feasibility corpus contains 720 paired cases in 48 shared scenario groups. The strict profile detects 384 of 480 authored faults and accepts 192 of 240 valid variations. Retained failures expose three boundaries: semantic restatement without lexical overlap, contradictions outside supplied claim annotations and negated phrases rejected by regex. An additional 21-case mutation campaign retains five survivors and one valid-control regression. A frozen 32-request pilot with two local model families records structural failures and contract findings without assigning semantic-accuracy labels. A follow-up 32-response corpus from larger user-installed models supports a 384-case authored mutation audit: 64 declaration faults, 96 lexical faults and 96 schema faults are detected; 48 changed controls are preserved and 16 no-ops excluded. All 64 inserted prose-only contradictions pass and are reported separately from in-scope scores. A separate customer-support workflow demonstrates trusted branch selection outside LifeCard. These artifacts illustrate behavior and limitations; they do not establish natural-output accuracy, superiority to LLM judges or broad cross-domain generalization. Independent evaluation is future work, not a prerequisite for releasing the engineering artifact.
 
 ## 1. Problem and intended contribution
 
@@ -83,6 +83,41 @@ The repetitions exercise data plumbing and reproduction, not 48 independent demo
 ### Interpretation
 
 Removing a character-count exemption and checking actual projected state changes repair specific failure mechanisms. More importantly, the deliberately retained failures show why a single mutation score is insufficient. The evaluator cannot detect free-text contradictions absent from annotations, and lexical recognizers cannot resolve general paraphrase or contextual negation. The current experiment supports these bounded observations only.
+
+### Follow-up: mutations of captured larger-model outputs
+
+A second capture uses the exact local tags `gemma4:26b-mlx-hermes` and `qwen3.8:27b`,
+with model digests and runtime metadata archived. These are user-installed aliases, not
+independently verified upstream identities. Sixteen shared authored scenarios per model
+produce 32 complete, structurally valid outputs, all accepted by the unchanged profile.
+Median request times were 4.38 s and 12.30 s, respectively; these include network/load
+behavior and do not form a controlled model-speed comparison. Models ran serially with
+explicit unloading and residency checks. Original prompts, states and outputs are retained.
+
+The [follow-up mutation protocol](real-mutation-protocol.md) fixes 12 operators per baseline
+before variant evaluation. The existing audit supplies rule/code/scope attribution for
+contract faults; schema failures and prose scope challenges have separate accounting:
+
+| Lane | Eligible | Outcome |
+| --- | ---: | --- |
+| Typed declarations | 64 | 64 attributable detections |
+| Lexical heuristics | 96 | 96 attributable detections |
+| Adapter/schema | 96 | 96 structure rejections |
+| Valid controls | 48 | 48 preserved; 16 no-op variants separately excluded |
+| Prose-only contradiction challenges | 64 | 64 accepted; no semantic detection claim |
+
+Branch-claim swapping is a compound field mutation. Lexical restatement also activates the
+content floor in 32 cases; reports retain both findings and require the declared target for
+a detection. These are controlled faults authored on real-output baselines, not spontaneous
+errors independently labelled in natural text. Baseline acceptance is not a factuality label.
+
+All derivatives share eight scenario groups; no independent-binomial intervals are inferred.
+The 100% in-scope figures characterize narrow configured operators, not general semantic
+sensitivity, and do not supersede survivors in the earlier synthetic campaigns. The 64
+accepted prose contradictions demonstrate that annotation consistency does not establish
+prose entailment. A versioned integrity revision additionally verifies complete request
+configuration and accounts for missing baseline attempts; labels and outcomes are unchanged.
+See [reproduction and limitations](../docs/real-output-mutations.md).
 
 ## 7. Additional a2 evidence
 

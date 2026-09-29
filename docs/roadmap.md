@@ -16,6 +16,17 @@
 The release verification record and PROJECT_STATUS.md identify the exact published state.
 PyPI distribution is optional follow-up, not a prerequisite to install the published wheels.
 
+## Follow-up launch milestones
+
+- [x] Audit controlled faults and valid transformations on the 32 larger-model responses.
+- [x] Report schema failures and prose-only scope challenges separately.
+- [x] Harden residency handling, replay identity/configuration checks and missing-attempt accounting.
+- [x] Add a five-minute offline demo and update the technical report with follow-up evidence.
+- [x] Prepare PyPI Trusted Publishing of the original verified a2 artifacts.
+- [ ] Owner configures both PyPI pending publishers; publish and verify clean installation.
+- [x] Prepare a public announcement and counterexample request.
+- [ ] Publish the announcement on the maintainer's chosen channel.
+
 ## External validation and research — future work
 
 - [ ] Independent review and adoption outside the authoring team.

@@ -29,3 +29,16 @@ package import precedence; prompts and rule thresholds were not tuned on observe
 No production traffic, independent human annotation, external adoption or LLM-judge quality
 comparison has been evaluated. This is an installable engineering artifact with bounded
 reproducible evidence, not a validated general semantic evaluator or accepted research paper.
+
+## Follow-up evidence verification
+
+The post-a2 repository additions passed 108 tests, Ruff, strict core/plugin mypy, both
+package builds, synthetic and expanded campaigns, and all eight selected source mutants.
+The 384-case real-output campaign is prepared before evaluation; v1 and its integrity-only
+v2 revision have identical labels and outcomes. CI replays both captured collections and
+compares frozen real-mutation summary/cases byte for byte. The demo runs against the a2 API.
+
+The PyPI workflow stages only the four original a2 release files by pinned SHA-256;
+newly built development artifacts are not replacements for that release. A dry run checks
+metadata and installed-wheel behavior before any publishing job. PyPI owner setup and an
+actual upload/installation check remain separate from repository verification.

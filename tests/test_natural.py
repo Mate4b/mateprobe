@@ -219,14 +219,27 @@ def test_batch_exception_still_unloads_model(monkeypatch):
 
 
 @pytest.mark.parametrize(
-    "change", ["extra_id", "model", "scenario", "group", "request_model", "prompt"]
+    "change",
+    [
+        "extra_id",
+        "model",
+        "scenario",
+        "group",
+        "request_model",
+        "prompt",
+        "stream",
+        "keep_alive",
+        "think",
+    ],
 )
 def test_replay_rejects_records_outside_frozen_manifest(tmp_path, change):
     collection = tmp_path / "collection"
     collection.mkdir()
     scenario = natural.scenarios()[0]
     row = record(scenario)
-    row["request"].update(system=natural.SYSTEM, options={"seed": 1729}, format="json")
+    row["request"].update(
+        system=natural.SYSTEM, options={"seed": 1729}, format="json", stream=False, keep_alive="5m"
+    )
     manifest = {
         "scenarios": [scenario],
         "scenario_digest": digest([scenario]),
@@ -247,8 +260,10 @@ def test_replay_rejects_records_outside_frozen_manifest(tmp_path, change):
         row["group"] = "pretend-independent"
     elif change == "request_model":
         row["request"]["model"] = "other"
-    else:
+    elif change == "prompt":
         row["request"]["prompt"] = "different instructions"
+    else:
+        row["request"][change] = "changed"
     row["request_digest"] = digest(row["request"])
     (collection / "manifest.json").write_text(json.dumps(manifest))
     (collection / "outputs.jsonl").write_text(json.dumps(row) + "\n")

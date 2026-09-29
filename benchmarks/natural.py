@@ -415,13 +415,19 @@ def load_collection(input_dir):
         if record["request"]["model"] != model:
             raise ValueError("Request model mismatch")
         if "system" in manifest:
-            request = record["request"]
-            if (
-                request["system"] != manifest["system"]
-                or request["options"] != manifest["options"]
-                or request["format"] != manifest["format"]
-                or request["prompt"] != prompt(dataset[scenario_id])
-            ):
+            expected_request = {
+                "model": model,
+                "system": manifest["system"],
+                "options": manifest["options"],
+                "format": manifest["format"],
+                "prompt": prompt(dataset[scenario_id]),
+                "stream": False,
+                "keep_alive": "5m",
+            }
+            capabilities = manifest["models"][model].get("show", {}).get("capabilities", [])
+            if "thinking" in capabilities:
+                expected_request["think"] = False
+            if record["request"] != expected_request:
                 raise ValueError("Request differs from frozen collection configuration")
     return manifest, records
 

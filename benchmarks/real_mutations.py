@@ -23,7 +23,7 @@ SPEC = importlib.util.spec_from_file_location(
 assert SPEC and SPEC.loader
 natural = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(natural)
-PROFILE = "real-output-mutations-v1"
+PROFILE = "real-output-mutations-v2"
 # Defined independently of evaluated outcomes. Semantic challenges have no detection targets.
 OPERATORS = (
     ("claim_credits", "exact", ("claims", "CLAIM_STATE_MISMATCH", "outcome.0")),
@@ -103,10 +103,19 @@ def prepare(input_dir, output_dir):
         raise FileExistsError("Prepared corpus must be new")
     manifest, records = natural.load_collection(input_dir)
     scenarios = {s["id"]: s for s in manifest["scenarios"]}
-    cases, unavailable = [], []
+    expected = {f"{model}/{sid}" for model in manifest["models"] for sid in scenarios}
+    cases = []
+    unavailable = [
+        {"id": rid, "reason": "missing_attempt"}
+        for rid in sorted(expected - {r["id"] for r in records})
+    ]
     for record in records:
         scenario = scenarios[record["scenario_id"]]
-        if record["collection_status"] != "returned" or not record.get("response", {}).get("done"):
+        if (
+            record["collection_status"] != "returned"
+            or not record.get("response", {}).get("done")
+            or record.get("response", {}).get("done_reason") == "length"
+        ):
             unavailable.append({"id": record["id"], "reason": "generation_unavailable"})
             continue
         raw = record["response"]["response"]
@@ -141,6 +150,7 @@ def prepare(input_dir, output_dir):
         "profile": PROFILE,
         "source_corpus_digest": digest(records),
         "source_manifest": manifest,
+        "expected_baseline_records": len(expected),
         "source_records": records,
         "rule_configuration": [r.configuration() for r in natural.rules()],
         "protocol_sha256": hashlib.sha256(protocol).hexdigest(),
@@ -287,6 +297,7 @@ def run(prepared_dir, output_dir):
         "prepared_sha256": expected_hash,
         "source_corpus_digest": payload["source_corpus_digest"],
         "baseline_records": len(records),
+        "expected_baseline_records": payload["expected_baseline_records"],
         "baselines_accepted": sum(accepted(b) for b in baseline.values()),
         "scenario_groups": len({r["group"] for r in records.values()}),
         "cases": len(rows),

@@ -70,3 +70,21 @@ def test_campaign_freezes_inputs_separates_denominators_and_replays(tmp_path):
     (prepared / "prepared.json").write_bytes(frozen + b" ")
     with pytest.raises(ValueError, match="hash mismatch"):
         campaign.run(prepared, tmp_path / "tampered")
+
+
+def test_missing_attempts_are_explicit_before_evaluation(tmp_path):
+    import shutil
+
+    source = tmp_path / "source"
+    shutil.copytree(ROOT / "benchmarks/remote-results", source)
+    rows = (source / "outputs.jsonl").read_text().splitlines()
+    missing = json.loads(rows.pop())["id"]
+    (source / "outputs.jsonl").write_text("\n".join(rows) + "\n")
+    prepared = tmp_path / "prepared"
+    result = campaign.prepare(source, prepared)
+    assert result["prepared_cases"] == 31 * 12
+    assert result["unavailable_baselines"] == [{"id": missing, "reason": "missing_attempt"}]
+    summary = campaign.run(prepared, tmp_path / "evaluation")
+    assert summary["expected_baseline_records"] == 32
+    assert summary["baseline_records"] == 31
+    assert summary["unavailable_baselines"] == result["unavailable_baselines"]

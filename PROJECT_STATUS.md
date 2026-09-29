@@ -13,6 +13,19 @@ Alpha **0.1.0a2**, independiente de Lifecard, con núcleo y plugin bajo licencia
 - Protocolo congelado, respuestas crudas, replay offline y reporte técnico actualizado.
 - Plantillas para contraejemplos, fallos no detectados y nuevos contratos.
 
+## Avance posterior a la release a2
+
+- Segunda corrida: 32 respuestas completas de los tags locales `gemma4:26b-mlx-hermes`
+  y `qwen3.8:27b`; todas pasan el perfil, sin anotación semántica independiente.
+- Campaña de 384 variantes: 64/64 fallos de declaraciones, 96/96 fallos léxicos y
+  96/96 fallos de esquema detectados; 48/48 controles preservados y 16 no-ops excluidos.
+- Los 64 desafíos que contradicen el estado solo en la prosa siguen pasando. Se reportan
+  separados, sin atribuirles detección ni mezclarlos con los mutation scores acotados.
+- Descarga de modelos verificada entre lotes, replay endurecido y ausencias explícitas.
+- Demo offline de cinco minutos y reporte técnico ampliado. Semántica del núcleo sin cambios.
+- Workflow de PyPI listo para publicar los bytes originales de a2; faltan los dos
+  pending publishers en la cuenta del propietario. Anuncio preparado, todavía no enviado.
+
 ## Límites de la evidencia
 
 Qwen3 respetó la estructura en 16/16 respuestas y sus declaraciones pasaron los invariantes;
@@ -30,9 +43,11 @@ pero no demuestra que ya exista.
 - [Alpha a2 y artefactos instalables](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a2).
 - [CI: test-and-build, Python 3.11–3.14](https://github.com/pablomate4b/narrative-contracts/actions/workflows/ci.yml). La procedencia adjunta a la release identifica el commit y run verificados.
 - Wheels/sdists se distribuyen por GitHub Releases; PyPI no es necesario para instalarlos.
-- Verificación local: 91 tests, Ruff, mypy, ocho mutantes de código y replay reproducible.
+- Verificación local de este avance: 108 tests, Ruff, mypy, ocho mutantes de código y replay reproducible.
 - Instalación de wheels y descubrimiento del plugin verificados en un entorno aislado.
 
 [Uso](README.md) · [Verificación](docs/verification.md) ·
 [Piloto real](docs/natural-benchmark.md) · [Informe técnico](paper/draft.md) ·
 [Contribuir](CONTRIBUTING.md) · [Roadmap](docs/roadmap.md)
+
+[Mutaciones sobre respuestas reales](docs/real-output-mutations.md) · [Demo](docs/quickstart.md) · [Configuración PyPI](docs/pypi-publishing.md)

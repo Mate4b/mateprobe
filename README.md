@@ -30,6 +30,9 @@ python -m pip install \
 The core wheel can also be installed alone. Installation downloads packages; evaluation itself
 never calls a model. Model collection is a separate, opt-in benchmark script.
 
+Start with the [five-minute offline demo](docs/quickstart.md): a detected declaration error,
+a preserved valid variation, and a prose contradiction that passes.
+
 ## State-conditioned checks
 
 ```python
@@ -115,6 +118,9 @@ python benchmarks/run.py
 The included benchmark has author-constructed state/text variations and deliberate scope challenges. It is a feasibility artifact, **not** evidence of accuracy on natural LLM outputs. [Original synthetic results](benchmarks/results/summary.md),
 [expanded mutation campaign](docs/mutation-campaign.md), and
 [real-model pilot](docs/natural-benchmark.md) are separate evidence streams.
+The follow-up [384-case mutation audit of captured Gemma/Qwen outputs](docs/real-output-mutations.md)
+separates declaration, lexical, schema, control and out-of-scope prose evidence.
+All 64 deliberately inserted prose-only contradictions pass; no semantic accuracy is claimed.
 Read the [technical report](paper/draft.md) and [frozen release protocol](paper/release-protocol.md).
 No human labels are required to use or reproduce the alpha; without them, natural-output
 acceptance must not be called semantic accuracy.

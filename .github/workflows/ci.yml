@@ -23,6 +23,15 @@ jobs:
           python benchmarks/natural.py replay --input benchmarks/natural-results --output /tmp/natural-replay
           cmp benchmarks/natural-results/evaluation/reports.json /tmp/natural-replay/reports.json
           cmp benchmarks/natural-results/evaluation/summary.json /tmp/natural-replay/summary.json
+      - name: Replay remote outputs and frozen mutation audit
+        run: |
+          python benchmarks/natural.py replay --input benchmarks/remote-results --output /tmp/remote-replay
+          cmp benchmarks/remote-results/evaluation/reports.json /tmp/remote-replay/reports.json
+          cmp benchmarks/remote-results/evaluation/summary.json /tmp/remote-replay/summary.json
+          python benchmarks/real_mutations.py evaluate --prepared benchmarks/real-mutation-results/prepared --output /tmp/real-mutations
+          cmp benchmarks/real-mutation-results/evaluation/summary.json /tmp/real-mutations/summary.json
+          cmp benchmarks/real-mutation-results/evaluation/cases.json /tmp/real-mutations/cases.json
+          python examples/five_minute_demo.py
       - run: python -m build && python -m build packages/pytest-narrative-contracts
       - name: Source mutation regression checks
         if: matrix.python == '3.12'
