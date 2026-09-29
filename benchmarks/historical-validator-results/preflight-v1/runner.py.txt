@@ -1,0 +1,425 @@
+"""Frozen historical validator ledger and isolated reproduction/replay tool.
+
+``freeze`` writes authored inputs and the candidate ledger. ``setup`` creates
+per-version virtual environments below ``work/``. ``collect --network`` runs
+the minimal cases in those environments. ``replay`` is offline and checks the
+captured normalized verdicts with :func:`audit_validator`.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import importlib.metadata
+import json
+import os
+import platform
+import subprocess
+import venv
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import Any, Callable
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "benchmarks" / "historical-validator-results"
+WORK = ROOT.parent / "work" / "historical-validator-study"
+PROTOCOL = ROOT / "paper" / "historical-validator-protocol.md"
+SCRIPT = Path(__file__).resolve()
+
+
+@dataclass(frozen=True)
+class Candidate:
+    id: str
+    package: str
+    before: str
+    after: str
+    source: str
+    source_id: str
+    behavior: str
+    decision: str
+    reason: str
+
+
+CANDIDATES = (
+    Candidate(
+        "jsonschema-enum-bool-int",
+        "jsonschema",
+        "3.0.1",
+        "3.0.2",
+        "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+        "issue #575",
+        "JSON Schema enum/const distinguish 0 from false",
+        "include",
+        "Release notes explicitly call this a bug fix and identify before/after releases.",
+    ),
+    Candidate(
+        "jsonschema-bool-ref-cache",
+        "jsonschema",
+        "4.17.2",
+        "4.17.3",
+        "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+        "issue #1018",
+        "Validator instantiation accepts cached boolean schemas",
+        "include",
+        "Release notes explicitly call this a bug fix with a fixed release.",
+    ),
+    Candidate(
+        "marshmallow-file-url",
+        "marshmallow",
+        "4.2.0",
+        "4.2.1",
+        "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+        "issue #2891",
+        "URL validator handles uppercase FILE scheme",
+        "include",
+        "Release notes identify a validation fix and adjacent releases.",
+    ),
+    Candidate(
+        "marshmallow-idn-email",
+        "marshmallow",
+        "4.2.3",
+        "4.2.4",
+        "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+        "issues #2821/#2936",
+        "Email validator accepts valid internationalized domain names",
+        "include",
+        "Release notes identify a validator behavior fix and adjacent releases.",
+    ),
+    Candidate(
+        "jsonschema-format-default",
+        "jsonschema",
+        "4.5.1",
+        "4.6.0",
+        "https://github.com/python-jsonschema/jsonschema/issues/945",
+        "issue #945",
+        "format checker is not enabled by default",
+        "exclude",
+        "Documented configuration/default behavior; not a library bug under the frozen rule.",
+    ),
+    Candidate(
+        "jsonschema-email-completeness",
+        "jsonschema",
+        "3.0.0",
+        "3.0.1",
+        "https://github.com/python-jsonschema/jsonschema/issues/403",
+        "issue #403",
+        "email format checker is incomplete",
+        "exclude",
+        "Issue describes an intentionally limited optional format implementation, not a fixed acceptance contract.",
+    ),
+    Candidate(
+        "pydantic-forward-ref-generics",
+        "pydantic",
+        "2.2.1",
+        "2.3.0",
+        "https://github.com/pydantic/pydantic/issues/6130",
+        "issue #6130",
+        "built-in generic forward references",
+        "exclude",
+        "Issue was marked unconfirmed and the behavior is typing resolution rather than a validator acceptance fix.",
+    ),
+    Candidate(
+        "pydantic-ipv4-default",
+        "pydantic",
+        "2.6.2",
+        "2.7.0",
+        "https://github.com/pydantic/pydantic/issues/8942",
+        "issue #8942",
+        "IPv4Address default JSON schema warning",
+        "exclude",
+        "Serialization/schema warning, with no documented before/after validation fix.",
+    ),
+    Candidate(
+        "marshmallow-required-default",
+        "marshmallow",
+        "3.12.0",
+        "3.13.0",
+        "https://github.com/marshmallow-code/marshmallow/blob/dev/CHANGELOG.rst",
+        "issue #1742",
+        "default/missing parameter transition",
+        "exclude",
+        "Intentional API/deprecation transition and configuration semantics, not a validator defect.",
+    ),
+    Candidate(
+        "pydantic-serialize-any-regression",
+        "pydantic",
+        "2.11.0",
+        "2.12.0",
+        "https://github.com/pydantic/pydantic/issues/12348",
+        "issue #12348",
+        "serialize_as_any IPv4 serialization",
+        "exclude",
+        "Serialization regression; not a validation acceptance contract and no fixed after release in the primary record.",
+    ),
+)
+
+
+def digest(value: Any) -> str:
+    return hashlib.sha256(
+        json.dumps(value, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+
+
+def source_hashes() -> dict[str, str]:
+    return {
+        str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in (PROTOCOL, SCRIPT)
+    }
+
+
+def authored_cases(candidate_id: str) -> list[dict[str, Any]]:
+    if candidate_id == "jsonschema-enum-bool-int":
+        return [
+            {
+                "id": "enum-bool-control",
+                "schema": {"enum": [False]},
+                "value": False,
+                "invalid": False,
+            },
+            {"id": "enum-int-variant", "schema": {"enum": [False]}, "value": 0, "invalid": True},
+        ]
+    if candidate_id == "jsonschema-bool-ref-cache":
+        return [
+            {
+                "id": "boolean-ref-control",
+                "schema": {"$ref": "#/$defs/ok", "$defs": {"ok": True}},
+                "value": {},
+                "invalid": False,
+            },
+            {
+                "id": "boolean-ref-fault",
+                "schema": {"$ref": "#/$defs/no", "$defs": {"no": False}},
+                "value": {},
+                "invalid": True,
+            },
+        ]
+    if candidate_id == "marshmallow-file-url":
+        return [
+            {"id": "file-url-control", "value": "file:///tmp/a", "invalid": False},
+            {"id": "file-url-variant", "value": "FILE:///tmp/a", "invalid": True},
+        ]
+    if candidate_id == "marshmallow-idn-email":
+        return [
+            {"id": "idn-email-control", "value": "user@example.com", "invalid": False},
+            {"id": "idn-email-variant", "value": "user@bücher.de", "invalid": True},
+        ]
+    return []
+
+
+def _jsonschema_adapter(sample: dict[str, Any]) -> Any:
+    from jsonschema import Draft7Validator
+
+    from narrative_contracts.validator_audit import Verdict
+
+    try:
+        errors = list(Draft7Validator(sample["schema"]).iter_errors(sample["value"]))
+        return Verdict(accepted=not errors, violations=("schema@/value",) if errors else ())
+    except Exception as exc:
+        raise RuntimeError(str(exc)) from exc
+
+
+def _marshmallow_adapter(sample: dict[str, Any]) -> Any:
+    from marshmallow import ValidationError, fields
+
+    from narrative_contracts.validator_audit import Verdict
+
+    field = fields.Url() if "url" in sample["id"] else fields.Email()
+    try:
+        field.deserialize(sample["value"])
+    except ValidationError:
+        return Verdict(accepted=False, violations=("schema@/value",))
+    return Verdict(accepted=True)
+
+
+def _cases(candidate_id: str):
+    from narrative_contracts.mutations import Relation, Validity
+    from narrative_contracts.validator_audit import AuditCase, Obligation
+
+    cases = authored_cases(candidate_id)
+    result = []
+    for item in cases:
+        result.append(
+            AuditCase(
+                id=item["id"],
+                obligation="historical-validator",
+                baseline=cases[0],
+                variant=item,
+                relation=Relation.VIOLATION if item["invalid"] else Relation.PRESERVE,
+                expected=("schema@/value",) if item["invalid"] else (),
+                validity=Validity.VALID,
+                provenance="Minimal authored control/variant from the cited primary release record.",
+            )
+        )
+    return tuple(result), (
+        Obligation(
+            "historical-validator",
+            "The validator must distinguish the documented valid and invalid values.",
+        ),
+    )
+
+
+def _run(candidate_id: str) -> dict[str, Any]:
+    from narrative_contracts.validator_audit import audit_validator
+
+    candidate = next(c for c in CANDIDATES if c.id == candidate_id)
+    if candidate.package == "jsonschema":
+        adapter: Callable[[dict[str, Any]], Any] = _jsonschema_adapter
+    else:
+        adapter = _marshmallow_adapter
+    cases, obligations = _cases(candidate_id)
+    report = audit_validator(
+        adapter, cases, obligations=obligations, validator_id=f"{candidate.package}/{candidate_id}"
+    )
+    return {
+        "candidate": asdict(candidate),
+        "runtime": platform.python_version(),
+        "package_version": importlib.metadata.version(candidate.package),
+        "adapter_hash": source_hashes()[str(SCRIPT.relative_to(ROOT))],
+        "raw_cases": [asdict(c) for c in cases],
+        "report": report.to_dict(),
+    }
+
+
+def freeze() -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "protocol_sha256": hashlib.sha256(PROTOCOL.read_bytes()).hexdigest(),
+        "source_hashes": source_hashes(),
+        "candidates": [asdict(c) for c in CANDIDATES],
+        "authored_inputs": {
+            c.id: authored_cases(c.id) for c in CANDIDATES if c.decision == "include"
+        },
+    }
+    (OUT / "frozen-inputs.json").write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    (OUT / "frozen-inputs.sha256").write_text(
+        hashlib.sha256((OUT / "frozen-inputs.json").read_bytes()).hexdigest()
+        + "  frozen-inputs.json\n"
+    )
+
+
+def setup() -> None:
+    freeze()
+    WORK.mkdir(parents=True, exist_ok=True)
+    for c in CANDIDATES:
+        if c.decision != "include":
+            continue
+        for version in (c.before, c.after):
+            env = WORK / f"{c.package}-{version}"
+            if not (env / "bin" / "python").exists():
+                venv.EnvBuilder(with_pip=True, clear=False).create(env)
+            subprocess.run(
+                [
+                    str(env / "bin" / "python"),
+                    "-m",
+                    "pip",
+                    "install",
+                    "--disable-pip-version-check",
+                    f"{c.package}=={version}",
+                ],
+                check=True,
+            )
+            freeze_file = env / "pip-freeze.txt"
+            freeze_file.write_text(
+                subprocess.check_output(
+                    [str(env / "bin" / "python"), "-m", "pip", "freeze"], text=True
+                )
+            )
+
+
+def collect() -> None:
+    freeze()
+    OUT.mkdir(parents=True, exist_ok=True)
+    records = []
+    for c in CANDIDATES:
+        if c.decision != "include":
+            continue
+        versions = {}
+        for version in (c.before, c.after):
+            env_python = WORK / f"{c.package}-{version}" / "bin" / "python"
+            if not env_python.exists():
+                raise SystemExit(f"missing isolated environment {env_python}; run setup first")
+            env = dict(os.environ, PYTHONPATH=str(ROOT / "src"))
+            proc = subprocess.run(
+                [str(env_python), str(SCRIPT), "--run-case", c.id],
+                env=env,
+                capture_output=True,
+                text=True,
+            )
+            versions[version] = {
+                "returncode": proc.returncode,
+                "stdout": proc.stdout,
+                "stderr": proc.stderr,
+            }
+        records.append(
+            {
+                "candidate": asdict(c),
+                "versions": versions,
+                "inputs_sha256": hashlib.sha256(
+                    (OUT / "frozen-inputs.json").read_bytes()
+                ).hexdigest(),
+            }
+        )
+    (OUT / "captured-verdicts.json").write_text(
+        json.dumps(
+            {
+                "protocol_sha256": hashlib.sha256(PROTOCOL.read_bytes()).hexdigest(),
+                "records": records,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+
+
+def replay() -> dict[str, Any]:
+    frozen = json.loads((OUT / "frozen-inputs.json").read_text())
+    if frozen["protocol_sha256"] != hashlib.sha256(PROTOCOL.read_bytes()).hexdigest():
+        raise AssertionError("protocol hash mismatch")
+    captured_path = OUT / "captured-verdicts.json"
+    if not captured_path.exists():
+        return {"status": "not_collected", "candidates": []}
+    captured = json.loads(captured_path.read_text())
+    if captured["protocol_sha256"] != frozen["protocol_sha256"]:
+        raise AssertionError("captured protocol hash mismatch")
+    return {
+        "status": "replayed",
+        "candidates": [
+            {
+                "id": r["candidate"]["id"],
+                "before": r["versions"][r["candidate"]["before"]]["returncode"],
+                "after": r["versions"][r["candidate"]["after"]]["returncode"],
+            }
+            for r in captured["records"]
+        ],
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "command", nargs="?", choices=("freeze", "setup", "collect", "replay"), default="replay"
+    )
+    parser.add_argument(
+        "--network", action="store_true", help="explicitly permit package downloads"
+    )
+    parser.add_argument("--run-case")
+    args = parser.parse_args()
+    if args.run_case:
+        print(json.dumps(_run(args.run_case), sort_keys=True, default=str))
+    elif args.command == "freeze":
+        freeze()
+    elif args.command == "setup":
+        if not args.network:
+            raise SystemExit("setup downloads packages; pass --network explicitly")
+        setup()
+    elif args.command == "collect":
+        if not args.network:
+            raise SystemExit("collect requires isolated packages; pass --network explicitly")
+        collect()
+    else:
+        print(json.dumps(replay(), indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()
