@@ -44,4 +44,4 @@ metadata and installed-wheel behavior before any publishing job. Both packages a
 published to PyPI. Downloaded wheel/sdist bytes match all four pinned release hashes.
 A fresh CPython 3.12 environment installed both packages solely from PyPI: pytest automatically
 discovered the plugin and its fixture/report smoke test passed; the offline demo and CLI also
-passed. [Publishing runs and recovery details](pypi-publishing.md).
+passed. [Published packages and verification](pypi-publishing.md).

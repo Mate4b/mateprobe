@@ -22,6 +22,11 @@ violation IDs (`lifecard.CardValidatorPipeline:<code>:<path>`).
 The adapter constructs a fresh pipeline, spec, and state for every case and
 never writes to the LifeCard checkout.
 
+The generated JSON includes the local `lifecard_root` path and validator evidence.
+Keep reports from a private checkout local; remove private paths and review finding
+messages before sharing a sanitized reproduction. These generated reports are not
+included in this repository.
+
 The cases are authored targeted stress cases. They demonstrate three useful
 boundaries: a short label restatement is reported; padding the repeated label
 to at least 90 characters bypasses the current anti-bureaucracy guard; and a

@@ -27,17 +27,12 @@ adoption and corpus relevance remain open questions, not claims established by C
 The release verification records identify the exact published state.
 Both a2 and a3 are available on PyPI; a3 is the current documented install target.
 
-## Follow-up launch milestones
+## Additional published evidence
 
-- [x] Audit controlled faults and valid transformations on the 32 larger-model responses.
-- [x] Report schema failures and prose-only scope challenges separately.
-- [x] Harden residency handling, replay identity/configuration checks and missing-attempt accounting.
-- [x] Add a five-minute offline demo and update the technical report with follow-up evidence.
-- [x] Prepare PyPI Trusted Publishing of the original verified a2 artifacts.
-- [x] Publish the core to PyPI and verify original hashes, clean installation, demo and CLI.
-- [x] Resolve the plugin pending publisher, publish it and verify pytest discovery from PyPI.
-- [x] Prepare a public announcement and counterexample request.
-- [ ] Publish the announcement on the maintainer's chosen channel.
+- Controlled faults and valid transformations over 32 larger-model responses.
+- Separate accounting for schema failures and prose-only scope challenges.
+- Collector residency handling, replay identity/configuration checks and explicit missing attempts.
+- Offline demos and published-package installation checks.
 
 ## External validation and research — future work
 
