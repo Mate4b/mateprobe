@@ -1,16 +1,25 @@
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, TypeVar
 
 import pytest
 
 from narrative_contracts import Context, Contract, Document, Policy, Report, evaluate
 from narrative_contracts.mutations import CampaignReport, MutationCase, audit
+from narrative_contracts.validator_audit import (
+    AuditCase,
+    Obligation,
+    ValidatorAuditReport,
+    Verdict,
+    audit_validator,
+)
 
 _REPORTS: pytest.StashKey[list[dict[str, Any]]] = pytest.StashKey()
+T = TypeVar("T")
 
 
 @dataclass
@@ -41,6 +50,23 @@ class NarrativeAssertions:
     ) -> CampaignReport:
         report = audit(cases, contracts, policy)
         self.records.append({"test": self.node_id, "type": "mutation_audit", **report.to_dict()})
+        report.assert_thresholds(detection, preservation)
+        return report
+
+    def audit_validator(
+        self,
+        validator: Callable[[T], Verdict],
+        cases: tuple[AuditCase[T], ...],
+        *,
+        obligations: tuple[Obligation, ...],
+        validator_id: str,
+        detection: float = 1.0,
+        preservation: float = 1.0,
+    ) -> ValidatorAuditReport:
+        report = audit_validator(
+            validator, cases, obligations=obligations, validator_id=validator_id
+        )
+        self.records.append({"test": self.node_id, "type": "validator_audit", **report.to_dict()})
         report.assert_thresholds(detection, preservation)
         return report
 

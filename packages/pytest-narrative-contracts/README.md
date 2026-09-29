@@ -17,3 +17,11 @@ Pytest discovers this package through the `pytest11` entry point. The core libra
 no pytest dependency. Serial JSON reports only; distributed report merging is not supported.
 
 Alpha software; MIT license. General free-text truthfulness is outside its guarantees.
+
+## Unreleased development addition
+
+This checkout also provides `narrative.audit_validator(validator, cases,
+obligations=..., validator_id=..., detection=1.0, preservation=1.0)` for existing
+validators. It records JSON results before asserting thresholds, including
+failures. Install both packages from this checkout; this API is not in the
+published `0.1.0a2` wheels. See [the audit guide](../../docs/validator-audit.md).

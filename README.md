@@ -1,10 +1,32 @@
 # Narrative Contracts
 
-**Executable contracts for state-conditioned language generation, with mutation audits of the validators.**
+**Check structured AI outputs against application state. Mutation-test the validators.**
 
 Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
+
+## In this development checkout
+
+The following additions are **unreleased** and are not in the published `0.1.0a2`
+packages. Install from this checkout to try them:
+
+- [Audit an existing validator](docs/validator-audit.md) without adopting `Context`,
+  `Surface`, or claims. Wrap its verdict, supply paired cases and obligations, and
+  inspect detections, survivors, false rejections, and failures.
+- [Bind output fields to state](docs/state-bindings.md) with `check_fields`, or use
+  the new bounded equality, numeric-limit, and transition contracts.
+- Run the [before/after refund demo](examples/audit_existing_validator.py) or the
+  opt-in [existing LifeCard validator integration](docs/lifecard-validator-audit.md).
+
+```sh
+python examples/audit_existing_validator.py --output /tmp/refund-audit
+```
+
+The refund demo detects 3 of 9 authored faults before the fix and 8 of 9 afterward,
+preserving both valid controls. The prose-only contradiction still passes and an
+untested idempotency obligation stays visible. This is an illustrative audit of
+validators, not measured production accuracy. See [scope and limits](docs/development-scope.md).
 
 ## Install from PyPI
 
