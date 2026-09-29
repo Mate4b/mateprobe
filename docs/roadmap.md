@@ -9,8 +9,9 @@
 - [x] Pytest package, CLI and LifeCard adapter demonstration.
 - [x] Synthetic benchmark with intentionally retained survivors and false positives.
 - [x] Research draft and independent evaluation protocol.
-- [ ] Publish the source repository at https://github.com/pablomate4b/narrative-contracts.
-- [ ] First PyPI release (package namespace and publishing credentials).
+- [x] Publish the source repository at https://github.com/pablomate4b/narrative-contracts and verify CI in green.
+- [x] Publish GitHub prerelease [v0.1.0a1](https://github.com/pablomate4b/narrative-contracts/releases/tag/v0.1.0a1) with wheel and sdist distributions.
+- [ ] First PyPI release (package namespace and publishing credentials; scheduled for a later stage after independent real-output evaluation).
 
 ## Research milestone — not completed by the synthetic benchmark
 
