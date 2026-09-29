@@ -385,8 +385,9 @@ def summarize(rows, records):
     return result
 
 
-def load_collection(input_dir):
-    """Validate membership and provenance before evaluating any captured output."""
+def replay(input_dir, output_dir):
+    if output_dir.exists():
+        raise FileExistsError("Replay output must be new")
     manifest = strict_json((input_dir / "manifest.json").read_text())
     if digest(manifest["scenarios"]) != manifest["scenario_digest"]:
         raise ValueError("Scenario digest mismatch")
@@ -395,45 +396,14 @@ def load_collection(input_dir):
     ]:
         raise ValueError("Replay requires the frozen rule configuration")
     dataset = {s["id"]: s for s in manifest["scenarios"]}
-    if len(dataset) != len(manifest["scenarios"]):
-        raise ValueError("Duplicate scenario id")
     records = [strict_json(line) for line in (input_dir / "outputs.jsonl").read_text().splitlines()]
     ids = [r["id"] for r in records]
     if len(ids) != len(set(ids)):
         raise ValueError("Duplicate collection row")
-    for record in records:
-        model, scenario_id = record["model"], record["scenario_id"]
-        if model not in manifest["models"] or scenario_id not in dataset:
-            raise ValueError("Record is outside the frozen model/scenario manifest")
-        if (
-            record["id"] != f"{model}/{scenario_id}"
-            or record["group"] != dataset[scenario_id]["group"]
-        ):
-            raise ValueError("Record identity/group mismatch")
-        if record["request_digest"] != digest(record["request"]):
-            raise ValueError("Request digest mismatch")
-        if record["request"]["model"] != model:
-            raise ValueError("Request model mismatch")
-        if "system" in manifest:
-            request = record["request"]
-            if (
-                request["system"] != manifest["system"]
-                or request["options"] != manifest["options"]
-                or request["format"] != manifest["format"]
-                or request["prompt"] != prompt(dataset[scenario_id])
-            ):
-                raise ValueError("Request differs from frozen collection configuration")
-    return manifest, records
-
-
-def replay(input_dir, output_dir):
-    if output_dir.exists():
-        raise FileExistsError("Replay output must be new")
-    manifest, records = load_collection(input_dir)
-    dataset = {s["id"]: s for s in manifest["scenarios"]}
-    ids = [r["id"] for r in records]
     rows, timings = [], []
     for record in records:
+        if record["request_digest"] != digest(record["request"]):
+            raise ValueError("Request digest mismatch")
         started = time.perf_counter_ns()
         rows.append(evaluate_record(record, dataset[record["scenario_id"]]))
         timings.append((time.perf_counter_ns() - started) / 1_000_000)

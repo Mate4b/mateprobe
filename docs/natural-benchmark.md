@@ -34,6 +34,15 @@ and weights belong to their upstream providers; weights are not redistributed. P
 prompts and benchmark harness are authored here. Raw outputs are supplied for evaluation and
 are not human-approved recommendations.
 
+Collection runs all scenarios for one model before moving to the next. Use an otherwise
+idle Ollama server and avoid other clients during the run. The collector checks `/api/ps`
+before each batch, explicitly unloads its model with `keep_alive: 0` afterward (including
+on exceptions), and verifies the server is empty before proceeding. An unload failure or
+a model still resident stops collection; recorded attempts remain on disk. Existing models
+belonging to other work are not unloaded automatically. These checks cannot prevent another
+client from concurrently loading a model. See Ollama's [running models API](https://docs.ollama.com/api/ps)
+and [generation API](https://docs.ollama.com/api/generate).
+
 ## Reading the results
 
 - Denominator: every requested generation. Structure/truncation failures are not dropped.

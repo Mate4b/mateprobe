@@ -1,0 +1,47 @@
+{
+  "profile": "natural-pilot-v1",
+  "corpus_digest": "26cff8e49df2b869af8454fe15c59a64b6012e4556ddb14a32ec345e7baddac6",
+  "scenario_groups": 8,
+  "missing_attempts": [],
+  "models": {
+    "gemma4:26b-mlx-hermes": {
+      "attempts": 16,
+      "status_counts": {
+        "evaluated": 16
+      },
+      "structured_outputs": 16,
+      "strict_accepted": 16,
+      "invariant_accepted": 16,
+      "heuristic_accepted": 16,
+      "length_assertions_accepted": 16,
+      "violation_findings": {},
+      "generation_wall_median_s": 4.378280790930148,
+      "generation_wall_p95_s": 13.541892624925822,
+      "output_tokens": 3879,
+      "prompt_tokens": 6096
+    },
+    "qwen3.8:27b": {
+      "attempts": 16,
+      "status_counts": {
+        "evaluated": 16
+      },
+      "structured_outputs": 16,
+      "strict_accepted": 16,
+      "invariant_accepted": 16,
+      "heuristic_accepted": 16,
+      "length_assertions_accepted": 16,
+      "violation_findings": {},
+      "generation_wall_median_s": 12.295306916465051,
+      "generation_wall_p95_s": 14.673007917008363,
+      "output_tokens": 3831,
+      "prompt_tokens": 5976
+    }
+  },
+  "limitations": [
+    "No independent labels: acceptance is not accuracy or quality",
+    "Small authored pilot; no production traffic or model ranking",
+    "Claims check annotations, not whether prose entails them",
+    "Regeneration is hardware/version dependent; replay of frozen records is deterministic",
+    "No judge baseline; no superiority or semantic FPR/FNR claim"
+  ]
+}

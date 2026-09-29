@@ -4,6 +4,7 @@ import copy
 import importlib.util
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -34,7 +35,7 @@ def response(scenario):
 
 
 def record(scenario, data=None):
-    request = {"prompt": natural.prompt(scenario)}
+    request = {"prompt": natural.prompt(scenario), "model": "fixture"}
     return {
         "id": f"fixture/{scenario['id']}",
         "scenario_id": scenario["id"],
@@ -134,3 +135,123 @@ def test_summaries_include_all_attempts_without_gold_metrics():
     assert summary["attempts"] == 2 and summary["structured_outputs"] == 1
     assert summary["status_counts"]["collection_error"] == 1
     assert not {"accuracy", "precision", "recall"}.intersection(summary)
+
+
+@pytest.mark.parametrize("unload_failure", [None, "still_loaded", "timeout"])
+def test_collection_unloads_before_next_model(monkeypatch, tmp_path, unload_failure):
+    loaded = set()
+    generated = []
+    unloads = []
+    dataset = natural.scenarios()[:2]
+
+    def http(base, route, payload=None, timeout=120):
+        if route == "/api/tags":
+            return {"models": [{"name": "first"}, {"name": "second"}]}
+        if route == "/api/show":
+            return {}
+        if route == "/api/version":
+            return {"version": "test"}
+        if route == "/api/ps":
+            return {"models": [{"name": name} for name in loaded]}
+        assert route == "/api/generate"
+        model = payload["model"]
+        if payload.get("keep_alive") == 0:
+            unloads.append(model)
+            if unload_failure == "timeout":
+                raise TimeoutError("Unload failed")
+            if unload_failure != "still_loaded":
+                loaded.discard(model)
+            return {"done": True}
+        assert not loaded - {model}, "Two different models would be resident"
+        loaded.add(model)
+        generated.append(model)
+        return {"done": True, "response": "{}"}
+
+    monkeypatch.setattr(natural, "_http", http)
+    monkeypatch.setattr(natural, "scenarios", lambda: dataset)
+    args = SimpleNamespace(
+        output=tmp_path / "collection",
+        models=["first", "second"],
+        base_url="http://fixture",
+        seed=1729,
+        timeout=5,
+    )
+    if unload_failure:
+        with pytest.raises((RuntimeError, TimeoutError)):
+            natural.collect(args)
+        assert generated == ["first", "first"]
+        assert unloads == ["first"]
+    else:
+        natural.collect(args)
+        assert generated == ["first", "first", "second", "second"]
+        assert unloads == ["first", "second"]
+        assert not loaded
+    assert len((args.output / "outputs.jsonl").read_text().splitlines()) == len(generated)
+
+
+def test_occupied_server_blocks_batch_without_unloading_other_work(monkeypatch):
+    calls = []
+
+    def http(base, route, payload=None, timeout=120):
+        calls.append(route)
+        return {"models": [{"name": "someone-elses-model"}]}
+
+    monkeypatch.setattr(natural, "_http", http)
+    with pytest.raises(RuntimeError), natural._single_model("http://fixture", "first", 5):
+        pytest.fail("Must not begin generation on an occupied server")
+    assert calls == ["/api/ps"]
+
+
+def test_batch_exception_still_unloads_model(monkeypatch):
+    unloaded = []
+
+    def http(base, route, payload=None, timeout=120):
+        if route == "/api/ps":
+            return {"models": []}
+        unloaded.append(payload)
+        return {"done": True}
+
+    monkeypatch.setattr(natural, "_http", http)
+    with pytest.raises(ValueError, match="interrupted batch"):
+        with natural._single_model("http://fixture", "first", 5):
+            raise ValueError("interrupted batch")
+    assert unloaded == [{"model": "first", "keep_alive": 0}]
+
+
+@pytest.mark.parametrize(
+    "change", ["extra_id", "model", "scenario", "group", "request_model", "prompt"]
+)
+def test_replay_rejects_records_outside_frozen_manifest(tmp_path, change):
+    collection = tmp_path / "collection"
+    collection.mkdir()
+    scenario = natural.scenarios()[0]
+    row = record(scenario)
+    row["request"].update(system=natural.SYSTEM, options={"seed": 1729}, format="json")
+    manifest = {
+        "scenarios": [scenario],
+        "scenario_digest": digest([scenario]),
+        "profile": natural.PROFILE,
+        "models": {"fixture": {}},
+        "rule_configuration": [r.configuration() for r in natural.rules()],
+        "system": natural.SYSTEM,
+        "options": {"seed": 1729},
+        "format": "json",
+    }
+    if change == "extra_id":
+        row["id"] += "/invented"
+    elif change == "model":
+        row["model"] = "not-in-manifest"
+    elif change == "scenario":
+        row["scenario_id"] = "not-in-manifest"
+    elif change == "group":
+        row["group"] = "pretend-independent"
+    elif change == "request_model":
+        row["request"]["model"] = "other"
+    else:
+        row["request"]["prompt"] = "different instructions"
+    row["request_digest"] = digest(row["request"])
+    (collection / "manifest.json").write_text(json.dumps(manifest))
+    (collection / "outputs.jsonl").write_text(json.dumps(row) + "\n")
+    with pytest.raises(ValueError):
+        natural.replay(collection, tmp_path / "invalid-replay")
+    assert not (tmp_path / "invalid-replay").exists()

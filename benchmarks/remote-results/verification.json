@@ -1,0 +1,18 @@
+{
+  "verified_at_utc": "2026-09-29T17:53:09.417841+00:00",
+  "records": 32,
+  "unique_expected_records": 32,
+  "request_digests_match": true,
+  "collector_digest_matches": true,
+  "protocol_digest_matches": true,
+  "replay_byte_identical": [
+    "reports.json",
+    "summary.json"
+  ],
+  "post_run_api_ps": {
+    "models": []
+  },
+  "post_run_api_ps_source": "Observed with independent HTTP GET after collector exit",
+  "base_commit": "ef14ad7fc1a18bb32f381459602eeb4d7c2038e2",
+  "source_note": "Working-tree collector includes serial unload guard; exact source archived with its hash."
+}
