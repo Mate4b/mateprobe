@@ -62,9 +62,13 @@ PUBLIC_MARKDOWN = (
     "docs/state-bindings.md",
     "docs/support-workflow.md",
     "docs/validator-audit.md",
+    "docs/validator-study.md",
     "docs/verification.md",
     "paper/draft.md",
     "paper/protocol.md",
+    "paper/validator-study-protocol.md",
+    "paper/historical-validator-protocol.md",
+    "paper/historical-followup-protocol.md",
     "paper/real-mutation-protocol.md",
     "paper/release-protocol.md",
 )

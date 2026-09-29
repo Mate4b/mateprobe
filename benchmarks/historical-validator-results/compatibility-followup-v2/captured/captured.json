@@ -1,0 +1,518 @@
+{
+  "jsonschema-bool-ref-cache": {
+    "4.17.1": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+          },
+          "name": "attrs",
+          "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+          "version": "26.1.0"
+        },
+        {
+          "hashes": {
+            "sha256": "410ef23dcdbca4eaedc08b850079179883c2ed09378bd1f760d4af4aacfa28d7"
+          },
+          "name": "jsonschema",
+          "url": "https://files.pythonhosted.org/packages/9f/df/824fdaa0d7228fa2e8a5171a408dbabe2c66955afd5be5211725389640b5/jsonschema-4.17.1-py3-none-any.whl",
+          "version": "4.17.1"
+        },
+        {
+          "hashes": {
+            "sha256": "09848306523a3aba463c4b49493a760e7a6ca52e4826aa100ee99d8d39b7ad1e"
+          },
+          "name": "pyrsistent",
+          "url": "https://files.pythonhosted.org/packages/15/ee/ff2ed52032ac1ce2e7ba19e79bd5b05d152ebfb77956cf08fcd6e8d760ea/pyrsistent-0.20.0-cp312-cp312-macosx_10_9_universal2.whl",
+          "version": "0.20.0"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "cbcdc8d2ed03fbdbf57a9aaa3c6dc09bb67ca99ae89d16901549ce33d737c9c0",
+      "payload": {
+        "package_version": "4.17.1",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "error": "TypeError: argument of type 'bool' is not iterable"
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.17.1\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"error\": \"TypeError: argument of type 'bool' is not iterable\"}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    },
+    "4.17.3": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+          },
+          "name": "attrs",
+          "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+          "version": "26.1.0"
+        },
+        {
+          "hashes": {
+            "sha256": "a870ad254da1a8ca84b6a2905cac29d265f805acc57af304784962a2aa6508f6"
+          },
+          "name": "jsonschema",
+          "url": "https://files.pythonhosted.org/packages/c1/97/c698bd9350f307daad79dd740806e1a59becd693bd11443a0f531e3229b3/jsonschema-4.17.3-py3-none-any.whl",
+          "version": "4.17.3"
+        },
+        {
+          "hashes": {
+            "sha256": "09848306523a3aba463c4b49493a760e7a6ca52e4826aa100ee99d8d39b7ad1e"
+          },
+          "name": "pyrsistent",
+          "url": "https://files.pythonhosted.org/packages/15/ee/ff2ed52032ac1ce2e7ba19e79bd5b05d152ebfb77956cf08fcd6e8d760ea/pyrsistent-0.20.0-cp312-cp312-macosx_10_9_universal2.whl",
+          "version": "0.20.0"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "839c46ca0b682f2f69ae74c921b15761456ea9107d3fb315ca2e0d7941107f8a",
+      "payload": {
+        "package_version": "4.17.3",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.17.3\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    }
+  },
+  "jsonschema-enum-bool-int": {
+    "3.0.1": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+          },
+          "name": "attrs",
+          "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+          "version": "26.1.0"
+        },
+        {
+          "hashes": {
+            "sha256": "a5f6559964a3851f59040d3b961de5e68e70971afb88ba519d27e6a039efff1a"
+          },
+          "name": "jsonschema",
+          "url": "https://files.pythonhosted.org/packages/aa/69/df679dfbdd051568b53c38ec8152a3ab6bc533434fc7ed11ab034bf5e82f/jsonschema-3.0.1-py2.py3-none-any.whl",
+          "version": "3.0.1"
+        },
+        {
+          "hashes": {
+            "sha256": "09848306523a3aba463c4b49493a760e7a6ca52e4826aa100ee99d8d39b7ad1e"
+          },
+          "name": "pyrsistent",
+          "url": "https://files.pythonhosted.org/packages/15/ee/ff2ed52032ac1ce2e7ba19e79bd5b05d152ebfb77956cf08fcd6e8d760ea/pyrsistent-0.20.0-cp312-cp312-macosx_10_9_universal2.whl",
+          "version": "0.20.0"
+        },
+        {
+          "hashes": {
+            "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+          },
+          "name": "six",
+          "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+          "version": "1.17.0"
+        },
+        {
+          "hashes": {
+            "sha256": "fe384da74336c398e0d956d1cae0669bc02eed936cdb1d49b57de1990dc11ffc"
+          },
+          "name": "setuptools",
+          "url": "https://files.pythonhosted.org/packages/ef/15/88e46eb9387e905704b69849618e699dc2f54407d8953cc4ec4b8b46528d/setuptools-70.3.0-py3-none-any.whl",
+          "version": "70.3.0"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "6c9323fdb37a347ad757ef9a48d859caa2d428e5105ac987977326cd7c260dbd",
+      "payload": {
+        "package_version": "3.0.1",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"3.0.1\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    },
+    "3.0.2": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+          },
+          "name": "attrs",
+          "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+          "version": "26.1.0"
+        },
+        {
+          "hashes": {
+            "sha256": "5f9c0a719ca2ce14c5de2fd350a64fd2d13e8539db29836a86adc990bb1a068f"
+          },
+          "name": "jsonschema",
+          "url": "https://files.pythonhosted.org/packages/54/48/f5f11003ceddcd4ad292d4d9b5677588e9169eef41f88e38b2888e7ec6c4/jsonschema-3.0.2-py2.py3-none-any.whl",
+          "version": "3.0.2"
+        },
+        {
+          "hashes": {
+            "sha256": "09848306523a3aba463c4b49493a760e7a6ca52e4826aa100ee99d8d39b7ad1e"
+          },
+          "name": "pyrsistent",
+          "url": "https://files.pythonhosted.org/packages/15/ee/ff2ed52032ac1ce2e7ba19e79bd5b05d152ebfb77956cf08fcd6e8d760ea/pyrsistent-0.20.0-cp312-cp312-macosx_10_9_universal2.whl",
+          "version": "0.20.0"
+        },
+        {
+          "hashes": {
+            "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+          },
+          "name": "six",
+          "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+          "version": "1.17.0"
+        },
+        {
+          "hashes": {
+            "sha256": "fe384da74336c398e0d956d1cae0669bc02eed936cdb1d49b57de1990dc11ffc"
+          },
+          "name": "setuptools",
+          "url": "https://files.pythonhosted.org/packages/ef/15/88e46eb9387e905704b69849618e699dc2f54407d8953cc4ec4b8b46528d/setuptools-70.3.0-py3-none-any.whl",
+          "version": "70.3.0"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "6eba25f854a8c1f6b17936f8d312a0e71e529630f22f7e216c9e71727595b89e",
+      "payload": {
+        "package_version": "3.0.2",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": false,
+            "complete": true,
+            "error": null,
+            "messages": [
+              "0 is not one of [False]"
+            ],
+            "violations": [
+              "enum@$"
+            ]
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"3.0.2\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": false, \"complete\": true, \"error\": null, \"messages\": [\"0 is not one of [False]\"], \"violations\": [\"enum@$\"]}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    }
+  },
+  "marshmallow-file-url": {
+    "4.2.0": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "1dc369bd13a8708a9566d6f73d1db07d50142a7580f04fd81e1c29a4d2e10af4"
+          },
+          "name": "marshmallow",
+          "url": "https://files.pythonhosted.org/packages/1c/b6/0a907f92c2158c9841da0227c7074ce1490f578f34d67cbba82ba8f9146e/marshmallow-4.2.0-py3-none-any.whl",
+          "version": "4.2.0"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "42d87bc7dbcbece58f644985e692238b2a6273d097e85deffc337316a6aa0ca0",
+      "payload": {
+        "package_version": "4.2.0",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": false,
+            "complete": true,
+            "error": null,
+            "messages": [
+              "['Not a valid URL.']"
+            ],
+            "violations": [
+              "field@$"
+            ]
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.2.0\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": false, \"complete\": true, \"error\": null, \"messages\": [\"['Not a valid URL.']\"], \"violations\": [\"field@$\"]}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    },
+    "4.2.1": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "d82b1a83cfbb4667d050850fbed4e9d4435576cb95f5ff37894f375dce201768"
+          },
+          "name": "marshmallow",
+          "url": "https://files.pythonhosted.org/packages/6c/41/e8cfdebc3a475c397e074ceaa12e86dca1b23e8e10c2ab4d4875f9a01418/marshmallow-4.2.1-py3-none-any.whl",
+          "version": "4.2.1"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "58dc973cc15ec968b9e44708e7ea902faaddb5a380096a4f794ae370dc944b02",
+      "payload": {
+        "package_version": "4.2.1",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.2.1\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    }
+  },
+  "marshmallow-idn-email": {
+    "4.2.3": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "c84fd89817ecea690bde1eb925036070e5e9883148217585adc56d5cfbc082b8"
+          },
+          "name": "marshmallow",
+          "url": "https://files.pythonhosted.org/packages/58/2e/ce3278954d44903ccf8606c2a16e6b3ad8e10146c21de1b7b9b0f5812b23/marshmallow-4.2.3-py3-none-any.whl",
+          "version": "4.2.3"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "1d7fa2cd4b51cd71b9a58cfd7bfb0a657d9f94dfc44cf957829af622faa14e57",
+      "payload": {
+        "package_version": "4.2.3",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.2.3\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    },
+    "4.2.4": {
+      "artifacts": [
+        {
+          "hashes": {
+            "sha256": "06f3a7ec7081e54e8026a8bd5e7c4e0e88bff82a8fa33714a33166917f2b353a"
+          },
+          "name": "marshmallow",
+          "url": "https://files.pythonhosted.org/packages/dc/df/7d6d6625ec822d5adf05b55a1a0f53e2f03627c6e841ea5655310b8fda22/marshmallow-4.2.4-py3-none-any.whl",
+          "version": "4.2.4"
+        }
+      ],
+      "install_returncode": 0,
+      "lock_sha256": "201c63e7fd2b26bde60fece7e85d6f35d651e3362edfa787cf6e536cd5fdd14b",
+      "payload": {
+        "package_version": "4.2.4",
+        "python": "3.12.13",
+        "results": [
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          },
+          {
+            "accepted": true,
+            "complete": true,
+            "error": null,
+            "messages": [],
+            "violations": []
+          }
+        ]
+      },
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"package_version\": \"4.2.4\", \"python\": \"3.12.13\", \"results\": [{\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}, {\"accepted\": true, \"complete\": true, \"error\": null, \"messages\": [], \"violations\": []}]}\n"
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "disagreements": 0,
+  "groups": 24,
+  "library_version": "0.1.0a3",
+  "pairs": 144,
+  "profiles": {
+    "accept-all": {
+      "ablations": {
+        "invalid_error_credit_score": 0.0,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 0.0
+        },
+        "without_controls": {
+          "detection_score": 0.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 0,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "preserved": 48,
+        "survived": 96
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 0.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 0,
+      "targeted_detections": 0
+    },
+    "correct": {
+      "ablations": {
+        "invalid_error_credit_score": 1.0,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 1.0
+        },
+        "without_controls": {
+          "detection_score": 1.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 96,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "detected": 96,
+        "preserved": 48
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 1.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 96,
+      "targeted_detections": 96
+    },
+    "crash-on-fault": {
+      "ablations": {
+        "invalid_error_credit_score": 1.0,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 0.0
+        },
+        "without_controls": {
+          "detection_score": 0.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 0,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "error": 96,
+        "preserved": 48
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 0.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 0,
+      "targeted_detections": 0
+    },
+    "omit-first-obligation": {
+      "ablations": {
+        "invalid_error_credit_score": 0.25,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 0.25
+        },
+        "without_controls": {
+          "detection_score": 0.25,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 24,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "detected": 24,
+        "preserved": 48,
+        "survived": 72
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 0.25,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 24,
+      "targeted_detections": 24
+    },
+    "reject-all": {
+      "ablations": {
+        "invalid_error_credit_score": null,
+        "invalid_hide_unknowns": {
+          "denominator": 0,
+          "score": null
+        },
+        "without_controls": {
+          "detection_score": null,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 0,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "baseline_failed": 144
+      },
+      "detailed_disagreements": 0,
+      "detection_score": null,
+      "eligible_controls": 0,
+      "eligible_faults": 0,
+      "preservation_rate": null,
+      "raw_fault_rejections_ignoring_baseline": 96,
+      "targeted_detections": 0
+    },
+    "reject-valid-variation": {
+      "ablations": {
+        "invalid_error_credit_score": 1.0,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 1.0
+        },
+        "without_controls": {
+          "detection_score": 1.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 96,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "detected": 96,
+        "preserved": 24,
+        "regressed": 24
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 1.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 0.5,
+      "raw_fault_rejections_ignoring_baseline": 96,
+      "targeted_detections": 96
+    },
+    "unknown-on-fault": {
+      "ablations": {
+        "invalid_error_credit_score": 0.0,
+        "invalid_hide_unknowns": {
+          "denominator": 0,
+          "score": null
+        },
+        "without_controls": {
+          "detection_score": 0.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 0,
+      "boolean_success_without_target": 0,
+      "counts": {
+        "preserved": 48,
+        "undetermined": 96
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 0.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 0,
+      "targeted_detections": 0
+    },
+    "wrong-diagnostic-ID": {
+      "ablations": {
+        "invalid_error_credit_score": 0.0,
+        "invalid_hide_unknowns": {
+          "denominator": 96,
+          "score": 0.0
+        },
+        "without_controls": {
+          "detection_score": 0.0,
+          "preservation_rate": null
+        }
+      },
+      "boolean_detections": 96,
+      "boolean_success_without_target": 96,
+      "counts": {
+        "preserved": 48,
+        "unattributed_rejection": 96
+      },
+      "detailed_disagreements": 0,
+      "detection_score": 0.0,
+      "eligible_controls": 48,
+      "eligible_faults": 96,
+      "preservation_rate": 1.0,
+      "raw_fault_rejections_ignoring_baseline": 96,
+      "targeted_detections": 0
+    }
+  },
+  "schema_version": 1
+}

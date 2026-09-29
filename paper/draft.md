@@ -1,12 +1,29 @@
-# State-Conditioned Narrative Contracts: Deterministic Validation with Mutation and Invariance Audits
+# Narrative Contracts: Attributable Mutation Audits for State-Aware Validators
 
-**Technical report, alpha artifact v0.1.0a2 with follow-up evidence — 29 September 2026.**
+**Technical report, a3 validator study with preserved a2 evidence — 29 September 2026.**
 
 Status: public engineering report, not submitted or peer reviewed. The artifact includes synthetic author-constructed cases, a second independent software integration, and a small frozen corpus of actual model generations. There are no independent human labels or LLM-judge labels. Natural-output acceptance is not semantic accuracy.
 
 ## Abstract
 
-Language-generation systems that maintain authoritative structured state can evaluate a useful subset of output obligations without another language model. We present Narrative Contracts, a dependency-free Python library that separates exact predicates over structured state and declared claims from lexical heuristics over prose. Contracts produce four-valued outcomes with branch-local scope, versioned configuration and diagnostic evidence. An accompanying mutation audit requires attributable detections and valid-variation controls, and exposes equivalent, unreviewed and baseline-invalid cases rather than counting them as successful tests. A synthetic feasibility corpus contains 720 paired cases in 48 shared scenario groups. The strict profile detects 384 of 480 authored faults and accepts 192 of 240 valid variations. Retained failures expose three boundaries: semantic restatement without lexical overlap, contradictions outside supplied claim annotations and negated phrases rejected by regex. An additional 21-case mutation campaign retains five survivors and one valid-control regression. A frozen 32-request pilot with two local model families records structural failures and contract findings without assigning semantic-accuracy labels. A follow-up 32-response corpus from larger user-installed models supports a 384-case authored mutation audit: 64 declaration faults, 96 lexical faults and 96 schema faults are detected; 48 changed controls are preserved and 16 no-ops excluded. All 64 inserted prose-only contradictions pass and are reported separately from in-scope scores. A separate customer-support workflow demonstrates trusted branch selection outside LifeCard. These artifacts illustrate behavior and limitations; they do not establish natural-output accuracy, superiority to LLM judges or broad cross-domain generalization. Independent evaluation is future work, not a prerequisite for releasing the engineering artifact.
+Narrative Contracts is a dependency-free Python library and pytest plugin for
+attributable mutation audits of existing validators and bounded state-conditioned
+checks. An audit pairs accepted baselines with authored faults and valid variations,
+requires the intended diagnostic findings, and preserves crashes, incomplete evidence,
+false rejections and untested obligations. A new controlled study evaluates 144 pairs
+from three exact policies under eight authored validator profiles. Detailed ordinary
+Python assertions and the audit agree on all 1,152 classifications. A boolean-rejection
+comparator counts 96 wrong-ID rejections as detections, while a fault-only view hides
+24 rejected valid controls. These are constructed accounting examples, not a measured
+frequency of defects or evidence of superiority over careful pytest tests. A separate
+retrospective study screens ten public candidates and executes four historical package
+comparisons. After disclosed environment-compatibility corrections, three fixes are
+reproduced across jsonschema and Marshmallow; the fourth selected input passes before
+and after, and remains a non-reproduction. Earlier a2 artifacts include 720 synthetic
+pairs, an expanded mutation campaign, and frozen model outputs, with prose-grounding
+failures retained. The evidence supports a reusable engineering protocol and diagnostic
+artifact. It does not establish natural-output accuracy, independent adoption, lower
+authoring effort, a novel general mutation algorithm, or replacement of LLM judges.
 
 ## 1. Problem and intended contribution
 
@@ -14,7 +31,7 @@ Consider an application where a trusted engine decides state transitions and a t
 
 Deterministic checks are attractive when the application already possesses the necessary evidence. Their reproducibility does not by itself establish construct validity: a length threshold can be implemented perfectly and remain a poor measure of informative content. We therefore treat the evaluator as an object requiring testing.
 
-The artifact contributes (1) an explicit boundary between structured invariants and textual heuristics, (2) branch-scoped checks and four-valued results, and (3) an audit connecting labelled violations to individual rule/code/scope targets while also measuring preservation of valid variants. The present contribution is an engineering artifact and experimental protocol. A claim of research novelty or broad effectiveness awaits the study below.
+The original a2 artifact contributes (1) an explicit boundary between structured invariants and textual heuristics, (2) branch-scoped checks and four-valued results, and (3) an audit connecting labelled violations to individual rule/code/scope targets while also measuring preservation of valid variants. The a3 contribution additionally packages independent-validator adapters, obligation inventories and auditable outcome accounting. The controlled and historical experiments below evaluate this engineering artifact; broad effectiveness and research novelty beyond this combination remain unestablished.
 
 ## 2. Related work
 
@@ -177,19 +194,103 @@ reproduces deterministic reports; regenerating outputs is not promised to be byt
 across runtime versions and hardware. The evaluation was replayed under a2 package metadata,
 with unchanged rule semantics. Source-mutation checks still kill all eight selected mutants.
 
-## 8. Threats to validity
+## 8. Independent validator audits in a3
+
+The a3 `audit_validator` interface adapts plain application samples and a small
+`Verdict` rather than requiring the library's document/claim model. Stable finding
+IDs encode diagnostic targets and optional scope. A rejection for an unrelated ID
+is recorded as `unattributed_rejection`; exceptions and incomplete verdicts remain
+errors and unknowns. An obligation inventory reports untested items without claiming
+to discover missing obligations. Field bindings and bounded relational rules support
+explicit equality, numeric limits and allowed transitions; they do not establish
+arbitrary-prose entailment or full state-machine reachability.
+
+The controlled protocol was committed at `5de4a06` before executing prepared
+cases/source (`97005d6`). Three policies concern receipt-supported refund completion,
+shipment transitions/ownership, and reservation capacity/resource identity. Eight
+baseline groups per policy receive four faults and two controls: 144 pairs in 24
+groups, evaluated under eight authored validator profiles (1,152 classifications).
+A separately implemented policy oracle verifies relations before validator execution.
+All comparison methods consume the same recorded outcomes. The ordinary-assertion
+reference has the same inputs, completeness information and expected diagnostic IDs.
+
+| Profile | Boolean detections | Attributed detections | Preserved controls |
+|---|---:|---:|---:|
+| Correct | 96/96 | 96/96 | 48/48 |
+| Omit first obligation | 24/96 | 24/96 | 48/48 |
+| Wrong diagnostic ID | 96/96 | 0/96 | 48/48 |
+| Reject valid variation | 96/96 | 96/96 | 24/48 |
+| Crash on faults | 0/96 | 0/96 | 48/48 |
+| Unknown on faults | 0/96 | 0/96 | 48/48 |
+| Accept all | 0/96 | 0/96 | 48/48 |
+| Reject all | Undefined | Undefined | Undefined |
+
+There are zero classification disagreements between detailed assertions and the
+audit. Reject-all fails all 144 baselines, leaving no eligible denominator. Removing
+controls hides 24 regressions in the wording-sensitive profile. Deliberately crediting
+crashes would change 0/96 to 96/96; discarding every unknown produces an empty
+denominator. One inventoried obligation per policy remains untested. These ablations
+illustrate information requirements, not the prevalence of poor testing practices.
+The wrong-ID profile rejects actual faults; its failure is diagnostic attribution,
+not proof that the application accepted unsafe output.
+
+The detailed comparator's agreement is evidence against a claim of additional
+detection power over correctly implemented pytest checks. The artifact packages
+paired execution and evidence accounting. Authoring-effort savings were not measured.
+There is no held-out natural corpus; values within a policy reuse few templates.
+See [protocol](validator-study-protocol.md) and
+[complete data and reproduction](../docs/validator-study.md).
+
+## 9. Retrospective historical reproduction
+
+Ten purposively selected public candidates were screened using primary issue and
+release records. Four were included, with two changed pairs each: a trigger and a
+valid control. Six were excluded for scope or insufficient before/after evidence.
+The labels originate in documented upstream behavior, while adapters and minimal
+reproducers are author-written. Two preflight label/configuration mistakes were
+corrected after reading original reports and before executing historical packages;
+original preparation and deviations are retained. This is not independent evaluation.
+
+| Public issue | Final version comparison | Trigger before → after | Reproduced |
+|---|---|---|---|
+| jsonschema #575: enum boolean/numeric equality | 3.0.1 → 3.0.2 | Survived → detected | Yes |
+| jsonschema #1018: cached boolean schemas | 4.17.1 → 4.17.3 | Error → preserved | Yes |
+| Marshmallow #2891: uppercase FILE scheme | 4.2.0 → 4.2.1 | Regressed → preserved | Yes |
+| Marshmallow #2936: IDN email | 4.2.3 → 4.2.4 | Preserved → preserved | No |
+
+All final preservation controls pass before and after. A first run reproduced only
+the FILE case: old jsonschema imports failed on `pkg_resources`, version 4.17.2 was
+unavailable, and the selected IDN input passed both releases. An explicitly
+exploratory compatibility follow-up pinned setuptools 70.3.0 and substituted 4.17.1.
+A conflicting first follow-up lockfile was also retained and corrected before a
+further run. Inputs and labels were never changed in response to these outcomes.
+The final run reproduces three fixes in two packages; unsuccessful IDN reproduction
+is not evidence against the upstream fix, only against this chosen trigger.
+
+Exact package/dependency versions, installed-artifact hashes, raw outcomes, labels
+and adapters are archived. Offline replay reclassifies those outcomes; it is not a
+fresh run of old packages. Fresh execution uses isolated environments and explicit
+package downloads. The historical and controlled datasets are not pooled. This
+small retrospective sample demonstrates applicability to real validator defects;
+it does not estimate natural LLM error detection, bug-discovery rate, usability,
+or independently adopted deployments. Ordinary tests could detect these same bugs.
+See the [screening protocol](historical-validator-protocol.md),
+[compatibility follow-up](historical-followup-protocol.md), and
+[primary links and results](../docs/validator-study.md).
+
+## 10. Threats to validity
 
 **Construction bias:** the authors designed both rules and most transformations. Covered-family success is expected and cannot validate real-world semantic accuracy. Challenge labels are author judgments and have not been independently adjudicated.
 
 **Limited diversity:** labels for three domains and two languages share few templates and the same schema. Numeric variations do not create independent semantic phenomena. The natural pilot contains small local models and authored scenarios, not production traffic. No held-out fault taxonomy or external adopter was evaluated; generation failures can dominate the observed pipeline.
 
-**Comparator limitations:** the excerpt baseline omits parts of LifeCard and has fewer capabilities. No result here establishes superiority to a full existing tool or LLM judge. A future comparison must give competitors equivalent state, history and obligations.
+**Comparator limitations:** the a2 excerpt baseline omits parts of LifeCard and has fewer capabilities. The a3 detailed-assertion reference agrees with the audit on the controlled corpus; it was implemented by the same authors, not an independently developed comparator. No result establishes superiority to a full existing tool or LLM judge. Historical failures are software-validator defects, not spontaneous LLM errors.
 
 **Oracle gap:** declaration consistency is not textual entailment. Grounding, annotation completeness and authoritative context remain application responsibilities. A complete report is complete only for executed checks.
 
 **Operational scope:** bounded snapshots and supplied history do not establish global reachability, liveness or future narrative quality. Regex configuration and normalization are language-specific maintenance obligations.
 
-## 9. Optional independent study and community validation
+## 11. Optional independent study and community validation
 
 The accompanying protocol specifies frozen research questions, corpus separation, independent annotations, judge calibration, matched-input comparisons, ablations, cluster-aware statistics and cost accounting. The highest-priority question is whether attributable synthetic mutation detection predicts recall on independently labelled natural errors while maintaining an acceptable valid-output rejection rate. This question remains unanswered. The public alpha ships with issue templates for reproducible counterexamples and contribution guidance; community publication invites scrutiny but does not itself constitute independent validation. Human review and calibrated model-judge comparisons are optional follow-up studies rather than release gates.
 
