@@ -70,6 +70,7 @@ PUBLIC_MARKDOWN = (
     "paper/draft.md",
     "paper/protocol.md",
     "paper/validator-study-protocol.md",
+    "paper/external-conformance-protocol.md",
     "paper/historical-validator-protocol.md",
     "paper/historical-followup-protocol.md",
     "paper/real-mutation-protocol.md",
