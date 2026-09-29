@@ -13,9 +13,9 @@ from jsonschema import Draft202012Validator, FormatChecker
 from pydantic import BaseModel, HttpUrl, ValidationError
 from pydantic.networks import UrlConstraints
 
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.provenance import observe_git
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
+from mateprobe.mutations import Relation, Validity
+from mateprobe.provenance import observe_git
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict, audit_validator
 
 
 def _path(path: Any) -> str:

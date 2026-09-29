@@ -1,29 +1,15 @@
-# MateProbe and published package names
+# MateProbe and historical package names
 
-**MateProbe** is the project name, formerly Narrative Contracts. The paper,
-site title and current usage guides use MateProbe. The released a3 artifacts
-retain their original installation and API identifiers:
+**MateProbe by Mate4B** is the current project. Since `0.1.0a4`, install
+`mateprobe` and optionally `pytest-mateprobe`, import `mateprobe`, and use the
+`mateprobe` CLI and pytest fixture with `--mateprobe-report`.
+See the [migration guide](migration-mateprobe.md) for complete commands.
 
-| Surface | Published alpha 0.1.0a3 identifier |
-|---|---|
-| Project / paper | MateProbe |
-| Core distribution | `narrative-contracts` |
-| Optional pytest distribution | `pytest-narrative-contracts` |
-| Python import | `narrative_contracts` |
-| CLI | `narrative-contracts` |
-| Pytest fixture / report flag | `narrative` / `--narrative-report` |
-| Current repository | [Mate4b/narrative-contracts](https://github.com/Mate4b/narrative-contracts) |
+The controlled comparison and historical-validator studies were recorded with
+`narrative-contracts==0.1.0a3`. Their source snapshots, protocol files and reports
+retain that distribution name and `narrative_contracts` imports. These are
+historical identifiers, not instructions for current application integrations.
 
-```sh
-python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
-```
-
-```python
-from narrative_contracts.validator_audit import audit_validator
-```
-
-The name change does not alter rule semantics or the published artifact bytes.
-Historical protocols, captured source files and reports retain the original name
-and hashes so they can still be reproduced. A future change to distribution names,
-import paths or repository location requires a new compatibility-verified migration;
-no `mateprobe` distribution or import is provided by the a3 wheels above.
+The [study reproduction guide](validator-study.md#offline-reproduction) separates
+byte-for-byte a3 replay from a4 compatibility replay. No frozen corpus, observation,
+label or report is renamed or regenerated to make migration checks pass.

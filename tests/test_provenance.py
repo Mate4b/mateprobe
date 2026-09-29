@@ -5,8 +5,8 @@ from pathlib import Path
 
 import pytest
 
-from narrative_contracts.model import plain
-from narrative_contracts.provenance import GitProvenance, observe_git, supplied_git_provenance
+from mateprobe.model import plain
+from mateprobe.provenance import GitProvenance, observe_git, supplied_git_provenance
 
 SHA = "a" * 40
 
@@ -72,7 +72,7 @@ def test_observe_git_unavailable_is_unknown(
     def missing(*args: object, **kwargs: object) -> None:
         raise FileNotFoundError("git")
 
-    monkeypatch.setattr("narrative_contracts.provenance.subprocess.run", missing)
+    monkeypatch.setattr("mateprobe.provenance.subprocess.run", missing)
     result = observe_git(tmp_path)
     assert result == GitProvenance(None, None, "observed", "git_unavailable")
 
@@ -81,6 +81,6 @@ def test_observe_timeout_is_unknown(monkeypatch: pytest.MonkeyPatch, tmp_path: P
     def timeout(*args: object, **kwargs: object) -> None:
         raise subprocess.TimeoutExpired("git", 5.0)
 
-    monkeypatch.setattr("narrative_contracts.provenance.subprocess.run", timeout)
+    monkeypatch.setattr("mateprobe.provenance.subprocess.run", timeout)
     result = observe_git(tmp_path)
     assert result == GitProvenance(None, None, "observed", "timeout")

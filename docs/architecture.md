@@ -18,8 +18,8 @@ flowchart LR
 
 ## Packages
 
-- `narrative-contracts`: immutable models, protocol, rules, strict JSON loader, CLI, adapters and mutation audit. Standard library only.
-- `pytest-narrative-contracts`: optional pytest entry point, fixture, assertion diagnostics and report export.
+- `mateprobe`: immutable models, protocol, rules, strict JSON loader, CLI, adapters and mutation audit. Standard library only.
+- `pytest-mateprobe`: optional pytest entry point, fixture, assertion diagnostics and report export.
 - `benchmarks`: authored feasibility corpus, explicit simple baseline, controls and source-code mutation experiment.
 - `paper`: draft, limitations, references and the protocol for an independently validated study.
 

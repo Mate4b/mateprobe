@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0a4",
+  "tag": "v0.1.0a4",
+  "source_commit": "e842d66faa5d2dd6d8cc9a7dd8abd7e31bc49078",
+  "sha256": {
+    "mateprobe-0.1.0a4-py3-none-any.whl": "462419a35c7f3cdecfde6609748331aaaaf77aeaca7836bb2db89a01ea79f1ca",
+    "mateprobe-0.1.0a4.tar.gz": "b7af4085f13cf96ebca572d844ff8fe1a68afacc5666783dc456a9ea16238924",
+    "pytest_mateprobe-0.1.0a4-py3-none-any.whl": "7dfab82a48c27224c9e2b30f705530c9cde13dabb0891322ba772a5ca0cc1fef",
+    "pytest_mateprobe-0.1.0a4.tar.gz": "4c57f2ed9e0385413681199e641e0a3b825d15a7f91e581bbb004a0a9b578746"
+  }
+}

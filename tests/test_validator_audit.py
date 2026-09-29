@@ -4,8 +4,8 @@ from copy import deepcopy
 
 import pytest
 
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.validator_audit import (
+from mateprobe.mutations import Relation, Validity
+from mateprobe.validator_audit import (
     AuditCase,
     Obligation,
     Verdict,

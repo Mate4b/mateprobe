@@ -10,7 +10,7 @@ if int(version("jsonschema").split(".")[0]) < 4:
     pytest.skip("Integration requires jsonschema 4+", allow_module_level=True)
 pytest.importorskip("pydantic", minversion="2.0")
 
-from narrative_contracts.validator_audit import audit_validator
+from mateprobe.validator_audit import audit_validator
 
 PATH = Path(__file__).resolve().parents[1] / "examples" / "external_validators.py"
 spec = importlib.util.spec_from_file_location("external_validators", PATH)

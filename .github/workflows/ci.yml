@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '${{ matrix.python }}'
-      - run: python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+      - run: python -m pip install -e '.[dev]' -e ./packages/pytest-mateprobe
       - run: pytest
       - run: ruff check . && ruff format --check . && mypy
       - run: python benchmarks/run.py --variants 1 --output /tmp/narrative-benchmark
@@ -21,20 +21,22 @@ jobs:
       - name: Replay captured model outputs offline
         run: |
           python benchmarks/natural.py replay --input benchmarks/natural-results --output /tmp/natural-replay
-          python scripts/compare_replay.py benchmarks/natural-results/evaluation/reports.json /tmp/natural-replay/reports.json --old-version 0.1.0a2 --new-version 0.1.0a3
+          python scripts/compare_replay.py benchmarks/natural-results/evaluation/reports.json /tmp/natural-replay/reports.json --old-version 0.1.0a2 --new-version 0.1.0a4
           cmp benchmarks/natural-results/evaluation/summary.json /tmp/natural-replay/summary.json
       - name: Replay remote outputs and frozen mutation audit
         run: |
           python benchmarks/natural.py replay --input benchmarks/remote-results --output /tmp/remote-replay
-          python scripts/compare_replay.py benchmarks/remote-results/evaluation/reports.json /tmp/remote-replay/reports.json --old-version 0.1.0a2 --new-version 0.1.0a3
+          python scripts/compare_replay.py benchmarks/remote-results/evaluation/reports.json /tmp/remote-replay/reports.json --old-version 0.1.0a2 --new-version 0.1.0a4
           cmp benchmarks/remote-results/evaluation/summary.json /tmp/remote-replay/summary.json
-          python benchmarks/real_mutations.py evaluate --prepared benchmarks/real-mutation-results/prepared --output /tmp/real-mutations
+          python benchmarks/replay_renamed_mutations.py --output /tmp/real-mutations
           cmp benchmarks/real-mutation-results/evaluation/summary.json /tmp/real-mutations/summary.json
-          python scripts/compare_replay.py benchmarks/real-mutation-results/evaluation/cases.json /tmp/real-mutations/cases.json --old-version 0.1.0a2 --new-version 0.1.0a3 --report-path result.report
+          python scripts/compare_replay.py benchmarks/real-mutation-results/evaluation/cases.json /tmp/real-mutations/cases.json --old-version 0.1.0a2 --new-version 0.1.0a4 --report-path result.report
           python examples/five_minute_demo.py
+      - name: Replay immutable validator studies with MateProbe
+        run: python benchmarks/study_replay.py --output /tmp/mateprobe-study-replay
       - name: Audit existing validators offline
         run: python examples/audit_existing_validator.py --output /tmp/validator-audit
-      - run: python -m build && python -m build packages/pytest-narrative-contracts
+      - run: python -m build && python -m build packages/pytest-mateprobe
       - name: Source mutation regression checks
         if: matrix.python == '3.12'
         run: python benchmarks/mutate_guards.py --output /tmp/source-mutations.json
@@ -72,7 +74,7 @@ jobs:
         run: |
           python -m pip install build twine
           python -m build --outdir /tmp/core-dist
-          python -m build packages/pytest-narrative-contracts --outdir /tmp/plugin-dist
+          python -m build packages/pytest-mateprobe --outdir /tmp/plugin-dist
           python -m twine check --strict /tmp/core-dist/* /tmp/plugin-dist/*
           python -m pip install /tmp/core-dist/*.whl /tmp/plugin-dist/*.whl -r requirements-integrations.txt
       - name: Exercise installed APIs, docs and pytest plugin

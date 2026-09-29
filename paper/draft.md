@@ -2,12 +2,17 @@
 
 **Technical report, a3 validator study with preserved a2 evidence — 29 September 2026.**
 
-Status: public engineering report, not submitted or peer reviewed. The artifact includes synthetic author-constructed cases, a second independent software integration, and a small frozen corpus of actual model generations. There are no independent human labels or LLM-judge labels. Natural-output acceptance is not semantic accuracy.
+The project was renamed to **MateProbe by Mate4B** in `0.1.0a4`. Reported experiments
+retain their original package versions, names and frozen artifacts; the rename is
+not a new evaluation.
+
+Status: public engineering report, not submitted or peer reviewed. The artifact includes synthetic author-constructed cases, a second author-implemented application integration, and a small frozen corpus of actual model generations. There are no independent human labels or LLM-judge labels. Natural-output acceptance is not semantic accuracy.
 
 ## Abstract
 
-MateProbe (formerly Narrative Contracts; distributed in alpha a3 as
-`narrative-contracts`) is a dependency-free Python library and pytest plugin for
+MateProbe by Mate4B (formerly Narrative Contracts; the study used alpha a3
+as `narrative-contracts`) provides a dependency-free Python core and an optional
+pytest plugin for
 attributable mutation audits of existing validators and bounded state-conditioned
 checks. An audit pairs accepted baselines with authored faults and valid variations,
 requires the intended diagnostic findings, and preserves crashes, incomplete evidence,
@@ -40,7 +45,7 @@ IFEval operationalizes verifiable instructions using reproducible checks [1]. It
 
 Mutation-based meta-evaluation also has close antecedents. Breaking Models to Test the Judge introduces controlled semantic defects in domain class diagrams to evaluate semantic judges [3]. When Knowledge Changes uses mutations and metamorphic relations to assess RAG under evolving corpora [4]. We do not claim to introduce mutation testing for semantic evaluators.
 
-LLM-as-a-judge work documents both useful agreement with human preferences and systematic biases [5]. Those results motivate careful evaluator calibration, not a blanket claim that judges are ineffective. Existing tools such as Promptfoo already support deterministic assertions and custom code [6]. The proposed study must therefore investigate the value of state-conditioned obligations, diagnostic attribution and audit methodology beyond ordinary assertions.
+LLM-as-a-judge work documents both useful agreement with human preferences and systematic biases [5]. Those results motivate careful evaluator calibration, not a blanket claim that judges are ineffective. Existing tools such as Promptfoo already support deterministic assertions and custom code [6]. The controlled study below therefore compares diagnostic attribution and audit accounting with ordinary assertions; it does not establish greater detection power or lower authoring cost.
 
 ## 3. Model and semantics
 
@@ -71,7 +76,7 @@ The separate source-mutation experiment changes selected evaluator implementatio
 
 ## 5. Implementation
 
-The core uses Python dataclasses and the standard library. It exposes a contract protocol, eight built-in rule classes, a strict allowlisted JSON loader, a CLI, a LifeCard-shaped adapter and a mutation runner. The optional pytest package provides fixtures, threshold assertions and JSON reports. Neither package calls an LLM.
+The core uses Python dataclasses and the standard library. The original a2 core exposes a contract protocol, eight built-in rule classes, a strict allowlisted JSON loader, a CLI, a LifeCard-shaped adapter and a mutation runner. The optional pytest package provides fixtures, threshold assertions and JSON reports. Neither package calls an LLM.
 
 Reports include SHA-256 digests of canonical inputs and configured contracts, rule and package versions, and policy. They omit timestamps. Configuration digests identify declared settings, not executable source; release hashes and environment records complement them. The adapter maps each outcome to its own state reference and leaves trusted state execution in the application.
 
@@ -278,6 +283,13 @@ or independently adopted deployments. Ordinary tests could detect these same bug
 See the [screening protocol](historical-validator-protocol.md),
 [compatibility follow-up](historical-followup-protocol.md), and
 [primary links and results](../docs/validator-study.md).
+
+The frozen studies retain their a3 package names, runner sources and report metadata.
+The current MateProbe checkout provides `benchmarks/study_replay.py`, which verifies
+unchanged hashes and compares reclassified results while permitting only the explicit
+library-version metadata transition. CI also replays the original drivers with the
+published a3 package and checks exact outputs. Neither replay is a new third-party
+package execution; see [the reproduction guide](../docs/validator-study.md).
 
 ## 10. Threats to validity
 

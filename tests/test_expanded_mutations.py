@@ -4,7 +4,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from narrative_contracts.mutations import Relation, Validity, audit
+from mateprobe.mutations import Relation, Validity, audit
 
 spec_path = Path(__file__).parents[1] / "benchmarks" / "expanded_mutations.py"
 spec = importlib.util.spec_from_file_location("expanded_mutations", spec_path)

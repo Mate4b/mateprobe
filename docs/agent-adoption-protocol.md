@@ -1,5 +1,9 @@
 # Documentation-guided agent smoke protocol v1
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 This is a maintainer-run usability smoke test. It is not independent human
 validation, a discovery/ranking study, or an estimate of agent success rates.
 The task and checks below are fixed before the trial. A single agent receives
@@ -9,7 +13,7 @@ the implementation conversation.
 ## Task supplied to the agent
 
 Using only the public documentation at
-`https://mate4b.github.io/narrative-contracts/llms.txt` as the starting point and
+`https://mate4b.github.io/narrative-contracts/llms.txt` (the original, frozen trial URL) as the starting point and
 the published PyPI packages, create a small pytest integration for a shipping
 assistant. Use a new isolated Python environment and do not read the local
 Narrative Contracts repository, its source, or the library implementation.

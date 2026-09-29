@@ -1,4 +1,4 @@
-"""Pydantic v2 schema boundary for a narrative-contracts reply.
+"""Pydantic v2 schema boundary for a mateprobe reply.
 
 The branch and authoritative state are selected by application code. Pydantic
 validates the structured reply and projects only an explicit allowlist into
@@ -11,7 +11,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, ValidationError
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,

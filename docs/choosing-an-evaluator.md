@@ -1,6 +1,6 @@
 # Choosing an evaluation method
 
-Use MateProbe when the application can express a checkable predicate
+Use MateProbe by Mate4B when the application can express a checkable predicate
 over trusted state, explicit declarations, or a deliberately narrow text pattern.
 It evaluates those predicates without inference calls. This is a scoped guarantee,
 not general factuality or writing-quality evaluation.

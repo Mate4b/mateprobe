@@ -85,7 +85,30 @@ cases is not a population success rate or evidence of three external adopters.
 
 ## Offline reproduction
 
-Install both a3 packages, or the current checkout. From a repository checkout:
+From a repository checkout with MateProbe installed (`pip install -e '.[dev]'`),
+replay all three studies offline with:
+
+```sh
+python benchmarks/study_replay.py --output /tmp/mateprobe-study-replay
+```
+
+This wrapper temporarily maps historical imports to MateProbe inside its own
+process. The original drivers and their source hashes remain unchanged. It compares
+all study results with the frozen evidence, allowing only the explicit transition
+from `library_version: 0.1.0a3` to the installed MateProbe version in reports and the
+controlled summary. It never rewrites archived reports or removes version fields.
+The output includes `compatibility.json` with the actual replay version. This is a
+compatibility check, not new historical package execution.
+
+To reproduce the original a3 JSON byte-for-byte, use a **separate environment**:
+
+```sh
+python3.12 -m venv /tmp/mateprobe-historical-a3
+. /tmp/mateprobe-historical-a3/bin/activate
+python -m pip install narrative-contracts==0.1.0a3
+```
+
+Then run the unchanged historical drivers from the repository root:
 
 ```sh
 python benchmarks/validator_study.py replay --prepared benchmarks/validator-study/prepared --captured benchmarks/validator-study/evaluation --output /tmp/controlled-replay
@@ -94,9 +117,11 @@ python benchmarks/historical_followup.py replay --captured benchmarks/historical
 ```
 
 Output directories must be new. Replay verifies hashes, reclassifies recorded
-verdicts and requires no historical packages, model or network. Tests compare the
-stable JSON outputs byte-for-byte. It does not independently re-execute third-party
-packages. For fresh execution of the final version pairs, explicitly permit downloads:
+verdicts and requires no historical third-party validator packages, model or network
+once MateProbe or the a3 library is installed. CI compares original a3 JSON outputs
+byte-for-byte and separately checks replay under published MateProbe a4. Replay does
+not independently re-execute third-party packages. In the historical a3 environment, fresh execution of the final version
+pairs requires explicitly permitting downloads:
 
 ```sh
 python benchmarks/historical_followup.py collect --network --work /tmp/historical-envs --output /tmp/historical-fresh

@@ -1,5 +1,9 @@
 # Agent integration trial
 
+> Historical evidence/reference from Narrative Contracts. The current project is
+> **MateProbe by Mate4B**; see the [migration guide](migration-mateprobe.md).
+> Original package names, versions and recorded results below identify that earlier work.
+
 This page preserves the historical a2 trial. See the separate
 [discovery and a3 integration observations](agent-readiness.md) for the newer tasks.
 

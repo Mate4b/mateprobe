@@ -1,4 +1,4 @@
-# Working on MateProbe
+# Working on MateProbe by Mate4B
 
 ## Install and verify
 
@@ -7,7 +7,7 @@ Use Python 3.11+. From the repository root:
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
+python -m pip install -e '.[dev]' -e ./packages/pytest-mateprobe
 pytest
 ruff check .
 ruff format --check .
@@ -16,27 +16,28 @@ mypy
 
 For documentation builds, install `requirements-docs.txt` and run
 `python scripts/build_docs.py`. For published-package examples, use a **separate**
-environment with `narrative-contracts==0.1.0a3`, `pytest-narrative-contracts==0.1.0a3`,
+environment with `mateprobe==0.1.0a4`, `pytest-mateprobe==0.1.0a4`,
 and `pydantic==2.13.5`, then run `python scripts/check_published_docs.py`;
 an editable checkout cannot verify published compatibility. See
 [the agent integration guide](docs/agent-guide.md) for consumer instructions.
 
 ## Project identity
 
-The public project and paper name is **MateProbe**, formerly Narrative Contracts.
-Published a2/a3 distribution names, Python imports, CLI/pytest entry points and
-repository URLs remain the existing identifiers until a separately verified
-technical migration. Do not invent `import mateprobe` for those wheels or rewrite
-frozen protocols, captured sources, historical results or release hashes for branding.
-See docs/project-name.md.
+The current project is **MateProbe by Mate4B** (`mateprobe`, `pytest-mateprobe`, a4).
+Frozen a3 study drivers, protocols, captures and hashes retain their original names
+and source bytes. Use `benchmarks/study_replay.py` to replay those studies against
+MateProbe; direct historical commands require an isolated a3 environment.
+See docs/project-name.md and docs/validator-study.md.
 
 ## Version boundary
 
-The current release is `0.1.0a3`, including independent audits and state bindings.
+The current release is `0.1.0a4`, including independent audits and state bindings.
 Verify built distributions in an isolated environment with
 `python scripts/check_alpha_install.py --output /tmp/alpha-check` (install the
 optional integration requirements first). Keep frozen a2 research artifacts and
-the agent-adoption replay pinned to a2; do not rewrite historical evidence.
+the agent-adoption replay pinned to a2 and agent-readiness replay pinned to a3;
+do not rewrite historical evidence. Use `benchmarks/replay_renamed_mutations.py`
+for the frozen real-output mutation replay against MateProbe.
 Keep the agent guide, `llms.txt`, and API reference consistent with installable artifacts.
 
 ## Public repository boundary

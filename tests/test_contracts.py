@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 import pytest
 
-from narrative_contracts import (
+from mateprobe import (
     Claim,
     Context,
     DeclaredClaimsConsistent,
@@ -20,7 +20,7 @@ from narrative_contracts import (
     Surface,
     evaluate,
 )
-from narrative_contracts.model import Check, Kind
+from mateprobe.model import Check, Kind
 
 
 def document(text="A concrete scene with enough different words to describe the consequence."):
@@ -209,3 +209,19 @@ def test_invalid_result_status_cannot_be_accepted():
     report = check(InvalidStatus("bad"))
     assert report.checks[0].status == Status.ERROR
     assert not report.accepted
+
+
+def test_rename_preserves_builtin_rule_identity_without_masking_custom_types():
+    from mateprobe import RequiredFact
+    from mateprobe.engine import Rule
+
+    assert RequiredFact("fact", "x", 1).configuration()["type"] == (
+        "narrative_contracts.rules.RequiredFact"
+    )
+
+    class CustomFact(RequiredFact):
+        pass
+
+    custom = CustomFact("custom", "x", 1)
+    assert custom.configuration()["type"] == (f"{CustomFact.__module__}.{CustomFact.__qualname__}")
+    assert Rule("base").configuration()["type"] == "mateprobe.engine.Rule"

@@ -7,10 +7,10 @@ description: Audit an existing Python validator with invalid output samples and 
 
 You already validate structured responses from an LLM or agent. How do you know
 the validator catches the policy violations you care about, while accepting valid
-changes? **MateProbe runs your validator against paired samples and
+changes? **MateProbe by Mate4B runs your validator against paired samples and
 reports what it detects, misses, or rejects for an unrelated reason.**
 
-The independent `audit_validator` API is available in published `0.1.0a3` for
+The independent `audit_validator` API is available in published `0.1.0a4` for
 Python 3.11+. It works with an adapter around your existing function; adopting the
 library's built-in state contracts or `Document`/`Claim` representation is optional.
 
@@ -54,7 +54,7 @@ value must stay accepted. Rejecting every input cannot establish useful coverage
 | Source mutation testing | Program source, with tests run against altered implementations | Do the tests detect these changes to the implementation? |
 | Ordinary pytest assertions | Whatever fixtures and assertions you write | Does the code satisfy these explicit test expectations? |
 
-These approaches can be used together. MateProbe adds paired execution,
+These approaches can be used together. MateProbe by Mate4B adds paired execution,
 finding attribution, obligation inventories, and JSON/Markdown reports to a supplied
 corpus. It does not edit validator source or automatically invent and label mutations.
 Every individual expectation can also be expressed directly in pytest.
@@ -67,8 +67,8 @@ Every individual expectation can also be expressed directly in pytest.
    invalid variants, and valid controls. Expected findings belong to cases, never
    inside the adapter's output.
 3. Call `audit_validator`, inspect individual outcomes, and retain survivors and errors.
-4. Use the optional `narrative.audit_validator` pytest fixture to set thresholds and
-   write `--narrative-report=contract-results.json`. Assert important case outcomes
+4. Use the optional `mateprobe.audit_validator` pytest fixture to set thresholds and
+   write `--mateprobe-report=contract-results.json`. Assert important case outcomes
    so a new miss cannot silently replace an acknowledged gap.
 
 See [the adapter API](validator-audit.md), [real Pydantic and JSON Schema adapters](external-validator-integrations.md),

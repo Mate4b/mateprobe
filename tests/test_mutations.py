@@ -2,8 +2,8 @@ from dataclasses import dataclass, replace
 
 import pytest
 
-from narrative_contracts import Context, Document, MinimumTokens, Rule, Status, Surface
-from narrative_contracts.mutations import (
+from mateprobe import Context, Document, MinimumTokens, Rule, Status, Surface
+from mateprobe.mutations import (
     MutationCase,
     Relation,
     Sample,

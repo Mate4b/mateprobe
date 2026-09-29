@@ -16,8 +16,8 @@ from urllib.parse import unquote, urljoin, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 STAGE = ROOT / ".docs-src"
 SITE = ROOT / "site"
-SITE_URL = "https://mate4b.github.io/narrative-contracts/"
-REPO_URL = "https://github.com/Mate4b/narrative-contracts/blob/main/"
+SITE_URL = "https://mate4b.github.io/mateprobe/"
+REPO_URL = "https://github.com/Mate4b/mateprobe/blob/main/"
 LINK = re.compile(r"(!?\[[^\]\n]*\]\()([^\s)]+)(\))")
 EXAMPLES = (
     "examples/first_audit.py",
@@ -53,6 +53,8 @@ PUBLIC_MARKDOWN = (
     "docs/lifecard-validator-audit.md",
     "docs/lifecard.md",
     "docs/mutation-campaign.md",
+    "docs/migration-mateprobe.md",
+    "docs/api-a4.md",
     "docs/natural-benchmark.md",
     "docs/policy-regression.md",
     "docs/project-name.md",

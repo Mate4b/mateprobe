@@ -1,8 +1,8 @@
 # Audit your existing validator
 
-Requires `narrative-contracts==0.1.0a3`. These APIs are not available in a2.
-Install the published core and optional pytest plugin from PyPI; see the
-[a3 installation command](api-a3.md). An editable checkout is only needed for development.
+Requires `mateprobe==0.1.0a4`. These APIs are not available in a2.
+Install the core and optional pytest plugin from PyPI; see the
+[migration guide](migration-mateprobe.md). An editable checkout is only needed for development.
 
 Use `audit_validator` when you already have a validator and want to test its
 failure modes. It does not require `Document`, `Context`, `Surface`, model calls,
@@ -24,8 +24,8 @@ explains schema 2 and optional observed/supplied Git metadata.
 ## Minimal runnable example
 
 ```python
-from narrative_contracts.mutations import Relation, Validity
-from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
+from mateprobe.mutations import Relation, Validity
+from mateprobe.validator_audit import AuditCase, Obligation, Verdict, audit_validator
 
 
 # Your existing code. Keep its real finding IDs rather than using a generic "bad".
@@ -141,8 +141,8 @@ One run does not measure stochastic stability or latency.
 ## Pytest and reports
 
 ```python
-def test_refund_guard(narrative):
-    narrative.audit_validator(
+def test_refund_guard(mateprobe):
+    mateprobe.audit_validator(
         validate_refund,
         cases,
         obligations=obligations,
@@ -152,9 +152,9 @@ def test_refund_guard(narrative):
     )
 ```
 
-Run `pytest --narrative-report=report.json`. The plugin records failed audits
+Run `pytest --mateprobe-report=report.json`. The plugin records failed audits
 before raising an assertion, so CI reports retain the cases that failed.
-Existing `narrative.check` and `narrative.audit` remain available.
+Existing `mateprobe.check` and `mateprobe.audit` remain available.
 
 ## Full demonstrations
 

@@ -2,8 +2,8 @@
 
 import json
 
-from narrative_contracts import Context, Document, MinimumTokens, Surface
-from narrative_contracts.mutations import (
+from mateprobe import Context, Document, MinimumTokens, Surface
+from mateprobe.mutations import (
     MutationCase,
     Relation,
     Sample,

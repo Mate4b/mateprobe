@@ -1,8 +1,8 @@
 import pytest
 
-from narrative_contracts.engine import evaluate
-from narrative_contracts.model import Context, Document, Status, Surface
-from narrative_contracts.relations import AllowedTransition, CompareFields, FieldRef
+from mateprobe.engine import evaluate
+from mateprobe.model import Context, Document, Status, Surface
+from mateprobe.relations import AllowedTransition, CompareFields, FieldRef
 
 DOC = Document((Surface("out", ""),))
 
