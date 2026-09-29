@@ -47,7 +47,6 @@ nav:
       - Policy regression: docs/policy-regression.md
       - Audit provenance: docs/audit-provenance.md
       - External validator trials: docs/external-validator-integrations.md
-      - Audit adoption plan: docs/audit-adoption-plan.md
       - State field bindings: docs/state-bindings.md
       - Contributing: CONTRIBUTING.md
       - Agent contributor instructions: AGENTS.md

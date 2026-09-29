@@ -20,7 +20,7 @@ The development tool versions are recorded in `requirements-dev.lock`.
 - Captured-model `reports.json` and `summary.json` reproduce byte-for-byte through offline
   replay. Timing is excluded from this identity claim and stored separately.
 - CI checks Python 3.11–3.14, package builds, expanded mutations and offline natural replay.
-  See the exact remote run linked from the release provenance/PROJECT_STATUS.md.
+  See the exact remote run linked from the release provenance.
 
 `benchmarks/natural-results/collector-source.py.txt` retains the collection-time script.
 The release collector additionally omits local model-file paths and respects installed

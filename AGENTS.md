@@ -30,6 +30,15 @@ optional integration requirements first). Keep frozen a2 research artifacts and
 the agent-adoption replay pinned to a2; do not rewrite historical evidence.
 Keep the agent guide, `llms.txt`, and API reference consistent with installable artifacts.
 
+## Public repository boundary
+
+Every tracked file is public, even if it is excluded from the documentation site.
+Keep announcement drafts, presentation scripts, conversation recaps, internal plans,
+and maintainer handoff notes outside this repository. Do not stage them here.
+Public usage guides, examples, contributor instructions and reproducible research
+artifacts belong here. New documentation pages require an explicit entry in the
+publication allowlist in `scripts/build_docs.py`; review the content before adding it.
+
 ## Engineering boundaries
 
 Keep core evaluation pure, offline and independent of LifeCard. Distinguish exact state

@@ -30,12 +30,57 @@ EXAMPLES = (
 )
 
 
+PUBLIC_MARKDOWN = (
+    "README.md",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "docs/adoption-levels.md",
+    "docs/agent-adoption-protocol.md",
+    "docs/agent-adoption.md",
+    "docs/agent-guide.md",
+    "docs/api-a2.md",
+    "docs/api-a3.md",
+    "docs/architecture.md",
+    "docs/audit-provenance.md",
+    "docs/choosing-an-evaluator.md",
+    "docs/contracts.md",
+    "docs/development-scope.md",
+    "docs/external-validator-integrations.md",
+    "docs/first-audit.md",
+    "docs/integration-feedback.md",
+    "docs/launch.md",
+    "docs/lifecard-validator-audit.md",
+    "docs/lifecard.md",
+    "docs/mutation-campaign.md",
+    "docs/natural-benchmark.md",
+    "docs/policy-regression.md",
+    "docs/pydantic.md",
+    "docs/pypi-publishing.md",
+    "docs/quickstart.md",
+    "docs/real-output-mutations.md",
+    "docs/roadmap.md",
+    "docs/state-bindings.md",
+    "docs/support-workflow.md",
+    "docs/validator-audit.md",
+    "docs/verification.md",
+    "paper/draft.md",
+    "paper/protocol.md",
+    "paper/real-mutation-protocol.md",
+    "paper/release-protocol.md",
+)
+
+
 def prepare() -> dict[str, str]:
-    # Explicit publication allowlist; never copy the workspace or private app fixtures.
-    sources = [ROOT / name for name in ("README.md", "AGENTS.md", "CONTRIBUTING.md")]
-    sources += sorted((ROOT / "docs").glob("*.md"))
-    sources += sorted((ROOT / "paper").glob("*.md"))
-    sources = [p for p in sources if p.name != "launch-draft.md"]
+    # Every page is explicitly reviewed for public use; never publish arbitrary new Markdown.
+    candidates = {
+        p.relative_to(ROOT).as_posix()
+        for folder in ("docs", "paper")
+        for p in (ROOT / folder).glob("*.md")
+    }
+    unexpected = candidates - set(PUBLIC_MARKDOWN)
+    if unexpected:
+        raise ValueError(f"Unreviewed documentation outside public allowlist: {sorted(unexpected)}")
+    sources = [ROOT / name for name in PUBLIC_MARKDOWN]
     mapping = {p.relative_to(ROOT).as_posix(): p.relative_to(ROOT).as_posix() for p in sources}
     mapping["README.md"] = "index.md"
     for name in (*EXAMPLES, "llms.txt"):

@@ -27,6 +27,12 @@ narrative-contracts = "narrative_contracts.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/narrative_contracts"]
 
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/docs/launch-draft.md", "/docs/audit-adoption-plan.md", "/PROJECT_STATUS.md",
+  "/internal", "/private", "/notes", "/.docs-src", "/site",
+]
+
 [tool.pytest.ini_options]
 addopts = "-ra"
 testpaths = ["tests"]

@@ -24,7 +24,7 @@ adoption and corpus relevance remain open questions, not claims established by C
 - [x] Alpha a2 GitHub release with pinned installable wheels/sdists; CI runs on Python 3.11–3.14.
   The release provenance records the verified commit and CI run.
 
-The release verification record and PROJECT_STATUS.md identify the exact published state.
+The release verification records identify the exact published state.
 Both a2 and a3 are available on PyPI; a3 is the current documented install target.
 
 ## Follow-up launch milestones
