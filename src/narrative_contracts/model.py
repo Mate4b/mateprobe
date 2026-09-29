@@ -11,6 +11,8 @@ from enum import Enum
 from types import MappingProxyType
 from typing import Any, TypeAlias
 
+from .version import LIBRARY_VERSION
+
 Scalar: TypeAlias = str | int | float | bool | None
 
 
@@ -157,7 +159,7 @@ class Report:
     input_digest: str
     contracts_digest: str
     policy: Policy
-    library_version: str = "0.1.0a2"
+    library_version: str = LIBRARY_VERSION
     schema_version: int = 1
 
     @property

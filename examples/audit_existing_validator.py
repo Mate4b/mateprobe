@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from narrative_contracts.mutations import Relation, Validity
+from narrative_contracts.provenance import observe_git
 from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict, audit_validator
 
 Sample = dict[str, Any]
@@ -62,7 +63,11 @@ OBLIGATIONS = (
     Obligation("order", "The action concerns the authorized order."),
     Obligation("amount", "Positive integer cents do not exceed the authoritative limit."),
     Obligation("completion", "A success claim needs a matching completed receipt."),
-    Obligation("prose", "The user-facing text must not contradict the evidence (scope challenge)."),
+    Obligation(
+        "prose",
+        "The user-facing text must not contradict the evidence (scope challenge).",
+        scope="challenge",
+    ),
     Obligation("idempotency", "Repeated requests must not execute twice (not tested here)."),
 )
 
@@ -205,12 +210,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="Directory for JSON and Markdown reports")
     args = parser.parse_args()
+    provenance = observe_git(Path(__file__).resolve().parents[1])
     for name, validator in (("before", existing_validator), ("after", corrected_validator)):
         report = audit_validator(
             validator,
             cases(),
             obligations=OBLIGATIONS,
             validator_id=f"refund-demo/{name}/1",
+            provenance=provenance,
         )
         print(report.to_markdown())
         if args.output:

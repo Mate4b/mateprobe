@@ -10,6 +10,7 @@ import pytest
 
 from narrative_contracts import Context, Contract, Document, Policy, Report, evaluate
 from narrative_contracts.mutations import CampaignReport, MutationCase, audit
+from narrative_contracts.provenance import GitProvenance
 from narrative_contracts.validator_audit import (
     AuditCase,
     Obligation,
@@ -60,11 +61,16 @@ class NarrativeAssertions:
         *,
         obligations: tuple[Obligation, ...],
         validator_id: str,
+        provenance: GitProvenance | None = None,
         detection: float = 1.0,
         preservation: float = 1.0,
     ) -> ValidatorAuditReport:
         report = audit_validator(
-            validator, cases, obligations=obligations, validator_id=validator_id
+            validator,
+            cases,
+            obligations=obligations,
+            validator_id=validator_id,
+            provenance=provenance,
         )
         self.records.append({"test": self.node_id, "type": "validator_audit", **report.to_dict()})
         report.assert_thresholds(detection, preservation)

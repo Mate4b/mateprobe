@@ -14,8 +14,9 @@ from .rules import (
     SettledPremise,
     StateChanged,
 )
+from .version import LIBRARY_VERSION
 
-__version__ = "0.1.0a2"
+__version__ = LIBRARY_VERSION
 __all__ = [
     "AllowedTransition",
     "Claim",

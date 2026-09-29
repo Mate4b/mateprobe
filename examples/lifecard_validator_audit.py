@@ -174,6 +174,7 @@ def _run(root: Path) -> tuple[Any, dict[str, str], dict[str, Any]]:
         Obligation(
             "layer4-length-independent-restatement",
             "Outcome text must not merely repeat its option label at any length.",
+            scope="challenge",
         ),
         Obligation(
             "layer4-meaningful-effect", "An outcome must include a meaningful domain effect."

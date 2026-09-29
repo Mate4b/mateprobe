@@ -38,3 +38,26 @@ jobs:
       - name: Source mutation regression checks
         if: matrix.python == '3.12'
         run: python benchmarks/mutate_guards.py --output /tmp/source-mutations.json
+  external-integrations:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.14']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '${{ matrix.python }}'
+      - name: Install optional integration dependencies
+        run: python -m pip install -e '.[dev]' -r requirements-integrations.txt
+      - name: Exercise real third-party validators
+        run: python -m pytest tests/test_external_validators.py -q
+      - name: Produce integration evidence
+        if: always()
+        run: python examples/external_validators.py --output /tmp/integration-audits
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: external-validator-audits-py${{ matrix.python }}
+          path: /tmp/integration-audits
+          if-no-files-found: warn

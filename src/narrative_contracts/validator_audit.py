@@ -12,10 +12,12 @@ from collections import Counter
 from collections.abc import Callable
 from copy import deepcopy
 from dataclasses import dataclass
-from typing import Any, Generic, TypeVar
+from typing import Any, Generic, Literal, TypeVar
 
 from .model import digest, plain
 from .mutations import Relation, Validity
+from .provenance import GitProvenance
+from .version import LIBRARY_VERSION
 
 T = TypeVar("T")
 
@@ -55,10 +57,13 @@ class Verdict:
 class Obligation:
     id: str
     description: str
+    scope: Literal["contract", "challenge"] = "contract"
 
     def __post_init__(self) -> None:
         if not self.id or not self.description:
             raise ValueError("Obligations need an id and description")
+        if self.scope not in ("contract", "challenge"):
+            raise ValueError("Obligation scope must be contract or challenge")
 
 
 @dataclass(frozen=True)
@@ -114,7 +119,28 @@ class ValidatorAuditReport:
     obligations: tuple[Obligation, ...]
     cases: tuple[AuditResult, ...]
     corpus_digest: str
-    schema_version: int = 1
+    schema_version: int = 2
+    library_version: str = LIBRARY_VERSION
+    provenance: GitProvenance | None = None
+
+    @staticmethod
+    def _assessment(cases: list[AuditResult]) -> str:
+        outcomes = {c.outcome for c in cases}
+        if not cases:
+            return "untested"
+        if outcomes == {"excluded"}:
+            return "not_evaluated"
+        if outcomes & {"survived", "regressed", "unattributed_rejection"}:
+            return "known_gaps"
+        if outcomes & {"baseline_failed", "error", "undetermined"}:
+            return "incomplete_evidence"
+        if "excluded" in outcomes:
+            return "partial_evidence"
+        if outcomes == {"detected"}:
+            return "faults_only_no_controls"
+        if outcomes == {"preserved"}:
+            return "controls_only_no_faults"
+        return "no_failures_observed"
 
     def summary(self) -> dict[str, Any]:
         counts = Counter(c.outcome for c in self.cases)
@@ -137,6 +163,10 @@ class ValidatorAuditReport:
                 {
                     "id": obligation.id,
                     "description": obligation.description,
+                    "scope": obligation.scope,
+                    "assessment": self._assessment(
+                        [c for c in self.cases if c.obligation == obligation.id]
+                    ),
                     "counts": dict(
                         sorted(
                             Counter(
@@ -162,15 +192,82 @@ class ValidatorAuditReport:
             "",
             "Authored obligations and cases only; this is not general semantic coverage.",
             "",
-            "| Obligation | Case outcomes |",
-            "|---|---|",
+            f"Library version: {cell(self.library_version)}. Report schema: {self.schema_version}.",
+            f"Corpus digest: `{self.corpus_digest}`.",
         ]
-        for row in self.summary()["obligations"]:
+        if self.provenance is None:
+            lines.append("Git provenance: not collected (audit execution does not inspect Git).")
+        else:
+            revision = self.provenance.commit or "unknown"
+            dirty = {True: "dirty", False: "clean", None: "unknown"}[self.provenance.dirty]
+            lines.append(
+                f"Git provenance: {cell(self.provenance.source)}; revision `{revision}`; tree {dirty}."
+            )
+            if self.provenance.error:
+                lines.append(f"Provenance warning: {cell(self.provenance.error)}.")
+            lines.append("Repository metadata does not prove which code the callable executed.")
+
+        obligations = {o.id: o for o in self.obligations}
+        lines.extend(["", "## Known gaps", ""])
+        gaps = [
+            c
+            for c in self.cases
+            if c.outcome in {"survived", "regressed", "unattributed_rejection"}
+        ]
+        for case in gaps:
+            challenge = (
+                " **Scope challenge, included in scores.**"
+                if obligations[case.obligation].scope == "challenge"
+                else ""
+            )
+            expected = ", ".join(case.expected) or "accept valid control"
+            observed = ", ".join(case.variant.violations) if case.variant else ""
+            if not observed:
+                observed = "accepted" if case.variant and case.variant.accepted else "rejected"
+            lines.append(
+                f"- **{cell(case.id)}** ({cell(case.obligation)}): {case.outcome}."
+                f" Expected: {cell(expected)}. Observed: {cell(observed)}.{challenge}"
+            )
+        if not gaps:
+            lines.append("No gaps observed in evaluated cases; this is not a completeness claim.")
+
+        lines.extend(["", "## Incomplete evidence and execution failures", ""])
+        issues = [
+            c for c in self.cases if c.outcome in {"baseline_failed", "error", "undetermined"}
+        ]
+        for case in issues:
+            lines.append(f"- **{cell(case.id)}**: {case.outcome}; {cell(case.reason)}.")
+        if not issues:
+            lines.append("None observed.")
+
+        rows = self.summary()["obligations"]
+        lines.extend(["", "## Untested or unevaluated obligations", ""])
+        untested = [row for row in rows if row["assessment"] in {"untested", "not_evaluated"}]
+        for row in untested:
+            lines.append(
+                f"- **{cell(row['id'])}**: {row['assessment']}; {cell(row['description'])}."
+            )
+        if not untested:
+            lines.append("None in the declared inventory; undeclared obligations remain unknown.")
+
+        lines.extend(
+            [
+                "",
+                "## Evidence by obligation",
+                "",
+                "Outcomes apply only to the supplied corpus. Scope challenges remain in denominators.",
+                "",
+                "| Obligation | Assessment | Case outcomes |",
+                "|---|---|---|",
+            ]
+        )
+        for row in rows:
             counts = ", ".join(f"{key}: {value}" for key, value in row["counts"].items())
             lines.append(
-                f"| {cell(row['id'])}: {cell(row['description'])} | {counts or 'untested'} |"
+                f"| {cell(row['id'])} ({row['scope']}): {cell(row['description'])} | "
+                f"{row['assessment']} | {counts or 'untested'} |"
             )
-        lines.extend(["", "| Case | Outcome | Reason |", "|---|---|---|"])
+        lines.extend(["", "## All cases", "", "| Case | Outcome | Reason |", "|---|---|---|"])
         for case in self.cases:
             lines.append(f"| {cell(case.id)} | {case.outcome} | {cell(case.reason)} |")
         return "\n".join(lines) + "\n"
@@ -213,6 +310,7 @@ def audit_validator(
     *,
     obligations: tuple[Obligation, ...],
     validator_id: str,
+    provenance: GitProvenance | None = None,
 ) -> ValidatorAuditReport:
     """Run a paired campaign once per case, preserving attribution and failures.
 
@@ -221,6 +319,8 @@ def audit_validator(
     for unreviewed/equivalent/no-op cases. No samples are stored in the returned report.
     """
     cases, obligations = tuple(cases), tuple(obligations)
+    if provenance is not None and not isinstance(provenance, GitProvenance):
+        raise TypeError("provenance must be GitProvenance or None")
     if not validator_id.strip() or not cases or not obligations:
         raise ValueError("Validator id, cases and obligation inventory must be nonempty")
     if len({c.id for c in cases}) != len(cases):
@@ -278,4 +378,6 @@ def audit_validator(
                 changed,
             )
         )
-    return ValidatorAuditReport(validator_id, obligations, tuple(results), corpus_digest)
+    return ValidatorAuditReport(
+        validator_id, obligations, tuple(results), corpus_digest, provenance=provenance
+    )

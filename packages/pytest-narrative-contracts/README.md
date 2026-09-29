@@ -25,3 +25,8 @@ obligations=..., validator_id=..., detection=1.0, preservation=1.0)` for existin
 validators. It records JSON results before asserting thresholds, including
 failures. Install both packages from this checkout; this API is not in the
 published `0.1.0a2` wheels. See [the audit guide](../../docs/validator-audit.md).
+
+`audit_validator` also accepts optional `provenance=...` from the explicit
+Git helpers. Its nested report uses schema 2; the aggregate pytest envelope remains
+schema 1. Missing metadata is not automatically inferred from CI environment
+variables. See [provenance](../../docs/audit-provenance.md).

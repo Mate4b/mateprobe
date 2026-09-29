@@ -33,6 +33,9 @@ def test_external_audit_plugin_records_failure_and_success(pytester, monkeypatch
     pytester.makepyfile("""
 from narrative_contracts.validator_audit import AuditCase, Obligation, Verdict
 from narrative_contracts.mutations import Relation, Validity
+from narrative_contracts.provenance import supplied_git_provenance
+
+metadata = supplied_git_provenance("a" * 40)
 
 cases = (
     AuditCase("fault", "positive", 1, -1, Relation.VIOLATION, ("negative",),
@@ -46,11 +49,13 @@ def test_correct(narrative):
     narrative.audit_validator(
         lambda n: Verdict(n > 0, () if n > 0 else ("negative",)),
         cases, obligations=obligations, validator_id="correct/1",
+        provenance=metadata,
     )
 
 def test_broken(narrative):
     narrative.audit_validator(
         lambda n: Verdict(True), cases, obligations=obligations, validator_id="broken/1",
+        provenance=metadata,
     )
 """)
     path = pytester.path / "report.json"
@@ -63,3 +68,10 @@ def test_broken(narrative):
     assert len(reports) == 2
     assert all(report["type"] == "validator_audit" for report in reports)
     assert reports[1]["summary"]["detection_score"] == 0
+    assert reports[1]["provenance"] == {
+        "commit": "a" * 40,
+        "dirty": None,
+        "source": "supplied",
+        "error": None,
+    }
+    assert reports[1]["schema_version"] == 2

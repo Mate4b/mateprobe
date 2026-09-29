@@ -1,6 +1,6 @@
 # Narrative Contracts
 
-**Check structured AI outputs against application state. Mutation-test the validators.**
+**Mutation-test your existing validators. See which faults they detect, miss, or reject for the wrong reason.**
 
 Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
@@ -9,6 +9,49 @@ The library checks structured state invariants and explicitly labelled lexical h
 [Documentation](https://mate4b.github.io/narrative-contracts/) ·
 [Agent integration guide](docs/agent-guide.md) · [Published API](docs/api-a2.md) ·
 [Pydantic recipe](docs/pydantic.md) · [Documentation index for agents](llms.txt)
+
+## Audit an existing validator
+
+The following additions are **unreleased** and are not in the published `0.1.0a2`
+packages. Install from this checkout to try them:
+
+Pytest can express every individual assertion. This library supplies paired
+baseline/variant execution, targeted finding attribution, valid controls, honest
+error accounting, obligation inventories, and CI reports. You still define the
+domain obligations and justify the cases.
+
+For example, a test expects `customer_mismatch`, but the validator rejects with
+`malformed_input`. A generic `assert not validate(sample)` passes; the audit
+reports **unattributed rejection**, not successful detection of the customer error.
+
+- [Audit an existing validator](docs/validator-audit.md) without adopting `Context`,
+  `Surface`, or claims. Wrap its verdict, supply paired cases and obligations, and
+  inspect detections, survivors, false rejections, and failures.
+- [Bind output fields to state](docs/state-bindings.md) with `check_fields`, or use
+  the new bounded equality, numeric-limit, and transition contracts.
+- Run the [before/after refund demo](examples/audit_existing_validator.py) or the
+  opt-in [existing LifeCard validator integration](docs/lifecard-validator-audit.md).
+
+```sh
+python examples/audit_existing_validator.py --output /tmp/refund-audit
+```
+
+The refund demo detects 3 of 9 authored faults before the fix and 8 of 9 afterward,
+preserving both valid controls. The prose-only contradiction still passes and an
+untested idempotency obligation stays visible. The prose challenge remains **inside
+the nine-fault denominator**. This is an illustrative audit of
+validators, not measured production accuracy. See [scope and limits](docs/development-scope.md).
+
+Start with the [adoption levels](docs/adoption-levels.md): a boolean validator can
+expose accepted bad cases and rejected valid controls; finding IDs enable targeted
+detection, scopes refine attribution, and completeness/evidence explain unknowns.
+The [external-validator trials](docs/external-validator-integrations.md) adapt
+JSON Schema and Pydantic without adding runtime dependencies to the core.
+
+Reports lead with known gaps, incomplete evidence, and untested obligations.
+[Opt-in provenance](docs/audit-provenance.md) records the library version, corpus
+digest, and observed or caller-supplied Git metadata. These are audit results for
+supplied cases, not a percentage of total agent coverage.
 
 ## When to use this
 
@@ -32,28 +75,6 @@ state checks solve different problems; the [Pydantic recipe](docs/pydantic.md) s
 An LLM judge may evaluate open-ended properties outside these predicates. The two approaches
 can coexist; this library does not claim to replace every judge or guardrail system.
 See [choosing an evaluation method](docs/choosing-an-evaluator.md).
-
-## In this development checkout
-
-The following additions are **unreleased** and are not in the published `0.1.0a2`
-packages. Install from this checkout to try them:
-
-- [Audit an existing validator](docs/validator-audit.md) without adopting `Context`,
-  `Surface`, or claims. Wrap its verdict, supply paired cases and obligations, and
-  inspect detections, survivors, false rejections, and failures.
-- [Bind output fields to state](docs/state-bindings.md) with `check_fields`, or use
-  the new bounded equality, numeric-limit, and transition contracts.
-- Run the [before/after refund demo](examples/audit_existing_validator.py) or the
-  opt-in [existing LifeCard validator integration](docs/lifecard-validator-audit.md).
-
-```sh
-python examples/audit_existing_validator.py --output /tmp/refund-audit
-```
-
-The refund demo detects 3 of 9 authored faults before the fix and 8 of 9 afterward,
-preserving both valid controls. The prose-only contradiction still passes and an
-untested idempotency obligation stays visible. This is an illustrative audit of
-validators, not measured production accuracy. See [scope and limits](docs/development-scope.md).
 
 ## Install from PyPI
 

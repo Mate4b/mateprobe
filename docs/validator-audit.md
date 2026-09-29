@@ -15,6 +15,11 @@ The library runs those pairs, attributes detections, keeps false rejections and
 execution errors visible, and produces a JSON/Markdown report. This is a test
 harness, not automatic grounding or proof of business correctness.
 
+Start with [adoption levels](adoption-levels.md) for boolean validators, finding IDs,
+scoped findings and incomplete evidence. [Third-party trials](external-validator-integrations.md)
+exercise JSON Schema and Pydantic adapters. [Report provenance](audit-provenance.md)
+explains schema 2 and optional observed/supplied Git metadata.
+
 ## Minimal runnable example
 
 ```python
@@ -110,8 +115,23 @@ input digests, and a corpus digest. Full input samples are not embedded, so reta
 your corpus separately. Evidence/exception messages may still contain application
 data; review reports before sharing them.
 
+The Markdown report leads with known gaps, then incomplete evidence/execution
+failures, then untested or unevaluated obligations. Excluded-only obligations are
+`not_evaluated`; controls-only and faults-only cases are identified separately.
+The table's `no_failures_observed` applies only to the evaluated corpus. Errors
+remain visible even when the same obligation also has a survivor.
+
+Mark a deliberately broader-policy obligation with `scope="challenge"`. This
+is caller-supplied scope metadata, not a label inferred by the tool. It does **not**
+exclude the cases or remove them from scores. In particular, the refund demo's
+prose-only contradiction is included in its nine-fault denominator: the result
+after correction remains **8/9**, not 8/8.
+
 `validator_id` is a caller-supplied implementation/configuration identifier, not
-an automatically verified code hash. Inputs must be JSON-encodable (including
+an automatically verified code hash. The optional `provenance` argument accepts
+explicitly observed or supplied Git metadata; default audit execution performs no
+Git lookup. `library_version` and `schema_version` are included automatically.
+Inputs must be JSON-encodable (including
 JSON-valued dataclasses) and deep-copyable. Validators receive isolated copies;
 the harness does not sandbox filesystem, network, closure, or service side effects.
 Run it against pure validation code or a controlled offline test environment.
