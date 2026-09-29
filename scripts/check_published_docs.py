@@ -1,4 +1,4 @@
-"""Run consumer documentation against installed PyPI a2, never editable source."""
+"""Run consumer documentation against an installed version, never editable source."""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ EXAMPLES = (
 )
 
 
-def verify(output: Path) -> None:
+def verify(output: Path, version: str = "0.1.0a2") -> None:
     def run(label: str, *args: str) -> str:
         result = subprocess.run(
             [sys.executable, "-I", *args], cwd=output, capture_output=True, text=True
@@ -45,7 +45,7 @@ def verify(output: Path) -> None:
     if module_path.is_relative_to(ROOT) or "site-packages" not in module_path.parts:
         raise RuntimeError(f"Expected an isolated installed package, got {module_path}")
     for package in ("narrative-contracts", "pytest-narrative-contracts"):
-        if installation["versions"][package] != "0.1.0a2":
+        if installation["versions"][package] != version:
             raise RuntimeError(f"Wrong published version of {package}")
 
     sources = {}
@@ -68,8 +68,8 @@ def verify(output: Path) -> None:
         str(output),
     )
     records = json.loads((output / "contract-results.json").read_text())["reports"]
-    if len(records) != 4 or any(record["library_version"] != "0.1.0a2" for record in records):
-        raise RuntimeError("Expected four recorded evaluations from published a2")
+    if len(records) != 4 or any(record["library_version"] != version for record in records):
+        raise RuntimeError("Expected four recorded evaluations from the requested version")
 
     for name in EXAMPLES:
         path = ROOT / name
@@ -103,13 +103,14 @@ def verify(output: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="New directory for retained evidence")
+    parser.add_argument("--version", default="0.1.0a2")
     args = parser.parse_args()
     if args.output:
         args.output.mkdir(parents=True, exist_ok=False)
-        verify(args.output.resolve())
+        verify(args.output.resolve(), args.version)
     else:
         with tempfile.TemporaryDirectory(prefix="narrative-published-docs-") as directory:
-            verify(Path(directory))
+            verify(Path(directory), args.version)
 
 
 if __name__ == "__main__":

@@ -1,9 +1,8 @@
 # Development scope: audit existing validators
 
-This checkout adds an unreleased development increment to published alpha
-`0.1.0a2`. Package/release versions and frozen benchmark artifacts have not been
-rewritten; these APIs are not in the existing PyPI wheels. No release or publication
-is part of this increment.
+Version 0.1.0a3 packages the audit and state-binding APIs developed after a2.
+The a3 release candidate is available from this checkout; published a2 wheels
+do not include these additions. Frozen benchmark artifacts are not rewritten.
 
 ## Delivered scope
 

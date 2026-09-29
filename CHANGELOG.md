@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0a3 — release candidate
+
+- Audit existing validators through paired cases, finding attribution, controls, and explicit obligation inventories.
+- Add independent evidence flags, prioritized reports, and optional Git provenance.
+- Add state-field bindings and bounded relation/transition contracts.
+- Provide adoption levels, a permanent-regression recipe, and JSON Schema/Pydantic configuration trials.
+- Synchronize core, plugin dependency, and report metadata at a3. Frozen research artifacts remain unchanged; replay compares all evidence while allowing the explicit package-version transition.
+- Cases remain authored; these integrations do not establish independent adoption or arbitrary-prose correctness.
+
 ## Repository follow-up — 2026-09-29 (package version unchanged)
 
 - Preserve a second 32-response collection from larger user-installed Gemma/Qwen tags.

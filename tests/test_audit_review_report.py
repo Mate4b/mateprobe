@@ -190,3 +190,55 @@ def test_markdown_escapes_table_pipes_and_newlines() -> None:
     assert "obl\\|id next" in markdown
     assert "Description \\| with line" in markdown
     assert "case\\|id next" in markdown
+
+
+def test_orthogonal_flags_preserve_simultaneous_gaps_errors_controls_and_exclusions() -> None:
+    def validator(value: object) -> Verdict:
+        if value == "crash":
+            raise RuntimeError("unavailable")
+        if value == "unknown":
+            return Verdict(False, complete=False)
+        return Verdict(True)
+
+    cases = (
+        reviewed_case("survivor", "ok", "bad", "policy"),
+        reviewed_case("crash", "ok", "crash", "policy"),
+        reviewed_case("unknown", "ok", "unknown", "policy"),
+        reviewed_case("control", "ok", "valid", "policy", relation=Relation.PRESERVE, expected=()),
+        reviewed_case("excluded", "ok", "bad", "policy", validity=Validity.UNREVIEWED),
+        reviewed_case("broken-baseline", "crash", "bad", "baseline"),
+        reviewed_case("excluded-only", "ok", "bad", "excluded", validity=Validity.UNREVIEWED),
+    )
+    report = audit_validator(
+        validator,
+        cases,
+        obligations=tuple(
+            Obligation(key, key) for key in ("policy", "baseline", "excluded", "empty")
+        ),
+        validator_id="flags",
+    )
+    flags = row(report, "policy")
+    assert flags["assessment"] == "known_gaps"
+    assert all(
+        flags[key]
+        for key in (
+            "has_known_gaps",
+            "has_incomplete_evidence",
+            "has_fault_tests",
+            "has_controls",
+            "has_exclusions",
+        )
+    )
+    assert report.summary()["eligible_faults"] == 3
+    assert report.summary()["detection_score"] == 0
+    assert report.summary()["preservation_rate"] == 1
+    for key in ("baseline", "excluded", "empty"):
+        flags = row(report, key)
+        assert not flags["has_fault_tests"]
+        assert not flags["has_controls"]
+        assert not flags["has_known_gaps"]
+        assert flags["has_incomplete_evidence"] == (key == "baseline")
+        assert flags["has_exclusions"] == (key == "excluded")
+    # JSON consumers receive both dimensions, even though assessment has a display priority.
+    serialized = report.to_dict()["summary"]["obligations"][0]
+    assert serialized["has_known_gaps"] and serialized["has_incomplete_evidence"]

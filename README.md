@@ -2,7 +2,7 @@
 
 **Mutation-test your existing validators. See which faults they detect, miss, or reject for the wrong reason.**
 
-Alpha `0.1.0a2`. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
+Alpha `0.1.0a3` release candidate. Python 3.11+. Core runtime has zero third-party dependencies and makes no model or network calls. The optional pytest plugin adds a fixture and JSON reports.
 
 The library checks structured state invariants and explicitly labelled lexical heuristics. It does **not** certify arbitrary prose as truthful, meaningful, or good writing. A passing declaration check only establishes consistency of the supplied declarations with supplied authoritative state.
 
@@ -12,8 +12,9 @@ The library checks structured state invariants and explicitly labelled lexical h
 
 ## Audit an existing validator
 
-The following additions are **unreleased** and are not in the published `0.1.0a2`
-packages. Install from this checkout to try them:
+You do not need to change your validator to start. Wrap its existing result and
+supply the failures and valid variations you care about. The APIs below belong to
+the **0.1.0a3 release candidate**; published `0.1.0a2` does not include them.
 
 Pytest can express every individual assertion. This library supplies paired
 baseline/variant execution, targeted finding attribution, valid controls, honest
@@ -52,6 +53,10 @@ Reports lead with known gaps, incomplete evidence, and untested obligations.
 [Opt-in provenance](docs/audit-provenance.md) records the library version, corpus
 digest, and observed or caller-supplied Git metadata. These are audit results for
 supplied cases, not a percentage of total agent coverage.
+
+The corpus becomes a regression suite for your validation policy. Follow the
+[survivor-to-regression guide](docs/policy-regression.md) to keep a discovered gap
+as a permanent pytest check and share a sanitized integration report.
 
 ## When to use this
 

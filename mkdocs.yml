@@ -41,6 +41,7 @@ nav:
       - Unreleased scope: docs/development-scope.md
       - Validator audits: docs/validator-audit.md
       - Adoption levels: docs/adoption-levels.md
+      - Policy regression: docs/policy-regression.md
       - Audit provenance: docs/audit-provenance.md
       - External validator trials: docs/external-validator-integrations.md
       - Audit adoption plan: docs/audit-adoption-plan.md

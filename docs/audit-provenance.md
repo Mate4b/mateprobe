@@ -12,10 +12,31 @@ Every external audit includes:
 - `schema_version`: the report format, independent from the package version.
 - `provenance`: null unless explicitly supplied, or a Git snapshot labelled by source.
 
-Reports from this unreleased checkout still identify the package version as
-`0.1.0a2`; this is not proof that its new APIs are in the published wheel. Use Git
-metadata and retain the exact code/configuration for development comparisons.
-No package version has been republished under the same number.
+Version 0.1.0a3 identifies the new audit APIs and report metadata. Historical
+0.1.0a2 wheels and frozen benchmark artifacts retain their original versions.
+A package version alone does not identify a local patch or external validator;
+retain code/configuration and explicit provenance for development comparisons.
+
+## Independent evidence flags
+
+Each entry in `summary.obligations` retains `assessment` as a priority-ordered
+display summary and adds five independent booleans (an additive schema-2 extension):
+
+- `has_known_gaps`: a survivor, regressed control, or unattributed rejection.
+- `has_incomplete_evidence`: a failed baseline, execution error, or unknown verdict.
+- `has_fault_tests`: at least one eligible violation case.
+- `has_controls`: at least one eligible preservation case.
+- `has_exclusions`: at least one excluded case.
+
+Eligible cases passed baseline validation and were not excluded. Variant errors
+and unknowns still count as eligible tests; presence does not imply successful
+validation. With only excluded cases or failed baselines, both test-presence flags
+are false. Obligations with no cases have all five flags false.
+
+A survivor and three crashes set both gap and incomplete-evidence flags to true,
+while `assessment` remains `known_gaps`. Dashboards should consume the flags
+and counts rather than interpret assessment as mutually exclusive evidence.
+Scores, exclusions, challenge scopes, and denominators are unchanged.
 
 ## Explicitly observe a repository
 

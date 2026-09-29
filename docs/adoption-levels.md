@@ -12,9 +12,15 @@ one intentionally invalid variant, and one valid variation. See the
 | 2 | Finding IDs with scope | Whether the right error occurred at the intended field/branch |
 | 3 | Completeness and evidence | Unknown outcomes distinguished from violations, plus diagnostic evidence |
 
+You do not need to change your validator to start: Level 0 can wrap its existing
+boolean result and show raw survivors, regressions, and unattributed rejections.
 These are adoption options, not a requirement to implement all four before use.
 Every level still needs justified fault and preservation cases. No level infers
 truth labels or extracts arbitrary assertions from prose.
+
+When a real invalid case survives, use the short [survivor-to-regression
+guide](policy-regression.md) to turn it into a repeatable audit check and verify
+the corresponding valid control.
 
 ## Level 0: an existing boolean function
 

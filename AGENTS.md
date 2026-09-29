@@ -23,9 +23,10 @@ an editable checkout cannot verify published compatibility. See
 
 ## Version boundary
 
-The published packages are `0.1.0a2`. The checkout also contains unreleased APIs
-(`check_fields`, relational rules, and the independent validator audit). Do not
-present those as available from the published wheels. Keep the agent guide,
+The checkout targets `0.1.0a3`; PyPI a2 does not contain its audit and state-binding
+APIs. Before publication, verify both built distributions in an isolated environment
+with `python scripts/check_alpha_install.py --output /tmp/alpha-check`. Do not
+present candidate APIs as available from the old a2 wheels. Keep the agent guide,
 `llms.txt`, and published API reference consistent with actual installable artifacts.
 
 ## Engineering boundaries

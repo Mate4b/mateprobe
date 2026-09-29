@@ -19,14 +19,16 @@ Supply authoritative state and branch selection from trusted application code. V
 - [Contract semantics](https://mate4b.github.io/narrative-contracts/docs/contracts.md): typed equality, unknowns, errors, policies, and mutation denominators.
 - [Real-output mutations](https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md): 32 captured responses, 384 authored variants, and 64 accepted prose-only challenges; no semantic accuracy claim.
 
-## Development checkout only
+## Alpha 0.1.0a3 release candidate
 
-These APIs require installing the repository, not the published `0.1.0a2` wheels.
+These APIs require the a3 candidate checkout, not the published `0.1.0a2` wheels.
 
 - [Audit an existing validator](https://mate4b.github.io/narrative-contracts/docs/validator-audit.md): paired samples, expected finding IDs, controls and CI reports without adopting Document/Claim.
 - [Adoption levels](https://mate4b.github.io/narrative-contracts/docs/adoption-levels.md): boolean acceptance, findings, scopes and incomplete evidence; boolean rejection alone is not targeted detection.
 - [Audit provenance](https://mate4b.github.io/narrative-contracts/docs/audit-provenance.md): report schema 2, library version, corpus digest and optional supplied/observed Git metadata.
 - [External validator trials](https://mate4b.github.io/narrative-contracts/docs/external-validator-integrations.md): authored configuration tests with real JSON Schema and Pydantic engines; not independent adopter evidence.
+
+- [Policy regression guide](https://mate4b.github.io/narrative-contracts/docs/policy-regression.md): keep survivors as permanent pytest checks and share sanitized feedback.
 
 ## Optional
 

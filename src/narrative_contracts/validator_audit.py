@@ -142,6 +142,20 @@ class ValidatorAuditReport:
             return "controls_only_no_faults"
         return "no_failures_observed"
 
+    @staticmethod
+    def _evidence_flags(cases: list[AuditResult]) -> dict[str, bool]:
+        outcomes = {c.outcome for c in cases}
+        eligible = [c for c in cases if c.outcome not in {"excluded", "baseline_failed"}]
+        return {
+            "has_known_gaps": bool(outcomes & {"survived", "regressed", "unattributed_rejection"}),
+            "has_incomplete_evidence": bool(
+                outcomes & {"baseline_failed", "error", "undetermined"}
+            ),
+            "has_fault_tests": any(c.relation == Relation.VIOLATION for c in eligible),
+            "has_controls": any(c.relation == Relation.PRESERVE for c in eligible),
+            "has_exclusions": "excluded" in outcomes,
+        }
+
     def summary(self) -> dict[str, Any]:
         counts = Counter(c.outcome for c in self.cases)
         # Variant crashes/unknowns stay in denominators: neither is a detection.
@@ -165,6 +179,9 @@ class ValidatorAuditReport:
                     "description": obligation.description,
                     "scope": obligation.scope,
                     "assessment": self._assessment(
+                        [c for c in self.cases if c.obligation == obligation.id]
+                    ),
+                    **self._evidence_flags(
                         [c for c in self.cases if c.obligation == obligation.id]
                     ),
                     "counts": dict(
