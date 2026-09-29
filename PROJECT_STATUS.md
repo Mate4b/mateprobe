@@ -28,8 +28,9 @@ ni superioridad frente a LLM-as-a-judge.
 ## Siguiente etapa
 
 El siguiente hito científico es congelar un corpus de salidas reales con etiquetas independientes
-según [el protocolo](paper/protocol.md). La publicación pública requiere definir el owner y
-namespace del repositorio/paquetes. El paper está en etapa de factibilidad, no listo para presentarse
+según [el protocolo](paper/protocol.md). El repositorio de destino es
+[pablomate4b/narrative-contracts](https://github.com/pablomate4b/narrative-contracts).
+La publicación de paquetes en PyPI sigue pendiente. El paper está en etapa de factibilidad, no listo para presentarse
 como estudio concluido.
 
 [Empezar a usar](README.md) · [Verificación](docs/verification.md) ·

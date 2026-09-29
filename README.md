@@ -9,6 +9,8 @@ The library checks structured state invariants and explicitly labelled lexical h
 ## Install from this checkout
 
 ```sh
+git clone https://github.com/pablomate4b/narrative-contracts.git
+cd narrative-contracts
 python -m venv .venv
 . .venv/bin/activate
 pip install -e '.[dev]' -e ./packages/pytest-narrative-contracts
