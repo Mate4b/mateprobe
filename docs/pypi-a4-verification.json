@@ -1,0 +1,231 @@
+{
+  "version": "0.1.0a4",
+  "source_commit": "e842d66faa5d2dd6d8cc9a7dd8abd7e31bc49078",
+  "status": "passed",
+  "files": [
+    {
+      "project": "mateprobe",
+      "filename": "mateprobe-0.1.0a4-py3-none-any.whl",
+      "sha256": "462419a35c7f3cdecfde6609748331aaaaf77aeaca7836bb2db89a01ea79f1ca",
+      "matches_release": true
+    },
+    {
+      "project": "mateprobe",
+      "filename": "mateprobe-0.1.0a4.tar.gz",
+      "sha256": "b7af4085f13cf96ebca572d844ff8fe1a68afacc5666783dc456a9ea16238924",
+      "matches_release": true
+    },
+    {
+      "project": "pytest-mateprobe",
+      "filename": "pytest_mateprobe-0.1.0a4-py3-none-any.whl",
+      "sha256": "7dfab82a48c27224c9e2b30f705530c9cde13dabb0891322ba772a5ca0cc1fef",
+      "matches_release": true
+    },
+    {
+      "project": "pytest-mateprobe",
+      "filename": "pytest_mateprobe-0.1.0a4.tar.gz",
+      "sha256": "4c57f2ed9e0385413681199e641e0a3b825d15a7f91e581bbb004a0a9b578746",
+      "matches_release": true
+    }
+  ],
+  "installed_checks": {
+    "status": "passed",
+    "library_version": "0.1.0a4",
+    "policy_regression": {
+      "total": 3,
+      "counts": {
+        "detected": 2,
+        "preserved": 1
+      },
+      "eligible_faults": 2,
+      "detected_faults": 2,
+      "detection_score": 1.0,
+      "eligible_controls": 1,
+      "preserved_controls": 1,
+      "preservation_rate": 1.0,
+      "obligations": [
+        {
+          "id": "refund-policy",
+          "description": "Refunds must be USD and no greater than the limit.",
+          "scope": "contract",
+          "assessment": "no_failures_observed",
+          "has_known_gaps": false,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": true,
+          "has_exclusions": false,
+          "counts": {
+            "detected": 2,
+            "preserved": 1
+          },
+          "case_ids": [
+            "over-limit",
+            "unsupported-currency",
+            "at-limit-usd"
+          ]
+        }
+      ]
+    },
+    "checks": [
+      "installed paths and versions",
+      "consumer docs",
+      "CLI",
+      "pytest plugin",
+      "policy regression",
+      "refund demo",
+      "JSON Schema and Pydantic trials"
+    ],
+    "scope": "Installed artifact checks; not independent adoption or semantic accuracy."
+  },
+  "consumer_checks": {
+    "status": "passed",
+    "versions": {
+      "mateprobe": "0.1.0a4",
+      "pytest-mateprobe": "0.1.0a4",
+      "pytest": "9.1.1",
+      "pydantic": "2.13.5"
+    },
+    "python": "3.12.13",
+    "markdown_tests": 2,
+    "recorded_evaluations": 4,
+    "examples": [
+      "examples/five_minute_demo.py",
+      "examples/mutation_audit.py",
+      "examples/pydantic_reply.py"
+    ],
+    "cli": "passed",
+    "source_sha256": {
+      "docs/quickstart.md": "9f2dcc6487bdfb189d6b79229c7f5cf594c9c881a476d9325d0f79de3ffff661",
+      "docs/agent-guide.md": "2dc449d4ee6bd7bd5801574355b71bee1dcabf9f1856de35d98e9c1c80629b5b",
+      "examples/five_minute_demo.py": "63f17e361c7e75fba177a9c353fd43c86eb040c8c91db0e8e5192bf3e2cb65d5",
+      "examples/mutation_audit.py": "7d3dba138fceb7c7589f9fbfad4396bad42998292baa8e0759184b3e191a9dac",
+      "examples/pydantic_reply.py": "623e036801408d7144084bba9977beba66ca5967af92abe3401fe0f26fcfe692"
+    },
+    "scope": "Consumer example compatibility; not agent discovery or semantic accuracy."
+  },
+  "launch_checks": {
+    "status": "passed",
+    "versions": {
+      "mateprobe": "0.1.0a4",
+      "pytest-mateprobe": "0.1.0a4"
+    },
+    "python": "3.12.13",
+    "source_sha256": "66001adf0170f3deb038317dea4ee2471f505e74d7f2a1658e96ca776b57683a",
+    "corpus_digest": "04ab14ea8030e5082a4db05179573481f10d9a3691155d305ce67f95de2d815a",
+    "before": {
+      "total": 4,
+      "counts": {
+        "preserved": 1,
+        "survived": 3
+      },
+      "eligible_faults": 3,
+      "detected_faults": 0,
+      "detection_score": 0.0,
+      "eligible_controls": 1,
+      "preserved_controls": 1,
+      "preservation_rate": 1.0,
+      "obligations": [
+        {
+          "id": "completion",
+          "description": "A completion claim needs a completed receipt for this request.",
+          "scope": "contract",
+          "assessment": "known_gaps",
+          "has_known_gaps": true,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": true,
+          "has_exclusions": false,
+          "counts": {
+            "preserved": 1,
+            "survived": 2
+          },
+          "case_ids": [
+            "missing-receipt",
+            "wrong-request",
+            "honest-pending"
+          ]
+        },
+        {
+          "id": "prose",
+          "description": "The prose must agree with the evidence.",
+          "scope": "challenge",
+          "assessment": "known_gaps",
+          "has_known_gaps": true,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": false,
+          "has_exclusions": false,
+          "counts": {
+            "survived": 1
+          },
+          "case_ids": [
+            "prose-only"
+          ]
+        }
+      ]
+    },
+    "after": {
+      "total": 4,
+      "counts": {
+        "detected": 2,
+        "preserved": 1,
+        "survived": 1
+      },
+      "eligible_faults": 3,
+      "detected_faults": 2,
+      "detection_score": 0.6666666666666666,
+      "eligible_controls": 1,
+      "preserved_controls": 1,
+      "preservation_rate": 1.0,
+      "obligations": [
+        {
+          "id": "completion",
+          "description": "A completion claim needs a completed receipt for this request.",
+          "scope": "contract",
+          "assessment": "no_failures_observed",
+          "has_known_gaps": false,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": true,
+          "has_exclusions": false,
+          "counts": {
+            "detected": 2,
+            "preserved": 1
+          },
+          "case_ids": [
+            "missing-receipt",
+            "wrong-request",
+            "honest-pending"
+          ]
+        },
+        {
+          "id": "prose",
+          "description": "The prose must agree with the evidence.",
+          "scope": "challenge",
+          "assessment": "known_gaps",
+          "has_known_gaps": true,
+          "has_incomplete_evidence": false,
+          "has_fault_tests": true,
+          "has_controls": false,
+          "has_exclusions": false,
+          "counts": {
+            "survived": 1
+          },
+          "case_ids": [
+            "prose-only"
+          ]
+        }
+      ]
+    },
+    "pytest_checks": {
+      "fixed": "passed",
+      "removed_fix": "failed as expected; JSON retained",
+      "reject_all": "failed as expected; JSON retained"
+    },
+    "scope": "Authored demo compatibility and regression behavior, not independent adoption."
+  },
+  "publication_runs": {
+    "core": "https://github.com/Mate4b/mateprobe/actions/runs/36640476132",
+    "plugin": "https://github.com/Mate4b/mateprobe/actions/runs/36640621431"
+  }
+}
