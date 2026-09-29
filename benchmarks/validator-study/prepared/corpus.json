@@ -1,0 +1,3434 @@
+[
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-0",
+    "id": "refund-0-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-0",
+    "id": "refund-0-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "pending"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-0",
+    "id": "refund-0-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "accepted"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-0",
+    "id": "refund-0-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-0-other",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-0",
+    "id": "refund-0-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-0",
+        "status": "completed"
+      },
+      "request": "refund-0",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-0",
+    "id": "refund-0-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-0-next",
+        "status": "completed"
+      },
+      "request": "refund-0-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-1",
+    "id": "refund-1-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-1",
+    "id": "refund-1-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "pending"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-1",
+    "id": "refund-1-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "accepted"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-1",
+    "id": "refund-1-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-1-other",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-1",
+    "id": "refund-1-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-1",
+        "status": "completed"
+      },
+      "request": "refund-1",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-1",
+    "id": "refund-1-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-1-next",
+        "status": "completed"
+      },
+      "request": "refund-1-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-2",
+    "id": "refund-2-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-2",
+    "id": "refund-2-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "pending"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-2",
+    "id": "refund-2-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "accepted"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-2",
+    "id": "refund-2-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-2-other",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-2",
+    "id": "refund-2-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-2",
+        "status": "completed"
+      },
+      "request": "refund-2",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-2",
+    "id": "refund-2-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-2-next",
+        "status": "completed"
+      },
+      "request": "refund-2-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-3",
+    "id": "refund-3-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-3",
+    "id": "refund-3-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "pending"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-3",
+    "id": "refund-3-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "accepted"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-3",
+    "id": "refund-3-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-3-other",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-3",
+    "id": "refund-3-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-3",
+        "status": "completed"
+      },
+      "request": "refund-3",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-3",
+    "id": "refund-3-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-3-next",
+        "status": "completed"
+      },
+      "request": "refund-3-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-4",
+    "id": "refund-4-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-4",
+    "id": "refund-4-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "pending"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-4",
+    "id": "refund-4-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "accepted"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-4",
+    "id": "refund-4-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-4-other",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-4",
+    "id": "refund-4-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-4",
+        "status": "completed"
+      },
+      "request": "refund-4",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-4",
+    "id": "refund-4-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-4-next",
+        "status": "completed"
+      },
+      "request": "refund-4-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-5",
+    "id": "refund-5-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-5",
+    "id": "refund-5-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "pending"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-5",
+    "id": "refund-5-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "accepted"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-5",
+    "id": "refund-5-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-5-other",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-5",
+    "id": "refund-5-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-5",
+        "status": "completed"
+      },
+      "request": "refund-5",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-5",
+    "id": "refund-5-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-5-next",
+        "status": "completed"
+      },
+      "request": "refund-5-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-6",
+    "id": "refund-6-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-6",
+    "id": "refund-6-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "pending"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-6",
+    "id": "refund-6-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "accepted"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-6",
+    "id": "refund-6-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-6-other",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-6",
+    "id": "refund-6-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-6",
+        "status": "completed"
+      },
+      "request": "refund-6",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-6",
+    "id": "refund-6-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-6-next",
+        "status": "completed"
+      },
+      "request": "refund-6-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-7",
+    "id": "refund-7-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": null,
+      "request": "refund-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-7",
+    "id": "refund-7-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "pending"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "completion_status"
+    ],
+    "group": "refund-7",
+    "id": "refund-7-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "accepted"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [
+      "receipt_request"
+    ],
+    "group": "refund-7",
+    "id": "refund-7-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "receipt": {
+        "request": "refund-7-other",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-7",
+    "id": "refund-7-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "receipt": {
+        "request": "refund-7",
+        "status": "completed"
+      },
+      "request": "refund-7",
+      "text": "Recorded."
+    },
+    "domain": "refund",
+    "expected": [],
+    "group": "refund-7",
+    "id": "refund-7-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "receipt": {
+        "request": "refund-7-next",
+        "status": "completed"
+      },
+      "request": "refund-7-next",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-0",
+    "id": "shipping-0-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-0",
+    "id": "shipping-0-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-0",
+    "id": "shipping-0-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-0",
+    "id": "shipping-0-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0-other",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-0",
+    "id": "shipping-0-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-0",
+    "id": "shipping-0-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-0",
+      "owner": "shipping-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-1",
+    "id": "shipping-1-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-1",
+    "id": "shipping-1-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-1",
+    "id": "shipping-1-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-1",
+    "id": "shipping-1-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1-other",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-1",
+    "id": "shipping-1-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-1",
+    "id": "shipping-1-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-1",
+      "owner": "shipping-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-2",
+    "id": "shipping-2-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-2",
+    "id": "shipping-2-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-2",
+    "id": "shipping-2-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-2",
+    "id": "shipping-2-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2-other",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-2",
+    "id": "shipping-2-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-2",
+    "id": "shipping-2-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-2",
+      "owner": "shipping-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-3",
+    "id": "shipping-3-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-3",
+    "id": "shipping-3-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-3",
+    "id": "shipping-3-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-3",
+    "id": "shipping-3-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3-other",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-3",
+    "id": "shipping-3-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-3",
+    "id": "shipping-3-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-3",
+      "owner": "shipping-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-4",
+    "id": "shipping-4-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-4",
+    "id": "shipping-4-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-4",
+    "id": "shipping-4-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-4",
+    "id": "shipping-4-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4-other",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-4",
+    "id": "shipping-4-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-4",
+    "id": "shipping-4-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-4",
+      "owner": "shipping-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-5",
+    "id": "shipping-5-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-5",
+    "id": "shipping-5-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-5",
+    "id": "shipping-5-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-5",
+    "id": "shipping-5-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5-other",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-5",
+    "id": "shipping-5-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-5",
+    "id": "shipping-5-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-5",
+      "owner": "shipping-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-6",
+    "id": "shipping-6-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-6",
+    "id": "shipping-6-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-6",
+    "id": "shipping-6-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-6",
+    "id": "shipping-6-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6-other",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-6",
+    "id": "shipping-6-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-6",
+    "id": "shipping-6-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-6",
+      "owner": "shipping-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-7",
+    "id": "shipping-7-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "delivered",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-7",
+    "id": "shipping-7-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "cancelled",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "transition"
+    ],
+    "group": "shipping-7",
+    "id": "shipping-7-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "queued",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [
+      "customer"
+    ],
+    "group": "shipping-7",
+    "id": "shipping-7-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7-other",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-7",
+    "id": "shipping-7-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "after": "packed",
+      "before": "queued",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    },
+    "domain": "shipping",
+    "expected": [],
+    "group": "shipping-7",
+    "id": "shipping-7-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "after": "shipped",
+      "before": "packed",
+      "customer": "shipping-7",
+      "owner": "shipping-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-0",
+    "id": "reservation-0-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 0,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-0",
+    "id": "reservation-0-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 11,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-0",
+    "id": "reservation-0-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": -1,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-0",
+    "id": "reservation-0-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-0",
+    "id": "reservation-0-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 2,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-0",
+    "id": "reservation-0-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-0",
+      "capacity": 10,
+      "quantity": 1,
+      "resource": "reservation-0",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-1",
+    "id": "reservation-1-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 0,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-1",
+    "id": "reservation-1-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 12,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-1",
+    "id": "reservation-1-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": -1,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-1",
+    "id": "reservation-1-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-1",
+    "id": "reservation-1-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 3,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-1",
+    "id": "reservation-1-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-1",
+      "capacity": 11,
+      "quantity": 1,
+      "resource": "reservation-1",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-2",
+    "id": "reservation-2-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 0,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-2",
+    "id": "reservation-2-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 13,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-2",
+    "id": "reservation-2-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": -1,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-2",
+    "id": "reservation-2-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-2",
+    "id": "reservation-2-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 4,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-2",
+    "id": "reservation-2-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-2",
+      "capacity": 12,
+      "quantity": 1,
+      "resource": "reservation-2",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-3",
+    "id": "reservation-3-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 0,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-3",
+    "id": "reservation-3-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 14,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-3",
+    "id": "reservation-3-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": -1,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-3",
+    "id": "reservation-3-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-3",
+    "id": "reservation-3-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 5,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-3",
+    "id": "reservation-3-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-3",
+      "capacity": 13,
+      "quantity": 1,
+      "resource": "reservation-3",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-4",
+    "id": "reservation-4-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 0,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-4",
+    "id": "reservation-4-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 15,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-4",
+    "id": "reservation-4-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": -1,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-4",
+    "id": "reservation-4-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-4",
+    "id": "reservation-4-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 6,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-4",
+    "id": "reservation-4-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-4",
+      "capacity": 14,
+      "quantity": 1,
+      "resource": "reservation-4",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-5",
+    "id": "reservation-5-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 0,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-5",
+    "id": "reservation-5-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 16,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-5",
+    "id": "reservation-5-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": -1,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-5",
+    "id": "reservation-5-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-5",
+    "id": "reservation-5-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 7,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-5",
+    "id": "reservation-5-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-5",
+      "capacity": 15,
+      "quantity": 1,
+      "resource": "reservation-5",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-6",
+    "id": "reservation-6-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 0,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-6",
+    "id": "reservation-6-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 17,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-6",
+    "id": "reservation-6-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": -1,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-6",
+    "id": "reservation-6-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-6",
+    "id": "reservation-6-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 8,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-6",
+    "id": "reservation-6-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-6",
+      "capacity": 16,
+      "quantity": 1,
+      "resource": "reservation-6",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-7",
+    "id": "reservation-7-0",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 0,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-7",
+    "id": "reservation-7-1",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 18,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "quantity"
+    ],
+    "group": "reservation-7",
+    "id": "reservation-7-2",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": -1,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [
+      "resource"
+    ],
+    "group": "reservation-7",
+    "id": "reservation-7-3",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "violation",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7-other",
+      "text": "Recorded."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-7",
+    "id": "reservation-7-4",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Acknowledged."
+    }
+  },
+  {
+    "baseline": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 9,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    },
+    "domain": "reservation",
+    "expected": [],
+    "group": "reservation-7",
+    "id": "reservation-7-5",
+    "provenance": "Authored from protocol v1; mechanically checked by specification.",
+    "relation": "preserve",
+    "variant": {
+      "authoritative_resource": "reservation-7",
+      "capacity": 17,
+      "quantity": 1,
+      "resource": "reservation-7",
+      "text": "Recorded."
+    }
+  }
+]

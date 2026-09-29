@@ -1,0 +1,10 @@
+{
+  "files": {
+    "corpus.json": "e731e2bb6352e9d09f6d73eef3861a4579a6dd07d31f8deb0647bb9378a208eb",
+    "protocol.md": "802d2e075447a73587f1ee7bad699bd5b735261fde913eec471c08af8722a438",
+    "runner.py.txt": "66247c5e34606fc6d73dfb1d006560c69501e43771853d546a701b16e0c14fad"
+  },
+  "pairs": 144,
+  "schema_version": 1,
+  "stage": "prepared-before-capture"
+}
