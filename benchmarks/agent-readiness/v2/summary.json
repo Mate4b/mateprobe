@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "experiment": "agent-readiness-v2",
+  "models": {
+    "discovery": "gpt-5.6-luna",
+    "integration": "gpt-5.6-luna"
+  },
+  "integration_package_version": "0.1.0a3",
+  "integration_docs_revision": "27ab960c6c3b3d3931221e6b335526d3f3b21947",
+  "discovery": {
+    "target_recommended": false,
+    "recommendation": "pytest-gremlins",
+    "search_calls": 4,
+    "unique_queries": 3,
+    "captured_search_responses": 3,
+    "capture_complete": false,
+    "target_found_in_retained_responses": false,
+    "target_found_in_all_responses": null,
+    "candidate_names_added_by_agent": true
+  },
+  "integration": {
+    "agent_tests_passed": 4,
+    "reviewer_checks_passed": 20,
+    "consumer_source_modified_by_reviewer": false,
+    "docs_captures_verified": 19,
+    "full_before_detection": "1/5",
+    "full_after_detection": "2/5",
+    "full_preservation": "2/2",
+    "policy_before_detection": "1/2",
+    "policy_after_detection": "2/2",
+    "no_op_exclusions": 1,
+    "untested_obligation": "idempotency"
+  },
+  "limitations": [
+    "One task per experiment, same model family, fresh conversation contexts. No OS-enforced isolation.",
+    "Discovery agent seeded searches with known tool names and omitted first raw response; only later repeated capture survives.",
+    "Source mutation tools were favored by the discovery agent; input-variant audit versus source mutation wording was not experimentally controlled.",
+    "Unknown/error and deliberately misattributed samples are accounting diagnostics, not independently established stock-policy violations.",
+    "Integration agent downloaded historical trial documentation linked from public llms.txt; this was not documentation-naive integration.",
+    "Baseline repo revision was frozen before a separate public docs commit; actual downloaded docs revision is retained.",
+    "Offline replay is a code regression check, not a fresh agent run or repeatable web-search result."
+  ],
+  "redactions": [
+    {
+      "path": "integration/submission/run-log.txt",
+      "change": "Machine-specific workspace prefix replaced with <WORKSPACE>; original retained locally."
+    }
+  ],
+  "third_party_content": "Search page bodies retained in local scratch only; public archive contains query text, titles, URLs, hashes and observed choices, not copied third-party articles."
+}

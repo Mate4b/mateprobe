@@ -1,0 +1,97 @@
+[
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/llms.txt",
+    "path": "integration/docs/llms.txt",
+    "sha256": "628334e43fb7c39aa1921bff5f48e2c12ef2cc66e8a47d537fc5b6db5e8b3c31"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/build-info.json",
+    "path": "integration/docs/build-info.json",
+    "sha256": "01336d26d92ef15afe0d7b7787d752a89aea1f89ad77339a39a24442c54f606e"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/first-audit.md",
+    "path": "integration/docs/docs_first-audit.md.txt",
+    "sha256": "739558552e421362c3f47ae53c95001da207d1f97997bec2fe9da1164199b6ff"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/integration-feedback.md",
+    "path": "integration/docs/docs_integration-feedback.md.txt",
+    "sha256": "938d394ea160fc6aea1deaf6f7259832484b8a2ced900dc10d1c7c63c90c6a5b"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/agent-guide.md",
+    "path": "integration/docs/docs_agent-guide.md.txt",
+    "sha256": "4e9c461c3d7b464f00092667107ad0aef65fb0980848e4ca79bdf1b8c613523b"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/quickstart.md",
+    "path": "integration/docs/docs_quickstart.md.txt",
+    "sha256": "f1da33192faea3c0465c286333975ec6da4ac12c46513797302128d647ca95de"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/api-a3.md",
+    "path": "integration/docs/docs_api-a3.md.txt",
+    "sha256": "68fd98992b60a81542b22095ff70264e906524bac87f7bbfeb35e415a1fe7503"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/pydantic.md",
+    "path": "integration/docs/docs_pydantic.md.txt",
+    "sha256": "73572d4b410524b9a4cb3df5187cafb22bdcc80c044496f3f8c3abee739b271d"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/choosing-an-evaluator.md",
+    "path": "integration/docs/docs_choosing-an-evaluator.md.txt",
+    "sha256": "6f3faf87b6bce1487ef7ab23a4202f089dc5d3d74ce00c8192c6d2d3fb841968"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/contracts.md",
+    "path": "integration/docs/docs_contracts.md.txt",
+    "sha256": "f8aeb0315a49f634894d180620999e8a81fa3f76da7a06b422a72d98b14a3a41"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/real-output-mutations.md",
+    "path": "integration/docs/docs_real-output-mutations.md.txt",
+    "sha256": "338fc2476274c3bbbfa2e5819af4a3f9d212f88d253528158ded4ec0fcaa4f98"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/validator-audit.md",
+    "path": "integration/docs/docs_validator-audit.md.txt",
+    "sha256": "c16291dcb0f20527e8f9411cac0199a25d122e4c22618577319f81713c0ee290"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/adoption-levels.md",
+    "path": "integration/docs/docs_adoption-levels.md.txt",
+    "sha256": "2679e53546fcbdf75c2514320be412f53057a9f355c8028c74888b7ad3acdabf"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/audit-provenance.md",
+    "path": "integration/docs/docs_audit-provenance.md.txt",
+    "sha256": "d113aa4f539c8a6418b5a527fddf88d62b6886e4d9245101103c98689873b709"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/external-validator-integrations.md",
+    "path": "integration/docs/docs_external-validator-integrations.md.txt",
+    "sha256": "d359526536df0ed8e7dede95c289e91df8dad99dd3cac6b5fa92edf43c19ba11"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/policy-regression.md",
+    "path": "integration/docs/docs_policy-regression.md.txt",
+    "sha256": "6520386dc08103a55ad136631564ad0835f35e2b0e019969fe00078d003bd1d3"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md",
+    "path": "integration/docs/docs_agent-adoption.md.txt",
+    "sha256": "1febbd9b3912a27fc759bff1bf06f21b7f0a094ca146bc8be1037f4f75a35e92"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/docs/development-scope.md",
+    "path": "integration/docs/docs_development-scope.md.txt",
+    "sha256": "c5268cbf5e579b9c8a5db4cc5781e087ad07ef8647da3338c3ed88957506665c"
+  },
+  {
+    "url": "https://mate4b.github.io/narrative-contracts/CONTRIBUTING.md",
+    "path": "integration/docs/CONTRIBUTING.md.txt",
+    "sha256": "77ed17952fef780b968ea178646dc9cd485037c84537d260d5990a6b06f41d1f"
+  }
+]

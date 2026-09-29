@@ -1,0 +1,94 @@
+{
+  "role": "Maintainer diagnostic after discovery ended; target name/URL known, excluded from blinded result.",
+  "parameters": {
+    "search_query": [
+      {
+        "q": "\"narrative-contracts\" Python"
+      },
+      {
+        "q": "site:mate4b.github.io/narrative-contracts/"
+      }
+    ],
+    "response_length": "long"
+  },
+  "returned_items": [
+    {
+      "title": "Microsoft Word - ieeemm-final",
+      "url": "https://upcommons.upc.edu/server/api/core/bitstreams/01f01480-e8e2-45d4-8d07-270f6ec5ee57/content"
+    },
+    {
+      "title": "The odyssey of style in Ulysses.  1981",
+      "url": "https://asset.library.wisc.edu/1711.dl/YRCIEIVSNSXWZ8D/E/file-b136a.pdf?dl="
+    },
+    {
+      "title": "PlotPilot/CLAUDE.md at master \u00b7 shenminglinyi/PlotPilot \u00b7 GitHub",
+      "url": "https://github.com/shenminglinyi/PlotPilot/blob/master/CLAUDE.md"
+    },
+    {
+      "title": "Microsoft Word - paper.doc",
+      "url": "https://upcommons.upc.edu/server/api/core/bitstreams/d3214b81-9432-4a8a-bae6-1570efc69dd2/content"
+    },
+    {
+      "title": "(PDF) The Voice of Experience and the Voice of the Expert \u2010 Can they Speak to each Other?",
+      "url": "https://www.researchgate.net/publication/229702973_The_Voice_of_Experience_and_the_Voice_of_the_Expert_-_Can_they_Speak_to_each_Other"
+    },
+    {
+      "title": "GitHub - lyndonkl/claude: Agents, skills and anything else to use with claude \u00b7 GitHub",
+      "url": "https://github.com/lyndonkl/claude"
+    },
+    {
+      "title": "GitHub - al4xdev/alex-tavern: A multi-agent AI system with isolated agent memory, deterministic confidentiality guards, transactional context compaction, provider adapters, and replayable observability. \u00b7 GitHub",
+      "url": "https://github.com/al4xdev/alex-tavern"
+    },
+    {
+      "title": "2. Narrative Contracts",
+      "url": "https://dipanugrahablog.wordpress.com/wp-content/uploads/2015/04/dipa-nugraha-suyitno-the-old-man-and-the-sea.pdf"
+    },
+    {
+      "title": "From Narrative Contracts to Electronic Licenses: A Guided Translation Process for the Case of Audiovisual Content Management | Request PDF",
+      "url": "https://www.researchgate.net/publication/4298923_From_Narrative_Contracts_to_Electronic_Licenses_A_Guided_Translation_Process_for_the_Case_of_Audiovisual_Content_Management"
+    },
+    {
+      "title": "Benslimane Radia",
+      "url": "https://asjp.cerist.dz/en/downArticle/371/9/1/108438"
+    },
+    {
+      "title": "Recuperating Agents: Narrative Contracts, Emancipatory Readers, and Incidents in the Life of a Slave Girl | The Erotics of Talk: Women\u2019s Writing and Feminist Paradigms | Oxford Academic",
+      "url": "https://academic.oup.com/book/48852/chapter-abstract/422014725"
+    },
+    {
+      "title": "Towards a Contract Expression Language for",
+      "url": "https://citeseerx.ist.psu.edu/document?doi=4eca8117f34f4671e3904c5fe44ddd5e1c3642ea&repid=rep1&type=pdf"
+    },
+    {
+      "title": "MODIP - Aristotle University of Thessaloniki | NARRATIVE CONTRACTS OF CINEMA",
+      "url": "https://qa.it.auth.gr/en/class/1/600121379/M1"
+    },
+    {
+      "title": "OpenCreator Novel - Open Source Project Profile, GitHub Star Trends and Deployment Guide",
+      "url": "https://reporank.net/en/repo/xwcai999-opencreator-novel.html"
+    },
+    {
+      "title": "LLM Narrative Engines, Part 2: Quick Start \u2014 Write Your First Contract - DEV Community",
+      "url": "https://dev.to/yuelinghuashu/llm-narrative-engines-part-2-quick-start-write-your-first-contract-4mb3"
+    },
+    {
+      "title": "(PDF) New Services for New Media",
+      "url": "https://www.researchgate.net/publication/304495497_New_Services_for_New_Media"
+    },
+    {
+      "title": "PPT - Narrative and Interaction Getting Natural Enemies to Work Together PowerPoint Presentation - ID:3275786",
+      "url": "https://www.slideserve.com/boyd/narrative-and-interaction-getting-natural-enemies-to-work-together"
+    },
+    {
+      "title": "Munarium Server 1.3 \u2014 Accountable operations for governed AI memory - Ioka LLC",
+      "url": "https://ioka.io/"
+    },
+    {
+      "title": "SAGE: Governed Artifact Generation from Enterprise Guidelines",
+      "url": "https://arxiv.org/abs/2609.17775"
+    }
+  ],
+  "target_url_observed": false,
+  "raw_response_sha256": "fc8ea73cffe1307c18c664b7ed90843ab5421c8187a9305b0cc2c8b5bc532345"
+}

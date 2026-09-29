@@ -1,0 +1,40 @@
+{
+  "protocol_version": "readiness-trials-v2",
+  "frozen_before_trials": true,
+  "target": "narrative-contracts",
+  "target_version": "0.1.0a3",
+  "baseline_repo_revision": "2d7ce503000b104dcfb19bb7616ec968cd04db2a",
+  "discovery": {
+    "model": "gpt-5.6-luna",
+    "fresh_context": true,
+    "scope": "One bounded, problem-driven web-search task; not a recommendation-rate estimate or sandboxed blinding.",
+    "limits": {"search_queries": 6, "candidate_projects": 3},
+    "withheld_from_agent": ["target name", "target URL", "prior work", "repository and other agents"],
+    "criteria": ["target appears in returned search evidence", "agent inspects target from that evidence", "agent includes target among candidates", "agent recommends target with accurate scope"],
+    "negative_policy": "Retain no-discovery/no-recommendation. Do not reveal target or rerun until positive. Named search afterward is a separate diagnostic, not discovery success."
+  },
+  "integration": {
+    "model": "gpt-5.6-luna",
+    "fresh_context": true,
+    "start": "https://mate4b.github.io/narrative-contracts/llms.txt",
+    "task": "Audit an authored inventory-allocation validator using published a3; keep a region-rule survivor as regression after fix.",
+    "authority": "stock and permitted_zone are trusted fixture evidence, independently supplied; units/requested_zone/reply are requested/generated data.",
+    "initial_validator": "Receives sample only; missing/None stock => incomplete rejection; non-integer units => schema.units rejection; units > stock => stock_exceeded rejection; otherwise accepts. Omits requested_zone == permitted_zone. Invalid string stock intentionally raises TypeError for execution-failure accounting.",
+    "baseline": {"units": 2, "stock": 5, "requested_zone": "north", "permitted_zone": "north", "reply": "Two units were allocated."},
+    "fixed_criteria": [
+      "Both installed core and plugin are 0.1.0a3, non-editable; no local library source read",
+      "Adapter receives sample only and preserves acceptance, blocking finding IDs and completeness",
+      "Above-stock fault detected; wrong-zone fault survives before domain fix and is detected after",
+      "Exact-stock boundary and changed wording controls preserved",
+      "Wrong finding rejection is unattributed, not detected",
+      "Missing stock unknown and invalid string stock error retained in eligible fault denominators",
+      "Identical baseline/variant explicitly excluded, never counted as success",
+      "Untested idempotency obligation visible",
+      "Full campaign thresholds fail; policy-only post-fix campaign passes and removing zone fix fails again",
+      "Pytest fixture records failed audit before raising; JSON report version/schema reflect a3",
+      "No claims of prose entailment, external adoption, production accuracy or automated correct labels"
+    ],
+    "retention": "Preserve all source revisions created, failures, doc snapshots and hashes, logs and exact dependency versions. No library edits; no fabricated label review."
+  },
+  "review": "Maintainer applies extra behavior checks to unchanged submitted code. Adapt only interface serialization, not criteria. Any repairs are separately versioned; historical a2 evidence remains unchanged."
+}

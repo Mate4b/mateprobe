@@ -35,7 +35,6 @@ You do not need to change your validator to start. These APIs are available in a
 
 ## Optional
 
-- [Discovery and a3 integration observations](https://mate4b.github.io/narrative-contracts/docs/agent-readiness.md): target not recommended in one bounded search task; new a3 integration with four consumer tests and twenty reviewer checks, with limits retained.
 - [Agent integration trial](https://mate4b.github.io/narrative-contracts/docs/agent-adoption.md): one prompted integration with frozen code and replay; not evidence of unprompted recommendations.
 - [Alpha a3 scope](https://mate4b.github.io/narrative-contracts/docs/development-scope.md): delivered APIs and explicit limits.
 - [Repository](https://github.com/Mate4b/narrative-contracts): source, issues, and releases.

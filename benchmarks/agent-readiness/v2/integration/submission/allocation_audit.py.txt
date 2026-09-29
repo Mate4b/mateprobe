@@ -1,0 +1,160 @@
+"""Consumer trial: authored inventory-allocation validator audit."""
+
+from narrative_contracts.mutations import Relation, Validity
+from narrative_contracts.validator_audit import (
+    AuditCase,
+    Obligation,
+    Verdict,
+    audit_validator,
+)
+
+
+def validate_before(sample):
+    """The supplied pre-fix validator, retained faithfully for comparison."""
+    stock = sample.get("stock")
+    if stock is None:
+        return {"accepted": False, "complete": False, "errors": []}
+    if type(sample.get("units")) is not int:
+        return {"accepted": False, "complete": True, "errors": ["schema.units"]}
+    errors = []
+    if sample["units"] > stock:
+        errors.append("stock_exceeded")
+    return {"accepted": not errors, "complete": True, "errors": errors}
+
+
+def validate_after(sample):
+    """The corrected validator, adding the requested-zone policy check."""
+    stock = sample.get("stock")
+    if stock is None:
+        return {"accepted": False, "complete": False, "errors": []}
+    if type(sample.get("units")) is not int:
+        return {"accepted": False, "complete": True, "errors": ["schema.units"]}
+    errors = []
+    if sample["units"] > stock:
+        errors.append("stock_exceeded")
+    if sample.get("requested_zone") != sample.get("permitted_zone"):
+        errors.append("zone_not_allowed")
+    return {"accepted": not errors, "complete": True, "errors": errors}
+
+
+def adapt_validator(validator):
+    """Adapt the sample-only dict validator without copying case labels."""
+    def adapted(sample):
+        result = validator(sample)
+        return Verdict(
+            accepted=result["accepted"],
+            complete=result["complete"],
+            violations=tuple(result["errors"]),
+        )
+
+    return adapted
+
+
+_BASELINE = {
+    "units": 2,
+    "stock": 5,
+    "requested_zone": "north",
+    "permitted_zone": "north",
+    "reply": "Two units were allocated.",
+}
+
+
+def _case(case_id, variant, relation, expected=(), provenance=""):
+    return AuditCase(
+        id=case_id,
+        obligation="allocation-policy",
+        baseline=_BASELINE,
+        variant=variant,
+        relation=relation,
+        expected=tuple(expected),
+        validity=Validity.VALID,
+        provenance=provenance,
+    )
+
+
+def build_cases():
+    """Return the fixed authored corpus, including diagnostic cases."""
+    return (
+        _case(
+            "above-stock",
+            {**_BASELINE, "units": 6},
+            Relation.VIOLATION,
+            ("stock_exceeded",),
+            "Authored violation: requested units 6 exceed trusted stock 5.",
+        ),
+        _case(
+            "wrong-zone",
+            {**_BASELINE, "requested_zone": "south"},
+            Relation.VIOLATION,
+            ("zone_not_allowed",),
+            "Authored violation: requested zone south differs from trusted permitted zone north.",
+        ),
+        _case(
+            "exact-stock",
+            {**_BASELINE, "units": 5},
+            Relation.PRESERVE,
+            provenance="Authored control: allocation exactly at trusted stock 5 is permitted.",
+        ),
+        _case(
+            "changed-wording",
+            {**_BASELINE, "reply": "Allocation complete: two units reserved."},
+            Relation.PRESERVE,
+            provenance="Authored control: wording may change while trusted state is unchanged.",
+        ),
+        _case(
+            "schema-units-string",
+            {**_BASELINE, "units": "6"},
+            Relation.VIOLATION,
+            ("stock_exceeded",),
+            "Authored diagnostic violation: string units is rejected by schema, not by stock policy.",
+        ),
+        _case(
+            "stock-unknown",
+            {**_BASELINE, "stock": None, "units": 6},
+            Relation.VIOLATION,
+            ("stock_exceeded",),
+            "Authored diagnostic violation: missing trusted stock remains unknown and is retained in the denominator.",
+        ),
+        _case(
+            "stock-error",
+            {**_BASELINE, "stock": "unavailable", "units": 6},
+            Relation.VIOLATION,
+            ("stock_exceeded",),
+            "Authored diagnostic violation: invalid string stock intentionally exercises comparison error accounting.",
+        ),
+        _case(
+            "identical-baseline-variant",
+            {**_BASELINE},
+            Relation.PRESERVE,
+            provenance="Authored equivalent pair: baseline and variant are identical and excluded.",
+        ),
+    )
+
+
+def build_policy_cases():
+    """The named policy-only subset: two faults and two valid controls."""
+    wanted = {"above-stock", "wrong-zone", "exact-stock", "changed-wording"}
+    return tuple(case for case in build_cases() if case.id in wanted)
+
+
+def build_obligations():
+    return (
+        Obligation(
+            "allocation-policy",
+            "Allocation units must not exceed trusted stock and requested_zone must equal permitted_zone.",
+        ),
+        Obligation(
+            "idempotency",
+            "Repeated validation of the same allocation should be stable.",
+        ),
+    )
+
+
+def run_audit(validator, cases=None, validator_id="inventory-allocation/1"):
+    return audit_validator(
+        adapt_validator(validator),
+        build_cases() if cases is None else cases,
+        obligations=build_obligations(),
+        validator_id=validator_id,
+    )
+

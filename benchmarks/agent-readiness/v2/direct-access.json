@@ -1,0 +1,51 @@
+{
+  "observed_at_utc": "2026-09-29T21:10:09.523454+00:00",
+  "records": [
+    {
+      "url": "https://mate4b.github.io/narrative-contracts/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null,
+      "tags": [
+        {
+          "rel": "canonical",
+          "href": "https://mate4b.github.io/narrative-contracts/"
+        }
+      ],
+      "body_sha256": "77091256f04fa6234ba2ce67153431429b43b5fb57721d84744b89d9319c01e9"
+    },
+    {
+      "url": "https://mate4b.github.io/narrative-contracts/llms.txt",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "x_robots_tag": null,
+      "tags": [],
+      "body_sha256": "628334e43fb7c39aa1921bff5f48e2c12ef2cc66e8a47d537fc5b6db5e8b3c31"
+    },
+    {
+      "url": "https://mate4b.github.io/narrative-contracts/sitemap.xml",
+      "status": 200,
+      "content_type": "application/xml",
+      "x_robots_tag": null,
+      "tags": [],
+      "body_sha256": "4b741429babe0c7c19a95a61181a5f3451d773cdc3bfaf2b373f0fbbd41f25a4"
+    },
+    {
+      "url": "https://mate4b.github.io/robots.txt",
+      "status": 404,
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null,
+      "tags": [],
+      "body_sha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3"
+    },
+    {
+      "url": "https://pypi.org/pypi/narrative-contracts/0.1.0a3/json",
+      "status": 200,
+      "content_type": "application/json",
+      "x_robots_tag": null,
+      "tags": [],
+      "body_sha256": "81bf9d6825f43aee6dd586e414258570a7aa6766505a25d940411bbdb6c5c274"
+    }
+  ],
+  "scope": "Direct HTTP accessibility and visible indexing directives, not proof of search indexing."
+}

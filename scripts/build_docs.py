@@ -38,6 +38,7 @@ PUBLIC_MARKDOWN = (
     "docs/agent-adoption-protocol.md",
     "docs/agent-adoption.md",
     "docs/agent-guide.md",
+    "docs/agent-readiness.md",
     "docs/api-a2.md",
     "docs/api-a3.md",
     "docs/architecture.md",

@@ -35,6 +35,7 @@ nav:
       - Contract semantics: docs/contracts.md
       - Architecture: docs/architecture.md
   - Evidence:
+      - Discovery and a3 integration: docs/agent-readiness.md
       - Agent integration trial: docs/agent-adoption.md
       - Real-output mutations: docs/real-output-mutations.md
       - Model pilot: docs/natural-benchmark.md

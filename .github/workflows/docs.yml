@@ -28,6 +28,7 @@ jobs:
           -r requirements-integrations.txt
       - run: python scripts/check_alpha_install.py --output /tmp/published-docs-evidence
       - run: python scripts/check_launch_package.py --output /tmp/launch-evidence
+      - run: python benchmarks/replay_agent_readiness.py --output /tmp/a3-agent-readiness
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -35,6 +36,7 @@ jobs:
           path: |
             /tmp/published-docs-evidence
             /tmp/launch-evidence
+            /tmp/a3-agent-readiness
 
   historical-a2-trial:
     runs-on: ubuntu-latest

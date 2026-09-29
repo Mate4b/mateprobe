@@ -1,0 +1,31 @@
+Commands and observed results
+
+1. <WORKSPACE>/work/pypi-both-a2-smoke/bin/python -m venv <WORKDIR>/.venv
+Result: exit 0.
+
+2. <WORKDIR>/.venv/bin/python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0.1.0a3
+Result: exit 0; installed narrative-contracts==0.1.0a3 and pytest-narrative-contracts==0.1.0a3 (with pytest==9.1.1 and runtime dependencies).
+
+3. <WORKDIR>/.venv/bin/python -m pip freeze
+Observed stdout:
+iniconfig==2.3.0
+narrative-contracts==0.1.0a3
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+pytest==9.1.1
+pytest-narrative-contracts==0.1.0a3
+
+4. <WORKDIR>/.venv/bin/python -m pytest -q tests/test_allocation_audit.py::test_full_campaign_before_fails_and_retains_survivor --narrative-report=results/test_full_campaign_before_fails_and_retains_survivor.json
+Result: exit 0; stdout `. [100%] 1 passed in 0.01s` (the test intentionally catches the expected threshold AssertionError; failed audit JSON was retained by the fixture).
+
+5. <WORKDIR>/.venv/bin/python -m pytest -q tests/test_allocation_audit.py::test_full_campaign_after_still_fails_diagnostic_gaps --narrative-report=results/test_full_campaign_after_still_fails_diagnostic_gaps.json
+Result: exit 0; stdout `. [100%] 1 passed in 0.01s` (the test intentionally catches the expected threshold AssertionError; failed audit JSON was retained by the fixture).
+
+6. <WORKDIR>/.venv/bin/python -m pytest -q tests/test_allocation_audit.py::test_policy_subset_before_fails --narrative-report=results/test_policy_subset_before_fails.json
+Result: exit 0; stdout `. [100%] 1 passed in 0.01s` (the test intentionally catches the expected threshold AssertionError; failed audit JSON was retained by the fixture).
+
+7. <WORKDIR>/.venv/bin/python -m pytest -q tests/test_allocation_audit.py::test_policy_subset_after_passes --narrative-report=results/test_policy_subset_after_passes.json
+Result: exit 0; stdout `. [100%] 1 passed in 0.01s`.
+
+No source/library repair was performed; therefore no repaired source version exists.
