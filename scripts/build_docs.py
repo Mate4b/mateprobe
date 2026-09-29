@@ -62,6 +62,7 @@ PUBLIC_MARKDOWN = (
     "docs/roadmap.md",
     "docs/state-bindings.md",
     "docs/support-workflow.md",
+    "docs/testing-ai-output-validators.md",
     "docs/validator-audit.md",
     "docs/verification.md",
     "paper/draft.md",

@@ -4,6 +4,11 @@ This guide targets **published alpha 0.1.0a3**, Python 3.11+. Use it when an
 application has authoritative state and needs to test explicit declarations in
 generated outputs against that state. The check itself makes no model or network calls.
 
+Already have a validator? Start with [testing AI output validators](testing-ai-output-validators.md)
+and the [one-file audit](first-audit.md). `audit_validator` accepts a sample-only
+adapter and caller-authored baseline/variant pairs; you do not need to migrate to
+the `Document`/`Claim` representation used in the state-check example below.
+
 ## Install the published API
 
 ```sh
@@ -14,7 +19,7 @@ python -m pip install narrative-contracts==0.1.0a3 pytest-narrative-contracts==0
 
 The second package supplies pytest and the automatically discovered `narrative`
 fixture. Do not also load it with `-p`. Pin the alpha versions rather than assuming
-an unqualified pip install selects a prerelease. See [API reference](api-a2.md).
+an unqualified pip install selects a prerelease. See [API reference](api-a3.md).
 
 ## Choose the source of authority
 

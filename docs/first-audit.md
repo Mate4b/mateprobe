@@ -5,6 +5,10 @@ policy language.** This small example targets published `0.1.0a3` and runs offli
 after installation. The walkthrough is designed for a short demo; five minutes
 is a presentation target, not measured integration time.
 
+The audit runs supplied input variants through a validator. It does not automatically
+rewrite validator source. This walkthrough explicitly compares a before and an after
+implementation on the same cases; see [the testing approaches](testing-ai-output-validators.md#input-audits-source-mutation-testing-and-pytest).
+
 ## Install and run without cloning the repository
 
 Python 3.11+ is required. In a new directory:
